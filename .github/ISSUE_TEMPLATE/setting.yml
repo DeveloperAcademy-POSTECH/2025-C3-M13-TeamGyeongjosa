@@ -16,13 +16,13 @@ body:
     attributes:
       label: ✅ 작업 항목
       options:
-        - label: [ ] Lint 도입 및 설정
-        - label: [ ] Git Hooks 설정
-        - label: [ ] CI/CD 파이프라인 설정
-        - label: [ ] .gitignore 구성
-        - label: [ ] 프로젝트 폴더 구조 초기화
-        - label: [ ] 공통 스타일 가이드 정리
-        - label: [ ] README 초기 구성
+        - label: "[ ] Lint 도입 및 설정"
+        - label: "[ ] Git Hooks 설정"
+        - label: "[ ] CI/CD 파이프라인 설정"
+        - label: "[ ] .gitignore 구성"
+        - label: "[ ] 프로젝트 폴더 구조 초기화"
+        - label: "[ ] 공통 스타일 가이드 정리"
+        - label: "[ ] README 초기 구성"
 
   - type: input
     id: branch
