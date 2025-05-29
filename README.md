@@ -1,25 +1,26 @@
-# 📱 [Project/App Name]
-[Logo/Cover Image]
+# 📱[경조사 실무팀]
 
-[App statement]
+![경조사실무팀](https://github.com/user-attachments/assets/58fe8151-7167-445d-a51b-d8fdead65d1b)
 
-## 🎇 Screenshots
+조금의 갈등이나 불편한 상황도 피하고 싶은 지수씨를 위해 직장동료의 결혼식 축하를 함께 할 파티원을 모집하고 함께 화환을 꾸미며 축의금을 모아내는 우회적이고 유쾌한 방식의 축하 플랫폼
+
+## 🎆Screenshots
 
 Attach photos if you are available
 
-## :framed_picture: Demo (optional)
+## 🖼️Demo (optional)
 
 Attach videos if you are available
 
 
-## 📌 Features
+## 📌Features
 
-- Feature 1
-- Feature 2
-- Feature 3
+- 축의금 결제 및 송금
+- 화환 꾸미기
+- 모임의 화환 전달 및 축의금 전달
 
 
-##  Skills & Tech Stack
+## ✨Skills & Tech Stack
 
 ex) <img src="https://img.shields.io/badge/Swift-FA7343?style=flat&logo=Swift&logoColor=white"/>, SwiftUI
 
@@ -27,6 +28,6 @@ ex) <img src="https://img.shields.io/badge/Swift-FA7343?style=flat&logo=Swift&lo
 [참조](https://shields.io/)
 
 
-## :people_hugging: Authors
+## 👥 Authors
 
-@username, @username, @username, @username, @username, @username
+@YooGyeongMo @username, @username, @username, @username, @username
