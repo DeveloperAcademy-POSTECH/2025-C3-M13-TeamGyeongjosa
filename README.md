@@ -63,11 +63,45 @@
 
 ## 👥 Authors
 
-| 이름           | 역할               |
-|----------------|--------------------|
-| [@YooGyeongMo](https://github.com/YooGyeongMo)   | iOS Developer |
-| @username      | UI Designer         |
-| @username      | UX Researcher       |
-| @username      | Backend / Firebase  |
-| @username      | QA / Operations     |
-| @username      | Product Manager     |
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/YooGyeongMo">
+        <img src="https://github.com/YooGyeongMo.png" width="60"/><br/>
+        <sub><b>YooGyeongMo</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="#">
+        <img src="https://github.com/username.png" width="60"/><br/>
+        <sub><b>username</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="#">
+        <img src="https://github.com/username.png" width="60"/><br/>
+        <sub><b>username</b></sub>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="#">
+        <img src="https://github.com/username.png" width="60"/><br/>
+        <sub><b>username</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="#">
+        <img src="https://github.com/username.png" width="60"/><br/>
+        <sub><b>username</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="#">
+        <img src="https://github.com/username.png" width="60"/><br/>
+        <sub><b>username</b></sub>
+      </a>
+    </td>
+  </tr>
+</table>
