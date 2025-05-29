@@ -1,0 +1,22 @@
+name: 🔧 Fix / Refactor
+description: 코드 수정이나 리팩토링을 제안합니다.
+title: "[Fix] "
+labels: ["refactor", "chore"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: 🛠️ 어떤 수정을 진행하나요?
+      placeholder: 예) Magic number 제거, 불필요한 주석 제거
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: ✨ 이유
+      placeholder: 유지보수성, 성능 개선, 클린코드 등
+  - type: input
+    id: branch
+    attributes:
+      label: 🔀 관련 브랜치
+      placeholder: 예) fix/remove-magic-number
