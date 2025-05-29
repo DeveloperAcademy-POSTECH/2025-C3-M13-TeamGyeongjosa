@@ -1,0 +1,40 @@
+name: 🚀 Feature Request
+description: 새로운 기능을 제안합니다.
+title: "[Feat] "
+labels: ["feature"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: 🙋 어떤 기능인가요?
+      placeholder: 예) 사용자가 다크모드를 설정할 수 있는 기능
+    validations:
+      required: true
+  - type: checkboxes
+    id: steps
+    attributes:
+      label: 🛠️ 작업 항목
+      description: 아래 항목 중 필요한 작업을 체크해주세요 (선택 사항은 삭제하거나 추가 가능합니다).
+      options:
+        - label: [ ] 기획/디자인 확인
+        - label: [ ] ViewModel 구현
+        - label: [ ] UI 구성 및 레이아웃 적용
+        - label: [ ] API 요청/응답 연동
+        - label: [ ] 에러 및 엣지 케이스 처리
+        - label: [ ] 테스트 코드 작성
+        - label: [ ] PR 생성 및 리뷰 요청    
+  - type: input
+    id: branch
+    attributes:
+      label: 🌿 작업 브랜치
+      placeholder: 예) feat/darkmode-toggle
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: 🖼️ 스크린샷 (선택)
+      placeholder: 여기에 이미지나 화면 캡처를 드래그해서 올려주세요. 설명이 필요한 경우 함께 적어주세요.
+  - type: textarea
+    id: reference
+    attributes:
+      label: 🔗 참고 자료
+      placeholder: 예) Figma 시안, Notion 문서, 관련 링크 등
