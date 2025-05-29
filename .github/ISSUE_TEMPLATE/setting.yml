@@ -1,0 +1,37 @@
+name: ⚙️ Project Setting
+description: 프로젝트 초기 세팅 및 구성 작업을 위한 이슈입니다.
+title: "[Setting] "
+labels: ["setting", "chore"]
+body:
+  - type: textarea
+    id: task
+    attributes:
+      label: 🔧 어떤 세팅 작업인가요?
+      placeholder: 예) SwiftLint 설정, 프로젝트 구조 초기화, CI 연동 등
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: ✅ 작업 항목
+      options:
+        - label: [ ] Lint 도입 및 설정
+        - label: [ ] Git Hooks 설정
+        - label: [ ] CI/CD 파이프라인 설정
+        - label: [ ] .gitignore 구성
+        - label: [ ] 프로젝트 폴더 구조 초기화
+        - label: [ ] 공통 스타일 가이드 정리
+        - label: [ ] README 초기 구성
+
+  - type: input
+    id: branch
+    attributes:
+      label: 🌱 작업 브랜치
+      placeholder: 예) setting/init-project-structure
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: 📌 기타 참고 사항
+      placeholder: 참고 문서, 관련 링크, 팀 합의 내용 등을 적어주세요.
