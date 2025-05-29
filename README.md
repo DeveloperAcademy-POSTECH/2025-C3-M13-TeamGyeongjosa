@@ -1,15 +1,12 @@
-# 📱경조사 실무팀 (TeamGyeongjosa)
-
 <div align="center">
   <img src="https://github.com/user-attachments/assets/58fe8151-7167-445d-a51b-d8fdead65d1b" height="600"/>
 </div>
 
-<br>
+# 📱경조사 실무팀 (TeamGyeongjosa)
 
-**App Statement**
+![Xcode](https://img.shields.io/badge/Xcode-16.2-blue?logo=xcode&logoColor=white) ![iOS](https://img.shields.io/badge/Minimum_iOS-15.6+-lightgrey?logo=apple&logoColor=white) ![Build](https://img.shields.io/badge/Build-1.0.0-green) ![Swift](https://img.shields.io/badge/Swift-6.0.2-orange?logo=swift&logoColor=white)
 
-**조금의 갈등이나 불편한 상황도 피하고 싶은 지수씨를 위해**, 직장동료의 결혼식 축하를 함께 할 파티원을 모집하고,
-함께 화환을 꾸미며 축의금을 모아내는 **우회적이고 유쾌한 방식의 축하 플랫폼** 🎉
+💬 **조금의 갈등이나 불편한 상황도 피하고 싶은 지수씨를 위해**, 직장동료의 결혼식 축하를 함께 할 파티원을 모집하고, 함께 화환을 꾸미며 축의금을 모아내는 **우회적이고 유쾌한 방식의 축하 플랫폼** 🎉
 
 
 ## 🧩 About the Project
