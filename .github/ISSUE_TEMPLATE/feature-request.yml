@@ -16,13 +16,13 @@ body:
       label: 🛠️ 작업 항목
       description: 아래 항목 중 필요한 작업을 체크해주세요 (선택 사항은 삭제하거나 추가 가능합니다).
       options:
-        - label: [ ] 기획/디자인 확인
-        - label: [ ] ViewModel 구현
-        - label: [ ] UI 구성 및 레이아웃 적용
-        - label: [ ] API 요청/응답 연동
-        - label: [ ] 에러 및 엣지 케이스 처리
-        - label: [ ] 테스트 코드 작성
-        - label: [ ] PR 생성 및 리뷰 요청    
+        - label: "[ ] 기획/디자인 확인"
+        - label: "[ ] ViewModel 구현"
+        - label: "[ ] UI 구성 및 레이아웃 적용"
+        - label: "[ ] API 요청/응답 연동"
+        - label: "[ ] 에러 및 엣지 케이스 처리"
+        - label: "[ ] 테스트 코드 작성"
+        - label: "[ ] PR 생성 및 리뷰 요청"
   - type: input
     id: branch
     attributes:
