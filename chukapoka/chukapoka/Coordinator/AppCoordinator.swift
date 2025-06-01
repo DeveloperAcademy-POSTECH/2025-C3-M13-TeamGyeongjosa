@@ -10,9 +10,8 @@ import SwiftUI
 @MainActor
 final class AppCoordinator: ObservableObject {
     
-    //Navigation Stack과 바인딩할 Path
+    // Navigation Stack과 바인딩할 Path
     @Published var path: [AppRoute] = []
-    
     
     func push(_ route: AppRoute) {
         path.append(route)
