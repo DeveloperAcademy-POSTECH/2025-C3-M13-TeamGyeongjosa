@@ -54,6 +54,7 @@
 		D59F7C7C2DEB00E000A829A8 /* InfoStep1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoStep1View.swift; sourceTree = "<group>"; };
 		D59F7C7E2DEB019100A829A8 /* GroupCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCreateViewModel.swift; sourceTree = "<group>"; };
 		D59F7C802DEB09BF00A829A8 /* EnterCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterCodeView.swift; sourceTree = "<group>"; };
+		D59F7C9E2DECC2B100A829A8 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +85,7 @@
 		D59F7C192DEAEB3600A829A8 = {
 			isa = PBXGroup;
 			children = (
+				D59F7C9E2DECC2B100A829A8 /* .swiftlint.yml */,
 				D59F7C542DEAF20600A829A8 /* chukapoka */,
 				D59F7C232DEAEB3600A829A8 /* Products */,
 			);
@@ -200,6 +202,7 @@
 				D59F7C1E2DEAEB3600A829A8 /* Sources */,
 				D59F7C1F2DEAEB3600A829A8 /* Frameworks */,
 				D59F7C202DEAEB3600A829A8 /* Resources */,
+				D59F7C972DECBBE000A829A8 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -321,6 +324,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D59F7C972DECBBE000A829A8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D59F7C1E2DEAEB3600A829A8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -407,7 +431,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -470,7 +494,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
