@@ -29,7 +29,6 @@
 		D59F7C7D2DEB00ED00A829A8 /* InfoStep1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59F7C7C2DEB00E000A829A8 /* InfoStep1View.swift */; };
 		D59F7C7F2DEB019700A829A8 /* GroupCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59F7C7E2DEB019100A829A8 /* GroupCreateViewModel.swift */; };
 		D59F7C812DEB09C200A829A8 /* EnterCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59F7C802DEB09BF00A829A8 /* EnterCodeView.swift */; };
-		D5ED63152DED2C43007912E1 /* InfoStep2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED63142DED2C3E007912E1 /* InfoStep2.swift */; };
 		D5ED63172DED427B007912E1 /* RootNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED63162DED427B007912E1 /* RootNavigationView.swift */; };
 /* End PBXBuildFile section */
 
@@ -78,7 +77,6 @@
 		D59F7C7E2DEB019100A829A8 /* GroupCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCreateViewModel.swift; sourceTree = "<group>"; };
 		D59F7C802DEB09BF00A829A8 /* EnterCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterCodeView.swift; sourceTree = "<group>"; };
 		D59F7C9E2DECC2B100A829A8 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
-		D5ED63142DED2C3E007912E1 /* InfoStep2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoStep2.swift; sourceTree = "<group>"; };
 		D5ED63162DED427B007912E1 /* RootNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -239,7 +237,6 @@
 		D59F7C7A2DEB00B600A829A8 /* GroupCreate */ = {
 			isa = PBXGroup;
 			children = (
-				D5ED63142DED2C3E007912E1 /* InfoStep2.swift */,
 				D59F7C7C2DEB00E000A829A8 /* InfoStep1View.swift */,
 				D59F7C7E2DEB019100A829A8 /* GroupCreateViewModel.swift */,
 			);
@@ -424,7 +421,6 @@
 				D59F7C742DEAF6D600A829A8 /* AppCoordinator.swift in Sources */,
 				D59F7C642DEAF56D00A829A8 /* AppDelegate.swift in Sources */,
 				D59F7C7F2DEB019700A829A8 /* GroupCreateViewModel.swift in Sources */,
-				D5ED63152DED2C43007912E1 /* InfoStep2.swift in Sources */,
 				D59F7C562DEAF20600A829A8 /* chukapokaApp.swift in Sources */,
 				D574E9DC2DED8E2E00AAF70F /* GSColor.swift in Sources */,
 				D574E9DA2DED8A6500AAF70F /* GSFont.swift in Sources */,
