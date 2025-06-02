@@ -21,7 +21,7 @@ struct PrimaryButton: View {
     
     private var buttonLabel: some View {
         return Text(title)
-            .font(GSFont.buttonText)
+            .font(GSFont.body1)
             .foregroundStyle(GSColor.white)
             .frame(maxWidth: .infinity)
             .frame(height: 50)
