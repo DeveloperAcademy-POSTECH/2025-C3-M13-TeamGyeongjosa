@@ -12,6 +12,7 @@ import SwiftData
 struct ChukapokaApp: App {
     @StateObject private var coordinator: AppCoordinator = AppCoordinator()
     
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     var body: some Scene {
         WindowGroup {
             RootNavigationView()

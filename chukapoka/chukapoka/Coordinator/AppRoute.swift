@@ -10,7 +10,6 @@ enum AppRoute: Hashable {
     case home
     case groupCreate(GroupCreateRoute)
     case groupJoin(GroupJoinRoute)
-
 }
 
 enum GroupCreateRoute: Hashable {

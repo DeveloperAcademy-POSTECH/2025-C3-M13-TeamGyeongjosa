@@ -10,16 +10,16 @@ import SwiftUI
 struct HomeView: View {
     @EnvironmentObject var coordinator: AppCoordinator
 
-        var body: some View {
-            VStack(spacing: 24) {
-                Button("🎉 그룹 만들기") {
-                    coordinator.push(.groupCreate(.infoStep1))
-                }
-
-                Button("💌 코드 입력하기") {
-                    coordinator.push(.groupJoin(.enterCode))
-                }
+    var body: some View {
+        VStack(spacing: 24) {
+            Button("🎉 그룹 만들기") {
+                coordinator.push(.groupCreate(.infoStep1))
             }
-            .navigationTitle("홈")
+
+            Button("💌 코드 입력하기") {
+                coordinator.push(.groupJoin(.enterCode))
+            }
+        }
+        .navigationTitle("홈")
     }
 }
