@@ -12,13 +12,14 @@ struct DeliveryLoadingView: View {
         VStack(spacing: 0) {
             
             Rectangle()
-                .fill(Color("Primary1"))
+                .foregroundStyle(GSColor.primary)
                 .frame(height: 2)
                 .padding(.top, 48)
             
             
             Text("모든 준비가 끝났어요! \n 열심히 재료를 배달 중이에요")
-                .font(.custom("Pretendard-Bold", size: 24))
+                .foregroundStyle(GSColor.black)
+                .font(GSFont.title2)
                 .multilineTextAlignment(.center)
                 .lineSpacing(12) // 36 - 24
                 .padding(.top, 58)
