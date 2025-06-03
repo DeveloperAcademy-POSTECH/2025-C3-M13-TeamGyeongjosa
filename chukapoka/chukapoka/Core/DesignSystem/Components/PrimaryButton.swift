@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+
 struct PrimaryButton: View {
     let title: String
     let style: PrimaryButtonStyle
@@ -22,7 +23,7 @@ struct PrimaryButton: View {
     private var buttonLabel: some View {
         return Text(title)
             .font(GSFont.body1)
-            .foregroundStyle(GSColor.white)
+            .foregroundStyle(style.textColor)
             .frame(maxWidth: .infinity)
             .frame(height: 50)
             .background(style.backgroundColor)
@@ -38,13 +39,13 @@ struct PrimaryButton: View {
             buttonLabel
         })
         .disabled(!style.isEnable)
-        .padding(.horizontal, 16)
     }
 }
 
 enum PrimaryButtonStyle {
     case basic
     case disabled
+    case custom(textColor: Color, backgroundColor: Color, isEnable: Bool)
     
     var textColor: Color {
         switch self {
@@ -52,6 +53,8 @@ enum PrimaryButtonStyle {
             return .white
         case .disabled:
             return .white
+        case .custom(let textColor, _, _):
+            return textColor
         }
     }
     
@@ -61,6 +64,8 @@ enum PrimaryButtonStyle {
             return GSColor.primary
         case .disabled:
             return GSColor.gray1
+        case .custom(_, let backgroundColor, _):
+            return backgroundColor
         }
     }
     
@@ -70,6 +75,8 @@ enum PrimaryButtonStyle {
             return true
         case .disabled:
             return false
+        case .custom(_, _, let isEnable):
+            return isEnable
         }
     }
 }

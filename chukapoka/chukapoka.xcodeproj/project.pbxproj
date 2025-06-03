@@ -19,6 +19,7 @@
 		D574E9D82DED897A00AAF70F /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = D574E9CE2DED897A00AAF70F /* Pretendard-Thin.otf */; };
 		D574E9DA2DED8A6500AAF70F /* GSFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = D574E9D92DED8A5C00AAF70F /* GSFont.swift */; };
 		D574E9DC2DED8E2E00AAF70F /* GSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D574E9DB2DED8E2900AAF70F /* GSColor.swift */; };
+		D574E9DE2DEDEE3500AAF70F /* PairButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D574E9DD2DEDEDE300AAF70F /* PairButton.swift */; };
 		D59F7C552DEAF20600A829A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D59F7C512DEAF20600A829A8 /* Assets.xcassets */; };
 		D59F7C562DEAF20600A829A8 /* chukapokaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59F7C522DEAF20600A829A8 /* chukapokaApp.swift */; };
 		D59F7C642DEAF56D00A829A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59F7C632DEAF56700A829A8 /* AppDelegate.swift */; };
@@ -63,6 +64,7 @@
 		D574E9CE2DED897A00AAF70F /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
 		D574E9D92DED8A5C00AAF70F /* GSFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSFont.swift; sourceTree = "<group>"; };
 		D574E9DB2DED8E2900AAF70F /* GSColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSColor.swift; sourceTree = "<group>"; };
+		D574E9DD2DEDEDE300AAF70F /* PairButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairButton.swift; sourceTree = "<group>"; };
 		D59F7C222DEAEB3600A829A8 /* chukapoka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chukapoka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D59F7C342DEAEB3700A829A8 /* chukapokaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chukapokaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D59F7C3E2DEAEB3700A829A8 /* chukapokaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chukapokaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +120,7 @@
 		D574E9AF2DED7F8A00AAF70F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D574E9DD2DEDEDE300AAF70F /* PairButton.swift */,
 				D574E9B02DED7F9400AAF70F /* PrimaryButton.swift */,
 			);
 			path = Components;
@@ -431,6 +434,7 @@
 				D59F7C702DEAF69400A829A8 /* Constants.swift in Sources */,
 				D5ED63172DED427B007912E1 /* RootNavigationView.swift in Sources */,
 				D59F7C812DEB09C200A829A8 /* EnterCodeView.swift in Sources */,
+				D574E9DE2DEDEE3500AAF70F /* PairButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
