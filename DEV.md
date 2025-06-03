@@ -119,6 +119,38 @@ Text("제목")
 ### PrimaryButton
 
 ```swift
+// TextField에 State따라서 기본 버튼 만드는 법
+
+
+import SwiftUI
+
+struct NameInputView: View {
+    @State private var name: String = ""
+
+    var body: some View {
+        VStack(spacing: 16) {
+            TextField("이름을 입력하세요", text: $name)
+                .padding()
+                .background(GSColor.gray3.opacity(0.1))
+                .cornerRadius(12)
+                .padding(.horizontal, 16)
+
+            PrimaryButton(
+                title: "다음",
+                style: name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+                    ? .disabled
+                    : .basic,
+                action: {
+                    print("입력값:", name)
+                }
+            )
+            .padding(.horizontal, 16)
+        }
+    }
+}
+
+// PrimaryButton 커스텀 시에 버튼 예시
+
 PrimaryButton(
   title: "다음",
   style: .custom(textColor: GSColor.white, backgroundColor: GSColor.primary, isEnable: true),
@@ -164,6 +196,8 @@ New Issue 버튼 누른 이후 템플릿 참조
 > PR 템플릿은 전체적인 구조는 따르되 필요없는 것은 수정 가능.
 
 ## 📦 SwiftData 모델링 (ERD 기반)
+
+![asda](https://github.com/user-attachments/assets/b1e52c24-b64b-43a2-ad7d-ba6033241e36)
 
 
 ## 🧾 Swift 코드 컨벤션
