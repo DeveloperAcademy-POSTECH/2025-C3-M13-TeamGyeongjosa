@@ -66,39 +66,39 @@
     <td align="center">
       <a href="https://github.com/YooGyeongMo">
         <img src="https://github.com/YooGyeongMo.png" width="60"/><br/>
-        <b>YooGyeongMo</b>
+        <b>Demian</b>
       </a>
     </td>
     <td align="center">
-      <a href="#">
-        <img src="https://github.com/username.png" width="60"/><br/>
-        <b>username</b>
+      <a href="https://github.com/ADA-Jenki">
+        <img src="https://github.com/ADA-Jenki.png" width="60"/><br/>
+        <b>Jenki</b>
       </a>
     </td>
     <td align="center">
-      <a href="#">
-        <img src="https://github.com/username.png" width="60"/><br/>
-        <b>username</b>
+      <a href="https://github.com/leetynim">
+        <img src="https://github.com/leetynim.png" width="60"/><br/>
+        <b>Way</b>
       </a>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <a href="#">
-        <img src="https://github.com/username.png" width="60"/><br/>
-        <b>username</b>
+      <a href="https://github.com/ohcuy">
+        <img src="https://github.com/ohcuy.png" width="60"/><br/>
+        <b>Yuu</b>
       </a>
     </td>
     <td align="center">
-      <a href="#">
-        <img src="https://github.com/username.png" width="60"/><br/>
-        <b>username</b>
+      <a href="https://github.com/uvo36">
+        <img src="https://github.com/uvo36.png" width="60"/><br/>
+        <b>Mosae</b>
       </a>
     </td>
     <td align="center">
-      <a href="#">
-        <img src="https://github.com/username.png" width="60"/><br/>
-        <b>username</b>
+      <a href="https://github.com/wish627">
+        <img src="https://github.com/wish627.png" width="60"/><br/>
+        <b>Wish</b>
       </a>
     </td>
   </tr>
