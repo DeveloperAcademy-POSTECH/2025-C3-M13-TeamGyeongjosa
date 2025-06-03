@@ -109,6 +109,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D51C80C12DEF47740051CB40 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
 		D574E9AD2DED7F6A00AAF70F /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +235,7 @@
 		D59F7C602DEAF4E000A829A8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				D51C80C12DEF47740051CB40 /* SubViews */,
 				D59F7C772DEB005E00A829A8 /* HomeView.swift */,
 			);
 			path = Home;
