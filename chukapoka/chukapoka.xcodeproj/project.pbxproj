@@ -51,6 +51,7 @@
 		D5B38C4A2DF04781005DAFDC /* PartyCardPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B38C492DF04781005DAFDC /* PartyCardPreview.swift */; };
 		D5B38C4D2DF04824005DAFDC /* PartyCardAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B38C4C2DF04824005DAFDC /* PartyCardAction.swift */; };
 		D5B38C4F2DF05A2C005DAFDC /* PartyCardGroupName.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B38C4E2DF05A11005DAFDC /* PartyCardGroupName.swift */; };
+		D5B38C532DF06D59005DAFDC /* ActionIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B38C522DF06D52005DAFDC /* ActionIconButton.swift */; };
 		D5ED63172DED427B007912E1 /* RootNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED63162DED427B007912E1 /* RootNavigationView.swift */; };
 /* End PBXBuildFile section */
 
@@ -121,6 +122,7 @@
 		D5B38C492DF04781005DAFDC /* PartyCardPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCardPreview.swift; sourceTree = "<group>"; };
 		D5B38C4C2DF04824005DAFDC /* PartyCardAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCardAction.swift; sourceTree = "<group>"; };
 		D5B38C4E2DF05A11005DAFDC /* PartyCardGroupName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCardGroupName.swift; sourceTree = "<group>"; };
+		D5B38C522DF06D52005DAFDC /* ActionIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionIconButton.swift; sourceTree = "<group>"; };
 		D5ED63162DED427B007912E1 /* RootNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -201,6 +203,7 @@
 			children = (
 				D5B38C362DF04079005DAFDC /* PartyCard */,
 				D5951AFF2DEFF68C006863B6 /* CustomTextField.swift */,
+				D5B38C522DF06D52005DAFDC /* ActionIconButton.swift */,
 				D574E9DD2DEDEDE300AAF70F /* PairButton.swift */,
 				D574E9B02DED7F9400AAF70F /* PrimaryButton.swift */,
 			);
@@ -540,6 +543,7 @@
 				D51C80D52DEF6B890051CB40 /* Party.swift in Sources */,
 				D5B38C4A2DF04781005DAFDC /* PartyCardPreview.swift in Sources */,
 				D5B38C482DF04775005DAFDC /* PartyCardModel.swift in Sources */,
+				D5B38C532DF06D59005DAFDC /* ActionIconButton.swift in Sources */,
 				D5B38C402DF04733005DAFDC /* PartyCardInfoText.swift in Sources */,
 				D59F7C7D2DEB00ED00A829A8 /* InfoStep1View.swift in Sources */,
 				55512E1E2DEEFB3300433ED8 /* LoadingView.swift in Sources */,

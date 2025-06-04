@@ -19,7 +19,3 @@ struct PartyCardGroupName: View {
             )
     }
 }
-
-#Preview {
-    PartyCardGroupName(groupName: "모임명")
-}
