@@ -51,6 +51,8 @@
 		D5B38C4D2DF04824005DAFDC /* PartyCardAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B38C4C2DF04824005DAFDC /* PartyCardAction.swift */; };
 		D5B38C4F2DF05A2C005DAFDC /* PartyCardGroupName.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B38C4E2DF05A11005DAFDC /* PartyCardGroupName.swift */; };
 		D5B38C532DF06D59005DAFDC /* ActionIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B38C522DF06D52005DAFDC /* ActionIconButton.swift */; };
+		D5B38C592DF09A11005DAFDC /* PartyCardBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B38C582DF09A0B005DAFDC /* PartyCardBackground.swift */; };
+		D5B38C5B2DF09B3F005DAFDC /* PartyCardContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B38C5A2DF09B39005DAFDC /* PartyCardContainer.swift */; };
 		D5ED63172DED427B007912E1 /* RootNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED63162DED427B007912E1 /* RootNavigationView.swift */; };
 /* End PBXBuildFile section */
 
@@ -121,6 +123,8 @@
 		D5B38C4C2DF04824005DAFDC /* PartyCardAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCardAction.swift; sourceTree = "<group>"; };
 		D5B38C4E2DF05A11005DAFDC /* PartyCardGroupName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCardGroupName.swift; sourceTree = "<group>"; };
 		D5B38C522DF06D52005DAFDC /* ActionIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionIconButton.swift; sourceTree = "<group>"; };
+		D5B38C582DF09A0B005DAFDC /* PartyCardBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCardBackground.swift; sourceTree = "<group>"; };
+		D5B38C5A2DF09B39005DAFDC /* PartyCardContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCardContainer.swift; sourceTree = "<group>"; };
 		D5ED63162DED427B007912E1 /* RootNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -355,6 +359,7 @@
 			isa = PBXGroup;
 			children = (
 				D5B38C372DF04081005DAFDC /* PartyCardView.swift */,
+				D5B38C5A2DF09B39005DAFDC /* PartyCardContainer.swift */,
 				D5B38C392DF045EC005DAFDC /* PartyCardStatusBadge.swift */,
 				D5B38C3B2DF045FB005DAFDC /* PartyCardActionIcons.swift */,
 				D5B38C3D2DF04621005DAFDC /* PartyCardTitle.swift */,
@@ -377,6 +382,7 @@
 			isa = PBXGroup;
 			children = (
 				D5B38C432DF0475A005DAFDC /* PartyCardStyle.swift */,
+				D5B38C582DF09A0B005DAFDC /* PartyCardBackground.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -562,6 +568,7 @@
 				D574E9DC2DED8E2E00AAF70F /* GSColor.swift in Sources */,
 				D574E9DA2DED8A6500AAF70F /* GSFont.swift in Sources */,
 				D51C80D52DEF6B890051CB40 /* Party.swift in Sources */,
+				D5B38C592DF09A11005DAFDC /* PartyCardBackground.swift in Sources */,
 				D5B38C482DF04775005DAFDC /* PartyCardModel.swift in Sources */,
 				D5B38C532DF06D59005DAFDC /* ActionIconButton.swift in Sources */,
 				D5B38C402DF04733005DAFDC /* PartyCardInfoText.swift in Sources */,
@@ -577,6 +584,7 @@
 				D59F7C762DEAF6E100A829A8 /* AppRoute.swift in Sources */,
 				D5B38C3E2DF04621005DAFDC /* PartyCardTitle.swift in Sources */,
 				D59F7C702DEAF69400A829A8 /* Constants.swift in Sources */,
+				D5B38C5B2DF09B3F005DAFDC /* PartyCardContainer.swift in Sources */,
 				D5ED63172DED427B007912E1 /* RootNavigationView.swift in Sources */,
 				D51C80CB2DEF487F0051CB40 /* HomeBottomButtons.swift in Sources */,
 				D59F7C812DEB09C200A829A8 /* EnterCodeView.swift in Sources */,
