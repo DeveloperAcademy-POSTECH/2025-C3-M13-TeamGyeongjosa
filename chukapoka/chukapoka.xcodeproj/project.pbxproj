@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55512E1E2DEEFB3300433ED8 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55512E1D2DEEFB3300433ED8 /* Loading.swift */; };
 		D51C80C32DEF48210051CB40 /* HomeIntroText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80C22DEF481C0051CB40 /* HomeIntroText.swift */; };
 		D51C80C52DEF482A0051CB40 /* HomeChracterImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80C42DEF48260051CB40 /* HomeChracterImage.swift */; };
 		D51C80CB2DEF487F0051CB40 /* HomeBottomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80CA2DEF487C0051CB40 /* HomeBottomButtons.swift */; };
@@ -58,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		55512E1D2DEEFB3300433ED8 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
 		D51C80C22DEF481C0051CB40 /* HomeIntroText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeIntroText.swift; sourceTree = "<group>"; };
 		D51C80C42DEF48260051CB40 /* HomeChracterImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChracterImage.swift; sourceTree = "<group>"; };
 		D51C80CA2DEF487C0051CB40 /* HomeBottomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomButtons.swift; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 		D59F7C5C2DEAF40300A829A8 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				55512E1D2DEEFB3300433ED8 /* Loading.swift */,
 				D59F7C602DEAF4E000A829A8 /* Home */,
 				D59F7C7A2DEB00B600A829A8 /* CreateGroup */,
 				D59F7C7B2DEB00C800A829A8 /* EnterGroup */,
@@ -483,6 +486,7 @@
 				D574E9DA2DED8A6500AAF70F /* GSFont.swift in Sources */,
 				D51C80D52DEF6B890051CB40 /* Party.swift in Sources */,
 				D59F7C7D2DEB00ED00A829A8 /* InfoStep1View.swift in Sources */,
+				55512E1E2DEEFB3300433ED8 /* Loading.swift in Sources */,
 				D574E9B12DED7FA000AAF70F /* PrimaryButton.swift in Sources */,
 				D51C80C32DEF48210051CB40 /* HomeIntroText.swift in Sources */,
 				D59F7C782DEB006200A829A8 /* HomeView.swift in Sources */,
