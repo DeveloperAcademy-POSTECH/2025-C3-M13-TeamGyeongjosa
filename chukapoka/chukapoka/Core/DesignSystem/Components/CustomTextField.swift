@@ -20,7 +20,7 @@ struct CustomTextField: View {
         placeholder: String,
         text: Binding<String>,
         action: (() -> Void)? = nil,
-        isValid: Binding<Bool>,
+        isValid: Binding<Bool>
     ) {
         self.title = title
         self.infoText = infoText
