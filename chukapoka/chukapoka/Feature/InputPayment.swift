@@ -53,7 +53,7 @@ struct InputPayment: View {
             
             ZStack(alignment: .leading) {
                 if amount.isEmpty {
-                    Text("얼마를 보낼까요?") // 깜빡 깜빡 ...
+                    Text("얼마를 보낼까요?")
                         .font(GSFont.title2)
                         .foregroundStyle(GSColor.gray1)
                 } else {
@@ -64,7 +64,7 @@ struct InputPayment: View {
                 
                 TextField("", text: $amount)
                     .keyboardType(.numberPad)
-                    .foregroundColor(.clear) // 사용하는 사람 눈에는 안보이게
+                    .foregroundColor(.clear)
                     .accentColor(.clear)
                     .disableAutocorrection(true)
             }
