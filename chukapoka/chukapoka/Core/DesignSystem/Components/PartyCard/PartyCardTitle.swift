@@ -20,7 +20,3 @@ struct PartyCardTitle: View {
             .padding(.leading, 16)
     }
 }
-
-#Preview {
-    PartyCardTitle(name: "지수")
-}

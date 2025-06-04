@@ -26,10 +26,3 @@ struct PartyCardInfoText: View {
         return formatter.string(from: weddingDate)
     }
 }
-
-#Preview {
-    PartyCardInfoText(
-        weddingDate: Date(),
-        weddingPlace: "서울 강남구 예식장 3층"
-    )
-}
