@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RootNavigationView: View {
     @EnvironmentObject var coordinator: AppCoordinator
-    @StateObject private var groupCreateViewModel: GroupCreateViewModel = GroupCreateViewModel()
+    @StateObject private var groupCreateViewModel: CreateGroupViewModel = CreateGroupViewModel()
     
     var body: some View {
         NavigationStack(path: $coordinator.path) {
@@ -20,11 +20,11 @@ struct RootNavigationView: View {
                         HomeView()
                     
                     // 그룹 생성 파티장 flow
-                    case .groupCreate(.infoStep1):
+                    case .createGroup(.infoStep1):
                         InfoStep1View(viewModel: groupCreateViewModel)
                     
                     // 그룹 참여 파티원 flow
-                    case . groupJoin(.enterCode):
+                    case .joinGroup(.enterCode):
                         EnterCodeView()
                         
                     }
