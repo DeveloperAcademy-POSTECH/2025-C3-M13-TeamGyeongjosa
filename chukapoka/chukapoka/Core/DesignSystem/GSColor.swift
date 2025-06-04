@@ -18,4 +18,8 @@ enum GSColor {
     static let gray3: Color = Color("Gray3") // placeholder
     static let black: Color = Color("Black1")
     static let white: Color = Color.white
+    static let cardRed1: Color = Color("CardRed")
+    static let cardRed2: Color = Color("CardRed2")
+    static let cardShadow: Color = Color("CardShadow")
+    static let cardYellow: Color = Color("CardYellow")
 }
