@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55512E272DEF1DD200433ED8 /* InputPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55512E262DEF1DD200433ED8 /* InputPayment.swift */; };
 		55512E1E2DEEFB3300433ED8 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55512E1D2DEEFB3300433ED8 /* LoadingView.swift */; };
 		D51C80C32DEF48210051CB40 /* HomeIntroText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80C22DEF481C0051CB40 /* HomeIntroText.swift */; };
 		D51C80C52DEF482A0051CB40 /* HomeChracterImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80C42DEF48260051CB40 /* HomeChracterImage.swift */; };
@@ -60,6 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		55512E262DEF1DD200433ED8 /* InputPayment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPayment.swift; sourceTree = "<group>"; };
 		55512E1D2DEEFB3300433ED8 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		D51C80C22DEF481C0051CB40 /* HomeIntroText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeIntroText.swift; sourceTree = "<group>"; };
 		D51C80C42DEF48260051CB40 /* HomeChracterImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChracterImage.swift; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				D59F7C602DEAF4E000A829A8 /* Home */,
 				D59F7C7A2DEB00B600A829A8 /* CreateGroup */,
 				D59F7C7B2DEB00C800A829A8 /* EnterGroup */,
+				55512E262DEF1DD200433ED8 /* InputPayment.swift */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 				D5ED63172DED427B007912E1 /* RootNavigationView.swift in Sources */,
 				D51C80CB2DEF487F0051CB40 /* HomeBottomButtons.swift in Sources */,
 				D59F7C812DEB09C200A829A8 /* EnterCodeView.swift in Sources */,
+				55512E272DEF1DD200433ED8 /* InputPayment.swift in Sources */,
 				D51C80D32DEF6B820051CB40 /* Wedding.swift in Sources */,
 				D574E9DE2DEDEE3500AAF70F /* PairButton.swift in Sources */,
 			);
