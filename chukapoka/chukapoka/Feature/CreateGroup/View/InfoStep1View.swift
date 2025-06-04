@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct InfoStep1View: View {
-    @StateObject private var viewModel: GroupCreateViewModel
+    @StateObject private var viewModel: CreateGroupViewModel
     
-    init(viewModel: GroupCreateViewModel) {
+    init(viewModel: CreateGroupViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
     }
     

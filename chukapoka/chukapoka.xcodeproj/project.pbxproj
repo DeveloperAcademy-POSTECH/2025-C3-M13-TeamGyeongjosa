@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		55512E272DEF1DD200433ED8 /* InputPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55512E262DEF1DD200433ED8 /* InputPayment.swift */; };
+		55512E1E2DEEFB3300433ED8 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55512E1D2DEEFB3300433ED8 /* LoadingView.swift */; };
+		D51C80C32DEF48210051CB40 /* HomeIntroText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80C22DEF481C0051CB40 /* HomeIntroText.swift */; };
+		D51C80C52DEF482A0051CB40 /* HomeChracterImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80C42DEF48260051CB40 /* HomeChracterImage.swift */; };
+		D51C80CB2DEF487F0051CB40 /* HomeBottomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80CA2DEF487C0051CB40 /* HomeBottomButtons.swift */; };
+		D51C80D32DEF6B820051CB40 /* Wedding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80D22DEF6B780051CB40 /* Wedding.swift */; };
+		D51C80D52DEF6B890051CB40 /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80D42DEF6B850051CB40 /* Party.swift */; };
+		D51C80D72DEF6B940051CB40 /* PartyMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80D62DEF6B8F0051CB40 /* PartyMember.swift */; };
+		D56CD4042DEF3BFD002267B1 /* GSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56CD4032DEF3BED002267B1 /* GSImage.swift */; };
 		D574E9B12DED7FA000AAF70F /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D574E9B02DED7F9400AAF70F /* PrimaryButton.swift */; };
 		D574E9D02DED897A00AAF70F /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = D574E9C62DED897A00AAF70F /* Pretendard-Black.otf */; };
 		D574E9D12DED897A00AAF70F /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D574E9C72DED897A00AAF70F /* Pretendard-Bold.otf */; };
@@ -21,6 +29,7 @@
 		D574E9DA2DED8A6500AAF70F /* GSFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = D574E9D92DED8A5C00AAF70F /* GSFont.swift */; };
 		D574E9DC2DED8E2E00AAF70F /* GSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D574E9DB2DED8E2900AAF70F /* GSColor.swift */; };
 		D574E9DE2DEDEE3500AAF70F /* PairButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D574E9DD2DEDEDE300AAF70F /* PairButton.swift */; };
+		D5951B002DEFF68C006863B6 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5951AFF2DEFF68C006863B6 /* CustomTextField.swift */; };
 		D59F7C552DEAF20600A829A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D59F7C512DEAF20600A829A8 /* Assets.xcassets */; };
 		D59F7C562DEAF20600A829A8 /* chukapokaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59F7C522DEAF20600A829A8 /* chukapokaApp.swift */; };
 		D59F7C642DEAF56D00A829A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59F7C632DEAF56700A829A8 /* AppDelegate.swift */; };
@@ -29,7 +38,7 @@
 		D59F7C762DEAF6E100A829A8 /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59F7C752DEAF6DF00A829A8 /* AppRoute.swift */; };
 		D59F7C782DEB006200A829A8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59F7C772DEB005E00A829A8 /* HomeView.swift */; };
 		D59F7C7D2DEB00ED00A829A8 /* InfoStep1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59F7C7C2DEB00E000A829A8 /* InfoStep1View.swift */; };
-		D59F7C7F2DEB019700A829A8 /* GroupCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59F7C7E2DEB019100A829A8 /* GroupCreateViewModel.swift */; };
+		D59F7C7F2DEB019700A829A8 /* CreateGroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59F7C7E2DEB019100A829A8 /* CreateGroupViewModel.swift */; };
 		D59F7C812DEB09C200A829A8 /* EnterCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59F7C802DEB09BF00A829A8 /* EnterCodeView.swift */; };
 		D5ED63172DED427B007912E1 /* RootNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED63162DED427B007912E1 /* RootNavigationView.swift */; };
 /* End PBXBuildFile section */
@@ -53,6 +62,14 @@
 
 /* Begin PBXFileReference section */
 		55512E262DEF1DD200433ED8 /* InputPayment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPayment.swift; sourceTree = "<group>"; };
+		55512E1D2DEEFB3300433ED8 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		D51C80C22DEF481C0051CB40 /* HomeIntroText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeIntroText.swift; sourceTree = "<group>"; };
+		D51C80C42DEF48260051CB40 /* HomeChracterImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChracterImage.swift; sourceTree = "<group>"; };
+		D51C80CA2DEF487C0051CB40 /* HomeBottomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomButtons.swift; sourceTree = "<group>"; };
+		D51C80D22DEF6B780051CB40 /* Wedding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wedding.swift; sourceTree = "<group>"; };
+		D51C80D42DEF6B850051CB40 /* Party.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Party.swift; sourceTree = "<group>"; };
+		D51C80D62DEF6B8F0051CB40 /* PartyMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyMember.swift; sourceTree = "<group>"; };
+		D56CD4032DEF3BED002267B1 /* GSImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSImage.swift; sourceTree = "<group>"; };
 		D574E9B02DED7F9400AAF70F /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		D574E9C52DED890000AAF70F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D574E9C62DED897A00AAF70F /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
@@ -67,6 +84,7 @@
 		D574E9D92DED8A5C00AAF70F /* GSFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSFont.swift; sourceTree = "<group>"; };
 		D574E9DB2DED8E2900AAF70F /* GSColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSColor.swift; sourceTree = "<group>"; };
 		D574E9DD2DEDEDE300AAF70F /* PairButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairButton.swift; sourceTree = "<group>"; };
+		D5951AFF2DEFF68C006863B6 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		D59F7C222DEAEB3600A829A8 /* chukapoka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chukapoka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D59F7C342DEAEB3700A829A8 /* chukapokaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chukapokaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D59F7C3E2DEAEB3700A829A8 /* chukapokaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chukapokaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,7 +96,7 @@
 		D59F7C752DEAF6DF00A829A8 /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
 		D59F7C772DEB005E00A829A8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D59F7C7C2DEB00E000A829A8 /* InfoStep1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoStep1View.swift; sourceTree = "<group>"; };
-		D59F7C7E2DEB019100A829A8 /* GroupCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCreateViewModel.swift; sourceTree = "<group>"; };
+		D59F7C7E2DEB019100A829A8 /* CreateGroupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupViewModel.swift; sourceTree = "<group>"; };
 		D59F7C802DEB09BF00A829A8 /* EnterCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterCodeView.swift; sourceTree = "<group>"; };
 		D59F7C9E2DECC2B100A829A8 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		D5ED63162DED427B007912E1 /* RootNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationView.swift; sourceTree = "<group>"; };
@@ -109,9 +127,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D51C80C12DEF47740051CB40 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				D51C80C22DEF481C0051CB40 /* HomeIntroText.swift */,
+				D51C80C42DEF48260051CB40 /* HomeChracterImage.swift */,
+				D51C80CA2DEF487C0051CB40 /* HomeBottomButtons.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		D51C80CE2DEF69E20051CB40 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D59F7C7C2DEB00E000A829A8 /* InfoStep1View.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D51C80CF2DEF69ED0051CB40 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D59F7C7E2DEB019100A829A8 /* CreateGroupViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D51C80D12DEF6B620051CB40 /* SharedModel */ = {
+			isa = PBXGroup;
+			children = (
+				D51C80D22DEF6B780051CB40 /* Wedding.swift */,
+				D51C80D42DEF6B850051CB40 /* Party.swift */,
+				D51C80D62DEF6B8F0051CB40 /* PartyMember.swift */,
+			);
+			path = SharedModel;
+			sourceTree = "<group>";
+		};
 		D574E9AD2DED7F6A00AAF70F /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				D56CD4032DEF3BED002267B1 /* GSImage.swift */,
 				D574E9DB2DED8E2900AAF70F /* GSColor.swift */,
 				D574E9D92DED8A5C00AAF70F /* GSFont.swift */,
 				D574E9AF2DED7F8A00AAF70F /* Components */,
@@ -122,6 +177,7 @@
 		D574E9AF2DED7F8A00AAF70F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D5951AFF2DEFF68C006863B6 /* CustomTextField.swift */,
 				D574E9DD2DEDEDE300AAF70F /* PairButton.swift */,
 				D574E9B02DED7F9400AAF70F /* PrimaryButton.swift */,
 			);
@@ -189,6 +245,7 @@
 		D59F7C5A2DEAF24500A829A8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				D51C80D12DEF6B620051CB40 /* SharedModel */,
 				D59F7C6D2DEAF64600A829A8 /* Extensions */,
 				D574E9AD2DED7F6A00AAF70F /* DesignSystem */,
 				D59F7C6F2DEAF69200A829A8 /* Constants.swift */,
@@ -208,8 +265,9 @@
 		D59F7C5C2DEAF40300A829A8 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				55512E1D2DEEFB3300433ED8 /* LoadingView.swift */,
 				D59F7C602DEAF4E000A829A8 /* Home */,
-				D59F7C7A2DEB00B600A829A8 /* GroupCreate */,
+				D59F7C7A2DEB00B600A829A8 /* CreateGroup */,
 				D59F7C7B2DEB00C800A829A8 /* EnterGroup */,
 				55512E262DEF1DD200433ED8 /* InputPayment.swift */,
 			);
@@ -229,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				D59F7C772DEB005E00A829A8 /* HomeView.swift */,
+				D51C80C12DEF47740051CB40 /* SubViews */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -240,13 +299,13 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		D59F7C7A2DEB00B600A829A8 /* GroupCreate */ = {
+		D59F7C7A2DEB00B600A829A8 /* CreateGroup */ = {
 			isa = PBXGroup;
 			children = (
-				D59F7C7C2DEB00E000A829A8 /* InfoStep1View.swift */,
-				D59F7C7E2DEB019100A829A8 /* GroupCreateViewModel.swift */,
+				D51C80CE2DEF69E20051CB40 /* View */,
+				D51C80CF2DEF69ED0051CB40 /* ViewModel */,
 			);
-			path = GroupCreate;
+			path = CreateGroup;
 			sourceTree = "<group>";
 		};
 		D59F7C7B2DEB00C800A829A8 /* EnterGroup */ = {
@@ -426,18 +485,27 @@
 			files = (
 				D59F7C742DEAF6D600A829A8 /* AppCoordinator.swift in Sources */,
 				D59F7C642DEAF56D00A829A8 /* AppDelegate.swift in Sources */,
-				D59F7C7F2DEB019700A829A8 /* GroupCreateViewModel.swift in Sources */,
+				D59F7C7F2DEB019700A829A8 /* CreateGroupViewModel.swift in Sources */,
+				D51C80D72DEF6B940051CB40 /* PartyMember.swift in Sources */,
+				D5951B002DEFF68C006863B6 /* CustomTextField.swift in Sources */,
 				D59F7C562DEAF20600A829A8 /* chukapokaApp.swift in Sources */,
 				D574E9DC2DED8E2E00AAF70F /* GSColor.swift in Sources */,
 				D574E9DA2DED8A6500AAF70F /* GSFont.swift in Sources */,
+				D51C80D52DEF6B890051CB40 /* Party.swift in Sources */,
 				D59F7C7D2DEB00ED00A829A8 /* InfoStep1View.swift in Sources */,
+				55512E1E2DEEFB3300433ED8 /* LoadingView.swift in Sources */,
 				D574E9B12DED7FA000AAF70F /* PrimaryButton.swift in Sources */,
+				D51C80C32DEF48210051CB40 /* HomeIntroText.swift in Sources */,
 				D59F7C782DEB006200A829A8 /* HomeView.swift in Sources */,
+				D56CD4042DEF3BFD002267B1 /* GSImage.swift in Sources */,
+				D51C80C52DEF482A0051CB40 /* HomeChracterImage.swift in Sources */,
 				D59F7C762DEAF6E100A829A8 /* AppRoute.swift in Sources */,
 				D59F7C702DEAF69400A829A8 /* Constants.swift in Sources */,
 				D5ED63172DED427B007912E1 /* RootNavigationView.swift in Sources */,
+				D51C80CB2DEF487F0051CB40 /* HomeBottomButtons.swift in Sources */,
 				D59F7C812DEB09C200A829A8 /* EnterCodeView.swift in Sources */,
 				55512E272DEF1DD200433ED8 /* InputPayment.swift in Sources */,
+				D51C80D32DEF6B820051CB40 /* Wedding.swift in Sources */,
 				D574E9DE2DEDEE3500AAF70F /* PairButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
