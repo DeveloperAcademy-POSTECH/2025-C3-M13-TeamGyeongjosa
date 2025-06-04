@@ -34,6 +34,13 @@ struct PartyCardView: View {
     }
     
     var body: some View {
+        GeometryReader { geometry in
+            buildCardView(height: geometry.size.height)
+        }
+    }
+    
+    @ViewBuilder
+    private func buildCardView(height: CGFloat) -> some View {
         VStack(spacing: 0) {
             HStack {
                 statusBadgeView()
@@ -49,34 +56,72 @@ struct PartyCardView: View {
                 .padding(.bottom, 16)
             
             infoTextView()
-
+                .padding(.bottom, 16)
+            
+            inviteCodeCopyButton()
+    
         }
         .padding(16)
-        .background(Color.black)
+        .background(cardBackground(height: height))
+        .background(.ultraThinMaterial)
         .cornerRadius(16)
+        .shadow(
+            color: GSColor.cardRed2.opacity(0.3),
+            radius: 30,
+            x: 0,
+            y: 4
+        )
     }
     
     private func titleView() -> some View {
         PartyCardTitle(name: name)
     }
-
+    
     private func groupNameView() -> some View {
         PartyCardGroupName(groupName: groupName)
     }
-
+    
     private func infoTextView() -> some View {
         PartyCardInfoText(weddingDate: weddingDate, weddingPlace: weddingPlace)
     }
-
+    
     private func statusBadgeView() -> some View {
         PartyCardStatusBadge(state: state)
     }
-
+    
     private func actionIconsView() -> some View {
         PartyCardActionIcons(
-                   onTapPhoto: { onTapPhoto?() },
-                   onTapClose: { onTapClose?() }
-               )
+            onTapPhoto: { onTapPhoto?() },
+            onTapClose: { onTapClose?() }
+        )
+    }
+    
+    private func inviteCodeCopyButton() -> some View {
+        PrimaryButton(title: "코드로 초대하기")
+    }
+    
+    private func cardBackground(height: CGFloat) -> some View {
+        ZStack {
+            LinearGradient(
+                colors: [
+                    GSColor.cardRed1.opacity(0.0),
+                    GSColor.cardRed1.opacity(1.0)
+                ],
+                startPoint: .top,
+                endPoint: .bottom
+            )
+            .opacity(0.2)
+            
+            LinearGradient(
+                colors: [
+                    GSColor.cardRed2.opacity(1.0),
+                    GSColor.cardYellow.opacity(1.0)
+                ],
+                startPoint: UnitPoint(x: 0.5, y: 0.38),
+                endPoint: .bottom
+            )
+            .opacity(0.5)
+        }
     }
 }
 
