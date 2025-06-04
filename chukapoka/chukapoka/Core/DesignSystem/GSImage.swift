@@ -9,4 +9,8 @@ import SwiftUI
 
 enum GSImage {
     static let mainLogo: Image = Image("MainPoki")
+    static let redFlower: Image = Image("RedFlower")
+    static let blueFlower: Image = Image("BlueFlower")
+    static let yellowFlower: Image = Image("YellowFlower")
+    static let messageRibbon: Image = Image("MessageRibbon")
 }
