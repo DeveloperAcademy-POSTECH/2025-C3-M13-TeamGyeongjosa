@@ -8,7 +8,7 @@ import Foundation
 import SwiftUI
 
 @MainActor
-final class GroupCreateViewModel: ObservableObject {
+final class CreateGroupViewModel: ObservableObject {
     @Published var name: String = ""
     
     // View가 처리

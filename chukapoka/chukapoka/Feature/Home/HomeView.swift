@@ -11,15 +11,26 @@ struct HomeView: View {
     @EnvironmentObject var coordinator: AppCoordinator
 
     var body: some View {
-        VStack(spacing: 24) {
-            Button("🎉 그룹 만들기") {
-                coordinator.push(.groupCreate(.infoStep1))
-            }
-
-            Button("💌 코드 입력하기") {
-                coordinator.push(.groupJoin(.enterCode))
-            }
+        VStack(spacing: 0) {
+            Spacer()
+            HomeIntroText()
+                .padding(.bottom, 96)
+            HomeChracterImage()
+            Spacer()
+            HomeBottomButtons(
+                onGroupCreateTapped: {
+                    coordinator.push(.createGroup(.infoStep1))
+                },
+                onGroupJoinTapped: {
+                    coordinator.push(.joinGroup(.enterCode))
+                }
+            )
+            .padding(.bottom, 24)
         }
-        .navigationTitle("홈")
     }
+}
+
+#Preview {
+    HomeView()
+        .environmentObject(AppCoordinator())
 }
