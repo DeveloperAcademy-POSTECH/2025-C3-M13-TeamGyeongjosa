@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct FlowerstandStep5: View {
-    @State var name: String = "강지수"
-    
     var body: some View {
         VStack(alignment: .center, spacing: 155) {
-            Text("\(name)님 만의\n진심이 담긴 화환이 준비되었어요!")
+            Text("포키가 화환을 배달하고 있어요\n조금만 기다려주세요")
                 .font(GSFont.title2)
                 .foregroundColor(GSColor.black)
                 .multilineTextAlignment(.center)
+            
+            Image("FinishCreatePoki")
         }
     }
 }
