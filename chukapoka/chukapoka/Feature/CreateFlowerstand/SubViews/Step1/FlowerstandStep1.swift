@@ -75,3 +75,7 @@ struct FlowerstandStep1: View {
         .padding(.horizontal, 16)
     }
 }
+
+#Preview {
+    FlowerstandStep1()
+}

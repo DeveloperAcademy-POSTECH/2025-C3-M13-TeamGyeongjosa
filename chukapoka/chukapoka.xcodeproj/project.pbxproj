@@ -66,6 +66,7 @@
 		D5B38C5E2DF0A769005DAFDC /* PartyCardBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B38C5D2DF0A763005DAFDC /* PartyCardBackView.swift */; };
 		D5B38C642DF0AB04005DAFDC /* PartyCardBackContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B38C632DF0AAFA005DAFDC /* PartyCardBackContainer.swift */; };
 		D5ED63172DED427B007912E1 /* RootNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED63162DED427B007912E1 /* RootNavigationView.swift */; };
+		D5F710AE2DF13C9D00F2CE3B /* CreateFlowerstandViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F710AD2DF13C9000F2CE3B /* CreateFlowerstandViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +151,7 @@
 		D5B38C5D2DF0A763005DAFDC /* PartyCardBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCardBackView.swift; sourceTree = "<group>"; };
 		D5B38C632DF0AAFA005DAFDC /* PartyCardBackContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCardBackContainer.swift; sourceTree = "<group>"; };
 		D5ED63162DED427B007912E1 /* RootNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationView.swift; sourceTree = "<group>"; };
+		D5F710AD2DF13C9000F2CE3B /* CreateFlowerstandViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFlowerstandViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +249,7 @@
 			children = (
 				CA064B272DF06B8C0048F794 /* SubViews */,
 				CA0B87EB2DF0217A0001F120 /* CreateFlowerstandView.swift */,
+				D5F710AC2DF13C3600F2CE3B /* ViewModel */,
 			);
 			path = CreateFlowerstand;
 			sourceTree = "<group>";
@@ -391,11 +394,11 @@
 		D59F7C5C2DEAF40300A829A8 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				D59F7C602DEAF4E000A829A8 /* Home */,
+				D59F7C7A2DEB00B600A829A8 /* CreateGroup */,
 				CA0B87EA2DF021300001F120 /* CreateFlowerstand */,
 				55935E222DEFE23D0079FFBB /* NameCheck .swift */,
 				55512E1D2DEEFB3300433ED8 /* LoadingView.swift */,
-				D59F7C602DEAF4E000A829A8 /* Home */,
-				D59F7C7A2DEB00B600A829A8 /* CreateGroup */,
 				D59F7C7B2DEB00C800A829A8 /* EnterGroup */,
 			);
 			path = Feature;
@@ -485,6 +488,14 @@
 				D5B38C582DF09A0B005DAFDC /* PartyCardBackground.swift */,
 			);
 			path = Style;
+			sourceTree = "<group>";
+		};
+		D5F710AC2DF13C3600F2CE3B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D5F710AD2DF13C9000F2CE3B /* CreateFlowerstandViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -676,6 +687,7 @@
 				D5B38C482DF04775005DAFDC /* PartyCardModel.swift in Sources */,
 				D5B38C532DF06D59005DAFDC /* ActionIconButton.swift in Sources */,
 				D5B38C402DF04733005DAFDC /* PartyCardInfoText.swift in Sources */,
+				D5F710AE2DF13C9D00F2CE3B /* CreateFlowerstandViewModel.swift in Sources */,
 				D59F7C7D2DEB00ED00A829A8 /* InfoStep1View.swift in Sources */,
 				55512E1E2DEEFB3300433ED8 /* LoadingView.swift in Sources */,
 				D574E9B12DED7FA000AAF70F /* PrimaryButton.swift in Sources */,
