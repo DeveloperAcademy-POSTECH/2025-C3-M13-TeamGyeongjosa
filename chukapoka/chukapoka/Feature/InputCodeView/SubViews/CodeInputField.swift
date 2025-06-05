@@ -64,8 +64,8 @@ struct CodeInputField: View {
                 .padding(.horizontal, 16)
 
                 Button("유효성 확인") {
-                    let pattern = "^[A-Z0-9]{6}$"
-                    if let _ = text.range(of: pattern, options: .regularExpression) {
+                    let pattern: String = "^[A-Z0-9]{6}$"
+                    if text.range(of: pattern, options: .regularExpression) != nil {
                         isValid = true
                     } else {
                         isValid = false

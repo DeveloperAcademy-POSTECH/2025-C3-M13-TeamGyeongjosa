@@ -10,8 +10,6 @@
 		55512E1E2DEEFB3300433ED8 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55512E1D2DEEFB3300433ED8 /* LoadingView.swift */; };
 		55512E272DEF1DD200433ED8 /* InputPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55512E262DEF1DD200433ED8 /* InputPayment.swift */; };
 		55935E232DEFE2470079FFBB /* NameCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55935E222DEFE23D0079FFBB /* NameCheck.swift */; };
-		55935E272DF021E40079FFBB /* InputCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55935E262DF021D10079FFBB /* InputCodeView.swift */; };
-		55935E292DF0365A0079FFBB /* CodeInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55935E282DF036580079FFBB /* CodeInputField.swift */; };
 		D51C80C32DEF48210051CB40 /* HomeIntroText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80C22DEF481C0051CB40 /* HomeIntroText.swift */; };
 		D51C80C52DEF482A0051CB40 /* HomeChracterImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80C42DEF48260051CB40 /* HomeChracterImage.swift */; };
 		D51C80CB2DEF487F0051CB40 /* HomeBottomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80CA2DEF487C0051CB40 /* HomeBottomButtons.swift */; };
@@ -67,8 +65,6 @@
 		55512E1D2DEEFB3300433ED8 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		55512E262DEF1DD200433ED8 /* InputPayment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPayment.swift; sourceTree = "<group>"; };
 		55935E222DEFE23D0079FFBB /* NameCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameCheck.swift; sourceTree = "<group>"; };
-		55935E262DF021D10079FFBB /* InputCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputCodeView.swift; sourceTree = "<group>"; };
-		55935E282DF036580079FFBB /* CodeInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeInputField.swift; sourceTree = "<group>"; };
 		D51C80C22DEF481C0051CB40 /* HomeIntroText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeIntroText.swift; sourceTree = "<group>"; };
 		D51C80C42DEF48260051CB40 /* HomeChracterImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChracterImage.swift; sourceTree = "<group>"; };
 		D51C80CA2DEF487C0051CB40 /* HomeBottomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomButtons.swift; sourceTree = "<group>"; };
@@ -107,6 +103,14 @@
 		D59F7C9E2DECC2B100A829A8 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		D5ED63162DED427B007912E1 /* RootNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		55935E2A2DF11CB10079FFBB /* InputCodeView */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = InputCodeView;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D59F7C1F2DEAEB3600A829A8 /* Frameworks */ = {
@@ -271,8 +275,7 @@
 		D59F7C5C2DEAF40300A829A8 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				55935E282DF036580079FFBB /* CodeInputField.swift */,
-				55935E262DF021D10079FFBB /* InputCodeView.swift */,
+				55935E2A2DF11CB10079FFBB /* InputCodeView */,
 				55935E222DEFE23D0079FFBB /* NameCheck.swift */,
 				55512E1D2DEEFB3300433ED8 /* LoadingView.swift */,
 				D59F7C602DEAF4E000A829A8 /* Home */,
@@ -340,6 +343,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				55935E2A2DF11CB10079FFBB /* InputCodeView */,
 			);
 			name = chukapoka;
 			packageProductDependencies = (
@@ -504,7 +510,6 @@
 				D51C80D52DEF6B890051CB40 /* Party.swift in Sources */,
 				D59F7C7D2DEB00ED00A829A8 /* InfoStep1View.swift in Sources */,
 				55512E1E2DEEFB3300433ED8 /* LoadingView.swift in Sources */,
-				55935E272DF021E40079FFBB /* InputCodeView.swift in Sources */,
 				D574E9B12DED7FA000AAF70F /* PrimaryButton.swift in Sources */,
 				D51C80C32DEF48210051CB40 /* HomeIntroText.swift in Sources */,
 				D59F7C782DEB006200A829A8 /* HomeView.swift in Sources */,
@@ -518,7 +523,6 @@
 				55512E272DEF1DD200433ED8 /* InputPayment.swift in Sources */,
 				D51C80D32DEF6B820051CB40 /* Wedding.swift in Sources */,
 				D574E9DE2DEDEE3500AAF70F /* PairButton.swift in Sources */,
-				55935E292DF0365A0079FFBB /* CodeInputField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -679,7 +683,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 9S8SHSW95K;
+				DEVELOPMENT_TEAM = 5SF56ZM8WP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = chukapoka/Info.plist;
@@ -709,7 +713,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 9S8SHSW95K;
+				DEVELOPMENT_TEAM = 5SF56ZM8WP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = chukapoka/Info.plist;
