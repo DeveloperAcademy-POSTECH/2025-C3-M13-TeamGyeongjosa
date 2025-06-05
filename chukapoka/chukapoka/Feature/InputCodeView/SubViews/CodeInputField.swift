@@ -43,6 +43,7 @@ struct CodeInputField: View {
                     .font(.caption)
                     .foregroundColor(.red)
                     .padding(.leading, 4)
+                    .padding(.top, 8)
             }
         }
     }

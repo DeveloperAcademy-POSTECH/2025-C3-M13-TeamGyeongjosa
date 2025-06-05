@@ -23,6 +23,10 @@ struct InputCodeView: View {
                 .padding(.bottom, 30)
         }
         .padding(.horizontal, 16)
+        .background(Color.white)
+                .onTapGesture {
+                    self.endTextEditing()
+                }
     }
 }
 

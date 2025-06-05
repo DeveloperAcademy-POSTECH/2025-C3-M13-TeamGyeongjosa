@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5551279E2DF12DD6002CC923 /* TextfieldDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5551279C2DF12DC6002CC923 /* TextfieldDown.swift */; };
 		55512E1E2DEEFB3300433ED8 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55512E1D2DEEFB3300433ED8 /* LoadingView.swift */; };
 		55512E272DEF1DD200433ED8 /* InputPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55512E262DEF1DD200433ED8 /* InputPayment.swift */; };
 		55935E232DEFE2470079FFBB /* NameCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55935E222DEFE23D0079FFBB /* NameCheck.swift */; };
@@ -62,6 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5551279C2DF12DC6002CC923 /* TextfieldDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldDown.swift; sourceTree = "<group>"; };
 		55512E1D2DEEFB3300433ED8 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		55512E262DEF1DD200433ED8 /* InputPayment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPayment.swift; sourceTree = "<group>"; };
 		55935E222DEFE23D0079FFBB /* NameCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameCheck.swift; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 				D59F7C7A2DEB00B600A829A8 /* CreateGroup */,
 				D59F7C7B2DEB00C800A829A8 /* EnterGroup */,
 				55512E262DEF1DD200433ED8 /* InputPayment.swift */,
+				5551279C2DF12DC6002CC923 /* TextfieldDown.swift */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 				D59F7C812DEB09C200A829A8 /* EnterCodeView.swift in Sources */,
 				55512E272DEF1DD200433ED8 /* InputPayment.swift in Sources */,
 				D51C80D32DEF6B820051CB40 /* Wedding.swift in Sources */,
+				5551279E2DF12DD6002CC923 /* TextfieldDown.swift in Sources */,
 				D574E9DE2DEDEE3500AAF70F /* PairButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
