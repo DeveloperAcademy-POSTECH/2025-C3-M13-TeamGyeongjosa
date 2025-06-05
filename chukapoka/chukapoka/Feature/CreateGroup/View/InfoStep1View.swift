@@ -18,9 +18,10 @@ struct InfoStep1View: View {
   @StateObject private var viewModel: CreateGroupViewModel
   
   // MARK: - Input States
-  @State private var party_name: String = ""
-  @State private var wedding_date: String = ""
-  @State private var wedding_time: String = ""
+  @State private var partyName: String = ""
+  @State private var weddingPlace: String = ""
+  @State private var weddingDate: String = ""
+  @State private var weddingTime: String = ""
   
   // MARK: - Validation States
   @State private var isGroupNameValid: Bool = true
@@ -72,7 +73,7 @@ struct InfoStep1View: View {
   
   // MARK: - View Body
   var body: some View {
-    ProgressView(value: 0.33)
+    ProgressView(value: 0.25)
       .tint(GSColor.primary)
       .background(Color(.white))
       .frame(height: 1)
@@ -90,7 +91,7 @@ struct InfoStep1View: View {
       CustomTextField(
         title: "모임명",
         placeholder: "어떤 파티에서 화환을 전달하나요?",
-        text: $party_name,
+        text: $partyName,
         isValid: $isGroupNameValid
       )
       .padding(.bottom, 32)
@@ -99,7 +100,7 @@ struct InfoStep1View: View {
       CustomTextField(
         title: "결혼식 장소",
         placeholder: "결혼식 장소를 입력해주세요",
-        text: $wedding_place,
+        text: $weddingPlace,
         isValid: $isLocationValid
       )
       .padding(.bottom, 32)
@@ -108,12 +109,12 @@ struct InfoStep1View: View {
       CustomTextField(
         title: "결혼식 날짜",
         placeholder: "YYYY. MM. DD",
-        text: $wedding_date,
+        text: $weddingDate,
         isValid: $isDateValid
       )
       .keyboardType(.numberPad)
-      .onChange(of: wedding_date) {
-        wedding_date = formatDateInput(wedding_date)
+      .onChange(of: weddingDate) {
+        weddingDate = formatDateInput(weddingDate)
       }
       .padding(.bottom, 32)
       
@@ -121,12 +122,12 @@ struct InfoStep1View: View {
       CustomTextField(
         title: "결혼식 시간",
         placeholder: "HH:MM",
-        text: $wedding_time,
+        text: $weddingTime,
         isValid: $isTimeValid
       )
       .keyboardType(.numberPad)
-      .onChange(of: wedding_time) {
-        wedding_time = formatTimeInput(wedding_time)
+      .onChange(of: weddingTime) {
+        weddingTime = formatTimeInput(weddingTime)
       }
       .padding(.bottom, 32)
       
