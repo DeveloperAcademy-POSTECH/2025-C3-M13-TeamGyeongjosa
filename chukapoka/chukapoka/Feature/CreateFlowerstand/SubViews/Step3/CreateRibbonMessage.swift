@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CreateRibbonMessage: View {
-    @State private var text: String = ""
+    @Binding var text: String
     @State private var isValid: Bool = true
 
     var body: some View {
@@ -32,6 +32,13 @@ struct CreateRibbonMessage: View {
             .onChange(of: text) {
                 if text.count > 10 {
                     text = String(text.prefix(10))
+                    isValid = false
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) {
+                        withAnimation(.easeInOut(duration: 0.25)) {
+                            isValid = true
+                        }
+                    }
                 }
                 if !isValid {
                     withAnimation(.easeInOut(duration: 0.25)) {
@@ -47,8 +54,4 @@ struct CreateRibbonMessage: View {
                 .stroke(isValid ? Color.clear : Color.red, lineWidth: 1)
         )
     }
-}
-
-#Preview {
-    CreateRibbonMessage()
 }

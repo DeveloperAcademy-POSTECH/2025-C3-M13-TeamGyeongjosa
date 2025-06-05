@@ -9,7 +9,10 @@ import SwiftUI
 
 struct FlowerstandStep3: View {
     @State private var text: String = ""
-    @State private var isValid: Bool = true
+
+    var isValidMessage: Bool {
+        !text.isEmpty && text.count <= 10
+    }
     
     var body: some View {
         ZStack(alignment: .leading) {
@@ -23,9 +26,10 @@ struct FlowerstandStep3: View {
                 
                 Spacer()
                 
-                CreateRibbonMessage()
+                CreateRibbonMessage(text: $text)
                 
-                PrimaryButton(title: "다음", style: .basic)
+                PrimaryButton(title: "다음",
+                              style: isValidMessage ? .basic : .disabled)
             }
             .padding(.horizontal, 16)
         }
