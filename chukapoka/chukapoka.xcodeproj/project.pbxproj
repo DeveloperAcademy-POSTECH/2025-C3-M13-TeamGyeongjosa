@@ -13,9 +13,8 @@
 		CA064B242DF05F660048F794 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA064B232DF05F660048F794 /* Assets.xcassets */; };
 		CA064B262DF061AD0048F794 /* SelectedFlowerGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA064B252DF061AD0048F794 /* SelectedFlowerGroup.swift */; };
 		CA064B2E2DF074040048F794 /* CreateRibbonMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA064B2D2DF074040048F794 /* CreateRibbonMessage.swift */; };
-		CA064B332DF07AF40048F794 /* FlowerstandStep5.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA064B322DF07AF40048F794 /* FlowerstandStep5.swift */; };
-		CA064B352DF07B090048F794 /* FlowerstandStep4.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA064B342DF07B090048F794 /* FlowerstandStep4.swift */; };
-		CA064B382DF07D2E0048F794 /* FlowerstandStep6.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA064B372DF07D2E0048F794 /* FlowerstandStep6.swift */; };
+		CA064B332DF07AF40048F794 /* FlowerstandStep4.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA064B322DF07AF40048F794 /* FlowerstandStep4.swift */; };
+		CA064B352DF07B090048F794 /* FlowerstandStep5.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA064B342DF07B090048F794 /* FlowerstandStep5.swift */; };
 		CA0B87EC2DF0217A0001F120 /* CreateFlowerstandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0B87EB2DF0217A0001F120 /* CreateFlowerstandView.swift */; };
 		CA0B87EE2DF021B80001F120 /* CircleProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0B87ED2DF021B80001F120 /* CircleProgress.swift */; };
 		CA0B87F02DF021F50001F120 /* FlowerstandStep1.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0B87EF2DF021F50001F120 /* FlowerstandStep1.swift */; };
@@ -91,9 +90,8 @@
 		CA064B232DF05F660048F794 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA064B252DF061AD0048F794 /* SelectedFlowerGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedFlowerGroup.swift; sourceTree = "<group>"; };
 		CA064B2D2DF074040048F794 /* CreateRibbonMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRibbonMessage.swift; sourceTree = "<group>"; };
-		CA064B322DF07AF40048F794 /* FlowerstandStep5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerstandStep5.swift; sourceTree = "<group>"; };
-		CA064B342DF07B090048F794 /* FlowerstandStep4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerstandStep4.swift; sourceTree = "<group>"; };
-		CA064B372DF07D2E0048F794 /* FlowerstandStep6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerstandStep6.swift; sourceTree = "<group>"; };
+		CA064B322DF07AF40048F794 /* FlowerstandStep4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerstandStep4.swift; sourceTree = "<group>"; };
+		CA064B342DF07B090048F794 /* FlowerstandStep5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerstandStep5.swift; sourceTree = "<group>"; };
 		CA0B87EB2DF0217A0001F120 /* CreateFlowerstandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFlowerstandView.swift; sourceTree = "<group>"; };
 		CA0B87ED2DF021B80001F120 /* CircleProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgress.swift; sourceTree = "<group>"; };
 		CA0B87EF2DF021F50001F120 /* FlowerstandStep1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerstandStep1.swift; sourceTree = "<group>"; };
@@ -184,7 +182,6 @@
 				CA064B2A2DF06C790048F794 /* Step3 */,
 				CA064B2F2DF07AC60048F794 /* Step4 */,
 				CA064B302DF07ACB0048F794 /* Step5 */,
-				CA064B362DF07D1B0048F794 /* Step6 */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -220,7 +217,7 @@
 		CA064B2F2DF07AC60048F794 /* Step4 */ = {
 			isa = PBXGroup;
 			children = (
-				CA064B342DF07B090048F794 /* FlowerstandStep4.swift */,
+				CA064B322DF07AF40048F794 /* FlowerstandStep4.swift */,
 			);
 			path = Step4;
 			sourceTree = "<group>";
@@ -228,7 +225,7 @@
 		CA064B302DF07ACB0048F794 /* Step5 */ = {
 			isa = PBXGroup;
 			children = (
-				CA064B322DF07AF40048F794 /* FlowerstandStep5.swift */,
+				CA064B342DF07B090048F794 /* FlowerstandStep5.swift */,
 			);
 			path = Step5;
 			sourceTree = "<group>";
@@ -239,14 +236,6 @@
 				CA0B87ED2DF021B80001F120 /* CircleProgress.swift */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		CA064B362DF07D1B0048F794 /* Step6 */ = {
-			isa = PBXGroup;
-			children = (
-				CA064B372DF07D2E0048F794 /* FlowerstandStep6.swift */,
-			);
-			path = Step6;
 			sourceTree = "<group>";
 		};
 		CA0B87EA2DF021300001F120 /* CreateFlowerstand */ = {
@@ -674,7 +663,6 @@
 				D574E9DC2DED8E2E00AAF70F /* GSColor.swift in Sources */,
 				CA064B222DF05DE60048F794 /* FlowerstandStep3.swift in Sources */,
 				D574E9DA2DED8A6500AAF70F /* GSFont.swift in Sources */,
-				CA064B382DF07D2E0048F794 /* FlowerstandStep6.swift in Sources */,
 				D51C80D52DEF6B890051CB40 /* Party.swift in Sources */,
 				D5B38C592DF09A11005DAFDC /* PartyCardBackground.swift in Sources */,
 				D5B38C482DF04775005DAFDC /* PartyCardModel.swift in Sources */,
@@ -684,7 +672,7 @@
 				55512E1E2DEEFB3300433ED8 /* LoadingView.swift in Sources */,
 				D574E9B12DED7FA000AAF70F /* PrimaryButton.swift in Sources */,
 				D51C80C32DEF48210051CB40 /* HomeIntroText.swift in Sources */,
-				CA064B332DF07AF40048F794 /* FlowerstandStep5.swift in Sources */,
+				CA064B332DF07AF40048F794 /* FlowerstandStep4.swift in Sources */,
 				CA0B87EE2DF021B80001F120 /* CircleProgress.swift in Sources */,
 				D5B38C4F2DF05A2C005DAFDC /* PartyCardGroupName.swift in Sources */,
 				D59F7C782DEB006200A829A8 /* HomeView.swift in Sources */,
@@ -702,7 +690,7 @@
 				D51C80CB2DEF487F0051CB40 /* HomeBottomButtons.swift in Sources */,
 				CA064B2E2DF074040048F794 /* CreateRibbonMessage.swift in Sources */,
 				D59F7C812DEB09C200A829A8 /* EnterCodeView.swift in Sources */,
-				CA064B352DF07B090048F794 /* FlowerstandStep4.swift in Sources */,
+				CA064B352DF07B090048F794 /* FlowerstandStep5.swift in Sources */,
 				CA2C4A492DF0513700D8E170 /* FlowerstandCardView.swift in Sources */,
 				D51C80D32DEF6B820051CB40 /* Wedding.swift in Sources */,
 				CA0B87EC2DF0217A0001F120 /* CreateFlowerstandView.swift in Sources */,
