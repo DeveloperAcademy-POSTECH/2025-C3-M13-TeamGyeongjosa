@@ -23,4 +23,6 @@ enum GSFont {
     static let caption2: Font = .custom("Pretendard-Medium", size: 14)
     /// font: Pretendard, size: 14, weight: bold
     static let caption3: Font = .custom("Pretendard-Bold", size: 14)
+    /// font: Pretendard, size: 36, weight: bold
+    static let invite: Font = .custom("Pretendard-Bold", size: 36)
 }
