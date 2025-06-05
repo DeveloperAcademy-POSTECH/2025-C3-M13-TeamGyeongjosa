@@ -193,6 +193,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8447205A2DF1763A00FE9441 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				8447205E2DF1766C00FE9441 /* Common */,
+				8447205B2DF1764E00FE9441 /* Step1 */,
+				8447205C2DF1765A00FE9441 /* Step2 */,
+				8447205D2DF1766200FE9441 /* Step3 */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		8447205B2DF1764E00FE9441 /* Step1 */ = {
+			isa = PBXGroup;
+			children = (
+				D59F7C7C2DEB00E000A829A8 /* InfoStep1View.swift */,
+			);
+			path = Step1;
+			sourceTree = "<group>";
+		};
+		8447205C2DF1765A00FE9441 /* Step2 */ = {
+			isa = PBXGroup;
+			children = (
+				844720542DF16DD100FE9441 /* InfoStep2View.swift */,
+			);
+			path = Step2;
+			sourceTree = "<group>";
+		};
+		8447205D2DF1766200FE9441 /* Step3 */ = {
+			isa = PBXGroup;
+			children = (
+				844720552DF16DD100FE9441 /* InfoStep3View.swift */,
+			);
+			path = Step3;
+			sourceTree = "<group>";
+		};
+		8447205E2DF1766C00FE9441 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				844720582DF1700500FE9441 /* CustomProgressView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		CA064B272DF06B8C0048F794 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,10 +323,7 @@
 		D51C80CE2DEF69E20051CB40 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D59F7C7C2DEB00E000A829A8 /* InfoStep1View.swift */,
-				844720542DF16DD100FE9441 /* InfoStep2View.swift */,
-				844720552DF16DD100FE9441 /* InfoStep3View.swift */,
-				844720582DF1700500FE9441 /* CustomProgressView.swift */,
+				8447205A2DF1763A00FE9441 /* SubViews */,
 			);
 			path = View;
 			sourceTree = "<group>";

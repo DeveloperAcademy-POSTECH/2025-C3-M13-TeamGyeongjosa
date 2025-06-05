@@ -22,7 +22,6 @@ struct CustomProgressView: View {
                 .fill(GSColor.primary)
                 .frame(width: UIScreen.main.bounds.width * progress - 0, height: 2) // 16pt 좌우 패딩 고려
         }
-        .padding(.bottom, 57)
     }
 }
 
