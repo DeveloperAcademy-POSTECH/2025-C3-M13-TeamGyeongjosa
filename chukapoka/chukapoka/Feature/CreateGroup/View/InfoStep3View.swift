@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct InfoStep1View: View {
+struct InfoStep3View: View {
   
   @State private var shouldNavigate: Bool = false
   // MARK: - 뒤로가기 기능 호출 (기본 애니메이션 유지)
@@ -18,10 +18,8 @@ struct InfoStep1View: View {
   @StateObject private var viewModel: CreateGroupViewModel
   
   // MARK: - Input States
-  @State private var partyName: String = ""
-  @State private var weddingPlace: String = ""
-  @State private var weddingDate: String = ""
-  @State private var weddingTime: String = ""
+  @State private var accountName: String = ""
+  @State private var accountNumber: String = ""
   
   // MARK: - Validation States
   @State private var isGroupNameValid: Bool = true
@@ -36,44 +34,15 @@ struct InfoStep1View: View {
   
   // MARK: - Format Utilities
 
-  /// 숫자만 허용
-  func allowOnlyDigits(_ input: String) -> String {
-      input.filter { $0.isNumber }
-  }
-  
-  /// YYYY.MM.DD 형식으로 날짜 자동 포맷팅
-  func formatDateInput(_ input: String) -> String {
-      let digits: String = input.filter { $0.isNumber }
-      let limited: String = String(digits.prefix(8)) // 최대 8자리까지 (YYYYMMDD)
-
-      var result: String = ""
-      for (index, char) in limited.enumerated() {
-          if index == 4 || index == 6 {
-              result.append(".")
-          }
-          result.append(char)
-      }
-      return result
-  }
-  
-  /// HH:MM 형식으로 시간 자동 포맷팅
-  func formatTimeInput(_ input: String) -> String {
-      let digits: String = input.filter { $0.isNumber }
-      let limited: String = String(digits.prefix(4)) // 최대 4자리 (HHMM)
-
-      var result: String = ""
-      for (index, char) in limited.enumerated() {
-          if index == 2 {
-              result.append(":")
-          }
-          result.append(char)
-      }
-      return result
+  /// 한글만 허용 + 길이 제한 (2~5자)
+  func isValidAccountHolderName(_ input: String) -> Bool {
+      let regex = "^[가-힣]{2,5}$"
+      return NSPredicate(format: "SELF MATCHES %@", regex).evaluate(with: input)
   }
   
   // MARK: - View Body
   var body: some View {
-    ProgressView(value: 0.25)
+    ProgressView(value: 0.75)
       .tint(GSColor.primary)
       .background(Color(.white))
       .frame(height: 1)
@@ -82,54 +51,53 @@ struct InfoStep1View: View {
     VStack(alignment: .leading) {
       
       // 설명 텍스트
-      Text("화환을 함께 전달하기 위해 \n몇 가지 정보를 수집할게요")
+      (
+        Text("화환을 ") +
+        Text("받는 분")
+          .foregroundColor(GSColor.primary) +
+        Text("의 \n정보를 수집할게요")
+      )
         .font(GSFont.title2)
+        .foregroundColor(GSColor.black)
+        .padding(.bottom, 8)
+      Text("결혼식 전날까지 돈을 안전하게 보관하기 위함이에요")
+        .font(GSFont.caption2)
         .foregroundColor(GSColor.black)
         .padding(.bottom, 32)
       
-      // 모임명 입력
+      // 보내는 분 입력
       CustomTextField(
-        title: "모임명",
-        placeholder: "어떤 파티에서 화환을 전달하나요?",
-        text: $partyName,
+        title: "받을 분",
+        placeholder: "화환을 받는 분의 이름을 입력해주세요",
+        text: $accountName,
         isValid: $isGroupNameValid
       )
       .padding(.bottom, 32)
       
-      // 장소 입력
+      // 계좌번호 입력
       CustomTextField(
-        title: "결혼식 장소",
-        placeholder: "결혼식 장소를 입력해주세요",
-        text: $weddingPlace,
+        title: "계좌번호",
+        placeholder: "모바일 청첩장에 있는 계좌번호를 입력해주세요",
+        text: $accountName,
         isValid: $isLocationValid
       )
       .padding(.bottom, 32)
       
-      // 날짜 입력
+      // 연락처 입력
       CustomTextField(
-        title: "결혼식 날짜",
-        placeholder: "YYYY. MM. DD",
-        text: $weddingDate,
-        isValid: $isDateValid
+        title: "연락처",
+        placeholder: "010-1234-5678",
+        text: $accountName,
+        isValid: $isLocationValid
       )
-      .keyboardType(.numberPad)
-      .onChange(of: weddingDate) {
-        weddingDate = formatDateInput(weddingDate)
-      }
       .padding(.bottom, 32)
       
-      // 시간 입력
-      CustomTextField(
-        title: "결혼식 시간",
-        placeholder: "HH:MM",
-        text: $weddingTime,
-        isValid: $isTimeValid
-      )
-      .keyboardType(.numberPad)
-      .onChange(of: weddingTime) {
-        weddingTime = formatTimeInput(weddingTime)
-      }
-      .padding(.bottom, 32)
+      Text("파티가 해산되면 입력하신 정보로 돌려드려요")
+        .font(GSFont.caption2)
+        .foregroundColor(GSColor.black)
+        .padding(.bottom, 32)
+        .frame(maxWidth: .infinity)
+        .multilineTextAlignment(.center)
       
       Spacer()
       
