@@ -142,6 +142,7 @@ struct InfoStep1View: View {
           shouldNavigate = true
         }
       )
+      .padding(.bottom, 30)
     }
     .padding(.horizontal, 16)
     .navigationTitle("") // 타이틀 비우기

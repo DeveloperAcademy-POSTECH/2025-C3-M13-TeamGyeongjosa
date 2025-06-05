@@ -51,7 +51,12 @@ struct InfoStep3View: View {
     VStack(alignment: .leading) {
       
       // 설명 텍스트
-      Text("화환을 보내는 분의 \n정보를 수집할게요")
+      (
+        Text("화환을 ") +
+        Text("받는 분")
+          .foregroundColor(GSColor.primary) +
+        Text("의 \n정보를 수집할게요")
+      )
         .font(GSFont.title2)
         .foregroundColor(GSColor.black)
         .padding(.bottom, 8)
@@ -105,6 +110,7 @@ struct InfoStep3View: View {
           shouldNavigate = true
         }
       )
+      .padding(.bottom, 30)
     }
     .padding(.horizontal, 16)
     .navigationTitle("") // 타이틀 비우기

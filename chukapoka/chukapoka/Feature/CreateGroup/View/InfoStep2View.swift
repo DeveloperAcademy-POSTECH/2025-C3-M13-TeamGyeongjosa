@@ -47,7 +47,7 @@ struct InfoStep2View: View {
   
   // MARK: - View Body
   var body: some View {
-    ProgressView(value: 0.33)
+    ProgressView(value: 0.50)
       .tint(GSColor.primary)
       .background(Color(.white))
       .frame(height: 1)
@@ -56,10 +56,15 @@ struct InfoStep2View: View {
     VStack(alignment: .leading) {
       
       // 설명 텍스트
-      Text("화환을 받는 분의 \n정보를 수집할게요")
-        .font(GSFont.title2)
-        .foregroundColor(GSColor.black)
-        .padding(.bottom, 32)
+      (
+        Text("화환을 ") +
+        Text("받는 분")
+          .foregroundColor(GSColor.primary) +
+        Text("의 \n정보를 수집할게요")
+      )
+      .font(GSFont.title2)
+      .foregroundColor(GSColor.black)
+      .padding(.bottom, 32)
       
       // 받을 분 입력
       CustomTextField(
@@ -92,6 +97,7 @@ struct InfoStep2View: View {
           shouldNavigate = true
         }
       )
+      .padding(.bottom, 30)
     }
     .padding(.horizontal, 16)
     .navigationTitle("") // 타이틀 비우기
