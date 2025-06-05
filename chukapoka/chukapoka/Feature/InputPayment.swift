@@ -5,8 +5,6 @@
 //  Created by 김소원 on 6/3/25.
 // 숫자 키패드만 올라오게 하기
 
-
-
 import SwiftUI
 
 struct InputPayment: View {
@@ -49,7 +47,6 @@ struct InputPayment: View {
                 .foregroundStyle(GSColor.gray2)
                 .frame(height: 36)
             // 이거 간격 어케함?
-            
             
             ZStack(alignment: .leading) {
                 if amount.isEmpty {

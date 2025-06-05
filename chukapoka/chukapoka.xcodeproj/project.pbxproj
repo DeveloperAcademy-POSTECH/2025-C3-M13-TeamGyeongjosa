@@ -53,6 +53,18 @@
 		D59F7C7D2DEB00ED00A829A8 /* InfoStep1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59F7C7C2DEB00E000A829A8 /* InfoStep1View.swift */; };
 		D59F7C7F2DEB019700A829A8 /* CreateGroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59F7C7E2DEB019100A829A8 /* CreateGroupViewModel.swift */; };
 		D59F7C812DEB09C200A829A8 /* EnterCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59F7C802DEB09BF00A829A8 /* EnterCodeView.swift */; };
+		D5B38C382DF04084005DAFDC /* PartyCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B38C372DF04081005DAFDC /* PartyCardView.swift */; };
+		D5B38C3A2DF045EC005DAFDC /* PartyCardStatusBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B38C392DF045EC005DAFDC /* PartyCardStatusBadge.swift */; };
+		D5B38C3C2DF045FB005DAFDC /* PartyCardActionIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B38C3B2DF045FB005DAFDC /* PartyCardActionIcons.swift */; };
+		D5B38C3E2DF04621005DAFDC /* PartyCardTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B38C3D2DF04621005DAFDC /* PartyCardTitle.swift */; };
+		D5B38C402DF04733005DAFDC /* PartyCardInfoText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B38C3F2DF04733005DAFDC /* PartyCardInfoText.swift */; };
+		D5B38C442DF0475A005DAFDC /* PartyCardStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B38C432DF0475A005DAFDC /* PartyCardStyle.swift */; };
+		D5B38C482DF04775005DAFDC /* PartyCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B38C472DF04775005DAFDC /* PartyCardModel.swift */; };
+		D5B38C4D2DF04824005DAFDC /* PartyCardAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B38C4C2DF04824005DAFDC /* PartyCardAction.swift */; };
+		D5B38C4F2DF05A2C005DAFDC /* PartyCardGroupName.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B38C4E2DF05A11005DAFDC /* PartyCardGroupName.swift */; };
+		D5B38C532DF06D59005DAFDC /* ActionIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B38C522DF06D52005DAFDC /* ActionIconButton.swift */; };
+		D5B38C592DF09A11005DAFDC /* PartyCardBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B38C582DF09A0B005DAFDC /* PartyCardBackground.swift */; };
+		D5B38C5B2DF09B3F005DAFDC /* PartyCardContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B38C5A2DF09B39005DAFDC /* PartyCardContainer.swift */; };
 		D5ED63172DED427B007912E1 /* RootNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED63162DED427B007912E1 /* RootNavigationView.swift */; };
 /* End PBXBuildFile section */
 
@@ -125,6 +137,18 @@
 		D59F7C7E2DEB019100A829A8 /* CreateGroupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupViewModel.swift; sourceTree = "<group>"; };
 		D59F7C802DEB09BF00A829A8 /* EnterCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterCodeView.swift; sourceTree = "<group>"; };
 		D59F7C9E2DECC2B100A829A8 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		D5B38C372DF04081005DAFDC /* PartyCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCardView.swift; sourceTree = "<group>"; };
+		D5B38C392DF045EC005DAFDC /* PartyCardStatusBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCardStatusBadge.swift; sourceTree = "<group>"; };
+		D5B38C3B2DF045FB005DAFDC /* PartyCardActionIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCardActionIcons.swift; sourceTree = "<group>"; };
+		D5B38C3D2DF04621005DAFDC /* PartyCardTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCardTitle.swift; sourceTree = "<group>"; };
+		D5B38C3F2DF04733005DAFDC /* PartyCardInfoText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCardInfoText.swift; sourceTree = "<group>"; };
+		D5B38C432DF0475A005DAFDC /* PartyCardStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCardStyle.swift; sourceTree = "<group>"; };
+		D5B38C472DF04775005DAFDC /* PartyCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCardModel.swift; sourceTree = "<group>"; };
+		D5B38C4C2DF04824005DAFDC /* PartyCardAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCardAction.swift; sourceTree = "<group>"; };
+		D5B38C4E2DF05A11005DAFDC /* PartyCardGroupName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCardGroupName.swift; sourceTree = "<group>"; };
+		D5B38C522DF06D52005DAFDC /* ActionIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionIconButton.swift; sourceTree = "<group>"; };
+		D5B38C582DF09A0B005DAFDC /* PartyCardBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCardBackground.swift; sourceTree = "<group>"; };
+		D5B38C5A2DF09B39005DAFDC /* PartyCardContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCardContainer.swift; sourceTree = "<group>"; };
 		D5ED63162DED427B007912E1 /* RootNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -286,7 +310,9 @@
 		D574E9AF2DED7F8A00AAF70F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D5B38C362DF04079005DAFDC /* PartyCard */,
 				D5951AFF2DEFF68C006863B6 /* CustomTextField.swift */,
+				D5B38C522DF06D52005DAFDC /* ActionIconButton.swift */,
 				D574E9DD2DEDEDE300AAF70F /* PairButton.swift */,
 				D574E9B02DED7F9400AAF70F /* PrimaryButton.swift */,
 			);
@@ -425,6 +451,48 @@
 				D59F7C802DEB09BF00A829A8 /* EnterCodeView.swift */,
 			);
 			path = EnterGroup;
+			sourceTree = "<group>";
+		};
+		D5B38C362DF04079005DAFDC /* PartyCard */ = {
+			isa = PBXGroup;
+			children = (
+				D5B38C542DF094B5005DAFDC /* View */,
+				D5B38C562DF094C1005DAFDC /* Model */,
+				D5B38C572DF094D0005DAFDC /* Style */,
+			);
+			path = PartyCard;
+			sourceTree = "<group>";
+		};
+		D5B38C542DF094B5005DAFDC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D5B38C372DF04081005DAFDC /* PartyCardView.swift */,
+				D5B38C5A2DF09B39005DAFDC /* PartyCardContainer.swift */,
+				D5B38C392DF045EC005DAFDC /* PartyCardStatusBadge.swift */,
+				D5B38C3B2DF045FB005DAFDC /* PartyCardActionIcons.swift */,
+				D5B38C3D2DF04621005DAFDC /* PartyCardTitle.swift */,
+				D5B38C4E2DF05A11005DAFDC /* PartyCardGroupName.swift */,
+				D5B38C3F2DF04733005DAFDC /* PartyCardInfoText.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D5B38C562DF094C1005DAFDC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D5B38C472DF04775005DAFDC /* PartyCardModel.swift */,
+				D5B38C4C2DF04824005DAFDC /* PartyCardAction.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D5B38C572DF094D0005DAFDC /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				D5B38C432DF0475A005DAFDC /* PartyCardStyle.swift */,
+				D5B38C582DF09A0B005DAFDC /* PartyCardBackground.swift */,
+			);
+			path = Style;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -599,28 +667,40 @@
 				55935E232DEFE2470079FFBB /* NameCheck .swift in Sources */,
 				D59F7C7F2DEB019700A829A8 /* CreateGroupViewModel.swift in Sources */,
 				D51C80D72DEF6B940051CB40 /* PartyMember.swift in Sources */,
+				D5B38C382DF04084005DAFDC /* PartyCardView.swift in Sources */,
+				D5B38C4D2DF04824005DAFDC /* PartyCardAction.swift in Sources */,
+				D5B38C3A2DF045EC005DAFDC /* PartyCardStatusBadge.swift in Sources */,
 				D5951B002DEFF68C006863B6 /* CustomTextField.swift in Sources */,
 				D59F7C562DEAF20600A829A8 /* chukapokaApp.swift in Sources */,
 				CA0B87F02DF021F50001F120 /* FlowerstandStep1.swift in Sources */,
+				D5B38C3C2DF045FB005DAFDC /* PartyCardActionIcons.swift in Sources */,
 				D574E9DC2DED8E2E00AAF70F /* GSColor.swift in Sources */,
 				CA064B222DF05DE60048F794 /* FlowerstandStep3.swift in Sources */,
 				D574E9DA2DED8A6500AAF70F /* GSFont.swift in Sources */,
 				CA064B382DF07D2E0048F794 /* FlowerstandStep6.swift in Sources */,
 				D51C80D52DEF6B890051CB40 /* Party.swift in Sources */,
+				D5B38C592DF09A11005DAFDC /* PartyCardBackground.swift in Sources */,
+				D5B38C482DF04775005DAFDC /* PartyCardModel.swift in Sources */,
+				D5B38C532DF06D59005DAFDC /* ActionIconButton.swift in Sources */,
+				D5B38C402DF04733005DAFDC /* PartyCardInfoText.swift in Sources */,
 				D59F7C7D2DEB00ED00A829A8 /* InfoStep1View.swift in Sources */,
 				55512E1E2DEEFB3300433ED8 /* LoadingView.swift in Sources */,
 				D574E9B12DED7FA000AAF70F /* PrimaryButton.swift in Sources */,
 				D51C80C32DEF48210051CB40 /* HomeIntroText.swift in Sources */,
 				CA064B332DF07AF40048F794 /* FlowerstandStep5.swift in Sources */,
 				CA0B87EE2DF021B80001F120 /* CircleProgress.swift in Sources */,
+				D5B38C4F2DF05A2C005DAFDC /* PartyCardGroupName.swift in Sources */,
 				D59F7C782DEB006200A829A8 /* HomeView.swift in Sources */,
 				CA0B87F22DF022070001F120 /* FlowerstandStep2.swift in Sources */,
 				D56CD4042DEF3BFD002267B1 /* GSImage.swift in Sources */,
 				CA2C4A4B2DF0525000D8E170 /* CardDecorationPicker.swift in Sources */,
 				D51C80C52DEF482A0051CB40 /* HomeChracterImage.swift in Sources */,
+				D5B38C442DF0475A005DAFDC /* PartyCardStyle.swift in Sources */,
 				D59F7C762DEAF6E100A829A8 /* AppRoute.swift in Sources */,
+				D5B38C3E2DF04621005DAFDC /* PartyCardTitle.swift in Sources */,
 				D59F7C702DEAF69400A829A8 /* Constants.swift in Sources */,
 				CA064B262DF061AD0048F794 /* SelectedFlowerGroup.swift in Sources */,
+				D5B38C5B2DF09B3F005DAFDC /* PartyCardContainer.swift in Sources */,
 				D5ED63172DED427B007912E1 /* RootNavigationView.swift in Sources */,
 				D51C80CB2DEF487F0051CB40 /* HomeBottomButtons.swift in Sources */,
 				CA064B2E2DF074040048F794 /* CreateRibbonMessage.swift in Sources */,
