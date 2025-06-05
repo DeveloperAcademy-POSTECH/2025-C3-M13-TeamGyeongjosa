@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5551279E2DF12DD6002CC923 /* TextfieldDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5551279C2DF12DC6002CC923 /* TextfieldDown.swift */; };
 		555127C42DF14A9D002CC923 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555127C22DF14A9B002CC923 /* OnboardingView.swift */; };
+		555127C92DF15DA3002CC923 /* NoticeStep1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555127C82DF15D89002CC923 /* NoticeStep1.swift */; };
+		555127CB2DF15DDB002CC923 /* NoticeStep2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555127CA2DF15DD4002CC923 /* NoticeStep2.swift */; };
 		55512E1E2DEEFB3300433ED8 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55512E1D2DEEFB3300433ED8 /* LoadingView.swift */; };
 		55935E232DEFE2470079FFBB /* NameCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55935E222DEFE23D0079FFBB /* NameCheck.swift */; };
 		CA064B222DF05DE60048F794 /* FlowerstandStep3.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA064B212DF05DE60048F794 /* FlowerstandStep3.swift */; };
@@ -90,6 +92,8 @@
 /* Begin PBXFileReference section */
 		5551279C2DF12DC6002CC923 /* TextfieldDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldDown.swift; sourceTree = "<group>"; };
 		555127C22DF14A9B002CC923 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		555127C82DF15D89002CC923 /* NoticeStep1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeStep1.swift; sourceTree = "<group>"; };
+		555127CA2DF15DD4002CC923 /* NoticeStep2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeStep2.swift; sourceTree = "<group>"; };
 		55512E1D2DEEFB3300433ED8 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		55512E262DEF1DD200433ED8 /* InputPayment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPayment.swift; sourceTree = "<group>"; };
 		55935E222DEFE23D0079FFBB /* NameCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameCheck.swift; sourceTree = "<group>"; };
@@ -190,6 +194,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		555127C62DF15D4C002CC923 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				555127C22DF14A9B002CC923 /* OnboardingView.swift */,
+				555127C72DF15D63002CC923 /* SubViews */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		555127C72DF15D63002CC923 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				555127C82DF15D89002CC923 /* NoticeStep1.swift */,
+				555127CA2DF15DD4002CC923 /* NoticeStep2.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
 		CA064B272DF06B8C0048F794 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -404,6 +426,7 @@
 		D59F7C5C2DEAF40300A829A8 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				555127C62DF15D4C002CC923 /* Onboarding */,
 				CA0B87EA2DF021300001F120 /* CreateFlowerstand */,
 				55935E2A2DF11CB10079FFBB /* InputCodeView */,
 				55935E222DEFE23D0079FFBB /* NameCheck.swift */,
@@ -413,7 +436,6 @@
 				D59F7C7B2DEB00C800A829A8 /* EnterGroup */,
 				55512E262DEF1DD200433ED8 /* InputPayment.swift */,
 				5551279C2DF12DC6002CC923 /* TextfieldDown.swift */,
-				555127C22DF14A9B002CC923 /* OnboardingView.swift */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -677,6 +699,7 @@
 				D5B38C5E2DF0A769005DAFDC /* PartyCardBackView.swift in Sources */,
 				D59F7C742DEAF6D600A829A8 /* AppCoordinator.swift in Sources */,
 				D59F7C642DEAF56D00A829A8 /* AppDelegate.swift in Sources */,
+				555127C92DF15DA3002CC923 /* NoticeStep1.swift in Sources */,
 				55935E232DEFE2470079FFBB /* NameCheck.swift in Sources */,
 				D59F7C7F2DEB019700A829A8 /* CreateGroupViewModel.swift in Sources */,
 				D51C80D72DEF6B940051CB40 /* PartyMember.swift in Sources */,
@@ -708,6 +731,7 @@
 				CA0B87F22DF022070001F120 /* FlowerstandStep2.swift in Sources */,
 				D56CD4042DEF3BFD002267B1 /* GSImage.swift in Sources */,
 				CA2C4A4B2DF0525000D8E170 /* CardDecorationPicker.swift in Sources */,
+				555127CB2DF15DDB002CC923 /* NoticeStep2.swift in Sources */,
 				D51C80C52DEF482A0051CB40 /* HomeChracterImage.swift in Sources */,
 				D5B38C442DF0475A005DAFDC /* PartyCardStyle.swift in Sources */,
 				D59F7C762DEAF6E100A829A8 /* AppRoute.swift in Sources */,
