@@ -12,20 +12,21 @@ import SwiftData
 final class PartyMember {
     var isLeader: Bool
     var name: String
-    var accountNumber: Int
-    var phoneNumber: Int
+    var accountNumber: String
+    var phoneNumber: String
     var money: Int
     var message: String
     var flowerstandPath: String
-
+    
     // 역관계: PartyMember ⟵ Party (N:1)
-    @Relationship(inverse: \Party.members) var party: Party?
-
+    @Relationship(inverse: \Party.members)
+    var party: Party?
+    
     init(
         isLeader: Bool,
         name: String,
-        accountNumber: Int,
-        phoneNumber: Int,
+        accountNumber: String,
+        phoneNumber: String,
         money: Int,
         message: String,
         flowerstandPath: String,
