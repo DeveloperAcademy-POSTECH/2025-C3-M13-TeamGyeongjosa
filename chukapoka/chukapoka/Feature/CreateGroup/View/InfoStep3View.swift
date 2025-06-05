@@ -42,11 +42,7 @@ struct InfoStep3View: View {
   
   // MARK: - View Body
   var body: some View {
-    ProgressView(value: 0.75)
-      .tint(GSColor.primary)
-      .background(Color(.white))
-      .frame(height: 1)
-      .padding(.bottom, 57)
+    CustomProgressView(progress: 0.75)
     
     VStack(alignment: .leading) {
       

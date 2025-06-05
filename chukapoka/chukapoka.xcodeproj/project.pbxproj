@@ -12,6 +12,7 @@
 		55935E232DEFE2470079FFBB /* NameCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55935E222DEFE23D0079FFBB /* NameCheck.swift */; };
 		844720562DF16DD100FE9441 /* InfoStep2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844720542DF16DD100FE9441 /* InfoStep2View.swift */; };
 		844720572DF16DD100FE9441 /* InfoStep3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844720552DF16DD100FE9441 /* InfoStep3View.swift */; };
+		844720592DF1700500FE9441 /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844720582DF1700500FE9441 /* CustomProgressView.swift */; };
 		CA064B222DF05DE60048F794 /* FlowerstandStep3.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA064B212DF05DE60048F794 /* FlowerstandStep3.swift */; };
 		CA064B242DF05F660048F794 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA064B232DF05F660048F794 /* Assets.xcassets */; };
 		CA064B262DF061AD0048F794 /* SelectedFlowerGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA064B252DF061AD0048F794 /* SelectedFlowerGroup.swift */; };
@@ -94,6 +95,7 @@
 		55935E222DEFE23D0079FFBB /* NameCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameCheck.swift; sourceTree = "<group>"; };
 		844720542DF16DD100FE9441 /* InfoStep2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoStep2View.swift; sourceTree = "<group>"; };
 		844720552DF16DD100FE9441 /* InfoStep3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoStep3View.swift; sourceTree = "<group>"; };
+		844720582DF1700500FE9441 /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
 		CA064B212DF05DE60048F794 /* FlowerstandStep3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerstandStep3.swift; sourceTree = "<group>"; };
 		CA064B232DF05F660048F794 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA064B252DF061AD0048F794 /* SelectedFlowerGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedFlowerGroup.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 				D59F7C7C2DEB00E000A829A8 /* InfoStep1View.swift */,
 				844720542DF16DD100FE9441 /* InfoStep2View.swift */,
 				844720552DF16DD100FE9441 /* InfoStep3View.swift */,
+				844720582DF1700500FE9441 /* CustomProgressView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -689,6 +692,7 @@
 				D5951B002DEFF68C006863B6 /* CustomTextField.swift in Sources */,
 				D59F7C562DEAF20600A829A8 /* chukapokaApp.swift in Sources */,
 				CA0B87F02DF021F50001F120 /* FlowerstandStep1.swift in Sources */,
+				844720592DF1700500FE9441 /* CustomProgressView.swift in Sources */,
 				D5B38C3C2DF045FB005DAFDC /* PartyCardActionIcons.swift in Sources */,
 				D574E9DC2DED8E2E00AAF70F /* GSColor.swift in Sources */,
 				D5B38C642DF0AB04005DAFDC /* PartyCardBackContainer.swift in Sources */,
