@@ -8,15 +8,50 @@
 import SwiftUI
 
 struct CreateFlowerstandView: View {
+    @ObservedObject var viewModel: CreateFlowerstandViewModel
+    @EnvironmentObject var coordinator: AppCoordinator
+    
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
-            CircleProgress()
-                .padding(.top, 48)
+        VStack(spacing: 0) {
+            // ⬆︎ 상단: 프로그레스 바만
+            CircleProgress(step: viewModel.step.rawValue)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.top, 20)
+                .padding(.horizontal, 16)
             
+            // 플로우따라 바뀌는 컨테이너
+            ZStack {
+                switch viewModel.step {
+                case .amount:
+                    FlowerstandStep1(viewModel: viewModel.step1ViewModel)
+                case .decorate:
+                    FlowerstandStep2(viewModel: viewModel.step2ViewModel)
+                case . message:
+                    FlowerstandStep3(viewModel: viewModel.step3ViewModel)
+                case .complete:
+                    FlowerstandStep4(viewModel: CreateFlowerstandViewModel())
+//                case .loading:
+//                    LoadingView()
+                default:
+                    EmptyView()
+                }
+            }
+            .frame(maxHeight: .infinity)
+            
+            // 하단 버튼 고정
+            PrimaryButton(
+                title: viewModel.nextButtonTitle,
+                style: viewModel.isNextEnabled ? .basic : .disabled,
+                action: {
+                    viewModel.goNext(coordinator: coordinator)
+                }
+            )
+            .padding(.horizontal, 16)
+            .padding(.bottom, 31)
         }
+        .ignoresSafeArea(.keyboard)
     }
 }
-
 #Preview {
-    CreateFlowerstandView()
+    CreateFlowerstandView(viewModel: CreateFlowerstandViewModel())
 }

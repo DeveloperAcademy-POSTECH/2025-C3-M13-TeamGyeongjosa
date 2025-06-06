@@ -19,7 +19,7 @@ struct HomeView: View {
             Spacer()
             HomeBottomButtons(
                 onGroupCreateTapped: {
-                    coordinator.push(.createGroup(.infoStep1))
+                    coordinator.push(.createGroupInfoStep1)
                 },
                 onGroupJoinTapped: {
                     coordinator.push(.joinGroup(.enterCode))

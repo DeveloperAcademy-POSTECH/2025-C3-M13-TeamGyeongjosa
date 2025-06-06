@@ -18,9 +18,10 @@ struct InfoStep1View: View {
         VStack {
             Text("정보 입력 1단계")
             Button("다음") {
-                viewModel.didTapNext()
+                // viewModel.didTapNext()
             }
         }
         .navigationTitle("그룹 생성1")
     }
 }
+
