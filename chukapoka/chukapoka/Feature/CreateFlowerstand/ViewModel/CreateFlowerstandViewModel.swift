@@ -9,12 +9,18 @@ import SwiftUI
 @MainActor
 final class CreateFlowerstandViewModel: ObservableObject {
     
+    private let coordinator: AppCoordinator
+    
+    init(coordinator: AppCoordinator) {
+        self.coordinator = coordinator
+        bindStepViewModels()
+    }
+    
     enum Step: Int, CaseIterable, Identifiable {
         case amount
         case decorate
         case message
         case complete
-        case loading
         
         var id: Int { rawValue }
     }
@@ -32,10 +38,6 @@ final class CreateFlowerstandViewModel: ObservableObject {
     @Published var selectedColor: Color = GSColor.yellow
     @Published var selectedFlower: String = ""
     @Published var message: String = ""
-    
-    init() {
-        bindStepViewModels()
-    }
     
     private func bindStepViewModels() {
         step1ViewModel.$amountText
@@ -59,14 +61,27 @@ final class CreateFlowerstandViewModel: ObservableObject {
         step == .complete ? "화환 만들기" : "다음"
     }
     
-    func goNext(coordinator: AppCoordinator) {
+    func goNext() {
         switch step {
         case .complete:
             // Step4까지 끝나면, 새로운 화면 (Finish/로딩)으로 네비게이션
-            coordinator.push(.loadingInfoDone)
+            coordinator.push(.loadingFlowerstandDone)
         default:
             if let next = Step(rawValue: step.rawValue + 1) {
                 step = next
+            }
+        }
+    }
+    
+    func goBack() {
+        switch step {
+        case .amount:
+            // 첫 단계면 뒤로 나가야 함 (아에 첨으로 새로 데이터 넣어야함)
+            coordinator.popToRoot()
+        default:
+            // 나머지는 이전 단계로 이동
+            if let prev = Step(rawValue: step.rawValue - 1) {
+                step = prev
             }
         }
     }

@@ -23,7 +23,8 @@ struct CreateGroupView: View {
             NavigationBar {
                 viewModel.goToPreviousStep()
             }
-            
+            CustomProgressView(progress: viewModel.progressRate)
+                .padding(.bottom, 30)
             // MARK: - ZStack으로 Step 전환
             ZStack {
                 switch viewModel.currentStep {
@@ -38,22 +39,13 @@ struct CreateGroupView: View {
             .padding(.horizontal, 16)
             .animation(.easeInOut, value: viewModel.currentStep)
             
-            // MARK: - 하단 진행도 + 다음 버튼
-            VStack(spacing: 12) {
-                CustomProgressView(progress: viewModel.progressRate)
-                
-                PrimaryButton(
-                    title: viewModel.nextButtonTitle,
-                    style: .custom(
-                        textColor: GSColor.white,
-                        backgroundColor: GSColor.primary,
-                        isEnable: true
-                    ),
-                    action: {
-                        viewModel.handleNext()
-                    }
-                )
-            }
+            PrimaryButton(
+                title: viewModel.nextButtonTitle,
+                style: viewModel.isNextButtonEnabled ? .basic : .disabled,
+                action: {
+                    viewModel.handleNext()
+                }
+            )
             .padding(.horizontal, 16)
             .padding(.bottom, 30)
         }

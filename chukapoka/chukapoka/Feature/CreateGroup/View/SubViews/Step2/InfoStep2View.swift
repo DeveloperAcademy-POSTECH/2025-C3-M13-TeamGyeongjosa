@@ -14,7 +14,6 @@ struct InfoStep2View: View {
         VStack(alignment: .leading, spacing: 32) {
             Text("화환을 받는 분의 정보를 수집할게요")
                 .font(GSFont.title2)
-                .padding(.top, 57)
             
             CustomTextField(
                 title: "받는 분",
@@ -29,6 +28,7 @@ struct InfoStep2View: View {
                 text: $viewModel.receiverAccount,
                 isValid: $viewModel.isReceiverAccountValid
             )
+            .keyboardType(.numberPad)
             
             Spacer()
         }

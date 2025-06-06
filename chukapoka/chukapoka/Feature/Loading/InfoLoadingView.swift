@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct InfoLoadingView: View {
+    @StateObject var viewModel: InfoViewModel
+    
     var body: some View {
         VStack(spacing: 0) {
             
@@ -32,8 +34,4 @@ struct InfoLoadingView: View {
             Spacer()
         }
     }
-}
-
-#Preview {
-    InfoLoadingView()
 }

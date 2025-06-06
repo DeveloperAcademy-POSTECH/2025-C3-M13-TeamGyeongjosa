@@ -18,7 +18,6 @@ struct InfoStep1View: View {
                 Text("화환을 함께 전달하기 위해 \n몇 가지 정보를 수집할게요")
                     .font(GSFont.title2)
                     .foregroundColor(GSColor.black)
-                    .padding(.top, 57)
                 
                 CustomTextField(
                     title: "모임명",

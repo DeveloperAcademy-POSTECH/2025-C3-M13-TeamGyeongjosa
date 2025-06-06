@@ -25,5 +25,6 @@ struct NavigationBar: View {
             Spacer()
         }
         .padding(.horizontal, 16)
+        .padding(.bottom, 16)
     }
 }

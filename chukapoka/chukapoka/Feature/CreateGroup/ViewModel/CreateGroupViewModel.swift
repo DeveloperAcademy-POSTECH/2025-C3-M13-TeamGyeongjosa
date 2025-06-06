@@ -136,8 +136,37 @@ final class CreateGroupViewModel: ObservableObject {
             }
         case .step3:
             if validateStep3() {
-                onComplete?()
+                coordinator.push(.loadingInfoDone)
             }
+        }
+    }
+    
+    var isStep1Valid: Bool {
+        !partyName.isEmpty &&
+        !weddingPlace.isEmpty &&
+        weddingDate.count == 10 &&
+        weddingTime.count == 5
+    }
+    
+    var isStep2Valid: Bool {
+        isValidKoreanName(receiverName) &&
+        !receiverAccount.isEmpty
+    }
+    
+    var isStep3Valid: Bool {
+        isValidKoreanName(senderName) &&
+        !senderAccount.isEmpty &&
+        isValidPhone(senderPhone)
+    }
+    
+    var isNextButtonEnabled: Bool {
+        switch currentStep {
+        case .step1:
+            return isStep1Valid
+        case .step2:
+            return isStep2Valid
+        case .step3:
+            return isStep3Valid
         }
     }
 }

@@ -24,17 +24,17 @@ struct RootNavigationView: View {
                         CreateGroupView(viewModel: CreateGroupViewModel(coordinator: coordinator))
                             .navigationBarHidden(true)
                     case .createFlowerstand:
-                        CreateFlowerstandView(viewModel: CreateFlowerstandViewModel())
+                        CreateFlowerstandView(viewModel: CreateFlowerstandViewModel(coordinator: coordinator))
                             .navigationBarHidden(true)
                     case .loadingInfoDone:
-                        FlowerLoadingView()
+                        InfoLoadingView(viewModel: InfoViewModel(coordinator: coordinator))
                             .navigationBarHidden(true)
                     case .joinGroup:
                         EnterCodeView()
                             .navigationBarHidden(true)
                     case .loadingFlowerstandDone:
-                        FlowerLoadingView()
-//                            .navigationBarHidden(true)
+                        FlowerLoadingView(viewModel: FlowerLoadingViewModel(coordinator: coordinator))
+                            .navigationBarHidden(true)
                     }
                 }
         }

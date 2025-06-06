@@ -45,11 +45,13 @@ struct FlowerstandStep1: View {
             
             Spacer()
             
-            VStack {
+            HStack {
+                Spacer()
                 Text("우리은행 1002-246-194483 김현진")
                     .font(GSFont.caption2)
                     .foregroundStyle(GSColor.primary)
                     .padding(.bottom, 16)
+                Spacer()
             }
         }
         .padding(.horizontal, 16)
