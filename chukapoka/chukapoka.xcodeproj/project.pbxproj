@@ -30,6 +30,7 @@
 		CA5EAA722DF2CA5800690A03 /* FinishFlowerstandContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAA702DF2CA5800690A03 /* FinishFlowerstandContent.swift */; };
 		CA5EAA752DF2CA5D00690A03 /* LeftText.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAA732DF2CA5D00690A03 /* LeftText.swift */; };
 		CA5EAA762DF2CA5D00690A03 /* RightText.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAA742DF2CA5D00690A03 /* RightText.swift */; };
+		CA5EAA792DF2CDAA00690A03 /* FlowerstandCardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAA782DF2CDAA00690A03 /* FlowerstandCardData.swift */; };
 		D51C80C32DEF48210051CB40 /* HomeIntroText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80C22DEF481C0051CB40 /* HomeIntroText.swift */; };
 		D51C80C52DEF482A0051CB40 /* HomeChracterImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80C42DEF48260051CB40 /* HomeChracterImage.swift */; };
 		D51C80CB2DEF487F0051CB40 /* HomeBottomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80CA2DEF487C0051CB40 /* HomeBottomButtons.swift */; };
@@ -121,6 +122,7 @@
 		CA5EAA702DF2CA5800690A03 /* FinishFlowerstandContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishFlowerstandContent.swift; sourceTree = "<group>"; };
 		CA5EAA732DF2CA5D00690A03 /* LeftText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftText.swift; sourceTree = "<group>"; };
 		CA5EAA742DF2CA5D00690A03 /* RightText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightText.swift; sourceTree = "<group>"; };
+		CA5EAA782DF2CDAA00690A03 /* FlowerstandCardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerstandCardData.swift; sourceTree = "<group>"; };
 		D51C80C22DEF481C0051CB40 /* HomeIntroText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeIntroText.swift; sourceTree = "<group>"; };
 		D51C80C42DEF48260051CB40 /* HomeChracterImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChracterImage.swift; sourceTree = "<group>"; };
 		D51C80CA2DEF487C0051CB40 /* HomeBottomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomButtons.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 		CA064B2F2DF07AC60048F794 /* Step4 */ = {
 			isa = PBXGroup;
 			children = (
+				CA5EAA772DF2CDA400690A03 /* Model */,
 				CA064B322DF07AF40048F794 /* FlowerstandStep4.swift */,
 				CA5EAA6F2DF2CA5800690A03 /* FinishFlowerstandCard.swift */,
 				CA5EAA702DF2CA5800690A03 /* FinishFlowerstandContent.swift */,
@@ -312,6 +315,14 @@
 				CA5EAA612DF2C34200690A03 /* Step3 */,
 			);
 			path = SubViews;
+			sourceTree = "<group>";
+		};
+		CA5EAA772DF2CDA400690A03 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CA5EAA782DF2CDAA00690A03 /* FlowerstandCardData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		D51C80C12DEF47740051CB40 /* SubViews */ = {
@@ -791,6 +802,7 @@
 				D51C80CB2DEF487F0051CB40 /* HomeBottomButtons.swift in Sources */,
 				CA064B2E2DF074040048F794 /* CreateRibbonMessage.swift in Sources */,
 				D59F7C812DEB09C200A829A8 /* EnterCodeView.swift in Sources */,
+				CA5EAA792DF2CDAA00690A03 /* FlowerstandCardData.swift in Sources */,
 				CA064B352DF07B090048F794 /* FlowerLoadingView.swift in Sources */,
 				CA2C4A492DF0513700D8E170 /* FlowerstandCardView.swift in Sources */,
 				D51C80D32DEF6B820051CB40 /* Wedding.swift in Sources */,
