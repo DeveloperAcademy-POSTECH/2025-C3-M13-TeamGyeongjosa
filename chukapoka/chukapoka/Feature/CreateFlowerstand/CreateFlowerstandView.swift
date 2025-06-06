@@ -32,8 +32,6 @@ struct CreateFlowerstandView: View {
                     FlowerstandStep3(viewModel: viewModel.step3ViewModel)
                 case .complete:
                     FlowerstandStep4(viewModel: viewModel)
-//                case .loading:
-//                    LoadingView()
                 default:
                     EmptyView()
                 }
@@ -52,5 +50,8 @@ struct CreateFlowerstandView: View {
             .padding(.bottom, 31)
         }
         .ignoresSafeArea(.keyboard)
+        .onTapGesture {
+            self.endTextEditing()
+        }
     }
 }

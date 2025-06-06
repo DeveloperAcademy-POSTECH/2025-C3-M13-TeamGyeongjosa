@@ -142,20 +142,20 @@ final class CreateGroupViewModel: ObservableObject {
     }
     
     var isStep1Valid: Bool {
-        !partyName.isEmpty &&
-        !weddingPlace.isEmpty &&
-        weddingDate.count == 10 &&
+        !partyName.isEmpty ||
+        !weddingPlace.isEmpty ||
+        weddingDate.count == 10 ||
         weddingTime.count == 5
     }
     
     var isStep2Valid: Bool {
-        isValidKoreanName(receiverName) &&
+        isValidKoreanName(receiverName) ||
         !receiverAccount.isEmpty
     }
     
     var isStep3Valid: Bool {
-        isValidKoreanName(senderName) &&
-        !senderAccount.isEmpty &&
+        isValidKoreanName(senderName) ||
+        !senderAccount.isEmpty ||
         isValidPhone(senderPhone)
     }
     

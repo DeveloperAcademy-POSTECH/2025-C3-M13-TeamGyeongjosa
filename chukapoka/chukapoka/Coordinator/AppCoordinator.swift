@@ -24,6 +24,8 @@ final class AppCoordinator: ObservableObject {
     
     // 홈으로 이동
     func popToRoot() {
-        self.path.removeAll()
+        withTransaction(.init(animation: nil)) {
+            path.removeAll()
+        }
     }
 }

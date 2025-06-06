@@ -344,8 +344,8 @@
 		D51C80CE2DEF69E20051CB40 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CA5EAA622DF2C34200690A03 /* SubViews */,
 				CA5EAA492DF2C06F00690A03 /* CreateGroupView.swift */,
+				CA5EAA622DF2C34200690A03 /* SubViews */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -411,8 +411,8 @@
 		D595C3082DF3635500F484A1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				D595C30B2DF3765900F484A1 /* FlowerLoadingViewModel.swift */,
 				D595C3092DF3635D00F484A1 /* InfoViewModel.swift */,
+				D595C30B2DF3765900F484A1 /* FlowerLoadingViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -991,7 +991,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 6TW9MCXPJD;
+				DEVELOPMENT_TEAM = 9S8SHSW95K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = chukapoka/Info.plist;
@@ -1021,7 +1021,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 6TW9MCXPJD;
+				DEVELOPMENT_TEAM = 9S8SHSW95K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = chukapoka/Info.plist;
