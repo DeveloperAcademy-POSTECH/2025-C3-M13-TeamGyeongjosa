@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RootNavigationView: View {
     @EnvironmentObject var coordinator: AppCoordinator
-    @StateObject private var selectImageViewModel : SelectImageViewModel = SelectImageViewModel()
+    @StateObject private var ocrViewModel : OCRViewModel = OCRViewModel()
     
     var body: some View {
         NavigationStack(path: $coordinator.path) {
@@ -22,7 +22,7 @@ struct RootNavigationView: View {
                     // 그룹 생성 파티장 flow
                     case .createGroup(.infoStep1):
                         //InfoStep1View(viewModel: groupCreateViewModel)
-                        SelectImageView(viewModel: selectImageViewModel)
+                        OCRScreen(viewModel: ocrViewModel)
                     
                     // 그룹 참여 파티원 flow
                     case .joinGroup(.enterCode):

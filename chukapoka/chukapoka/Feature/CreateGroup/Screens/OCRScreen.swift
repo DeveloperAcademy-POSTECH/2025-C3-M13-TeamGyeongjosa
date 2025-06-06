@@ -8,7 +8,7 @@
 import SwiftUI
 import PhotosUI
 
-struct InvitationOCRScreen: View {
+struct OCRScreen: View {
     @State private var selectedItem: PhotosPickerItem?
     @StateObject private var viewModel: SelectImageViewModel
 
@@ -18,26 +18,26 @@ struct InvitationOCRScreen: View {
 
     var body: some View {
         VStack(spacing: 20) {
-            ImagePickerSectionView(selectedItem: $selectedItem)
+            ImagePickerView(selectedItem: $selectedItem)
+//
+//            .onChange(of: selectedItem) {
+//                guard let item = selectedItem else { return }
+//
+//                Task {
+//                    if let data = try? await item.loadTransferable(type: Data.self),
+//                       let image = UIImage(data: data) {
+//                        viewModel.handleImageSelection(image)
+//                    }
+//                }
+//            }
 
-            .onChange(of: selectedItem) {
-                guard let item = selectedItem else { return }
-
-                Task {
-                    if let data = try? await item.loadTransferable(type: Data.self),
-                       let image = UIImage(data: data) {
-                        viewModel.handleImageSelection(image)
-                    }
-                }
-            }
-
-            if let image = viewModel.selectedImage {
-                ImagePreviewView(image: image)
-            }
-
-            if let result = viewModel.ocrResult {
-                OCRResultView(result: result)
-            }
+//            if let image = viewModel.selectedImage {
+//                ImagePreviewView(image: image)
+//            }
+//
+//            if let result = viewModel.ocrResult {
+//                OCRResultView(result: result)
+//            }
         }
         .padding()
         .navigationTitle("청첩장 인식")

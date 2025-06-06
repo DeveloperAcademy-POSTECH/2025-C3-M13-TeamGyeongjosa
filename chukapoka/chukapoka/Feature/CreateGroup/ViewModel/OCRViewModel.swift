@@ -10,22 +10,22 @@ import SwiftUI
 import PhotosUI
 
 @MainActor
-final class SelectImageViewModel: ObservableObject {
+final class OCRViewModel: ObservableObject {
     @Published var selectedImage: UIImage?
-    @Published var ocrResult: OCRResult?
+    //@Published var ocrResult: OCRResult?
     @Published var recognizedTextLines: [String] = []
 
-    private let ocrManager = OCRManager()
-    private let textClassifier = TextClassifier()
+    //private let ocrManager = OCRManager()
+    //private let textClassifier = TextClassifier()
 
-    func handleImageSelection(_ image: UIImage) {
-        self.selectedImage = image
-        ocrManager.recognizeText(from: image) { [weak self] lines in
-            guard let self = self else { return }
-            Task { @MainActor in
-                self.recognizedTextLines = lines
-                self.ocrResult = self.textClassifier.classify(lines)
-            }
-        }
-    }
+//    func handleImageSelection(_ image: UIImage) {
+//        self.selectedImage = image
+//        ocrManager.recognizeText(from: image) { [weak self] lines in
+//            guard let self = self else { return }
+//            Task { @MainActor in
+//                self.recognizedTextLines = lines
+//                self.ocrResult = self.textClassifier.classify(lines)
+//            }
+//        }
+//    }
 }
