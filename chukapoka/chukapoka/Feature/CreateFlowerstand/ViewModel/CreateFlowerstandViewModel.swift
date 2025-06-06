@@ -21,113 +21,66 @@ final class CreateFlowerstandViewModel: ObservableObject {
     
     @Published var step: Step = .amount
     
-    @Published var moneyinputVM = FlowerstandAmountViewModel()
+    // 각 스텝별 ViewModel UI 상태만 가짐
+    @Published var step1ViewModel = FlowerStandStep1ViewModel()
+    @Published var step2ViewModel = FlowerStandStep2ViewModel()
+    @Published var step3ViewModel = FlowerStandStep3ViewModel()
     
-    func goNext() {
-        if let next = Step(rawValue: step.rawValue + 1) {
-            step = next
+    // 각 step별 입력값 통합 ( 하위 ViewModel에서 바인딩됨 )
+    @Published var amount: Int?
+    @Published var recipientName: String = "지수"
+    @Published var selectedColor: Color = GSColor.yellow
+    @Published var selectedFlower: String = ""
+    @Published var message: String = ""
+    
+    init() {
+        bindStepViewModels()
+    }
+    
+    private func bindStepViewModels() {
+        step1ViewModel.$amountText
+            .map { Int($0.filter(\.isNumber)) }
+            .assign(to: &$amount)
+        
+        //        step1ViewModel.$recipientName
+        //            .assign(to: &$recipientName)
+        
+        step2ViewModel.$selectedColor
+            .assign(to: &$selectedColor)
+        
+        step2ViewModel.$selectedFlower
+            .assign(to: &$selectedFlower)
+        
+        step3ViewModel.$message
+            .assign(to: &$message)
+    }
+    
+    var nextButtonTitle: String {
+        step == .complete ? "화환 만들기" : "다음"
+    }
+    
+    func goNext(coordinator: AppCoordinator) {
+        switch step {
+        case .complete:
+            // Step4까지 끝나면, 새로운 화면 (Finish/로딩)으로 네비게이션
+            coordinator.push(.loadingInfoDone)
+        default:
+            if let next = Step(rawValue: step.rawValue + 1) {
+                step = next
+            }
         }
     }
     
     var isNextEnabled: Bool {
         switch step {
         case .amount:
-            return moneyinputVM.isVaild
+            return step1ViewModel.isValid
+        case .decorate:
+            return step2ViewModel.isValid
+        case .message:
+            return step3ViewModel.isValid
         default:
             return true
         }
     }
 }
-//    struct State {
-//        var step: Step = .amount
-//        
-//        var amount: Int? = nil
-//        
-//        // 꽃 기본 색상 꽃 선택시
-//        var selectedColor: Color = GSColor.yellow
-//        var selectedFlower: String = "YellowFlower"
-//        
-//        var message: String = ""
-//        
-//        var recipientName: String = "강지수"
-//        
-//        var isLoading: Bool = false
-//    }
-//    
-//    enum Action {
-//        case inputAmount(String)
-//        case selectFlower(String)
-//        case selectColor(Color)
-//        case inputMessage(String)
-//        case tapNext
-//        case tapBack
-//        case complete
-//    }
-//    
-//    @Published var state: State = State()
-//    
-//    func action(_ action: Action) {
-//        switch action {
-//        case let .inputAmount(text):
-//            let filtered: String = String(text.filter { $0.isNumber }.prefix(3))
-//            state.amount = Int(filtered)
-//            
-//        case let .selectFlower(flowerName):
-//            state.selectedFlower = flowerName
-//            
-//        case let .selectColor(color):
-//            state.selectedColor = color
-//            
-//        case let .inputMessage(message):
-//            state.message = message
-//            
-//        case .tapNext:
-//            if let next = Step(rawValue: state.step.rawValue + 1) {
-//                state.step = next
-//            }
-//            
-//        case .tapBack:
-//            if let prev = Step(rawValue: state.step.rawValue - 1) {
-//                state.step = prev
-//            }
-//            
-//        case .complete:
-//            state.isLoading = true
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-//                self.state.isLoading = false
-//                if let next = Step(rawValue: self.state.step.rawValue + 1) {
-//                    self.state.step = next
-//                }
-//            }
-//        }
-//    }
-//    
-//    var bindingAmountText: Binding<String> {
-//        Binding(
-//            get: { self.state.amount.map { "\($0)" } ?? "" },
-//            set: { self.action(.inputAmount($0)) }
-//        )
-//    }
-//    
-//    var isValidAmount: Bool {
-//        if let amount = state.amount, amount > 0 {
-//            return true
-//        }
-//        return false
-//    }
-//    
-//    var isValidMessage: Bool {
-//        !state.message.isEmpty && state.message.count <= 10
-//    }
-//    
-//    var nextButtonEnabled: Bool {
-//        switch state.step {
-//        case .amount:
-//            return isValidAmount
-//        case .message:
-//            return isValidMessage
-//        default:
-//            return true
-//        }
-//    }
-//}

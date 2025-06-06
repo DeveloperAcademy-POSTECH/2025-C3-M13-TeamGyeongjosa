@@ -6,14 +6,14 @@
 //
 import SwiftUI
 
-final class FlowerstandAmountViewModel: ObservableObject {
+final class FlowerStandStep1ViewModel: ObservableObject {
     @Published var amountText: String = ""
     
     var amount: Int? {
         Int(amountText.filter(\.isNumber))
     }
     
-    var isVaild: Bool {
+    var isValid: Bool {
         if let value = amount {
             return value > 0
         }

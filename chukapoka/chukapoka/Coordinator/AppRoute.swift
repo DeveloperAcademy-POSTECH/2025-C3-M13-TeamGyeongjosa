@@ -21,12 +21,6 @@ enum CreateGroupRoute: Int, CaseIterable, Hashable {
     //    case infoStep2
     //    case enterName
     
-    static func next(after step: CreateGroupRoute) -> CreateGroupRoute? {
-        let allSteps = Self.allCases
-        guard let currentIndex = allSteps.firstIndex(of: step),
-              currentIndex + 1 < allSteps.count else { return nil }
-        return allSteps[currentIndex + 1]
-    }
 }
 
 enum JoinGroupRoute: Hashable {

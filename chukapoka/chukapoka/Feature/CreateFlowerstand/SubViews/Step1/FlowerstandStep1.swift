@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FlowerstandStep1: View {
-    @ObservedObject var viewModel: FlowerstandAmountViewModel
+    @ObservedObject var viewModel: FlowerStandStep1ViewModel
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -57,5 +57,5 @@ struct FlowerstandStep1: View {
 }
 
 #Preview {
-    FlowerstandStep1(viewModel: FlowerstandAmountViewModel())
+    FlowerstandStep1(viewModel: FlowerStandStep1ViewModel())
 }

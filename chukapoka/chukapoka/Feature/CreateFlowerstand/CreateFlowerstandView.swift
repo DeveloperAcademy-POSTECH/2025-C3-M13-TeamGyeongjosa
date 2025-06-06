@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CreateFlowerstandView: View {
     @ObservedObject var viewModel: CreateFlowerstandViewModel
+    @EnvironmentObject var coordinator: AppCoordinator
     
     var body: some View {
         VStack(spacing: 0) {
@@ -22,7 +23,15 @@ struct CreateFlowerstandView: View {
             ZStack {
                 switch viewModel.step {
                 case .amount:
-                    FlowerstandStep1(viewModel: viewModel.moneyinputVM)
+                    FlowerstandStep1(viewModel: viewModel.step1ViewModel)
+                case .decorate:
+                    FlowerstandStep2(viewModel: viewModel.step2ViewModel)
+                case . message:
+                    FlowerstandStep3(viewModel: viewModel.step3ViewModel)
+                case .complete:
+                    FlowerstandStep4(viewModel: CreateFlowerstandViewModel())
+//                case .loading:
+//                    LoadingView()
                 default:
                     EmptyView()
                 }
@@ -31,10 +40,10 @@ struct CreateFlowerstandView: View {
             
             // 하단 버튼 고정
             PrimaryButton(
-                title: "다음",
+                title: viewModel.nextButtonTitle,
                 style: viewModel.isNextEnabled ? .basic : .disabled,
                 action: {
-                    viewModel.goNext()
+                    viewModel.goNext(coordinator: coordinator)
                 }
             )
             .padding(.horizontal, 16)

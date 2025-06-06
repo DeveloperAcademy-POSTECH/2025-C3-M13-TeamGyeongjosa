@@ -35,6 +35,9 @@ struct RootNavigationView: View {
                         // 꽃 만들기 flow
                     case .createFlowerstand:
                         CreateFlowerstandView(viewModel: CreateFlowerstandViewModel())
+                    
+                    case .loadingInfoDone:
+                        FlowerLoadingView()
                         
                     default:
                         EmptyView()
