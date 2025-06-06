@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		55935E232DEFE2470079FFBB /* NameCheck .swift in Sources */ = {isa = PBXBuildFile; fileRef = 55935E222DEFE23D0079FFBB /* NameCheck .swift */; };
-		55512E272DEF1DD200433ED8 /* InputPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55512E262DEF1DD200433ED8 /* InputPayment.swift */; };
+		38E58C9C2DF2BE7A0085A752 /* OCRViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E58C9B2DF2BE720085A752 /* OCRViewModel.swift */; };
 		55512E1E2DEEFB3300433ED8 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55512E1D2DEEFB3300433ED8 /* LoadingView.swift */; };
+		55512E272DEF1DD200433ED8 /* InputPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55512E262DEF1DD200433ED8 /* InputPayment.swift */; };
+		55935E232DEFE2470079FFBB /* NameCheck .swift in Sources */ = {isa = PBXBuildFile; fileRef = 55935E222DEFE23D0079FFBB /* NameCheck .swift */; };
 		D51C80C32DEF48210051CB40 /* HomeIntroText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80C22DEF481C0051CB40 /* HomeIntroText.swift */; };
 		D51C80C52DEF482A0051CB40 /* HomeChracterImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80C42DEF48260051CB40 /* HomeChracterImage.swift */; };
 		D51C80CB2DEF487F0051CB40 /* HomeBottomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80CA2DEF487C0051CB40 /* HomeBottomButtons.swift */; };
@@ -62,9 +63,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		55935E222DEFE23D0079FFBB /* NameCheck .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NameCheck .swift"; sourceTree = "<group>"; };
-		55512E262DEF1DD200433ED8 /* InputPayment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPayment.swift; sourceTree = "<group>"; };
+		38E58C9B2DF2BE720085A752 /* OCRViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRViewModel.swift; sourceTree = "<group>"; };
 		55512E1D2DEEFB3300433ED8 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		55512E262DEF1DD200433ED8 /* InputPayment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPayment.swift; sourceTree = "<group>"; };
+		55935E222DEFE23D0079FFBB /* NameCheck .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NameCheck .swift"; sourceTree = "<group>"; };
 		D51C80C22DEF481C0051CB40 /* HomeIntroText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeIntroText.swift; sourceTree = "<group>"; };
 		D51C80C42DEF48260051CB40 /* HomeChracterImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChracterImage.swift; sourceTree = "<group>"; };
 		D51C80CA2DEF487C0051CB40 /* HomeBottomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomButtons.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 		D51C80CF2DEF69ED0051CB40 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				38E58C9B2DF2BE720085A752 /* OCRViewModel.swift */,
 				D59F7C7E2DEB019100A829A8 /* CreateGroupViewModel.swift */,
 			);
 			path = ViewModel;
@@ -305,8 +308,8 @@
 		D59F7C7A2DEB00B600A829A8 /* CreateGroup */ = {
 			isa = PBXGroup;
 			children = (
-				D51C80CE2DEF69E20051CB40 /* View */,
 				D51C80CF2DEF69ED0051CB40 /* ViewModel */,
+				D51C80CE2DEF69E20051CB40 /* View */,
 			);
 			path = CreateGroup;
 			sourceTree = "<group>";
@@ -508,6 +511,7 @@
 				D5ED63172DED427B007912E1 /* RootNavigationView.swift in Sources */,
 				D51C80CB2DEF487F0051CB40 /* HomeBottomButtons.swift in Sources */,
 				D59F7C812DEB09C200A829A8 /* EnterCodeView.swift in Sources */,
+				38E58C9C2DF2BE7A0085A752 /* OCRViewModel.swift in Sources */,
 				55512E272DEF1DD200433ED8 /* InputPayment.swift in Sources */,
 				D51C80D32DEF6B820051CB40 /* Wedding.swift in Sources */,
 				D574E9DE2DEDEE3500AAF70F /* PairButton.swift in Sources */,
@@ -668,10 +672,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 9S8SHSW95K;
+				DEVELOPMENT_TEAM = L9AQ48UJ68;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = chukapoka/Info.plist;
@@ -687,6 +692,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.GMYoo.chukapoka;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -698,10 +704,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 9S8SHSW95K;
+				DEVELOPMENT_TEAM = L9AQ48UJ68;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = chukapoka/Info.plist;
@@ -717,6 +724,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.GMYoo.chukapoka;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -729,7 +737,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9S8SHSW95K;
+				DEVELOPMENT_TEAM = L9AQ48UJ68;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				MARKETING_VERSION = 1.0;
@@ -748,7 +756,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9S8SHSW95K;
+				DEVELOPMENT_TEAM = L9AQ48UJ68;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				MARKETING_VERSION = 1.0;
@@ -766,7 +774,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9S8SHSW95K;
+				DEVELOPMENT_TEAM = L9AQ48UJ68;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.GMYoo.chukapokaUITests;
@@ -783,7 +791,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9S8SHSW95K;
+				DEVELOPMENT_TEAM = L9AQ48UJ68;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.GMYoo.chukapokaUITests;
