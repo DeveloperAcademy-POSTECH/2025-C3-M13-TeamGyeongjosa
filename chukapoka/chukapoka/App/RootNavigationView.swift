@@ -10,11 +10,13 @@ import SwiftUI
 struct RootNavigationView: View {
     @EnvironmentObject var coordinator: AppCoordinator
     @StateObject private var groupCreateViewModel: CreateGroupViewModel
-    
+    @StateObject private var ocrViewModel : OCRViewModel = OCRViewModel()
+
     init(coordinator: AppCoordinator) {
         // init에서는 coordinator를 못 씀 → StateObject를 지연 초기화 방식으로
         _groupCreateViewModel = StateObject(wrappedValue: CreateGroupViewModel(coordinator: coordinator))
     }
+
     
     var body: some View {
         NavigationStack(path: $coordinator.path) {
@@ -29,8 +31,9 @@ struct RootNavigationView: View {
                     case .createGroupInfoStep1:
                         InfoStep1View(viewModel: groupCreateViewModel)
                             .navigationBarHidden(true)
-                        
-                        // 그룹 참여 파티원 flow
+                        //OCRScreen(viewModel: ocrViewModel)
+                    
+                    // 그룹 참여 파티원 flow
                     case .joinGroup(.enterCode):
                         EnterCodeView()
                             .navigationBarHidden(true)
