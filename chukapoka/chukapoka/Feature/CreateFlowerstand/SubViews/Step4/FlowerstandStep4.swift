@@ -20,7 +20,3 @@ struct FlowerstandStep4: View {
         .padding(.horizontal, 16)
     }
 }
-
-#Preview {
-    FlowerstandStep4(viewModel: CreateFlowerstandViewModel())
-}
