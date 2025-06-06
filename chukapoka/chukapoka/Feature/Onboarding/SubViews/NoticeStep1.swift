@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Lottie
 
 struct NoticeStep1: View {
     
@@ -13,6 +14,10 @@ struct NoticeStep1: View {
         VStack {
             VStack(spacing: 0) {
                 Spacer()
+                LottieView(fileName: "CKPK_onboarding1")
+                                .frame(width: 320, height: 320)
+                                .padding(.bottom, 43)
+                
                 Text("함께 축하할 사람을 모아봐요")
                     .foregroundStyle(GSColor.black)
                     .font(GSFont.title2)

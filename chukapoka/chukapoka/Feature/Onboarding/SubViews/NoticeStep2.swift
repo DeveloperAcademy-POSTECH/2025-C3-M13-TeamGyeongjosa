@@ -12,6 +12,10 @@ struct NoticeStep2: View {
     var body: some View {
         VStack(spacing: 0) {
             Spacer()
+            LottieView(fileName: "CKPK_onboarding2")
+                            .frame(width: 300, height: 400)
+                             .padding(.bottom, 32)
+            
             Text("나만의 화환 포토카드로 축하해줘요")
                 .foregroundStyle(GSColor.black)
                 .font(GSFont.title2)
@@ -25,7 +29,6 @@ struct NoticeStep2: View {
                 .multilineTextAlignment(.center)
                 .lineSpacing(10)
                 .padding(.bottom, 36)
-            
         }
         .tag(1)
     }

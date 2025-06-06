@@ -31,11 +31,14 @@ struct OnboardingView: View {
                             Circle()
                                 .stroke(GSColor.primary, lineWidth: 2)
                         )
-                        .frame(width: 12, height: 12)
+                        .frame(width: 10, height: 10)
                         .animation(.easeInOut(duration: 0.2), value: currentPage)
                 }
             }
-            .padding(.bottom, 155)
+            .padding(.bottom, 117)
+            
+            SkipView()
+           
         }
     }
 }
