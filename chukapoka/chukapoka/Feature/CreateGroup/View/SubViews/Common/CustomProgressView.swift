@@ -9,22 +9,21 @@ import SwiftUI
 
 struct CustomProgressView: View {
     var progress: CGFloat // 0.0 ~ 1.0
-
+    
     var body: some View {
-        ZStack(alignment: .leading) {
-            // 배경: 완전한 흰색
-            Rectangle()
-                .fill(Color.white)
-                .frame(height: 1)
-
-            // 진행 바: 둥글지 않은 스타일
-            Rectangle()
-                .fill(GSColor.primary)
-                .frame(width: UIScreen.main.bounds.width * progress - 0, height: 2) // 16pt 좌우 패딩 고려
+        GeometryReader { geometry in
+            ZStack(alignment: .leading) {
+                // 배경 바
+                Rectangle()
+                    .fill(Color.white)
+                    .frame(height: 1)
+                
+                // 진행 바
+                Rectangle()
+                    .fill(GSColor.primary)
+                    .frame(width: geometry.size.width * progress, height: 2)
+            }
         }
+        .frame(height: 2) // 외부에서 height 강제
     }
-}
-
-#Preview {
-  CustomProgressView(progress: 0.5)
 }

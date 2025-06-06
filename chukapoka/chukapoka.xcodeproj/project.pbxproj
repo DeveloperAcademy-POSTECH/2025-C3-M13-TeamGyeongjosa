@@ -52,6 +52,8 @@
 		D574E9DC2DED8E2E00AAF70F /* GSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D574E9DB2DED8E2900AAF70F /* GSColor.swift */; };
 		D574E9DE2DEDEE3500AAF70F /* PairButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D574E9DD2DEDEDE300AAF70F /* PairButton.swift */; };
 		D5951B002DEFF68C006863B6 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5951AFF2DEFF68C006863B6 /* CustomTextField.swift */; };
+		D595C30A2DF3636B00F484A1 /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595C3092DF3635D00F484A1 /* InfoViewModel.swift */; };
+		D595C30C2DF3766000F484A1 /* FlowerLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595C30B2DF3765900F484A1 /* FlowerLoadingViewModel.swift */; };
 		D59F7C562DEAF20600A829A8 /* chukapokaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59F7C522DEAF20600A829A8 /* chukapokaApp.swift */; };
 		D59F7C642DEAF56D00A829A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59F7C632DEAF56700A829A8 /* AppDelegate.swift */; };
 		D59F7C702DEAF69400A829A8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59F7C6F2DEAF69200A829A8 /* Constants.swift */; };
@@ -146,6 +148,8 @@
 		D574E9DB2DED8E2900AAF70F /* GSColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSColor.swift; sourceTree = "<group>"; };
 		D574E9DD2DEDEDE300AAF70F /* PairButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairButton.swift; sourceTree = "<group>"; };
 		D5951AFF2DEFF68C006863B6 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		D595C3092DF3635D00F484A1 /* InfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
+		D595C30B2DF3765900F484A1 /* FlowerLoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerLoadingViewModel.swift; sourceTree = "<group>"; };
 		D59F7C222DEAEB3600A829A8 /* chukapoka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chukapoka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D59F7C342DEAEB3700A829A8 /* chukapokaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chukapokaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D59F7C3E2DEAEB3700A829A8 /* chukapokaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chukapokaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -340,8 +344,8 @@
 		D51C80CE2DEF69E20051CB40 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CA5EAA622DF2C34200690A03 /* SubViews */,
 				CA5EAA492DF2C06F00690A03 /* CreateGroupView.swift */,
+				CA5EAA622DF2C34200690A03 /* SubViews */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -402,6 +406,15 @@
 				D574E9CE2DED897A00AAF70F /* Pretendard-Thin.otf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		D595C3082DF3635500F484A1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D595C3092DF3635D00F484A1 /* InfoViewModel.swift */,
+				D595C30B2DF3765900F484A1 /* FlowerLoadingViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		D59F7C192DEAEB3600A829A8 = {
@@ -581,6 +594,7 @@
 			children = (
 				55512E1D2DEEFB3300433ED8 /* InfoLoadingView.swift */,
 				CA064B342DF07B090048F794 /* FlowerLoadingView.swift */,
+				D595C3082DF3635500F484A1 /* ViewModel */,
 			);
 			path = Loading;
 			sourceTree = "<group>";
@@ -758,10 +772,12 @@
 				D59F7C7F2DEB019700A829A8 /* CreateGroupViewModel.swift in Sources */,
 				D51C80D72DEF6B940051CB40 /* PartyMember.swift in Sources */,
 				D5B38C382DF04084005DAFDC /* PartyCardView.swift in Sources */,
+				D595C30A2DF3636B00F484A1 /* InfoViewModel.swift in Sources */,
 				D5B38C4D2DF04824005DAFDC /* PartyCardAction.swift in Sources */,
 				D5B38C3A2DF045EC005DAFDC /* PartyCardStatusBadge.swift in Sources */,
 				D5951B002DEFF68C006863B6 /* CustomTextField.swift in Sources */,
 				D5F710B02DF284CB00F2CE3B /* FlowerStandStep1ViewModel.swift in Sources */,
+				D595C30C2DF3766000F484A1 /* FlowerLoadingViewModel.swift in Sources */,
 				D59F7C562DEAF20600A829A8 /* chukapokaApp.swift in Sources */,
 				CA0B87F02DF021F50001F120 /* FlowerstandStep1.swift in Sources */,
 				D5B38C3C2DF045FB005DAFDC /* PartyCardActionIcons.swift in Sources */,
@@ -975,7 +991,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 6TW9MCXPJD;
+				DEVELOPMENT_TEAM = 9S8SHSW95K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = chukapoka/Info.plist;
@@ -1005,7 +1021,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 6TW9MCXPJD;
+				DEVELOPMENT_TEAM = 9S8SHSW95K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = chukapoka/Info.plist;

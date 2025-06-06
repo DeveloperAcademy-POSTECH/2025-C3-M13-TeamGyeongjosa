@@ -13,11 +13,13 @@ struct CreateFlowerstandView: View {
     
     var body: some View {
         VStack(spacing: 0) {
+            NavigationBar {
+                viewModel.goBack()
+            }
             // ⬆︎ 상단: 프로그레스 바만
             CircleProgress(step: viewModel.step.rawValue)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.top, 20)
-                .padding(.horizontal, 16)
+                .padding(.top, 16)
             
             // 플로우따라 바뀌는 컨테이너
             ZStack {
@@ -29,9 +31,7 @@ struct CreateFlowerstandView: View {
                 case . message:
                     FlowerstandStep3(viewModel: viewModel.step3ViewModel)
                 case .complete:
-                    FlowerstandStep4(viewModel: CreateFlowerstandViewModel())
-//                case .loading:
-//                    LoadingView()
+                    FlowerstandStep4(viewModel: viewModel)
                 default:
                     EmptyView()
                 }
@@ -43,15 +43,15 @@ struct CreateFlowerstandView: View {
                 title: viewModel.nextButtonTitle,
                 style: viewModel.isNextEnabled ? .basic : .disabled,
                 action: {
-                    viewModel.goNext(coordinator: coordinator)
+                    viewModel.goNext()
                 }
             )
             .padding(.horizontal, 16)
             .padding(.bottom, 31)
         }
         .ignoresSafeArea(.keyboard)
+        .onTapGesture {
+            self.endTextEditing()
+        }
     }
-}
-#Preview {
-    CreateFlowerstandView(viewModel: CreateFlowerstandViewModel())
 }
