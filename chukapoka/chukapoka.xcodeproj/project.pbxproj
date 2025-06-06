@@ -31,6 +31,11 @@
 		CA5EAA752DF2CA5D00690A03 /* LeftText.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAA732DF2CA5D00690A03 /* LeftText.swift */; };
 		CA5EAA762DF2CA5D00690A03 /* RightText.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAA742DF2CA5D00690A03 /* RightText.swift */; };
 		CA5EAA792DF2CDAA00690A03 /* FlowerstandCardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAA782DF2CDAA00690A03 /* FlowerstandCardData.swift */; };
+		CA5EAA8C2DF2DD7F00690A03 /* InputCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAA8A2DF2DD7F00690A03 /* InputCodeView.swift */; };
+		CA5EAA8D2DF2DD7F00690A03 /* CodeInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAA852DF2DD7F00690A03 /* CodeInputField.swift */; };
+		CA5EAA8E2DF2DD7F00690A03 /* InputCodeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAA882DF2DD7F00690A03 /* InputCodeHeaderView.swift */; };
+		CA5EAA8F2DF2DD7F00690A03 /* InputCodeFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAA872DF2DD7F00690A03 /* InputCodeFieldView.swift */; };
+		CA5EAA902DF2DD7F00690A03 /* InputCodeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAA862DF2DD7F00690A03 /* InputCodeButtonView.swift */; };
 		D51C80C32DEF48210051CB40 /* HomeIntroText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80C22DEF481C0051CB40 /* HomeIntroText.swift */; };
 		D51C80C52DEF482A0051CB40 /* HomeChracterImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80C42DEF48260051CB40 /* HomeChracterImage.swift */; };
 		D51C80CB2DEF487F0051CB40 /* HomeBottomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80CA2DEF487C0051CB40 /* HomeBottomButtons.swift */; };
@@ -123,6 +128,11 @@
 		CA5EAA732DF2CA5D00690A03 /* LeftText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftText.swift; sourceTree = "<group>"; };
 		CA5EAA742DF2CA5D00690A03 /* RightText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightText.swift; sourceTree = "<group>"; };
 		CA5EAA782DF2CDAA00690A03 /* FlowerstandCardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerstandCardData.swift; sourceTree = "<group>"; };
+		CA5EAA852DF2DD7F00690A03 /* CodeInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeInputField.swift; sourceTree = "<group>"; };
+		CA5EAA862DF2DD7F00690A03 /* InputCodeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputCodeButtonView.swift; sourceTree = "<group>"; };
+		CA5EAA872DF2DD7F00690A03 /* InputCodeFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputCodeFieldView.swift; sourceTree = "<group>"; };
+		CA5EAA882DF2DD7F00690A03 /* InputCodeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputCodeHeaderView.swift; sourceTree = "<group>"; };
+		CA5EAA8A2DF2DD7F00690A03 /* InputCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputCodeView.swift; sourceTree = "<group>"; };
 		D51C80C22DEF481C0051CB40 /* HomeIntroText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeIntroText.swift; sourceTree = "<group>"; };
 		D51C80C42DEF48260051CB40 /* HomeChracterImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChracterImage.swift; sourceTree = "<group>"; };
 		D51C80CA2DEF487C0051CB40 /* HomeBottomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomButtons.swift; sourceTree = "<group>"; };
@@ -325,6 +335,26 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		CA5EAA892DF2DD7F00690A03 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				CA5EAA852DF2DD7F00690A03 /* CodeInputField.swift */,
+				CA5EAA862DF2DD7F00690A03 /* InputCodeButtonView.swift */,
+				CA5EAA872DF2DD7F00690A03 /* InputCodeFieldView.swift */,
+				CA5EAA882DF2DD7F00690A03 /* InputCodeHeaderView.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		CA5EAA8B2DF2DD7F00690A03 /* InputCodeView */ = {
+			isa = PBXGroup;
+			children = (
+				CA5EAA892DF2DD7F00690A03 /* SubViews */,
+				CA5EAA8A2DF2DD7F00690A03 /* InputCodeView.swift */,
+			);
+			path = InputCodeView;
+			sourceTree = "<group>";
+		};
 		D51C80C12DEF47740051CB40 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -466,6 +496,7 @@
 		D59F7C5C2DEAF40300A829A8 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				CA5EAA8B2DF2DD7F00690A03 /* InputCodeView */,
 				D59F7C602DEAF4E000A829A8 /* Home */,
 				D59F7C7A2DEB00B600A829A8 /* CreateGroup */,
 				CA0B87EA2DF021300001F120 /* CreateFlowerstand */,
@@ -749,6 +780,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA5EAA8C2DF2DD7F00690A03 /* InputCodeView.swift in Sources */,
+				CA5EAA8D2DF2DD7F00690A03 /* CodeInputField.swift in Sources */,
+				CA5EAA8E2DF2DD7F00690A03 /* InputCodeHeaderView.swift in Sources */,
+				CA5EAA8F2DF2DD7F00690A03 /* InputCodeFieldView.swift in Sources */,
+				CA5EAA902DF2DD7F00690A03 /* InputCodeButtonView.swift in Sources */,
 				D5B38C5E2DF0A769005DAFDC /* PartyCardBackView.swift in Sources */,
 				D59F7C742DEAF6D600A829A8 /* AppCoordinator.swift in Sources */,
 				D59F7C642DEAF56D00A829A8 /* AppDelegate.swift in Sources */,
