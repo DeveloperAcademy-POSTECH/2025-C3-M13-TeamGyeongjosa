@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		38E58C9C2DF2BE7A0085A752 /* OCRViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E58C9B2DF2BE720085A752 /* OCRViewModel.swift */; };
+		38E58CA22DF2C4790085A752 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E58CA12DF2C4730085A752 /* ImagePickerView.swift */; };
 		55512E1E2DEEFB3300433ED8 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55512E1D2DEEFB3300433ED8 /* LoadingView.swift */; };
 		55512E272DEF1DD200433ED8 /* InputPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55512E262DEF1DD200433ED8 /* InputPayment.swift */; };
 		55935E232DEFE2470079FFBB /* NameCheck .swift in Sources */ = {isa = PBXBuildFile; fileRef = 55935E222DEFE23D0079FFBB /* NameCheck .swift */; };
@@ -64,6 +65,7 @@
 
 /* Begin PBXFileReference section */
 		38E58C9B2DF2BE720085A752 /* OCRViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRViewModel.swift; sourceTree = "<group>"; };
+		38E58CA12DF2C4730085A752 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		55512E1D2DEEFB3300433ED8 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		55512E262DEF1DD200433ED8 /* InputPayment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPayment.swift; sourceTree = "<group>"; };
 		55935E222DEFE23D0079FFBB /* NameCheck .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NameCheck .swift"; sourceTree = "<group>"; };
@@ -106,6 +108,19 @@
 		D5ED63162DED427B007912E1 /* RootNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		38E58C9D2DF2C05A0085A752 /* OCR */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = OCR;
+			sourceTree = "<group>";
+		};
+		38E58CA32DF2C6C50085A752 /* Screens */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Screens;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		D59F7C1F2DEAEB3600A829A8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -144,6 +159,7 @@
 		D51C80CE2DEF69E20051CB40 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				38E58CA12DF2C4730085A752 /* ImagePickerView.swift */,
 				D59F7C7C2DEB00E000A829A8 /* InfoStep1View.swift */,
 			);
 			path = View;
@@ -250,6 +266,7 @@
 		D59F7C5A2DEAF24500A829A8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				38E58C9D2DF2C05A0085A752 /* OCR */,
 				D51C80D12DEF6B620051CB40 /* SharedModel */,
 				D59F7C6D2DEAF64600A829A8 /* Extensions */,
 				D574E9AD2DED7F6A00AAF70F /* DesignSystem */,
@@ -308,6 +325,7 @@
 		D59F7C7A2DEB00B600A829A8 /* CreateGroup */ = {
 			isa = PBXGroup;
 			children = (
+				38E58CA32DF2C6C50085A752 /* Screens */,
 				D51C80CF2DEF69ED0051CB40 /* ViewModel */,
 				D51C80CE2DEF69E20051CB40 /* View */,
 			);
@@ -337,6 +355,10 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				38E58C9D2DF2C05A0085A752 /* OCR */,
+				38E58CA32DF2C6C50085A752 /* Screens */,
 			);
 			name = chukapoka;
 			packageProductDependencies = (
@@ -492,6 +514,7 @@
 				D59F7C742DEAF6D600A829A8 /* AppCoordinator.swift in Sources */,
 				D59F7C642DEAF56D00A829A8 /* AppDelegate.swift in Sources */,
 				55935E232DEFE2470079FFBB /* NameCheck .swift in Sources */,
+				38E58CA22DF2C4790085A752 /* ImagePickerView.swift in Sources */,
 				D59F7C7F2DEB019700A829A8 /* CreateGroupViewModel.swift in Sources */,
 				D51C80D72DEF6B940051CB40 /* PartyMember.swift in Sources */,
 				D5951B002DEFF68C006863B6 /* CustomTextField.swift in Sources */,
