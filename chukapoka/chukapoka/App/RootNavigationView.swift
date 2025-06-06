@@ -21,29 +21,35 @@ struct RootNavigationView: View {
     var body: some View {
         NavigationStack(path: $coordinator.path) {
             HomeView()
+                .navigationBarHidden(true)
                 .navigationDestination(for: AppRoute.self) { route in
                     switch route {
                     case .home:
                         HomeView()
-                    
-                    // 그룹 생성 파티장 flow
+                            .navigationBarHidden(true)
+                        // 그룹 생성 파티장 flow
                     case .createGroupInfoStep1:
                         InfoStep1View(viewModel: groupCreateViewModel)
+                            .navigationBarHidden(true)
                         //OCRScreen(viewModel: ocrViewModel)
                     
                     // 그룹 참여 파티원 flow
                     case .joinGroup(.enterCode):
                         EnterCodeView()
+                            .navigationBarHidden(true)
                         
                         // 꽃 만들기 flow
                     case .createFlowerstand:
                         CreateFlowerstandView(viewModel: CreateFlowerstandViewModel())
+                            .navigationBarHidden(true)
                     
                     case .loadingInfoDone:
                         FlowerLoadingView()
+                            .navigationBarHidden(true)
                         
                     default:
                         EmptyView()
+                            .navigationBarHidden(true)
                         
                     }
                 }
