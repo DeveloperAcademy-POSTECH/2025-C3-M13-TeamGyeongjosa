@@ -8,18 +8,7 @@
 import SwiftUI
 
 struct FlowerstandStep1: View {
-    @State private var amountText: String = ""
-    
-    var amount: Int? {
-        Int(amountText)
-    }
-    
-    var isValidAmount: Bool {
-        if let amount = amount, amount > 0 {
-            return true
-        }
-        return false
-    }
+    @ObservedObject var viewModel: FlowerstandAmountViewModel
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -35,24 +24,21 @@ struct FlowerstandStep1: View {
             }
             
             ZStack(alignment: .leading) {
-                if amountText.isEmpty {
+                if viewModel.amountText.isEmpty {
                     Text("얼마를 보낼까요?")
                         .font(GSFont.title2)
                         .foregroundStyle(GSColor.gray1)
-                } else if let amount = amount {
+                } else if let amount = viewModel.amount {
                     Text("\(amount)만원")
                         .font(GSFont.title2)
                         .foregroundStyle(GSColor.primary)
                 }
                 
-                TextField("", text: $amountText)
+                TextField("", text: $viewModel.amountText)
                     .keyboardType(.numberPad)
                     .foregroundColor(.clear)
                     .accentColor(.clear)
                     .disableAutocorrection(true)
-                    .onChange(of: amountText) {
-                        amountText = String(amountText.filter { $0.isNumber }.prefix(3))
-                    }
             }
             .padding(.horizontal, 4)
             .padding(.top, 32)
@@ -64,12 +50,6 @@ struct FlowerstandStep1: View {
                     .font(GSFont.caption2)
                     .foregroundStyle(GSColor.primary)
                     .padding(.bottom, 16)
-                
-                PrimaryButton(
-                    title: "다음",
-                    style: isValidAmount ? .basic : .disabled,
-                    action: { print("다음 클릭: \(amount ?? 0)만원") }
-                )
             }
         }
         .padding(.horizontal, 16)
@@ -77,5 +57,5 @@ struct FlowerstandStep1: View {
 }
 
 #Preview {
-    FlowerstandStep1()
+    FlowerstandStep1(viewModel: FlowerstandAmountViewModel())
 }

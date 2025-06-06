@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct FlowerstandStep2: View {
-    @State private var selectedColor: Color = GSColor.yellow
-    @State private var selectedFlower: String = "YellowFlower"
+    @ObservedObject var viewModel: CreateFlowerstandViewModel
     
     var body: some View {
         VStack(alignment: .leading, spacing: 39) {
@@ -20,16 +19,29 @@ struct FlowerstandStep2: View {
             VStack(spacing: 28) {
                 VStack(spacing: 45) {
                     FlowerstandCardView(
-                        selectedColor: selectedColor,
-                        selectedFlower: selectedFlower
+                        selectedColor: viewModel.state.selectedColor,
+                        selectedFlower: viewModel.state.selectedFlower
                     )
                     
                     CardDecorationPicker(
-                        selectedColor: $selectedColor,
-                        selectedFlower: $selectedFlower)
+                        selectedColor: Binding(
+                            get: { viewModel.state.selectedColor },
+                            set: { viewModel.action(.selectColor($0)) }
+                        ),
+                        selectedFlower: Binding(
+                            get: { viewModel.state.selectedFlower },
+                            set: { viewModel.action(.selectFlower($0)) }
+                        )
+                    )
                 }
                 
-                PrimaryButton(title: "다음", style: .basic)
+                PrimaryButton(
+                    title: "다음",
+                    style: .basic,
+                    action: {
+                        viewModel.action(.tapNext)
+                    }
+                )
             }
         }
         .padding(.horizontal, 16)
@@ -37,5 +49,5 @@ struct FlowerstandStep2: View {
 }
 
 #Preview {
-    FlowerstandStep2()
+    FlowerstandStep2(viewModel: CreateFlowerstandViewModel())
 }

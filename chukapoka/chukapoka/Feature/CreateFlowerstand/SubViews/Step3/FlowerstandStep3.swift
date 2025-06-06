@@ -8,11 +8,7 @@
 import SwiftUI
 
 struct FlowerstandStep3: View {
-    @State private var text: String = ""
-
-    var isValidMessage: Bool {
-        !text.isEmpty && text.count <= 10
-    }
+    @ObservedObject var viewModel: CreateFlowerstandViewModel
     
     var body: some View {
         ZStack(alignment: .leading) {
@@ -26,10 +22,18 @@ struct FlowerstandStep3: View {
                 
                 Spacer()
                 
-                CreateRibbonMessage(text: $text)
+                CreateRibbonMessage(text: Binding(
+                    get: { viewModel.state.message },
+                    set: { viewModel.action(.inputMessage($0)) }
+                ))
                 
-                PrimaryButton(title: "다음",
-                              style: isValidMessage ? .basic : .disabled)
+                PrimaryButton(
+                    title: "다음",
+                    style: viewModel.isValidMessage ? .basic : .disabled,
+                    action: {
+                        viewModel.action(.complete)
+                    }
+                )
             }
             .padding(.horizontal, 16)
         }
@@ -37,5 +41,5 @@ struct FlowerstandStep3: View {
 }
 
 #Preview {
-    FlowerstandStep3()
+    FlowerstandStep3(viewModel: CreateFlowerstandViewModel())
 }

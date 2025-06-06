@@ -8,17 +8,13 @@
 import SwiftUI
 
 struct InfoStep1View: View {
-    @StateObject private var viewModel: CreateGroupViewModel
-    
-    init(viewModel: CreateGroupViewModel) {
-        _viewModel = StateObject(wrappedValue: viewModel)
-    }
+    @ObservedObject var viewModel: CreateGroupViewModel
     
     var body: some View {
         VStack {
             Text("정보 입력 1단계")
             Button("다음") {
-                viewModel.didTapNext()
+                viewModel.coordinator.push(.createFlowerstand)
             }
         }
         .navigationTitle("그룹 생성1")
