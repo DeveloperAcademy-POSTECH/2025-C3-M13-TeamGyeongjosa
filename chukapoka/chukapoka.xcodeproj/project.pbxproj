@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38E58C9C2DF2BE7A0085A752 /* OCRViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E58C9B2DF2BE720085A752 /* OCRViewModel.swift */; };
+		38E58CAE2DF2C8F80085A752 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E58CAC2DF2C8F40085A752 /* ImagePickerView.swift */; };
 		55512E1E2DEEFB3300433ED8 /* InfoLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55512E1D2DEEFB3300433ED8 /* InfoLoadingView.swift */; };
+		55512E272DEF1DD200433ED8 /* InputPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55512E262DEF1DD200433ED8 /* InputPayment.swift */; };
 		CA064B222DF05DE60048F794 /* FlowerstandStep3.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA064B212DF05DE60048F794 /* FlowerstandStep3.swift */; };
 		CA064B242DF05F660048F794 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA064B232DF05F660048F794 /* Assets.xcassets */; };
 		CA064B262DF061AD0048F794 /* SelectedFlowerGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA064B252DF061AD0048F794 /* SelectedFlowerGroup.swift */; };
@@ -104,7 +107,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		38E58C9B2DF2BE720085A752 /* OCRViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRViewModel.swift; sourceTree = "<group>"; };
+		38E58CAC2DF2C8F40085A752 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		55512E1D2DEEFB3300433ED8 /* InfoLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoLoadingView.swift; sourceTree = "<group>"; };
+		55512E262DEF1DD200433ED8 /* InputPayment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPayment.swift; sourceTree = "<group>"; };
 		CA064B212DF05DE60048F794 /* FlowerstandStep3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerstandStep3.swift; sourceTree = "<group>"; };
 		CA064B232DF05F660048F794 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA064B252DF061AD0048F794 /* SelectedFlowerGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedFlowerGroup.swift; sourceTree = "<group>"; };
@@ -188,6 +194,19 @@
 		D5F710B32DF28D8D00F2CE3B /* FlowerStandStep3ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerStandStep3ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		38E58C9D2DF2C05A0085A752 /* OCR */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = OCR;
+			sourceTree = "<group>";
+		};
+		38E58CA32DF2C6C50085A752 /* Screens */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Screens;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		D59F7C1F2DEAEB3600A829A8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -213,6 +232,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38E58CAF2DF2D4A70085A752 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				55512E262DEF1DD200433ED8 /* InputPayment.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		CA064B272DF06B8C0048F794 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -369,6 +396,7 @@
 			isa = PBXGroup;
 			children = (
 				CA5EAA622DF2C34200690A03 /* SubViews */,
+				38E58CAC2DF2C8F40085A752 /* ImagePickerView.swift */,
 				CA5EAA492DF2C06F00690A03 /* CreateGroupView.swift */,
 			);
 			path = View;
@@ -377,6 +405,7 @@
 		D51C80CF2DEF69ED0051CB40 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				38E58C9B2DF2BE720085A752 /* OCRViewModel.swift */,
 				D59F7C7E2DEB019100A829A8 /* CreateGroupViewModel.swift */,
 			);
 			path = ViewModel;
@@ -437,6 +466,7 @@
 				D59F7C9E2DECC2B100A829A8 /* .swiftlint.yml */,
 				D59F7C542DEAF20600A829A8 /* chukapoka */,
 				D59F7C232DEAEB3600A829A8 /* Products */,
+				38E58CAF2DF2D4A70085A752 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -476,8 +506,8 @@
 		D59F7C5A2DEAF24500A829A8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				38E58C9D2DF2C05A0085A752 /* OCR */,
 				D51C80D12DEF6B620051CB40 /* SharedModel */,
-				D59F7C6D2DEAF64600A829A8 /* Extensions */,
 				D574E9AD2DED7F6A00AAF70F /* DesignSystem */,
 				D59F7C6F2DEAF69200A829A8 /* Constants.swift */,
 			);
@@ -525,18 +555,12 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		D59F7C6D2DEAF64600A829A8 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		D59F7C7A2DEB00B600A829A8 /* CreateGroup */ = {
 			isa = PBXGroup;
 			children = (
-				D51C80CE2DEF69E20051CB40 /* View */,
+				38E58CA32DF2C6C50085A752 /* Screens */,
 				D51C80CF2DEF69ED0051CB40 /* ViewModel */,
+				D51C80CE2DEF69E20051CB40 /* View */,
 			);
 			path = CreateGroup;
 			sourceTree = "<group>";
@@ -628,6 +652,10 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				38E58C9D2DF2C05A0085A752 /* OCR */,
+				38E58CA32DF2C6C50085A752 /* Screens */,
 			);
 			name = chukapoka;
 			packageProductDependencies = (
@@ -789,6 +817,7 @@
 				D59F7C742DEAF6D600A829A8 /* AppCoordinator.swift in Sources */,
 				D59F7C642DEAF56D00A829A8 /* AppDelegate.swift in Sources */,
 				D59F7C7F2DEB019700A829A8 /* CreateGroupViewModel.swift in Sources */,
+				38E58CAE2DF2C8F80085A752 /* ImagePickerView.swift in Sources */,
 				D51C80D72DEF6B940051CB40 /* PartyMember.swift in Sources */,
 				D5B38C382DF04084005DAFDC /* PartyCardView.swift in Sources */,
 				D5B38C4D2DF04824005DAFDC /* PartyCardAction.swift in Sources */,
@@ -838,6 +867,8 @@
 				D51C80CB2DEF487F0051CB40 /* HomeBottomButtons.swift in Sources */,
 				CA064B2E2DF074040048F794 /* CreateRibbonMessage.swift in Sources */,
 				D59F7C812DEB09C200A829A8 /* EnterCodeView.swift in Sources */,
+				38E58C9C2DF2BE7A0085A752 /* OCRViewModel.swift in Sources */,
+				55512E272DEF1DD200433ED8 /* InputPayment.swift in Sources */,
 				CA5EAA792DF2CDAA00690A03 /* FlowerstandCardData.swift in Sources */,
 				CA064B352DF07B090048F794 /* FlowerLoadingView.swift in Sources */,
 				CA2C4A492DF0513700D8E170 /* FlowerstandCardView.swift in Sources */,
@@ -1004,6 +1035,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
@@ -1023,6 +1055,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.GMYoo.chukapoka;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1034,6 +1067,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
@@ -1053,6 +1087,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.GMYoo.chukapoka;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1065,7 +1100,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9S8SHSW95K;
+				DEVELOPMENT_TEAM = L9AQ48UJ68;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				MARKETING_VERSION = 1.0;
@@ -1084,7 +1119,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9S8SHSW95K;
+				DEVELOPMENT_TEAM = L9AQ48UJ68;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				MARKETING_VERSION = 1.0;
@@ -1102,7 +1137,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9S8SHSW95K;
+				DEVELOPMENT_TEAM = L9AQ48UJ68;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.GMYoo.chukapokaUITests;
@@ -1119,7 +1154,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9S8SHSW95K;
+				DEVELOPMENT_TEAM = L9AQ48UJ68;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.GMYoo.chukapokaUITests;
