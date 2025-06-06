@@ -30,16 +30,16 @@ struct SplashView: View {
           .frame(maxWidth: .infinity, alignment: .leading)
 
           // 하단 이미지
-          Image("Splash")
+          Image("SplashLogo")
             .resizable()
             .scaledToFit()
-            .frame(height: geometry.size.height * 0.525)
-            .position(x: geometry.size.width / 2.19,
-                      y: geometry.size.height - (geometry.size.width * imageHeightRatio) / 2.4)
+            .frame(height: geometry.size.height * 0.45)
+            .position(x: geometry.size.width / 2.15,
+                      y: geometry.size.height - (geometry.size.width * imageHeightRatio) / 2.85)
         }
         .onAppear {
           // 3초 뒤 전환
-          DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+          DispatchQueue.main.asyncAfter(deadline: .now() + 300) {
             withAnimation {
               isActive = true
             }
