@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DeliveryLoadingView: View {
+struct InfoLoadingView: View {
     var body: some View {
         VStack(spacing: 0) {
             
@@ -35,5 +35,5 @@ struct DeliveryLoadingView: View {
 }
 
 #Preview {
-    DeliveryLoadingView()
+    InfoLoadingView()
 }

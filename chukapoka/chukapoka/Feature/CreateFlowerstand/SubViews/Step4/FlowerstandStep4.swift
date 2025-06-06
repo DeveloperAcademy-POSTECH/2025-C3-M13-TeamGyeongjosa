@@ -8,22 +8,14 @@
 import SwiftUI
 
 struct FlowerstandStep4: View {
-    @State private var cardData: FlowerstandCardData = FlowerstandCardData(
-        name: "강지수",
-        selectedColor: GSColor.yellow,
-        selectedFlower: "YellowFlower",
-        partyName: "경조사실무팀",
-        ribbonText: "행복하세요!"
-    )
+    @ObservedObject var viewModel: CreateFlowerstandViewModel
     
     var body: some View {
-        VStack(alignment: .center) {
-            FinishFlowerstandContent(cardData: cardData)
-            
-            Spacer()
-            
-            PrimaryButton(title: "카드 보내기", style: .basic)
-                .padding(.bottom, 30)
+        VStack(alignment: .center, spacing: 155) {
+            Text("\(viewModel.recipientName)님 만의\n화환이 준비되었어요!")
+                .font(GSFont.title2)
+                .foregroundColor(GSColor.black)
+                .multilineTextAlignment(.center)
         }
         .padding(.horizontal, 16)
     }

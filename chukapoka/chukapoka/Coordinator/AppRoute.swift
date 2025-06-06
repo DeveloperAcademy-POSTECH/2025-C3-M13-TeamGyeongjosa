@@ -8,17 +8,22 @@ import Foundation
 
 enum AppRoute: Hashable {
     case home
-    case createGroup(CreateGroupRoute)
+    case createGroupInfoStep1
+    case createGroupInfoStep2
+    case createGroupInfoStep3
     case joinGroup(JoinGroupRoute)
+    case loadingInfoDone
+    case createFlowerstand
 }
 
-enum CreateGroupRoute: Hashable {
+enum CreateGroupRoute: Int, CaseIterable, Hashable {
     case infoStep1
-//    case infoStep2
-//    case enterName
+    //    case infoStep2
+    //    case enterName
+    
 }
 
 enum JoinGroupRoute: Hashable {
     case enterCode
-//    case joinComplete
+    //    case joinComplete
 }

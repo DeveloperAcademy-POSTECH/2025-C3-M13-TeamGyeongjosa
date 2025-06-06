@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FlowerstandStep5: View {
+struct FlowerLoadingView: View {
     var body: some View {
         VStack(alignment: .center, spacing: 155) {
             Text("포키가 화환을 배달하고 있어요\n조금만 기다려주세요")
@@ -21,5 +21,5 @@ struct FlowerstandStep5: View {
 }
 
 #Preview {
-    FlowerstandStep5()
+    FlowerLoadingView()
 }

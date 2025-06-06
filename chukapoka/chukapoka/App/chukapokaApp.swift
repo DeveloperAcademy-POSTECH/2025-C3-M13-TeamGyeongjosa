@@ -15,7 +15,7 @@ struct ChukapokaApp: App {
 //    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     var body: some Scene {
         WindowGroup {
-            RootNavigationView()
+            RootNavigationView(coordinator: coordinator)
                 // 전역 주입
                 .environmentObject(coordinator)
         }

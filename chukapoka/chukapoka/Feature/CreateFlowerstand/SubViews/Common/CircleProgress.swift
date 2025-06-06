@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct CircleProgress: View {
-    @State private var step: Int = 0 // 0,1,2로 단계 구분
+//    @State private var step: Int = 0
+    
+    // 외부에서 주입
+    let step: Int
     
     var body: some View {
         ZStack {
@@ -34,5 +37,5 @@ struct CircleProgress: View {
 }
 
 #Preview {
-    CircleProgress()
+    CircleProgress(step: 5)
 }

@@ -8,17 +8,13 @@
 import SwiftUI
 
 struct FlowerstandStep3: View {
-    @State private var text: String = ""
-
-    var isValidMessage: Bool {
-        !text.isEmpty && text.count <= 10
-    }
+    @ObservedObject var viewModel: FlowerStandStep3ViewModel
     
     var body: some View {
         ZStack(alignment: .leading) {
             GSImage.messageRibbon
                 .scaledToFit()
-            
+            // TODO: - 리본위에 실시간 데이터 반영되게
             VStack(alignment: .leading, spacing: 39) {
                 Text("화환에 들어갈 문구를\n작성해주세요")
                     .font(GSFont.title2)
@@ -26,10 +22,7 @@ struct FlowerstandStep3: View {
                 
                 Spacer()
                 
-                CreateRibbonMessage(text: $text)
-                
-                PrimaryButton(title: "다음",
-                              style: isValidMessage ? .basic : .disabled)
+                CreateRibbonMessage(text: $viewModel.message)
             }
             .padding(.horizontal, 16)
         }
@@ -37,5 +30,5 @@ struct FlowerstandStep3: View {
 }
 
 #Preview {
-    FlowerstandStep3()
+    FlowerstandStep3(viewModel: FlowerStandStep3ViewModel())
 }

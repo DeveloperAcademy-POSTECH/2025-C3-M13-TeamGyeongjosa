@@ -9,10 +9,14 @@ import SwiftUI
 
 @MainActor
 final class CreateGroupViewModel: ObservableObject {
-    @Published var name: String = ""
+    let coordinator: AppCoordinator
+    
+    init(coordinator: AppCoordinator) {
+        self.coordinator = coordinator
+    }
     
     // View가 처리
     func didTapNext() {
-        print("다음 단계로 이동 요청")
+        self.coordinator.push(.createFlowerstand)
     }
 }
