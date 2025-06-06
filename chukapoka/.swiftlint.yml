@@ -6,13 +6,12 @@ disabled_rules: # 초보자에게 너무 엄격한 건 끄자 !
   - nesting                         # SwiftUI 구조상 중첩 뷰 많음
   - line_length                     # View 선언이 길어질 수 있음
   - cyclomatic_complexity           # 조건문 많아지는 건 초기엔 자연스러움
+  - explicit_type_interface 
 
 opt_in_rules: # SwiftUI와 MVVM 스타일에서 명시적으로 켜줄 것들
-  - attributes                      # @MainActor, @State 등 속성 정렬
   - closure_end_indentation         # 클로저 끝 들여쓰기 일관되게
   - empty_count                     # .count == 0보다 .isEmpty 쓰기
   - redundant_optional_initialization # ?= nil 금지
-  - explicit_type_interface         # ViewModel 변수 타입 명시하자
 
 type_name: # ViewModel, View 등 이름 길이 제한 완화
   min_length: 3

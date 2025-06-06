@@ -1,0 +1,22 @@
+//
+//  FlowerstandStep4.swift
+//  chukapoka
+//
+//  Created by 조유진 on 6/4/25.
+//
+
+import SwiftUI
+
+struct FlowerstandStep4: View {
+    @ObservedObject var viewModel: CreateFlowerstandViewModel
+    
+    var body: some View {
+        VStack(alignment: .center, spacing: 155) {
+            Text("\(viewModel.recipientName)님 만의\n화환이 준비되었어요!")
+                .font(GSFont.title2)
+                .foregroundColor(GSColor.black)
+                .multilineTextAlignment(.center)
+        }
+        .padding(.horizontal, 16)
+    }
+}

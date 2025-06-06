@@ -10,9 +10,9 @@ import PhotosUI
 
 struct OCRScreen: View {
     @State private var selectedItem: PhotosPickerItem?
-    @StateObject private var viewModel: SelectImageViewModel
+    @StateObject private var viewModel: OCRViewModel
 
-    init(viewModel: SelectImageViewModel) {
+    init(viewModel: OCRViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
     }
 
