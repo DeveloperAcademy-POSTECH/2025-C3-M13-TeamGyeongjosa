@@ -24,6 +24,6 @@ final class AppCoordinator: ObservableObject {
     
     // 홈으로 이동
     func popToRoot() {
-        path.removeLast(path.count)
+        self.path.removeAll()
     }
 }

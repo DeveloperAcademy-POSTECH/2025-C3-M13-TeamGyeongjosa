@@ -14,7 +14,8 @@ struct NavigationBar: View {
         HStack {
             Button(action: {
                 onBack()
-            }) {
+            })
+            {
                 Image(systemName: "chevron.backward")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
