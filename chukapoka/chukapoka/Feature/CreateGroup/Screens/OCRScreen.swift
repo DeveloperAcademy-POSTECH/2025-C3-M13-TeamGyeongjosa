@@ -18,7 +18,7 @@ struct OCRScreen: View {
 
     var body: some View {
         VStack(spacing: 20) {
-            ImagePickerView(selectedItem: $selectedItem)
+//            ImagePickerView(selectedItem: $selectedItem)
 //
 //            .onChange(of: selectedItem) {
 //                guard let item = selectedItem else { return }

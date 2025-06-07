@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		38A09B532DF431AC0066E434 /* OCRManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A09B522DF431A30066E434 /* OCRManager.swift */; };
+		38A09B572DF4A9090066E434 /* InvitationOCRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A09B562DF4A8BD0066E434 /* InvitationOCRView.swift */; };
 		38AA40C62DF38D18004D5EC9 /* OCRScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40C42DF38D18004D5EC9 /* OCRScreen.swift */; };
 		38AA40C92DF38D27004D5EC9 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40C72DF38D27004D5EC9 /* ImagePickerView.swift */; };
 		38AA40CC2DF38D44004D5EC9 /* OCRViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40CB2DF38D44004D5EC9 /* OCRViewModel.swift */; };
@@ -123,6 +124,7 @@
 
 /* Begin PBXFileReference section */
 		38A09B522DF431A30066E434 /* OCRManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRManager.swift; sourceTree = "<group>"; };
+		38A09B562DF4A8BD0066E434 /* InvitationOCRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationOCRView.swift; sourceTree = "<group>"; };
 		38AA40C42DF38D18004D5EC9 /* OCRScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRScreen.swift; sourceTree = "<group>"; };
 		38AA40C72DF38D27004D5EC9 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		38AA40CB2DF38D44004D5EC9 /* OCRViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRViewModel.swift; sourceTree = "<group>"; };
@@ -458,6 +460,7 @@
 		D51C80CE2DEF69E20051CB40 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				38A09B562DF4A8BD0066E434 /* InvitationOCRView.swift */,
 				38AA40C72DF38D27004D5EC9 /* ImagePickerView.swift */,
 				CA5EAA492DF2C06F00690A03 /* CreateGroupView.swift */,
 				CA5EAA622DF2C34200690A03 /* SubViews */,
@@ -922,6 +925,7 @@
 				CA5EAA642DF2C34200690A03 /* InfoStep1View.swift in Sources */,
 				CA5EAA652DF2C34200690A03 /* InfoStep3View.swift in Sources */,
 				CA5EAA662DF2C34200690A03 /* InfoStep2View.swift in Sources */,
+				38A09B572DF4A9090066E434 /* InvitationOCRView.swift in Sources */,
 				55512E1E2DEEFB3300433ED8 /* InfoLoadingView.swift in Sources */,
 				D574E9B12DED7FA000AAF70F /* PrimaryButton.swift in Sources */,
 				D51C80C32DEF48210051CB40 /* HomeIntroText.swift in Sources */,
