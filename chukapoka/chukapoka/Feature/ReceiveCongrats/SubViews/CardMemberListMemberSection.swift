@@ -13,7 +13,7 @@ struct CardMemberListMemberSection: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             if !members.isEmpty {
-                Text("멤버(\(members.count)명)")
+                Text("참여자(\(members.count)명)")
                     .font(GSFont.body1)
                     .foregroundColor(GSColor.white)
             }

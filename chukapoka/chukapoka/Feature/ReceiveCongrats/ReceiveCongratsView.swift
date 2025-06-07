@@ -17,6 +17,7 @@ struct ReceiveCongratsView: View {
             PrimaryButton(title: "해당 파티의 화환 보러가기")
         }
         .padding(.horizontal, 16)
+        .padding(.bottom, 20)
         .environmentObject(viewModel)
     }
 }
