@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import SwiftData
 
 @main
 struct ChukapokaApp: App {
@@ -18,6 +17,7 @@ struct ChukapokaApp: App {
             RootNavigationView()
                 // 전역 주입
                 .environmentObject(coordinator)
+                .modelContainer(for: [Wedding.self, Party.self, PartyMember.self])
         }
     }
 }

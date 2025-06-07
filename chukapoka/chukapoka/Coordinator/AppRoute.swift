@@ -9,8 +9,8 @@ import Foundation
 enum AppRoute: Hashable {
     case home
     case createGroup
-    case loadingInfoDone
-    case createFlowerstand
+    case loadingInfoDone(leader: PartyMember)
+    case createFlowerstand(leader: PartyMember)
     case loadingFlowerstandDone
     case joinGroup
 }
