@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		38AA40BF2DF38CD1004D5EC9 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40BE2DF38CD1004D5EC9 /* OnboardingView.swift */; };
 		38AA40C62DF38D18004D5EC9 /* OCRScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40C42DF38D18004D5EC9 /* OCRScreen.swift */; };
 		38AA40C92DF38D27004D5EC9 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40C72DF38D27004D5EC9 /* ImagePickerView.swift */; };
-		38AA40CA2DF38D27004D5EC9 /* InfoStep1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40C82DF38D27004D5EC9 /* InfoStep1View.swift */; };
 		38AA40CC2DF38D44004D5EC9 /* OCRViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40CB2DF38D44004D5EC9 /* OCRViewModel.swift */; };
 		38AA40CF2DF38D77004D5EC9 /* FlowerstandCardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40CD2DF38D77004D5EC9 /* FlowerstandCardData.swift */; };
 		38AA40D12DF38D9C004D5EC9 /* NameCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40D02DF38D9C004D5EC9 /* NameCheck.swift */; };
@@ -49,7 +47,9 @@
 		CA5EAA722DF2CA5800690A03 /* FinishFlowerstandContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAA702DF2CA5800690A03 /* FinishFlowerstandContent.swift */; };
 		CA5EAA752DF2CA5D00690A03 /* LeftText.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAA732DF2CA5D00690A03 /* LeftText.swift */; };
 		CA5EAA762DF2CA5D00690A03 /* RightText.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAA742DF2CA5D00690A03 /* RightText.swift */; };
-		CA5EAA792DF2CDAA00690A03 /* FlowerstandCardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAA782DF2CDAA00690A03 /* FlowerstandCardData.swift */; };
+		CA5EAAA82DF41A8E00690A03 /* CKPK_onboarding2.json in Resources */ = {isa = PBXBuildFile; fileRef = CA5EAAA62DF41A8E00690A03 /* CKPK_onboarding2.json */; };
+		CA5EAAA92DF41A8E00690A03 /* CKPK_onboarding1.json in Resources */ = {isa = PBXBuildFile; fileRef = CA5EAAA52DF41A8E00690A03 /* CKPK_onboarding1.json */; };
+		CA5EAAAC2DF41B2B00690A03 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = CA5EAAAB2DF41B2B00690A03 /* Lottie */; };
 		D51C80C32DEF48210051CB40 /* HomeIntroText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80C22DEF481C0051CB40 /* HomeIntroText.swift */; };
 		D51C80C52DEF482A0051CB40 /* HomeChracterImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80C42DEF48260051CB40 /* HomeChracterImage.swift */; };
 		D51C80CB2DEF487F0051CB40 /* HomeBottomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80CA2DEF487C0051CB40 /* HomeBottomButtons.swift */; };
@@ -121,10 +121,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		38AA40BE2DF38CD1004D5EC9 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		38AA40C42DF38D18004D5EC9 /* OCRScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRScreen.swift; sourceTree = "<group>"; };
 		38AA40C72DF38D27004D5EC9 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
-		38AA40C82DF38D27004D5EC9 /* InfoStep1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoStep1View.swift; sourceTree = "<group>"; };
 		38AA40CB2DF38D44004D5EC9 /* OCRViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRViewModel.swift; sourceTree = "<group>"; };
 		38AA40CD2DF38D77004D5EC9 /* FlowerstandCardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerstandCardData.swift; sourceTree = "<group>"; };
 		38AA40D02DF38D9C004D5EC9 /* NameCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameCheck.swift; sourceTree = "<group>"; };
@@ -163,7 +161,8 @@
 		CA5EAA702DF2CA5800690A03 /* FinishFlowerstandContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishFlowerstandContent.swift; sourceTree = "<group>"; };
 		CA5EAA732DF2CA5D00690A03 /* LeftText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftText.swift; sourceTree = "<group>"; };
 		CA5EAA742DF2CA5D00690A03 /* RightText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightText.swift; sourceTree = "<group>"; };
-		CA5EAA782DF2CDAA00690A03 /* FlowerstandCardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerstandCardData.swift; sourceTree = "<group>"; };
+		CA5EAAA52DF41A8E00690A03 /* CKPK_onboarding1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CKPK_onboarding1.json; sourceTree = "<group>"; };
+		CA5EAAA62DF41A8E00690A03 /* CKPK_onboarding2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CKPK_onboarding2.json; sourceTree = "<group>"; };
 		D51C80C22DEF481C0051CB40 /* HomeIntroText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeIntroText.swift; sourceTree = "<group>"; };
 		D51C80C42DEF48260051CB40 /* HomeChracterImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChracterImage.swift; sourceTree = "<group>"; };
 		D51C80CA2DEF487C0051CB40 /* HomeBottomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomButtons.swift; sourceTree = "<group>"; };
@@ -227,6 +226,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA5EAAAC2DF41B2B00690A03 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,7 +355,6 @@
 		CA064B2F2DF07AC60048F794 /* Step4 */ = {
 			isa = PBXGroup;
 			children = (
-				CA5EAA772DF2CDA400690A03 /* Model */,
 				CA064B322DF07AF40048F794 /* FlowerstandStep4.swift */,
 				CA5EAA6F2DF2CA5800690A03 /* FinishFlowerstandCard.swift */,
 				CA5EAA702DF2CA5800690A03 /* FinishFlowerstandContent.swift */,
@@ -427,12 +426,13 @@
 			path = SubViews;
 			sourceTree = "<group>";
 		};
-		CA5EAA772DF2CDA400690A03 /* Model */ = {
+		CA5EAAA72DF41A8E00690A03 /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
-				CA5EAA782DF2CDAA00690A03 /* FlowerstandCardData.swift */,
+				CA5EAAA52DF41A8E00690A03 /* CKPK_onboarding1.json */,
+				CA5EAAA62DF41A8E00690A03 /* CKPK_onboarding2.json */,
 			);
-			path = Model;
+			path = Lottie;
 			sourceTree = "<group>";
 		};
 		D51C80C12DEF47740051CB40 /* SubViews */ = {
@@ -449,7 +449,6 @@
 			isa = PBXGroup;
 			children = (
 				38AA40C72DF38D27004D5EC9 /* ImagePickerView.swift */,
-				38AA40C82DF38D27004D5EC9 /* InfoStep1View.swift */,
 				CA5EAA492DF2C06F00690A03 /* CreateGroupView.swift */,
 				CA5EAA622DF2C34200690A03 /* SubViews */,
 			);
@@ -604,6 +603,7 @@
 		D59F7C5D2DEAF42900A829A8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CA5EAAA72DF41A8E00690A03 /* Lottie */,
 				CA064B232DF05F660048F794 /* Assets.xcassets */,
 				D574E9CF2DED897A00AAF70F /* Font */,
 			);
@@ -613,7 +613,6 @@
 		D59F7C602DEAF4E000A829A8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				38AA40BE2DF38CD1004D5EC9 /* OnboardingView.swift */,
 				D59F7C772DEB005E00A829A8 /* HomeView.swift */,
 				D51C80C12DEF47740051CB40 /* SubViews */,
 			);
@@ -722,6 +721,7 @@
 			);
 			name = chukapoka;
 			packageProductDependencies = (
+				CA5EAAAB2DF41B2B00690A03 /* Lottie */,
 			);
 			productName = chukapoka;
 			productReference = D59F7C222DEAEB3600A829A8 /* chukapoka.app */;
@@ -799,6 +799,9 @@
 			);
 			mainGroup = D59F7C192DEAEB3600A829A8;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				CA5EAAAA2DF41B2B00690A03 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D59F7C232DEAEB3600A829A8 /* Products */;
 			projectDirPath = "";
@@ -823,6 +826,8 @@
 				CA064B242DF05F660048F794 /* Assets.xcassets in Resources */,
 				38AA40EB2DF38DF0004D5EC9 /* .swift in Resources */,
 				D574E9D42DED897A00AAF70F /* Pretendard-Light.otf in Resources */,
+				CA5EAAA82DF41A8E00690A03 /* CKPK_onboarding2.json in Resources */,
+				CA5EAAA92DF41A8E00690A03 /* CKPK_onboarding1.json in Resources */,
 				D574E9D52DED897A00AAF70F /* Pretendard-Medium.otf in Resources */,
 				D574E9D62DED897A00AAF70F /* Pretendard-Regular.otf in Resources */,
 				D574E9D72DED897A00AAF70F /* Pretendard-SemiBold.otf in Resources */,
@@ -896,12 +901,10 @@
 				D574E9DA2DED8A6500AAF70F /* GSFont.swift in Sources */,
 				D51C80D52DEF6B890051CB40 /* Party.swift in Sources */,
 				D5B38C592DF09A11005DAFDC /* PartyCardBackground.swift in Sources */,
-				38AA40BF2DF38CD1004D5EC9 /* OnboardingView.swift in Sources */,
 				D5B38C482DF04775005DAFDC /* PartyCardModel.swift in Sources */,
 				D5B38C532DF06D59005DAFDC /* ActionIconButton.swift in Sources */,
 				D5B38C402DF04733005DAFDC /* PartyCardInfoText.swift in Sources */,
 				38AA40C92DF38D27004D5EC9 /* ImagePickerView.swift in Sources */,
-				38AA40CA2DF38D27004D5EC9 /* InfoStep1View.swift in Sources */,
 				D5F710AE2DF13C9D00F2CE3B /* CreateFlowerstandViewModel.swift in Sources */,
 				CA5EAA632DF2C34200690A03 /* CustomProgressView.swift in Sources */,
 				CA5EAA642DF2C34200690A03 /* InfoStep1View.swift in Sources */,
@@ -945,7 +948,6 @@
 				D51C80CB2DEF487F0051CB40 /* HomeBottomButtons.swift in Sources */,
 				CA064B2E2DF074040048F794 /* CreateRibbonMessage.swift in Sources */,
 				D59F7C812DEB09C200A829A8 /* EnterCodeView.swift in Sources */,
-				CA5EAA792DF2CDAA00690A03 /* FlowerstandCardData.swift in Sources */,
 				CA064B352DF07B090048F794 /* FlowerLoadingView.swift in Sources */,
 				CA2C4A492DF0513700D8E170 /* FlowerstandCardView.swift in Sources */,
 				D51C80D32DEF6B820051CB40 /* Wedding.swift in Sources */,
@@ -1279,6 +1281,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CA5EAAAA2DF41B2B00690A03 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CA5EAAAB2DF41B2B00690A03 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA5EAAAA2DF41B2B00690A03 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D59F7C1A2DEAEB3600A829A8 /* Project object */;
 }
