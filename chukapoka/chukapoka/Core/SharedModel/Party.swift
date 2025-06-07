@@ -13,6 +13,8 @@ final class Party {
     var partyID: UUID
     var name: String
     var photoPath: String
+    @Attribute(.unique)
+    var inviteCode: String
     
     // 관계: Party ⟶ PartyMember (1:N)
     @Relationship(deleteRule: .cascade)
@@ -26,11 +28,13 @@ final class Party {
         partyID: UUID = UUID(),
         name: String,
         photoPath: String,
-        wedding: Wedding? = nil
+        wedding: Wedding? = nil,
+        inviteCode: String
     ) {
         self.partyID = partyID
         self.name = name
         self.photoPath = photoPath
         self.wedding = wedding
+        self.inviteCode = inviteCode
     }
 }
