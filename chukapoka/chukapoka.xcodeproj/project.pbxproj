@@ -50,6 +50,16 @@
 		CA5EAAA82DF41A8E00690A03 /* CKPK_onboarding2.json in Resources */ = {isa = PBXBuildFile; fileRef = CA5EAAA62DF41A8E00690A03 /* CKPK_onboarding2.json */; };
 		CA5EAAA92DF41A8E00690A03 /* CKPK_onboarding1.json in Resources */ = {isa = PBXBuildFile; fileRef = CA5EAAA52DF41A8E00690A03 /* CKPK_onboarding1.json */; };
 		CA5EAAAC2DF41B2B00690A03 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = CA5EAAAB2DF41B2B00690A03 /* Lottie */; };
+		CA5EAAAF2DF4286900690A03 /* ReceiveCongratsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAAAE2DF4286900690A03 /* ReceiveCongratsView.swift */; };
+		CA5EAAB12DF4287A00690A03 /* ReceiveCongratsCardFrontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAAB02DF4287A00690A03 /* ReceiveCongratsCardFrontView.swift */; };
+		CA5EAAB32DF4288E00690A03 /* ReceiveCongratsCardContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAAB22DF4288E00690A03 /* ReceiveCongratsCardContainer.swift */; };
+		CA5EAAB52DF4289F00690A03 /* ReceiveCongratsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAAB42DF4289F00690A03 /* ReceiveCongratsViewModel.swift */; };
+		CA5EAAB92DF4292100690A03 /* ReceiveCongratsCardBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAAB82DF4292100690A03 /* ReceiveCongratsCardBackView.swift */; };
+		CA5EAABD2DF42C3C00690A03 /* CardMemberListLeaderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAABC2DF42C3C00690A03 /* CardMemberListLeaderSection.swift */; };
+		CA5EAABF2DF42D1C00690A03 /* CardMemberListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAABE2DF42D1C00690A03 /* CardMemberListItem.swift */; };
+		CA5EAAC12DF430F800690A03 /* CardMemberListMemberSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAAC02DF430F800690A03 /* CardMemberListMemberSection.swift */; };
+		CA5EAAC32DF443C300690A03 /* ReceiveCongratsCardFlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAAC22DF443C300690A03 /* ReceiveCongratsCardFlipView.swift */; };
+		CA5EAAC52DF4486800690A03 /* CardMemberListMemberSectionScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAAC42DF4486800690A03 /* CardMemberListMemberSectionScrollView.swift */; };
 		D51C80C32DEF48210051CB40 /* HomeIntroText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80C22DEF481C0051CB40 /* HomeIntroText.swift */; };
 		D51C80C52DEF482A0051CB40 /* HomeChracterImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80C42DEF48260051CB40 /* HomeChracterImage.swift */; };
 		D51C80CB2DEF487F0051CB40 /* HomeBottomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80CA2DEF487C0051CB40 /* HomeBottomButtons.swift */; };
@@ -163,6 +173,16 @@
 		CA5EAA742DF2CA5D00690A03 /* RightText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightText.swift; sourceTree = "<group>"; };
 		CA5EAAA52DF41A8E00690A03 /* CKPK_onboarding1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CKPK_onboarding1.json; sourceTree = "<group>"; };
 		CA5EAAA62DF41A8E00690A03 /* CKPK_onboarding2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CKPK_onboarding2.json; sourceTree = "<group>"; };
+		CA5EAAAE2DF4286900690A03 /* ReceiveCongratsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveCongratsView.swift; sourceTree = "<group>"; };
+		CA5EAAB02DF4287A00690A03 /* ReceiveCongratsCardFrontView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveCongratsCardFrontView.swift; sourceTree = "<group>"; };
+		CA5EAAB22DF4288E00690A03 /* ReceiveCongratsCardContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveCongratsCardContainer.swift; sourceTree = "<group>"; };
+		CA5EAAB42DF4289F00690A03 /* ReceiveCongratsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveCongratsViewModel.swift; sourceTree = "<group>"; };
+		CA5EAAB82DF4292100690A03 /* ReceiveCongratsCardBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveCongratsCardBackView.swift; sourceTree = "<group>"; };
+		CA5EAABC2DF42C3C00690A03 /* CardMemberListLeaderSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMemberListLeaderSection.swift; sourceTree = "<group>"; };
+		CA5EAABE2DF42D1C00690A03 /* CardMemberListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMemberListItem.swift; sourceTree = "<group>"; };
+		CA5EAAC02DF430F800690A03 /* CardMemberListMemberSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMemberListMemberSection.swift; sourceTree = "<group>"; };
+		CA5EAAC22DF443C300690A03 /* ReceiveCongratsCardFlipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveCongratsCardFlipView.swift; sourceTree = "<group>"; };
+		CA5EAAC42DF4486800690A03 /* CardMemberListMemberSectionScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMemberListMemberSectionScrollView.swift; sourceTree = "<group>"; };
 		D51C80C22DEF481C0051CB40 /* HomeIntroText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeIntroText.swift; sourceTree = "<group>"; };
 		D51C80C42DEF48260051CB40 /* HomeChracterImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChracterImage.swift; sourceTree = "<group>"; };
 		D51C80CA2DEF487C0051CB40 /* HomeBottomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomButtons.swift; sourceTree = "<group>"; };
@@ -435,6 +455,39 @@
 			path = Lottie;
 			sourceTree = "<group>";
 		};
+		CA5EAAAD2DF4282F00690A03 /* ReceiveCongrats */ = {
+			isa = PBXGroup;
+			children = (
+				CA5EAAB62DF428A400690A03 /* ViewModel */,
+				CA5EAAB72DF428AD00690A03 /* SubViews */,
+				CA5EAAAE2DF4286900690A03 /* ReceiveCongratsView.swift */,
+			);
+			path = ReceiveCongrats;
+			sourceTree = "<group>";
+		};
+		CA5EAAB62DF428A400690A03 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CA5EAAB42DF4289F00690A03 /* ReceiveCongratsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CA5EAAB72DF428AD00690A03 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				CA5EAAB22DF4288E00690A03 /* ReceiveCongratsCardContainer.swift */,
+				CA5EAAC22DF443C300690A03 /* ReceiveCongratsCardFlipView.swift */,
+				CA5EAAB02DF4287A00690A03 /* ReceiveCongratsCardFrontView.swift */,
+				CA5EAAB82DF4292100690A03 /* ReceiveCongratsCardBackView.swift */,
+				CA5EAABC2DF42C3C00690A03 /* CardMemberListLeaderSection.swift */,
+				CA5EAAC02DF430F800690A03 /* CardMemberListMemberSection.swift */,
+				CA5EAAC42DF4486800690A03 /* CardMemberListMemberSectionScrollView.swift */,
+				CA5EAABE2DF42D1C00690A03 /* CardMemberListItem.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
 		D51C80C12DEF47740051CB40 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -587,6 +640,7 @@
 		D59F7C5C2DEAF40300A829A8 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				CA5EAAAD2DF4282F00690A03 /* ReceiveCongrats */,
 				38AA40ED2DF38DFB004D5EC9 /* Splash */,
 				38AA40E52DF38DF0004D5EC9 /* Onboarding */,
 				38AA40D82DF38DE2004D5EC9 /* InputCodeView */,
@@ -878,12 +932,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5B38C5E2DF0A769005DAFDC /* PartyCardBackView.swift in Sources */,
+				CA5EAABD2DF42C3C00690A03 /* CardMemberListLeaderSection.swift in Sources */,
 				D59F7C742DEAF6D600A829A8 /* AppCoordinator.swift in Sources */,
 				38AA40EE2DF38DFB004D5EC9 /* SplashView.swift in Sources */,
 				D59F7C642DEAF56D00A829A8 /* AppDelegate.swift in Sources */,
 				D59F7C7F2DEB019700A829A8 /* CreateGroupViewModel.swift in Sources */,
 				D51C80D72DEF6B940051CB40 /* PartyMember.swift in Sources */,
 				D5B38C382DF04084005DAFDC /* PartyCardView.swift in Sources */,
+				CA5EAABF2DF42D1C00690A03 /* CardMemberListItem.swift in Sources */,
 				D595C30A2DF3636B00F484A1 /* InfoViewModel.swift in Sources */,
 				38AA40C62DF38D18004D5EC9 /* OCRScreen.swift in Sources */,
 				D5B38C4D2DF04824005DAFDC /* PartyCardAction.swift in Sources */,
@@ -912,9 +968,12 @@
 				CA5EAA662DF2C34200690A03 /* InfoStep2View.swift in Sources */,
 				55512E1E2DEEFB3300433ED8 /* InfoLoadingView.swift in Sources */,
 				D574E9B12DED7FA000AAF70F /* PrimaryButton.swift in Sources */,
+				CA5EAAAF2DF4286900690A03 /* ReceiveCongratsView.swift in Sources */,
 				D51C80C32DEF48210051CB40 /* HomeIntroText.swift in Sources */,
 				38AA40D92DF38DE2004D5EC9 /* InputCodeButtonView.swift in Sources */,
 				38AA40DA2DF38DE2004D5EC9 /* CodeInputField.swift in Sources */,
+				CA5EAAC52DF4486800690A03 /* CardMemberListMemberSectionScrollView.swift in Sources */,
+				CA5EAAC12DF430F800690A03 /* CardMemberListMemberSection.swift in Sources */,
 				38AA40DB2DF38DE2004D5EC9 /* InputCodeHeaderView.swift in Sources */,
 				38AA40DC2DF38DE2004D5EC9 /* InputCodeView.swift in Sources */,
 				38AA40DD2DF38DE2004D5EC9 /* InputCodeFieldView.swift in Sources */,
@@ -922,6 +981,7 @@
 				CA5EAA762DF2CA5D00690A03 /* RightText.swift in Sources */,
 				CA064B332DF07AF40048F794 /* FlowerstandStep4.swift in Sources */,
 				CA0B87EE2DF021B80001F120 /* CircleProgress.swift in Sources */,
+				CA5EAAC32DF443C300690A03 /* ReceiveCongratsCardFlipView.swift in Sources */,
 				D5B38C4F2DF05A2C005DAFDC /* PartyCardGroupName.swift in Sources */,
 				D59F7C782DEB006200A829A8 /* HomeView.swift in Sources */,
 				CA5EAA4A2DF2C06F00690A03 /* CreateGroupView.swift in Sources */,
@@ -929,9 +989,11 @@
 				CA0B87F22DF022070001F120 /* FlowerstandStep2.swift in Sources */,
 				D56CD4042DEF3BFD002267B1 /* GSImage.swift in Sources */,
 				38AA40E62DF38DF0004D5EC9 /* LottieView.swift in Sources */,
+				CA5EAAB32DF4288E00690A03 /* ReceiveCongratsCardContainer.swift in Sources */,
 				38AA40E72DF38DF0004D5EC9 /* NoticeStep1.swift in Sources */,
 				38AA40E82DF38DF0004D5EC9 /* NoticeStep2.swift in Sources */,
 				38AA40E92DF38DF0004D5EC9 /* SkipView.swift in Sources */,
+				CA5EAAB12DF4287A00690A03 /* ReceiveCongratsCardFrontView.swift in Sources */,
 				38AA40EA2DF38DF0004D5EC9 /* OnboardingView.swift in Sources */,
 				CA2C4A4B2DF0525000D8E170 /* CardDecorationPicker.swift in Sources */,
 				D51C80C52DEF482A0051CB40 /* HomeChracterImage.swift in Sources */,
@@ -947,12 +1009,14 @@
 				D5ED63172DED427B007912E1 /* RootNavigationView.swift in Sources */,
 				D51C80CB2DEF487F0051CB40 /* HomeBottomButtons.swift in Sources */,
 				CA064B2E2DF074040048F794 /* CreateRibbonMessage.swift in Sources */,
+				CA5EAAB52DF4289F00690A03 /* ReceiveCongratsViewModel.swift in Sources */,
 				D59F7C812DEB09C200A829A8 /* EnterCodeView.swift in Sources */,
 				CA064B352DF07B090048F794 /* FlowerLoadingView.swift in Sources */,
 				CA2C4A492DF0513700D8E170 /* FlowerstandCardView.swift in Sources */,
 				D51C80D32DEF6B820051CB40 /* Wedding.swift in Sources */,
 				CA5EAA712DF2CA5800690A03 /* FinishFlowerstandCard.swift in Sources */,
 				CA5EAA722DF2CA5800690A03 /* FinishFlowerstandContent.swift in Sources */,
+				CA5EAAB92DF4292100690A03 /* ReceiveCongratsCardBackView.swift in Sources */,
 				38AA40CF2DF38D77004D5EC9 /* FlowerstandCardData.swift in Sources */,
 				CA0B87EC2DF0217A0001F120 /* CreateFlowerstandView.swift in Sources */,
 				D5F710B42DF28D9800F2CE3B /* FlowerStandStep3ViewModel.swift in Sources */,
@@ -1117,7 +1181,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = L9AQ48UJ68;
+				DEVELOPMENT_TEAM = 6TW9MCXPJD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = chukapoka/Info.plist;
@@ -1147,7 +1211,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = L9AQ48UJ68;
+				DEVELOPMENT_TEAM = 6TW9MCXPJD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = chukapoka/Info.plist;
