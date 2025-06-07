@@ -12,7 +12,7 @@ import PhotosUI
 @MainActor
 final class OCRViewModel: ObservableObject {
     @Published var selectedImage: UIImage?
-    //@Published var ocrResult: OCRResult?
+//    @Published var ocrResult: OCRResult?
     @Published var recognizedTextLines: [String] = []
 
     //private let ocrManager = OCRManager()

@@ -19,7 +19,7 @@ struct ImagePickerView: View {
         ) {
             HStack {
                 Image(systemName: "photo")
-                Text("청첩장 이미지 선택")
+                Text("청첩장 불러오기")
             }
             .font(.headline)
             .foregroundColor(.blue)

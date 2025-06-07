@@ -21,7 +21,8 @@ struct RootNavigationView: View {
                             .navigationBarHidden(true)
                         // 그룹 생성 파티장 flow
                     case .createGroup:
-                        CreateGroupView(viewModel: CreateGroupViewModel(coordinator: coordinator))
+                        // CreateGroupView(viewModel: CreateGroupViewModel(coordinator: coordinator))
+                        ImagePickerView(viewModel: OCRViewModel(coordinator: coordinator))
                             .navigationBarHidden(true)
                     case .createFlowerstand:
                         CreateFlowerstandView(viewModel: CreateFlowerstandViewModel(coordinator: coordinator))
