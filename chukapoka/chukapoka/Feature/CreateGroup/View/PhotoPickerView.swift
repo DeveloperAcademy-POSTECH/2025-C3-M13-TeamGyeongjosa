@@ -9,7 +9,7 @@
 import SwiftUI
 import PhotosUI
 
-struct ImagePickerView: View {
+struct PhotoPickerView: View {
     @ObservedObject var ocrViewModel: OCRViewModel
     @StateObject private var viewModel: CreateGroupViewModel
     @EnvironmentObject var coordinator: AppCoordinator

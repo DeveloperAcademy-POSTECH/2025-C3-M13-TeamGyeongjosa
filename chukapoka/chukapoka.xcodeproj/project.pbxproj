@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		38A09B532DF431AC0066E434 /* OCRManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A09B522DF431A30066E434 /* OCRManager.swift */; };
 		38A09B572DF4A9090066E434 /* InvitationOCRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A09B562DF4A8BD0066E434 /* InvitationOCRView.swift */; };
-		38AA40C92DF38D27004D5EC9 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40C72DF38D27004D5EC9 /* ImagePickerView.swift */; };
+		38AA40C92DF38D27004D5EC9 /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40C72DF38D27004D5EC9 /* PhotoPickerView.swift */; };
 		38AA40CC2DF38D44004D5EC9 /* OCRViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40CB2DF38D44004D5EC9 /* OCRViewModel.swift */; };
 		38AA40CF2DF38D77004D5EC9 /* FlowerstandCardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40CD2DF38D77004D5EC9 /* FlowerstandCardData.swift */; };
 		38AA40D12DF38D9C004D5EC9 /* NameCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40D02DF38D9C004D5EC9 /* NameCheck.swift */; };
@@ -124,7 +124,7 @@
 /* Begin PBXFileReference section */
 		38A09B522DF431A30066E434 /* OCRManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRManager.swift; sourceTree = "<group>"; };
 		38A09B562DF4A8BD0066E434 /* InvitationOCRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationOCRView.swift; sourceTree = "<group>"; };
-		38AA40C72DF38D27004D5EC9 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		38AA40C72DF38D27004D5EC9 /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
 		38AA40CB2DF38D44004D5EC9 /* OCRViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRViewModel.swift; sourceTree = "<group>"; };
 		38AA40CD2DF38D77004D5EC9 /* FlowerstandCardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerstandCardData.swift; sourceTree = "<group>"; };
 		38AA40D02DF38D9C004D5EC9 /* NameCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameCheck.swift; sourceTree = "<group>"; };
@@ -451,7 +451,7 @@
 			isa = PBXGroup;
 			children = (
 				38A09B562DF4A8BD0066E434 /* InvitationOCRView.swift */,
-				38AA40C72DF38D27004D5EC9 /* ImagePickerView.swift */,
+				38AA40C72DF38D27004D5EC9 /* PhotoPickerView.swift */,
 				CA5EAA492DF2C06F00690A03 /* CreateGroupView.swift */,
 				CA5EAA622DF2C34200690A03 /* SubViews */,
 			);
@@ -907,7 +907,7 @@
 				D5B38C482DF04775005DAFDC /* PartyCardModel.swift in Sources */,
 				D5B38C532DF06D59005DAFDC /* ActionIconButton.swift in Sources */,
 				D5B38C402DF04733005DAFDC /* PartyCardInfoText.swift in Sources */,
-				38AA40C92DF38D27004D5EC9 /* ImagePickerView.swift in Sources */,
+				38AA40C92DF38D27004D5EC9 /* PhotoPickerView.swift in Sources */,
 				D5F710AE2DF13C9D00F2CE3B /* CreateFlowerstandViewModel.swift in Sources */,
 				CA5EAA632DF2C34200690A03 /* CustomProgressView.swift in Sources */,
 				CA5EAA642DF2C34200690A03 /* InfoStep1View.swift in Sources */,
