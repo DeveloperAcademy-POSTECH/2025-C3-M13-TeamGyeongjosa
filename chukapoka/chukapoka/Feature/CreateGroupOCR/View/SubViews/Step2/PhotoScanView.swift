@@ -45,7 +45,6 @@ struct PhotoScanView: View {
                             onFinished()
                         }
                     }
-                    .background(Color.black)
             }
         }
     }
