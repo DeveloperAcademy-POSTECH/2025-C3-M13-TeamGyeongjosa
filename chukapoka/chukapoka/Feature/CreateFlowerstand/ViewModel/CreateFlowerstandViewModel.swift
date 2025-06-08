@@ -5,14 +5,20 @@
 //  Created by Demian Yoo on 6/5/25.
 //
 import SwiftUI
+import SwiftData
 
 @MainActor
 final class CreateFlowerstandViewModel: ObservableObject {
     
     private let coordinator: AppCoordinator
     
-    init(coordinator: AppCoordinator) {
+    @Published private(set) var leader: PartyMember?
+    
+    init(coordinator: AppCoordinator, leader: PartyMember) {
         self.coordinator = coordinator
+        self.leader = leader
+        self.recipientName = leader.name
+        
         bindStepViewModels()
     }
     
@@ -34,7 +40,7 @@ final class CreateFlowerstandViewModel: ObservableObject {
     
     // 각 step별 입력값 통합 ( 하위 ViewModel에서 바인딩됨 )
     @Published var amount: Int?
-    @Published var recipientName: String = "지수"
+    @Published var recipientName: String = ""
     @Published var selectedColor: Color = GSColor.yellow
     @Published var selectedFlower: String = ""
     @Published var message: String = ""
@@ -61,10 +67,11 @@ final class CreateFlowerstandViewModel: ObservableObject {
         step == .complete ? "화환 만들기" : "다음"
     }
     
-    func goNext() {
+    func goNext(modelContext: ModelContext) {
         switch step {
         case .complete:
             // Step4까지 끝나면, 새로운 화면 (Finish/로딩)으로 네비게이션
+            saveFlowerstandInfo(modelContext: modelContext)
             coordinator.push(.loadingFlowerstandDone)
         default:
             if let next = Step(rawValue: step.rawValue + 1) {
@@ -97,5 +104,46 @@ final class CreateFlowerstandViewModel: ObservableObject {
         default:
             return true
         }
+    }
+    
+    var partyName: String {
+        leader?.party?.name ?? "알 수 없음"
+    }
+    
+    func saveFlowerstandInfo(modelContext: ModelContext) {
+        guard let leader else {
+            print("error: 리더가 존재하지않음")
+            return
+        }
+        
+        if let amount = self.amount {
+            leader.money = amount
+        }
+        
+        leader.message = self.message
+        leader.flowerstandPath = generateFlowerstandPath(flower: selectedFlower, color: selectedColor)
+        
+        do {
+            try modelContext.save()
+            print("✅ 화환 정보 저장됨: \(leader.name), 금액=\(leader.money), 메시지=\(leader.message), path=\(leader.flowerstandPath)")
+        } catch {
+            print("저장 실패: \(error.localizedDescription)")
+        }
+    }
+    
+    func generateFlowerstandPath(flower: String, color: Color) -> String {
+        let colorName: String
+        
+        switch color {
+        case GSColor.yellow:
+            colorName = "Yellow"
+        case GSColor.pink:
+            colorName = "Pink"
+        case GSColor.purple:
+            colorName = "Purple"
+        default:
+            colorName = "Yellow"
+        }
+        return "\(flower)_\(colorName)"
     }
 }

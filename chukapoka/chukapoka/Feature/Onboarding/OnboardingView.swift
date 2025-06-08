@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct OnboardingView: View {
+    @Binding var isOnboardingDone: Bool
     @State private var currentPage: Int = 0
     
     var body: some View {
@@ -37,12 +38,12 @@ struct OnboardingView: View {
             }
             .padding(.bottom, 117)
             
-            SkipView()
+            SkipView {
+                withAnimation {
+                    isOnboardingDone = true
+                }
+            }
            
         }
     }
-}
-
-#Preview {
-    OnboardingView()
 }

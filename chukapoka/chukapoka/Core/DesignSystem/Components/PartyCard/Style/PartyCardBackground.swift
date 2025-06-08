@@ -7,7 +7,6 @@
 import SwiftUI
 
 struct PartyCardBackground: View {
-    let height: CGFloat
     
     var body: some View {
         ZStack {

@@ -11,6 +11,6 @@ struct HomeChracterImage: View {
         GSImage.mainLogo
             .resizable()
             .aspectRatio(contentMode: .fit)
-            .frame(width: 200, height: 200)
+            .frame(width: 332, height: 332)
     }
 }

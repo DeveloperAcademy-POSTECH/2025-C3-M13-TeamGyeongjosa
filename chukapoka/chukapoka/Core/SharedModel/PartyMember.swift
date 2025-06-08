@@ -9,7 +9,9 @@ import Foundation
 import SwiftData
 
 @Model
-final class PartyMember {
+final class PartyMember: Identifiable {
+    @Attribute(.unique)
+    var id: UUID
     var isLeader: Bool
     var name: String
     var accountNumber: String
@@ -23,6 +25,7 @@ final class PartyMember {
     var party: Party?
     
     init(
+        id: UUID = UUID(),
         isLeader: Bool,
         name: String,
         accountNumber: String,
@@ -32,6 +35,7 @@ final class PartyMember {
         flowerstandPath: String,
         party: Party? = nil
     ) {
+        self.id = id
         self.isLeader = isLeader
         self.name = name
         self.accountNumber = accountNumber

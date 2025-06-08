@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import _PhotosUI_SwiftUI
+import SwiftData
 
 struct RootNavigationView: View {
     @EnvironmentObject var coordinator: AppCoordinator
@@ -22,14 +22,15 @@ struct RootNavigationView: View {
                             .navigationBarHidden(true)
                         // 그룹 생성 파티장 flow
                     case .createGroup:
-//                        CreateGroupView(viewModel: CreateGroupViewModel(coordinator: coordinator))
+                        //                        CreateGroupView(viewModel: CreateGroupViewModel(coordinator: coordinator))
                         InvitationOCRView(viewModel: CreateGroupViewModel(coordinator: coordinator),
-                            ocrViewModel: OCRViewModel(coordinator: coordinator)).navigationBarHidden(true)
-                    case .createFlowerstand:
-                        CreateFlowerstandView(viewModel: CreateFlowerstandViewModel(coordinator: coordinator))
+                                          ocrViewModel: OCRViewModel(coordinator: coordinator))
+                        .navigationBarHidden(true)
+                    case .createFlowerstand(let leader):
+                        CreateFlowerstandView(viewModel: CreateFlowerstandViewModel(coordinator: coordinator, leader: leader))
                             .navigationBarHidden(true)
-                    case .loadingInfoDone:
-                        InfoLoadingView(viewModel: InfoViewModel(coordinator: coordinator))
+                    case .loadingInfoDone(let leader):
+                        InfoLoadingView(viewModel: InfoViewModel(coordinator: coordinator, leader: leader))
                             .navigationBarHidden(true)
                     case .joinGroup:
                         EnterCodeView()
@@ -40,6 +41,5 @@ struct RootNavigationView: View {
                     }
                 }
         }
-        
     }
 }

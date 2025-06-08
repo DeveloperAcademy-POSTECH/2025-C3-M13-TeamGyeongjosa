@@ -14,10 +14,10 @@ struct LeftText: View {
         VStack(spacing: 0) {
             ForEach(Array(partyName), id: \.self) { char in
                 Text(String(char))
-                    .font(GSFont.body2)
+                    .font(GSFont.caption3)
                     .foregroundColor(GSColor.white)
             }
         }
-        .rotationEffect(Angle(degrees: 23))
+        .rotationEffect(Angle(degrees: 24.5))
     }
 }

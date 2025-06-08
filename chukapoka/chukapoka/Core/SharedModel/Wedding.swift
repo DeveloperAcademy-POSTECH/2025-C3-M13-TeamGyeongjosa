@@ -9,29 +9,35 @@ import Foundation
 import SwiftData
 
 @Model
-final class Wedding {
+final class Wedding: Identifiable {
     @Attribute(.unique)
     var weddingID: UUID
     var place: String
     var date: Date
     var accountName: String
     var accountNumber: String
+    @Attribute(.unique)
+    var brideInviteCode: String
     
     // 관계: Wedding ⟶ Party (1:N)
     @Relationship(deleteRule: .cascade)
     var parties: [Party] = []
+    
+    var id: UUID { weddingID }
     
     init(
         weddingID: UUID = UUID(),
         place: String,
         date: Date,
         accountName: String,
-        accountNumber: String
+        accountNumber: String,
+        brideInviteCode: String
     ) {
         self.weddingID = weddingID
         self.place = place
         self.date = date
         self.accountName = accountName
         self.accountNumber = accountNumber
+        self.brideInviteCode = brideInviteCode
     }
 }

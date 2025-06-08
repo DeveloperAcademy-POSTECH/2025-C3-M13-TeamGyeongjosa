@@ -10,6 +10,7 @@ import SwiftUI
 struct CreateFlowerstandView: View {
     @ObservedObject var viewModel: CreateFlowerstandViewModel
     @EnvironmentObject var coordinator: AppCoordinator
+    @Environment(\.modelContext) private var modelContext
     
     var body: some View {
         VStack(spacing: 0) {
@@ -17,9 +18,11 @@ struct CreateFlowerstandView: View {
                 viewModel.goBack()
             }
             // ⬆︎ 상단: 프로그레스 바만
-            CircleProgress(step: viewModel.step.rawValue)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.top, 16)
+            if viewModel.step != .complete {
+                CircleProgress(step: viewModel.step.rawValue)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.top, 16)
+            }
             
             // 플로우따라 바뀌는 컨테이너
             ZStack {
@@ -32,8 +35,6 @@ struct CreateFlowerstandView: View {
                     FlowerstandStep3(viewModel: viewModel.step3ViewModel)
                 case .complete:
                     FlowerstandStep4(viewModel: viewModel)
-                default:
-                    EmptyView()
                 }
             }
             .frame(maxHeight: .infinity)
@@ -43,7 +44,7 @@ struct CreateFlowerstandView: View {
                 title: viewModel.nextButtonTitle,
                 style: viewModel.isNextEnabled ? .basic : .disabled,
                 action: {
-                    viewModel.goNext()
+                    viewModel.goNext(modelContext: modelContext)
                 }
             )
             .padding(.horizontal, 16)

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 enum CreateGroupStep: Int, CaseIterable {
     case step1, step2, step3
@@ -124,7 +125,7 @@ final class CreateGroupViewModel: ObservableObject {
         return digitsOnly.count == 11
     }
     
-    func handleNext() {
+    func handleNext(modelContext: ModelContext) {
         switch currentStep {
         case .step1:
             if validateStep1() {
@@ -136,7 +137,8 @@ final class CreateGroupViewModel: ObservableObject {
             }
         case .step3:
             if validateStep3() {
-                coordinator.push(.loadingInfoDone)
+                let leader = saveGroupData(modelContext: modelContext)
+                coordinator.push(.loadingInfoDone(leader: leader))
             }
         }
     }
@@ -169,6 +171,73 @@ final class CreateGroupViewModel: ObservableObject {
             return isStep3Valid
         }
     }
+    
+    // SwiftData 저장
+    func saveGroupData(modelContext: ModelContext) -> PartyMember {
+        
+        let partyCode = generatePartyInviteCode()
+        let brideCode = generateBrideInviteCode()
+        
+        let formatter = DateFormatter()
+        formatter.timeZone = .current
+        let dateTime: Date
+        
+        if !weddingTime.isEmpty {
+            formatter.dateFormat = "yyyy.MM.dd HH:mm"
+            dateTime = formatter.date(from: "\(weddingDate) \(weddingTime)") ?? Date()
+        } else {
+            formatter.dateFormat = "yyyy.MM.dd"
+            dateTime = formatter.date(from: weddingDate) ?? Date()
+        }
+        
+        let wedding = Wedding(
+            place: weddingPlace,
+            date: dateTime,
+            accountName: receiverName,
+            accountNumber: receiverAccount,
+            brideInviteCode: brideCode
+        )
+        modelContext.insert(wedding)
+        print("✅ Wedding 저장됨: place=\(wedding.place), date=\(wedding.date), name=\(wedding.accountName), number=\(wedding.accountNumber), 신부코드=\(wedding.brideInviteCode)")
+        
+        let party = Party(
+            name: partyName,
+            photoPath: "",
+            wedding: wedding,
+            inviteCode: partyCode
+        )
+        modelContext.insert(party)
+        print("✅ Party 저장됨: name=\(party.name), photoPath=\(party.photoPath), wedding=\(party.wedding?.place ?? "nil"), 파티코드 = \(party.inviteCode)")
+        
+        let leader = PartyMember(
+            isLeader: true,
+            name: senderName,
+            accountNumber: senderAccount,
+            phoneNumber: senderPhone,
+            money: 0,
+            message: "",
+            flowerstandPath: "",
+            party: party
+        )
+        modelContext.insert(leader)
+        print("✅ Leader 저장됨: name=\(leader.name), phone=\(leader.phoneNumber), account=\(leader.accountNumber), party=\(leader.party?.name ?? "nil")")
+        
+        print("Leader 저장됨: name=\(leader.name)")
+        return leader
+    }
+    
+    // 모임 초대코드 생성 -> 랜덤값
+    private func generatePartyInviteCode() -> String {
+        let letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        return "G" + String((0..<5).map { _ in letters.randomElement()! })
+    }
+    
+    // 신부 모임코드 생성 -> 랜덤값
+    private func generateBrideInviteCode() -> String {
+        let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        return "BB" + String((0..<4).map { _ in chars.randomElement()! })
+    }
+    
 }
 
 extension CreateGroupViewModel {

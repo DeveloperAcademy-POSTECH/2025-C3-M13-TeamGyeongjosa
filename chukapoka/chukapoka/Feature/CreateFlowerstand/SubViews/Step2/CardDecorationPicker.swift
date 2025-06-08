@@ -24,7 +24,7 @@ struct CardDecorationPicker: View {
     ]
     
     var body: some View {
-        VStack(alignment: .center, spacing: 11) {
+        VStack(alignment: .center, spacing: 14) {
             HStack(spacing: 13) {
                 ForEach(0..<3, id: \.self) { index in
                     Circle()
@@ -64,5 +64,6 @@ struct CardDecorationPicker: View {
                 }
             }
         }
+        .padding(.bottom, 20)
     }
 }

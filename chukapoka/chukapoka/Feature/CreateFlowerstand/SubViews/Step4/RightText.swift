@@ -14,10 +14,10 @@ struct RightText: View {
         VStack(spacing: 0) {
             ForEach(Array(ribbonText), id: \.self) { char in
                 Text(String(char))
-                    .font(GSFont.body2)
+                    .font(GSFont.caption3)
                     .foregroundColor(GSColor.white)
             }
         }
-        .rotationEffect(Angle(degrees: -22.5))
+        .rotationEffect(Angle(degrees: -23.5))
     }
 }

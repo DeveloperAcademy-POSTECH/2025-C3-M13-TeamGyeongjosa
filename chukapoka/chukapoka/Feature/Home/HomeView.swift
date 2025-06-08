@@ -6,17 +6,23 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct HomeView: View {
     @EnvironmentObject var coordinator: AppCoordinator
+    // 최근에 만들어진 것
+    @Query(sort: \Party.createdAt, order: .reverse) var parties: [Party]
+    @State private var currentIndex = 0
 
     var body: some View {
         VStack(spacing: 0) {
+            if parties.isEmpty {
+                HomeNormalView()
+            } else {
+                HomeCardView(parties: parties, currentIndex: $currentIndex)
+            }
             Spacer()
-            HomeIntroText()
-                .padding(.bottom, 96)
-            HomeChracterImage()
-            Spacer()
+            
             HomeBottomButtons(
                 onGroupCreateTapped: {
                     coordinator.push(.createGroup)
@@ -28,9 +34,4 @@ struct HomeView: View {
             .padding(.bottom, 24)
         }
     }
-}
-
-#Preview {
-    HomeView()
-        .environmentObject(AppCoordinator())
 }
