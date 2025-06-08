@@ -8,20 +8,27 @@
 import SwiftUI
 
 struct OCRResultView: View {
+    
+    
+    
     // MARK: - ViewModel
     @ObservedObject var viewModel: CreateGroupViewModel
     @ObservedObject var ocrViewModel: OCRViewModel
+    @Binding var currentStep: InvitationOCRView.OCRStep
     
     // OCR 결과를 받아와 텍스트 필드에 반영할 State 변수
     @State private var place: String = ""
     @State private var date: String = ""
+    @State private var time: String = ""
     
+    var onNext: () -> Void
     // MARK: - View Body
     var body: some View {
         VStack(spacing: 0) {
             // MARK: - 툴바 (뒤로가기)
             NavigationBar {
-                viewModel.goToPreviousStep()
+                //ocrviewModel.goToPreviousStep()
+                currentStep = .photoPicker
             }
             CustomProgressView(progress: viewModel.progressRate)
                 .padding(.bottom, 30)
@@ -78,6 +85,7 @@ struct OCRResultView: View {
                 style: viewModel.isNextButtonEnabled ? .basic : .disabled,
                 action: {
                     viewModel.handleNext()
+                    onNext()
                 }
             )
             .padding(.horizontal, 16)
@@ -89,9 +97,16 @@ struct OCRResultView: View {
         }
         .onAppear {
             if let result = ocrViewModel.ocrResult {
-                self.place = result.place ?? ""
-                self.date = result.date ?? ""
+                place = result.place ?? ""
+                date = result.date ?? ""
+                time = result.time ?? ""
+                
+                viewModel.weddingPlace = place
+                viewModel.weddingDate = viewModel.formatDateInput(date)
+                viewModel.weddingTime = viewModel.formatTimeInput(time)
             }
+            //onNext()
         }
     }
 }
+

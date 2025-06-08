@@ -43,10 +43,9 @@ struct PhotoPickerView: View {
                     isPickerPresented = true
                 }
             )
-            .padding(.horizontal, 16)
-            .padding(.bottom, 30)
         }
         .padding(.horizontal, 16)
+        .padding(.bottom, 30)
         .navigationBarBackButtonHidden(true)
         // MARK: - PhotosPicker 와 .onChange
         .photosPicker(
