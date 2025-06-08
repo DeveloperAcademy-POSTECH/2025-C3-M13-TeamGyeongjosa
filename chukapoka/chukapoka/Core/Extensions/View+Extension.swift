@@ -1,8 +1,8 @@
 //
-//  TextfieldDown.swift
+//  View+Extension.swift
 //  chukapoka
 //
-//  Created by 김소원 on 6/5/25.
+//  Created by 조유진 on 6/8/25.
 //
 
 import SwiftUI

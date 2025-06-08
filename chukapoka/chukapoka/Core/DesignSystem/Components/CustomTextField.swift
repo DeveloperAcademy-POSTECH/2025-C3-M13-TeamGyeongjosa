@@ -71,9 +71,8 @@ struct CustomTextField: View {
                 }
             }
             .background(GSColor.secondary3)
-            .cornerRadius(12)
             .overlay(
-                RoundedRectangle(cornerRadius: 12)
+                Rectangle()
                     .stroke(isValid ? Color.clear : Color.red, lineWidth: 1)
             )
         }
