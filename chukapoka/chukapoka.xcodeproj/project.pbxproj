@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		38AA40C62DF38D18004D5EC9 /* OCRScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40C42DF38D18004D5EC9 /* OCRScreen.swift */; };
-		38AA40C92DF38D27004D5EC9 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40C72DF38D27004D5EC9 /* ImagePickerView.swift */; };
+		38A09B532DF431AC0066E434 /* OCRManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A09B522DF431A30066E434 /* OCRManager.swift */; };
+		38A09B572DF4A9090066E434 /* InvitationOCRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A09B562DF4A8BD0066E434 /* InvitationOCRView.swift */; };
+		38A09B592DF55F1D0066E434 /* OCRResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A09B582DF55F180066E434 /* OCRResultView.swift */; };
+		38A09B652DF578B90066E434 /* PhotoScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A09B642DF578B20066E434 /* PhotoScanView.swift */; };
+		38A09B672DF59B3F0066E434 /* OCRTextParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A09B662DF59B360066E434 /* OCRTextParser.swift */; };
+		38AA40C92DF38D27004D5EC9 /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40C72DF38D27004D5EC9 /* PhotoPickerView.swift */; };
 		38AA40CC2DF38D44004D5EC9 /* OCRViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40CB2DF38D44004D5EC9 /* OCRViewModel.swift */; };
 		38AA40CF2DF38D77004D5EC9 /* FlowerstandCardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40CD2DF38D77004D5EC9 /* FlowerstandCardData.swift */; };
 		38AA40D12DF38D9C004D5EC9 /* NameCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40D02DF38D9C004D5EC9 /* NameCheck.swift */; };
@@ -143,8 +147,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		38AA40C42DF38D18004D5EC9 /* OCRScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRScreen.swift; sourceTree = "<group>"; };
-		38AA40C72DF38D27004D5EC9 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		38A09B522DF431A30066E434 /* OCRManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRManager.swift; sourceTree = "<group>"; };
+		38A09B562DF4A8BD0066E434 /* InvitationOCRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationOCRView.swift; sourceTree = "<group>"; };
+		38A09B582DF55F180066E434 /* OCRResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRResultView.swift; sourceTree = "<group>"; };
+		38A09B642DF578B20066E434 /* PhotoScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoScanView.swift; sourceTree = "<group>"; };
+		38A09B662DF59B360066E434 /* OCRTextParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRTextParser.swift; sourceTree = "<group>"; };
+		38AA40C72DF38D27004D5EC9 /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
 		38AA40CB2DF38D44004D5EC9 /* OCRViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRViewModel.swift; sourceTree = "<group>"; };
 		38AA40CD2DF38D77004D5EC9 /* FlowerstandCardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerstandCardData.swift; sourceTree = "<group>"; };
 		38AA40D02DF38D9C004D5EC9 /* NameCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameCheck.swift; sourceTree = "<group>"; };
@@ -291,12 +299,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		38AA40C52DF38D18004D5EC9 /* Screens */ = {
+		38A09B512DF4318C0066E434 /* TextRecognition */ = {
 			isa = PBXGroup;
 			children = (
-				38AA40C42DF38D18004D5EC9 /* OCRScreen.swift */,
+				38A09B662DF59B360066E434 /* OCRTextParser.swift */,
+				38A09B522DF431A30066E434 /* OCRManager.swift */,
 			);
-			path = Screens;
+			path = TextRecognition;
+			sourceTree = "<group>";
+		};
+		38A09B5A2DF566AC0066E434 /* CreateGroupOCR */ = {
+			isa = PBXGroup;
+			children = (
+				38A09B5B2DF5675F0066E434 /* View */,
+				38A09B5C2DF567650066E434 /* ViewModel */,
+			);
+			path = CreateGroupOCR;
+			sourceTree = "<group>";
+		};
+		38A09B5B2DF5675F0066E434 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				38A09B562DF4A8BD0066E434 /* InvitationOCRView.swift */,
+				38A09B5D2DF568270066E434 /* SubViews */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		38A09B5C2DF567650066E434 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				38AA40CB2DF38D44004D5EC9 /* OCRViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		38A09B5D2DF568270066E434 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				38A09B5E2DF568590066E434 /* Step1 */,
+				38A09B5F2DF568640066E434 /* Step2 */,
+				38A09B622DF569AA0066E434 /* Step3 */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		38A09B5E2DF568590066E434 /* Step1 */ = {
+			isa = PBXGroup;
+			children = (
+				38AA40C72DF38D27004D5EC9 /* PhotoPickerView.swift */,
+			);
+			path = Step1;
+			sourceTree = "<group>";
+		};
+		38A09B5F2DF568640066E434 /* Step2 */ = {
+			isa = PBXGroup;
+			children = (
+				38A09B642DF578B20066E434 /* PhotoScanView.swift */,
+			);
+			path = Step2;
+			sourceTree = "<group>";
+		};
+		38A09B622DF569AA0066E434 /* Step3 */ = {
+			isa = PBXGroup;
+			children = (
+				38A09B582DF55F180066E434 /* OCRResultView.swift */,
+			);
+			path = Step3;
 			sourceTree = "<group>";
 		};
 		38AA40CE2DF38D77004D5EC9 /* Model */ = {
@@ -560,7 +629,6 @@
 		D51C80CE2DEF69E20051CB40 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				38AA40C72DF38D27004D5EC9 /* ImagePickerView.swift */,
 				CA5EAA492DF2C06F00690A03 /* CreateGroupView.swift */,
 				CA5EAA622DF2C34200690A03 /* SubViews */,
 			);
@@ -570,7 +638,6 @@
 		D51C80CF2DEF69ED0051CB40 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				38AA40CB2DF38D44004D5EC9 /* OCRViewModel.swift */,
 				D59F7C7E2DEB019100A829A8 /* CreateGroupViewModel.swift */,
 			);
 			path = ViewModel;
@@ -680,6 +747,7 @@
 		D59F7C5A2DEAF24500A829A8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				38A09B512DF4318C0066E434 /* TextRecognition */,
 				CA5EAADE2DF5646E00690A03 /* Extensions */,
 				D51C80D12DEF6B620051CB40 /* SharedModel */,
 				D574E9AD2DED7F6A00AAF70F /* DesignSystem */,
@@ -700,6 +768,7 @@
 		D59F7C5C2DEAF40300A829A8 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				38A09B5A2DF566AC0066E434 /* CreateGroupOCR */,
 				CA5EAAAD2DF4282F00690A03 /* ReceiveCongrats */,
 				38AA40ED2DF38DFB004D5EC9 /* Splash */,
 				38AA40E52DF38DF0004D5EC9 /* Onboarding */,
@@ -735,7 +804,6 @@
 		D59F7C7A2DEB00B600A829A8 /* CreateGroup */ = {
 			isa = PBXGroup;
 			children = (
-				38AA40C52DF38D18004D5EC9 /* Screens */,
 				D51C80CE2DEF69E20051CB40 /* View */,
 				D51C80CF2DEF69ED0051CB40 /* ViewModel */,
 			);
@@ -1024,6 +1092,7 @@
 				D5B38C382DF04084005DAFDC /* PartyCardView.swift in Sources */,
 				CA5EAABF2DF42D1C00690A03 /* CardMemberListItem.swift in Sources */,
 				D595C30A2DF3636B00F484A1 /* InfoViewModel.swift in Sources */,
+				38A09B592DF55F1D0066E434 /* OCRResultView.swift in Sources */,
 				38AA40C62DF38D18004D5EC9 /* OCRScreen.swift in Sources */,
 				D5E9AD902DF5A7D200CDB444 /* HomeCardView.swift in Sources */,
 				D5B38C4D2DF04824005DAFDC /* PartyCardAction.swift in Sources */,
@@ -1036,6 +1105,7 @@
 				D59F7C562DEAF20600A829A8 /* chukapokaApp.swift in Sources */,
 				CA0B87F02DF021F50001F120 /* FlowerstandStep1.swift in Sources */,
 				D5B38C3C2DF045FB005DAFDC /* PartyCardActionIcons.swift in Sources */,
+				38A09B532DF431AC0066E434 /* OCRManager.swift in Sources */,
 				D574E9DC2DED8E2E00AAF70F /* GSColor.swift in Sources */,
 				D5B38C642DF0AB04005DAFDC /* PartyCardBackContainer.swift in Sources */,
 				CA5EAAE02DF5648300690A03 /* View+Extension.swift in Sources */,
@@ -1047,6 +1117,7 @@
 				D5B38C482DF04775005DAFDC /* PartyCardModel.swift in Sources */,
 				D5B38C532DF06D59005DAFDC /* ActionIconButton.swift in Sources */,
 				D5B38C402DF04733005DAFDC /* PartyCardInfoText.swift in Sources */,
+				38AA40C92DF38D27004D5EC9 /* PhotoPickerView.swift in Sources */,
 				D5E9ADA12DF5DC0700CDB444 /* FlippableBackCardView.swift in Sources */,
 				38AA40C92DF38D27004D5EC9 /* ImagePickerView.swift in Sources */,
 				D5F710AE2DF13C9D00F2CE3B /* CreateFlowerstandViewModel.swift in Sources */,
@@ -1054,6 +1125,7 @@
 				CA5EAA642DF2C34200690A03 /* InfoStep1View.swift in Sources */,
 				CA5EAA652DF2C34200690A03 /* InfoStep3View.swift in Sources */,
 				CA5EAA662DF2C34200690A03 /* InfoStep2View.swift in Sources */,
+				38A09B572DF4A9090066E434 /* InvitationOCRView.swift in Sources */,
 				55512E1E2DEEFB3300433ED8 /* InfoLoadingView.swift in Sources */,
 				D574E9B12DED7FA000AAF70F /* PrimaryButton.swift in Sources */,
 				CA5EAAAF2DF4286900690A03 /* ReceiveCongratsView.swift in Sources */,
@@ -1072,6 +1144,7 @@
 				CA5EAAC32DF443C300690A03 /* ReceiveCongratsCardFlipView.swift in Sources */,
 				D5F2EDB72DF5E254003D1291 /* HomeCardScrollView.swift in Sources */,
 				D5B38C4F2DF05A2C005DAFDC /* PartyCardGroupName.swift in Sources */,
+				38A09B672DF59B3F0066E434 /* OCRTextParser.swift in Sources */,
 				D59F7C782DEB006200A829A8 /* HomeView.swift in Sources */,
 				CA5EAA4A2DF2C06F00690A03 /* CreateGroupView.swift in Sources */,
 				38AA40CC2DF38D44004D5EC9 /* OCRViewModel.swift in Sources */,
@@ -1087,6 +1160,7 @@
 				CA5EAAB12DF4287A00690A03 /* ReceiveCongratsCardFrontView.swift in Sources */,
 				38AA40EA2DF38DF0004D5EC9 /* OnboardingView.swift in Sources */,
 				CA2C4A4B2DF0525000D8E170 /* CardDecorationPicker.swift in Sources */,
+				38A09B652DF578B90066E434 /* PhotoScanView.swift in Sources */,
 				D51C80C52DEF482A0051CB40 /* HomeChracterImage.swift in Sources */,
 				D5B38C442DF0475A005DAFDC /* PartyCardStyle.swift in Sources */,
 				D5F2EDBE2DF5E798003D1291 /* MultiCardViewModel.swift in Sources */,
