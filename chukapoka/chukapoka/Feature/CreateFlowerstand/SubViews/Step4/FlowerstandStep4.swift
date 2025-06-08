@@ -11,12 +11,19 @@ struct FlowerstandStep4: View {
     @ObservedObject var viewModel: CreateFlowerstandViewModel
     
     var body: some View {
-        VStack(alignment: .center, spacing: 155) {
-            Text("\(viewModel.recipientName)님 만의\n화환이 준비되었어요!")
+        VStack(spacing: 59) {
+            Text("\(viewModel.recipientName)님 만의\n화환 카드가 준비되었어요!")
                 .font(GSFont.title2)
+                .lineSpacing(12)
                 .foregroundColor(GSColor.black)
                 .multilineTextAlignment(.center)
+            
+            FinishFlowerstandCard(
+                selectedColor: viewModel.selectedColor,
+                selectedFlower: viewModel.selectedFlower,
+                partyName: viewModel.partyName,
+                ribbonText: viewModel.message
+            )
         }
-        .padding(.horizontal, 16)
     }
 }
