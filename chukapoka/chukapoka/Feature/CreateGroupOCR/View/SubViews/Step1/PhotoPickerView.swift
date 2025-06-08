@@ -12,7 +12,6 @@ import PhotosUI
 struct PhotoPickerView: View {
     @ObservedObject var ocrViewModel: OCRViewModel
     @StateObject private var viewModel: CreateGroupViewModel
-    @EnvironmentObject var coordinator: AppCoordinator
     @State private var isPickerPresented = false
     
     init(viewModel: CreateGroupViewModel, ocrViewModel: OCRViewModel) {
@@ -56,5 +55,5 @@ struct PhotoPickerView: View {
             selection: $ocrViewModel.selectedItem,
             matching: .images
         )
-        }
     }
+}
