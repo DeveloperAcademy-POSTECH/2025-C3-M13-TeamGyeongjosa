@@ -36,9 +36,14 @@ struct FlowerstandStep1: View {
                 
                 TextField("", text: $viewModel.amountText)
                     .keyboardType(.numberPad)
+                    .onChange(of: viewModel.amountText) {
+                        let filtered = viewModel.amountText.filter(\.isNumber)
+                        viewModel.amountText = String(filtered.prefix(4))
+                    }
                     .foregroundColor(.clear)
                     .accentColor(.clear)
                     .disableAutocorrection(true)
+                    .background(Color.white.opacity(0.01))
             }
             .padding(.horizontal, 4)
             .padding(.top, 32)
@@ -55,6 +60,9 @@ struct FlowerstandStep1: View {
             }
         }
         .padding(.horizontal, 16)
+        .onTapGesture {
+            self.endTextEditing()
+        }
     }
 }
 
