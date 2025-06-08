@@ -9,8 +9,6 @@ import SwiftUI
 
 struct OCRResultView: View {
     
-    
-    
     // MARK: - ViewModel
     @ObservedObject var viewModel: CreateGroupViewModel
     @ObservedObject var ocrViewModel: OCRViewModel
@@ -20,6 +18,7 @@ struct OCRResultView: View {
     @State private var place: String = ""
     @State private var date: String = ""
     @State private var time: String = ""
+    @State private var bride: String = ""
     
     var onNext: () -> Void
     // MARK: - View Body
@@ -91,7 +90,7 @@ struct OCRResultView: View {
             .padding(.horizontal, 16)
             .padding(.bottom, 30)
         }
-        .navigationBarBackButtonHidden(true)
+        //.navigationBarBackButtonHidden(true)
         .onTapGesture {
             self.endTextEditing()
         }
@@ -104,9 +103,11 @@ struct OCRResultView: View {
                 viewModel.weddingPlace = place
                 viewModel.weddingDate = viewModel.formatDateInput(date)
                 viewModel.weddingTime = viewModel.formatTimeInput(time)
+                
+                if let bride = result.brideName {
+                    viewModel.receiverName = bride
+                }
             }
-            //onNext()
         }
     }
 }
-

@@ -21,6 +21,12 @@ class OCRViewModel: ObservableObject {
     @Published var selectedItem: PhotosPickerItem?
     @Published var selectedImage: UIImage?
     @Published var recognizedTextLines: [String] = []
+    
+    func reset() {
+        selectedImage = nil
+        selectedItem = nil
+        recognizedTextLines = []
+    }
 
     private let ocrManager = OCRManager()
 
@@ -32,7 +38,7 @@ class OCRViewModel: ObservableObject {
                    let image = UIImage(data: data) {
                     self.selectedImage = image
 
-                    // ✅ OCRManager도 async 버전으로 되어 있어야 함
+                    // OCRManager도 async 버전으로 되어 있어야 함
                     let lines = await ocrManager.recognizeText(from: image)
                     self.recognizedTextLines = lines
                     completion()
