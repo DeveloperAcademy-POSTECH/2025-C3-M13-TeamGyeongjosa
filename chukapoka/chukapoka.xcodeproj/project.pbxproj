@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		38A09B532DF431AC0066E434 /* OCRManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A09B522DF431A30066E434 /* OCRManager.swift */; };
 		38A09B572DF4A9090066E434 /* InvitationOCRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A09B562DF4A8BD0066E434 /* InvitationOCRView.swift */; };
+		38A09B592DF55F1D0066E434 /* OCRResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A09B582DF55F180066E434 /* OCRResultView.swift */; };
 		38AA40C92DF38D27004D5EC9 /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40C72DF38D27004D5EC9 /* PhotoPickerView.swift */; };
 		38AA40CC2DF38D44004D5EC9 /* OCRViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40CB2DF38D44004D5EC9 /* OCRViewModel.swift */; };
 		38AA40CF2DF38D77004D5EC9 /* FlowerstandCardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40CD2DF38D77004D5EC9 /* FlowerstandCardData.swift */; };
@@ -124,6 +125,7 @@
 /* Begin PBXFileReference section */
 		38A09B522DF431A30066E434 /* OCRManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRManager.swift; sourceTree = "<group>"; };
 		38A09B562DF4A8BD0066E434 /* InvitationOCRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationOCRView.swift; sourceTree = "<group>"; };
+		38A09B582DF55F180066E434 /* OCRResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRResultView.swift; sourceTree = "<group>"; };
 		38AA40C72DF38D27004D5EC9 /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
 		38AA40CB2DF38D44004D5EC9 /* OCRViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRViewModel.swift; sourceTree = "<group>"; };
 		38AA40CD2DF38D77004D5EC9 /* FlowerstandCardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerstandCardData.swift; sourceTree = "<group>"; };
@@ -255,6 +257,57 @@
 				38A09B522DF431A30066E434 /* OCRManager.swift */,
 			);
 			path = TextRecognition;
+			sourceTree = "<group>";
+		};
+		38A09B5A2DF566AC0066E434 /* CreateGroupOCR */ = {
+			isa = PBXGroup;
+			children = (
+				38A09B5C2DF567650066E434 /* ViewModel */,
+				38A09B5B2DF5675F0066E434 /* View */,
+			);
+			path = CreateGroupOCR;
+			sourceTree = "<group>";
+		};
+		38A09B5B2DF5675F0066E434 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				38A09B562DF4A8BD0066E434 /* InvitationOCRView.swift */,
+				38A09B5D2DF568270066E434 /* SubViews */,
+				38A09B582DF55F180066E434 /* OCRResultView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		38A09B5C2DF567650066E434 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				38AA40CB2DF38D44004D5EC9 /* OCRViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		38A09B5D2DF568270066E434 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				38A09B5E2DF568590066E434 /* Step1 */,
+				38A09B5F2DF568640066E434 /* Step2 */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		38A09B5E2DF568590066E434 /* Step1 */ = {
+			isa = PBXGroup;
+			children = (
+				38AA40C72DF38D27004D5EC9 /* PhotoPickerView.swift */,
+			);
+			path = Step1;
+			sourceTree = "<group>";
+		};
+		38A09B5F2DF568640066E434 /* Step2 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Step2;
 			sourceTree = "<group>";
 		};
 		38AA40CE2DF38D77004D5EC9 /* Model */ = {
@@ -450,8 +503,6 @@
 		D51C80CE2DEF69E20051CB40 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				38A09B562DF4A8BD0066E434 /* InvitationOCRView.swift */,
-				38AA40C72DF38D27004D5EC9 /* PhotoPickerView.swift */,
 				CA5EAA492DF2C06F00690A03 /* CreateGroupView.swift */,
 				CA5EAA622DF2C34200690A03 /* SubViews */,
 			);
@@ -461,7 +512,6 @@
 		D51C80CF2DEF69ED0051CB40 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				38AA40CB2DF38D44004D5EC9 /* OCRViewModel.swift */,
 				D59F7C7E2DEB019100A829A8 /* CreateGroupViewModel.swift */,
 			);
 			path = ViewModel;
@@ -591,6 +641,7 @@
 		D59F7C5C2DEAF40300A829A8 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				38A09B5A2DF566AC0066E434 /* CreateGroupOCR */,
 				38AA40ED2DF38DFB004D5EC9 /* Splash */,
 				38AA40E52DF38DF0004D5EC9 /* Onboarding */,
 				38AA40D82DF38DE2004D5EC9 /* InputCodeView */,
@@ -888,6 +939,7 @@
 				D51C80D72DEF6B940051CB40 /* PartyMember.swift in Sources */,
 				D5B38C382DF04084005DAFDC /* PartyCardView.swift in Sources */,
 				D595C30A2DF3636B00F484A1 /* InfoViewModel.swift in Sources */,
+				38A09B592DF55F1D0066E434 /* OCRResultView.swift in Sources */,
 				D5B38C4D2DF04824005DAFDC /* PartyCardAction.swift in Sources */,
 				38AA40D12DF38D9C004D5EC9 /* NameCheck.swift in Sources */,
 				D5B38C3A2DF045EC005DAFDC /* PartyCardStatusBadge.swift in Sources */,

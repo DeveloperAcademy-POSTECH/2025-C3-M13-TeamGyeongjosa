@@ -26,8 +26,8 @@ struct PhotoPickerView: View {
             NavigationBar {
                 viewModel.goToPreviousStep()
             }
-//            CustomProgressView(progress: viewModel.progressRate)
-                .padding(.bottom, 30)
+            //            CustomProgressView(progress: viewModel.progressRate)
+            .padding(.bottom, 30)
             // MARK: - 청첩장 불러오기 설명
             Text("화환을 함께 전달하기 위해\n몇 가지 정보를 수집할게요")
                 .font(GSFont.title2)
@@ -56,19 +56,5 @@ struct PhotoPickerView: View {
             selection: $ocrViewModel.selectedItem,
             matching: .images
         )
-//        .onChange(of: ocrViewModel.selectedItem) { newItem in
-//            guard let newItem else { return }
-//            ocrViewModel.handleImageSelection(from: newItem) {
-//                coordinator.push(.loadingInfoDone)
-//            }
-//        }
-
-//        .onChange(of: ocrViewModel.selectedItem) {
-//            guard let item = ocrViewModel.selectedItem else { return }
-//
-//            ocrViewModel.handleImageSelection(from: item) {
-//                coordinator.push(.loadingInfoDone)
-//            }
-//        }
     }
 }

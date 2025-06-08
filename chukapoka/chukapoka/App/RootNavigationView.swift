@@ -10,8 +10,6 @@ import _PhotosUI_SwiftUI
 
 struct RootNavigationView: View {
     @EnvironmentObject var coordinator: AppCoordinator
-    @State private var selectedItem: PhotosPickerItem? = nil
-    @StateObject private var ocrViewModel = OCRViewModel()
     
     var body: some View {
         NavigationStack(path: $coordinator.path) {
@@ -25,8 +23,7 @@ struct RootNavigationView: View {
                         // 그룹 생성 파티장 flow
                     case .createGroup:
                         // CreateGroupView(viewModel: CreateGroupViewModel(coordinator: coordinator))
-                        ImagePickerView(viewModel: CreateGroupViewModel(coordinator: coordinator), ocrViewModel: ocrViewModel)
-                        .environmentObject(coordinator) 
+                        InvitationOCRView(ocrviewModel: OCRViewModel(), coordinator: coordinator)
                         .navigationBarHidden(true)
                     case .createFlowerstand:
                         CreateFlowerstandView(viewModel: CreateFlowerstandViewModel(coordinator: coordinator))
