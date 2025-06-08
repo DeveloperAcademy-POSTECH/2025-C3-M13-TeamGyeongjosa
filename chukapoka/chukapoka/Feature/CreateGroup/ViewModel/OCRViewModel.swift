@@ -15,18 +15,14 @@ class OCRViewModel: ObservableObject {
     func handleImageSelection(from item: PhotosPickerItem, completion: @escaping () -> Void) {
         Task {
             do {
-                // 이미지 데이터 가져오기
                 if let data = try await item.loadTransferable(type: Data.self),
                    let image = UIImage(data: data) {
                     self.selectedImage = image
 
-                    // OCR 실행
-                    ocrManager.recognizeText(from: image) { [weak self] lines in
-                        DispatchQueue.main.async {
-                            self?.recognizedTextLines = lines
-                            completion()
-                        }
-                    }
+                    // ✅ OCRManager도 async 버전으로 되어 있어야 함
+                    let lines = await ocrManager.recognizeText(from: image)
+                    self.recognizedTextLines = lines
+                    completion()
                 }
             } catch {
                 print("이미지 로딩 실패: \(error.localizedDescription)")

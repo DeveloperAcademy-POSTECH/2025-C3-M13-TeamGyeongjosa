@@ -56,11 +56,19 @@ struct ImagePickerView: View {
             selection: $ocrViewModel.selectedItem,
             matching: .images
         )
-        .onChange(of: ocrViewModel.selectedItem) { newItem in
-            guard let newItem else { return }
-            ocrViewModel.handleImageSelection(from: newItem) {
-                coordinator.push(.loadingInfoDone)
-            }
-        }
+//        .onChange(of: ocrViewModel.selectedItem) { newItem in
+//            guard let newItem else { return }
+//            ocrViewModel.handleImageSelection(from: newItem) {
+//                coordinator.push(.loadingInfoDone)
+//            }
+//        }
+
+//        .onChange(of: ocrViewModel.selectedItem) {
+//            guard let item = ocrViewModel.selectedItem else { return }
+//
+//            ocrViewModel.handleImageSelection(from: item) {
+//                coordinator.push(.loadingInfoDone)
+//            }
+//        }
     }
 }
