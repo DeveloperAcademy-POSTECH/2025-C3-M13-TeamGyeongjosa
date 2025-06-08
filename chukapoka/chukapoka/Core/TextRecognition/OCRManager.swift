@@ -25,7 +25,6 @@ class OCRManager {
 
                 let texts = (request.results as? [VNRecognizedTextObservation])?
                     .compactMap { $0.topCandidates(1).first?.string } ?? []
-
                 continuation.resume(returning: texts)
             }
 

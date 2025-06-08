@@ -5,11 +5,11 @@
 //  Created by jenki on 6/8/25.
 //
 
+// TODO: 값만 InfoStep1View 로 보내도록 수정
+
 import SwiftUI
 
 struct OCRResultView: View {
-    
-    // MARK: - ViewModel
     @ObservedObject var viewModel: CreateGroupViewModel
     @ObservedObject var ocrViewModel: OCRViewModel
     @Binding var currentStep: InvitationOCRView.OCRStep
@@ -21,10 +21,8 @@ struct OCRResultView: View {
     @State private var bride: String = ""
     
     var onNext: () -> Void
-    // MARK: - View Body
     var body: some View {
         VStack(spacing: 0) {
-            // MARK: - 툴바 (뒤로가기)
             NavigationBar {
                 //ocrviewModel.goToPreviousStep()
                 currentStep = .photoPicker
@@ -37,21 +35,18 @@ struct OCRResultView: View {
                         Text("입력된 정보가 정확한지 \n 다시 한 번 확인해주세요")
                             .font(GSFont.title2)
                             .foregroundColor(GSColor.black)
-                        
                         CustomTextField(
                             title: "모임명",
                             placeholder: "어떤 모임에서 화환을 전달하나요?",
                             text: $viewModel.partyName,
                             isValid: $viewModel.isPartyNameValid
                         )
-                        
                         CustomTextField(
                             title: "결혼식 장소",
                             placeholder: "결혼식 장소를 입력해주세요",
                             text: $place,
                             isValid: $viewModel.isPlaceValid
                         )
-                        
                         CustomTextField(
                             title: "결혼식 날짜",
                             placeholder: "YYYY. MM. DD",
