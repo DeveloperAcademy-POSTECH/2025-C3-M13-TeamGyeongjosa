@@ -8,62 +8,90 @@
 import SwiftUI
 
 struct OCRResultView: View {
+    // MARK: - ViewModel
+    @ObservedObject var viewModel: CreateGroupViewModel
     @ObservedObject var ocrViewModel: OCRViewModel
-
+    
+    // OCR 결과를 받아와 텍스트 필드에 반영할 State 변수
+    @State private var place: String = ""
+    @State private var date: String = ""
+    
+    // MARK: - View Body
     var body: some View {
-        ScrollView {
-            VStack(spacing: 24) {
-                // 선택된 이미지 표시
-                if let image = ocrViewModel.selectedImage {
-                    Image(uiImage: image)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(maxWidth: .infinity)
-                        .cornerRadius(10)
-                }
-
-                // 인식된 텍스트 표시
-                if !ocrViewModel.recognizedTextLines.isEmpty {
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text("인식된 텍스트")
-                            .font(.headline)
-
-                        // MARK: - OCR 결과 출력
-                        if let result = ocrViewModel.ocrResult {
-                            VStack(alignment: .leading, spacing: 8) {
-                                Text("👰 신부: \(result.brideName ?? "인식 실패")")
-                                Text("🤵 신랑: \(result.groomName ?? "인식 실패")")
-                                Text("📅 날짜: \(result.date ?? "인식 실패")")
-                                Text("📍 장소: \(result.place ?? "인식 실패")")
-                            }
-                            .padding()
-                            .background(Color(.secondarySystemBackground))
-                            .cornerRadius(12)
-                        }
-//
-//                        ForEach(ocrViewModel.recognizedTextLines, id: \.self) { line in
-//                            Text("• \(line)")
-//                                .font(.body)
-//                                .padding(.vertical, 4)
-//                                .padding(.horizontal, 8)
-//                                .background(Color.yellow.opacity(0.2))
-//                                .cornerRadius(5)
-//                        }
-                    }
-                    .padding()
-                    .background(Color(.secondarySystemBackground))
-                    .cornerRadius(10)
-                }
-
-                
-                // 다음 단계로 이동 버튼
-                Button("다음으로") {
-                    // coordinator.push(.nextStep) 등으로 다음 라우트 이동
-                }
-                .padding()
+        VStack(spacing: 0) {
+            // MARK: - 툴바 (뒤로가기)
+            NavigationBar {
+                viewModel.goToPreviousStep()
             }
-            .padding()
+            CustomProgressView(progress: viewModel.progressRate)
+                .padding(.bottom, 30)
+            ZStack{
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 32) {
+                        Text("입력된 정보가 정확한지 \n 다시 한 번 확인해주세요")
+                            .font(GSFont.title2)
+                            .foregroundColor(GSColor.black)
+                        
+                        CustomTextField(
+                            title: "모임명",
+                            placeholder: "어떤 모임에서 화환을 전달하나요?",
+                            text: $viewModel.partyName,
+                            isValid: $viewModel.isPartyNameValid
+                        )
+                        
+                        CustomTextField(
+                            title: "결혼식 장소",
+                            placeholder: "결혼식 장소를 입력해주세요",
+                            text: $place,
+                            isValid: $viewModel.isPlaceValid
+                        )
+                        
+                        CustomTextField(
+                            title: "결혼식 날짜",
+                            placeholder: "YYYY. MM. DD",
+                            text: $date,
+                            isValid: $viewModel.isDateValid
+                        )
+                        .keyboardType(.numberPad)
+                        .onChange(of: viewModel.weddingDate) {
+                            viewModel.weddingDate = viewModel.formatDateInput(viewModel.weddingDate)
+                        }
+                        CustomTextField(
+                            title: "결혼식 시간",
+                            placeholder: "HH:MM",
+                            text: $viewModel.weddingTime,
+                            isValid: $viewModel.isTimeValid
+                        )
+                        .keyboardType(.numberPad)
+                        .onChange(of: viewModel.weddingTime) {
+                            viewModel.weddingTime = viewModel.formatTimeInput(viewModel.weddingTime)
+                        }
+                        Spacer(minLength: 0)
+                    }
+                }
+            }
+            .padding(.horizontal, 16)
+            .animation(.easeInOut, value: viewModel.currentStep)
+            
+            PrimaryButton(
+                title: viewModel.nextButtonTitle,
+                style: viewModel.isNextButtonEnabled ? .basic : .disabled,
+                action: {
+                    viewModel.handleNext()
+                }
+            )
+            .padding(.horizontal, 16)
+            .padding(.bottom, 30)
         }
         .navigationBarBackButtonHidden(true)
+        .onTapGesture {
+            self.endTextEditing()
+        }
+        .onAppear {
+            if let result = ocrViewModel.ocrResult {
+                self.place = result.place ?? ""
+                self.date = result.date ?? ""
+            }
+        }
     }
 }

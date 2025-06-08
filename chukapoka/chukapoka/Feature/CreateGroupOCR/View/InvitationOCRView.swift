@@ -22,7 +22,7 @@ struct InvitationOCRView: View {
                         showScan = false
                     }
                 } else {
-                    OCRResultView(ocrViewModel: ocrViewModel)
+                    OCRResultView(viewModel: viewModel, ocrViewModel: ocrViewModel)
                 }
             }
         }
@@ -35,4 +35,3 @@ struct InvitationOCRView: View {
         .navigationBarBackButtonHidden(true)
     }
 }
-
