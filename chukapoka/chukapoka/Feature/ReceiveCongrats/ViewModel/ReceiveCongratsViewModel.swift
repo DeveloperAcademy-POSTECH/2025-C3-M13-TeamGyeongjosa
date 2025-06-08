@@ -61,7 +61,8 @@ class ReceiveCongratsViewModel: ObservableObject {
         let party = Party(
             name: "친구들",
             photoPath: "photo/path",
-            wedding: nil
+            wedding: nil,
+            inviteCode: "MM1234"
         )
         party.members = [leader, member1, member2]
         
