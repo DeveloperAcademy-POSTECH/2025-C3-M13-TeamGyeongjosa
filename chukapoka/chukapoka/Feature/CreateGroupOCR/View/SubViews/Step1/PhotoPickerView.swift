@@ -56,5 +56,11 @@ struct PhotoPickerView: View {
             selection: $ocrViewModel.selectedItem,
             matching: .images
         )
+        .onChange(of: ocrViewModel.selectedItem) { newItem in
+            guard let newItem else { return }
+            ocrViewModel.handleImageSelection(from: newItem) {
+                coordinator.push(.invitationOCR)
+            }
+        }
     }
 }

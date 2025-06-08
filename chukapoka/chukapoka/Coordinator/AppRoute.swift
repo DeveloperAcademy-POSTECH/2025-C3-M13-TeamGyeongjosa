@@ -13,4 +13,5 @@ enum AppRoute: Hashable {
     case createFlowerstand
     case loadingFlowerstandDone
     case joinGroup
+    case invitationOCR
 }
