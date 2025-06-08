@@ -38,13 +38,11 @@
 		CA2C4A492DF0513700D8E170 /* FlowerstandCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2C4A482DF0512E00D8E170 /* FlowerstandCardView.swift */; };
 		CA2C4A4B2DF0525000D8E170 /* CardDecorationPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2C4A4A2DF0525000D8E170 /* CardDecorationPicker.swift */; };
 		CA5EAA4A2DF2C06F00690A03 /* CreateGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAA492DF2C06F00690A03 /* CreateGroupView.swift */; };
-		CA5EAA4C2DF2C15600690A03 /* TextfieldDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAA4B2DF2C15600690A03 /* TextfieldDown.swift */; };
 		CA5EAA632DF2C34200690A03 /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAA5A2DF2C34200690A03 /* CustomProgressView.swift */; };
 		CA5EAA642DF2C34200690A03 /* InfoStep1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAA5C2DF2C34200690A03 /* InfoStep1View.swift */; };
 		CA5EAA652DF2C34200690A03 /* InfoStep3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAA602DF2C34200690A03 /* InfoStep3View.swift */; };
 		CA5EAA662DF2C34200690A03 /* InfoStep2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAA5E2DF2C34200690A03 /* InfoStep2View.swift */; };
 		CA5EAA712DF2CA5800690A03 /* FinishFlowerstandCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAA6F2DF2CA5800690A03 /* FinishFlowerstandCard.swift */; };
-		CA5EAA722DF2CA5800690A03 /* FinishFlowerstandContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAA702DF2CA5800690A03 /* FinishFlowerstandContent.swift */; };
 		CA5EAA752DF2CA5D00690A03 /* LeftText.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAA732DF2CA5D00690A03 /* LeftText.swift */; };
 		CA5EAA762DF2CA5D00690A03 /* RightText.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAA742DF2CA5D00690A03 /* RightText.swift */; };
 		CA5EAAA82DF41A8E00690A03 /* CKPK_onboarding2.json in Resources */ = {isa = PBXBuildFile; fileRef = CA5EAAA62DF41A8E00690A03 /* CKPK_onboarding2.json */; };
@@ -65,6 +63,7 @@
 		CA5EAAD42DF483FC00690A03 /* FlowerstandCardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAAD32DF483FC00690A03 /* FlowerstandCardList.swift */; };
 		CA5EAAD82DF4897400690A03 /* FlowerstandCardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAAD72DF4897400690A03 /* FlowerstandCardItem.swift */; };
 		CA5EAADA2DF48E6600690A03 /* SelectedCardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAAD92DF48E6600690A03 /* SelectedCardDetailView.swift */; };
+		CA5EAAE02DF5648300690A03 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAADF2DF5648300690A03 /* View+Extension.swift */; };
 		D51C80C32DEF48210051CB40 /* HomeIntroText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80C22DEF481C0051CB40 /* HomeIntroText.swift */; };
 		D51C80C52DEF482A0051CB40 /* HomeChracterImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80C42DEF48260051CB40 /* HomeChracterImage.swift */; };
 		D51C80CB2DEF487F0051CB40 /* HomeBottomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80CA2DEF487C0051CB40 /* HomeBottomButtons.swift */; };
@@ -167,13 +166,11 @@
 		CA2C4A482DF0512E00D8E170 /* FlowerstandCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerstandCardView.swift; sourceTree = "<group>"; };
 		CA2C4A4A2DF0525000D8E170 /* CardDecorationPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDecorationPicker.swift; sourceTree = "<group>"; };
 		CA5EAA492DF2C06F00690A03 /* CreateGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupView.swift; sourceTree = "<group>"; };
-		CA5EAA4B2DF2C15600690A03 /* TextfieldDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldDown.swift; sourceTree = "<group>"; };
 		CA5EAA5A2DF2C34200690A03 /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
 		CA5EAA5C2DF2C34200690A03 /* InfoStep1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoStep1View.swift; sourceTree = "<group>"; };
 		CA5EAA5E2DF2C34200690A03 /* InfoStep2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoStep2View.swift; sourceTree = "<group>"; };
 		CA5EAA602DF2C34200690A03 /* InfoStep3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoStep3View.swift; sourceTree = "<group>"; };
 		CA5EAA6F2DF2CA5800690A03 /* FinishFlowerstandCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishFlowerstandCard.swift; sourceTree = "<group>"; };
-		CA5EAA702DF2CA5800690A03 /* FinishFlowerstandContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishFlowerstandContent.swift; sourceTree = "<group>"; };
 		CA5EAA732DF2CA5D00690A03 /* LeftText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftText.swift; sourceTree = "<group>"; };
 		CA5EAA742DF2CA5D00690A03 /* RightText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightText.swift; sourceTree = "<group>"; };
 		CA5EAAA52DF41A8E00690A03 /* CKPK_onboarding1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CKPK_onboarding1.json; sourceTree = "<group>"; };
@@ -193,6 +190,7 @@
 		CA5EAAD32DF483FC00690A03 /* FlowerstandCardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerstandCardList.swift; sourceTree = "<group>"; };
 		CA5EAAD72DF4897400690A03 /* FlowerstandCardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerstandCardItem.swift; sourceTree = "<group>"; };
 		CA5EAAD92DF48E6600690A03 /* SelectedCardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCardDetailView.swift; sourceTree = "<group>"; };
+		CA5EAADF2DF5648300690A03 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		D51C80C22DEF481C0051CB40 /* HomeIntroText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeIntroText.swift; sourceTree = "<group>"; };
 		D51C80C42DEF48260051CB40 /* HomeChracterImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChracterImage.swift; sourceTree = "<group>"; };
 		D51C80CA2DEF487C0051CB40 /* HomeBottomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomButtons.swift; sourceTree = "<group>"; };
@@ -387,7 +385,6 @@
 			children = (
 				CA064B322DF07AF40048F794 /* FlowerstandStep4.swift */,
 				CA5EAA6F2DF2CA5800690A03 /* FinishFlowerstandCard.swift */,
-				CA5EAA702DF2CA5800690A03 /* FinishFlowerstandContent.swift */,
 				CA5EAA732DF2CA5D00690A03 /* LeftText.swift */,
 				CA5EAA742DF2CA5D00690A03 /* RightText.swift */,
 			);
@@ -527,6 +524,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		CA5EAADE2DF5646E00690A03 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CA5EAADF2DF5648300690A03 /* View+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		D51C80C12DEF47740051CB40 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -660,6 +665,7 @@
 		D59F7C5A2DEAF24500A829A8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				CA5EAADE2DF5646E00690A03 /* Extensions */,
 				D51C80D12DEF6B620051CB40 /* SharedModel */,
 				D574E9AD2DED7F6A00AAF70F /* DesignSystem */,
 				D59F7C6F2DEAF69200A829A8 /* Constants.swift */,
@@ -688,7 +694,6 @@
 				CA0B87EA2DF021300001F120 /* CreateFlowerstand */,
 				D59F7C7B2DEB00C800A829A8 /* EnterGroup */,
 				D5F710B72DF2971F00F2CE3B /* Loading */,
-				CA5EAA4B2DF2C15600690A03 /* TextfieldDown.swift */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -992,6 +997,7 @@
 				D5B38C3C2DF045FB005DAFDC /* PartyCardActionIcons.swift in Sources */,
 				D574E9DC2DED8E2E00AAF70F /* GSColor.swift in Sources */,
 				D5B38C642DF0AB04005DAFDC /* PartyCardBackContainer.swift in Sources */,
+				CA5EAAE02DF5648300690A03 /* View+Extension.swift in Sources */,
 				CA064B222DF05DE60048F794 /* FlowerstandStep3.swift in Sources */,
 				CA5EAACF2DF483C400690A03 /* ShowFlowerstandCardsView.swift in Sources */,
 				D574E9DA2DED8A6500AAF70F /* GSFont.swift in Sources */,
@@ -1045,7 +1051,6 @@
 				D5B38C3E2DF04621005DAFDC /* PartyCardTitle.swift in Sources */,
 				D59F7C702DEAF69400A829A8 /* Constants.swift in Sources */,
 				CA064B262DF061AD0048F794 /* SelectedFlowerGroup.swift in Sources */,
-				CA5EAA4C2DF2C15600690A03 /* TextfieldDown.swift in Sources */,
 				D5F710B22DF28D1500F2CE3B /* FlowerStandStep2ViewModel.swift in Sources */,
 				D5B38C5B2DF09B3F005DAFDC /* PartyCardContainer.swift in Sources */,
 				D5ED63172DED427B007912E1 /* RootNavigationView.swift in Sources */,
@@ -1058,7 +1063,6 @@
 				CA2C4A492DF0513700D8E170 /* FlowerstandCardView.swift in Sources */,
 				D51C80D32DEF6B820051CB40 /* Wedding.swift in Sources */,
 				CA5EAA712DF2CA5800690A03 /* FinishFlowerstandCard.swift in Sources */,
-				CA5EAA722DF2CA5800690A03 /* FinishFlowerstandContent.swift in Sources */,
 				CA5EAAB92DF4292100690A03 /* ReceiveCongratsCardBackView.swift in Sources */,
 				38AA40CF2DF38D77004D5EC9 /* FlowerstandCardData.swift in Sources */,
 				CA0B87EC2DF0217A0001F120 /* CreateFlowerstandView.swift in Sources */,
@@ -1225,7 +1229,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 9S8SHSW95K;
 				DEVELOPMENT_TEAM = 6TW9MCXPJD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1256,7 +1259,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 9S8SHSW95K;
 				DEVELOPMENT_TEAM = 6TW9MCXPJD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
