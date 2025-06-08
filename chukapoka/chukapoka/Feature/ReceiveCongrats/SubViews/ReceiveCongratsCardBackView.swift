@@ -29,7 +29,7 @@ struct ReceiveCongratsCardBackView: View {
         .padding(.top, 26)
         .padding(.bottom, 42)
         .padding(.horizontal, 16)
-        .background(PartyCardBackground(height: height))
+        .background(PartyCardBackground())
         .background(.ultraThinMaterial)
         .cornerRadius(16)
         .shadow(color: GSColor.cardRed2.opacity(0.3), radius: 30, x: 0, y: 4)

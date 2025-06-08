@@ -13,7 +13,7 @@ enum PartyCardState {
     
     var badgeText: String {
         switch self {
-        case .dDay(let days): return "D-\(days)"
+        case .dDay(let days): return days == 0 ? "오늘" : "D-\(days)"
         case .archived: return "완료"
         }
     }
@@ -37,5 +37,12 @@ enum PartyCardState {
         case .dDay: return true
         case .archived: return false
         }
+    }
+    
+    static func from(date: Date) -> PartyCardState {
+        let today = Calendar.current.startOfDay(for: Date())
+        let target = Calendar.current.startOfDay(for: date)
+        let diff = Calendar.current.dateComponents([.day], from: today, to: target).day ?? 0
+        return diff < 0 ? .archived : .dDay(diff)
     }
 }

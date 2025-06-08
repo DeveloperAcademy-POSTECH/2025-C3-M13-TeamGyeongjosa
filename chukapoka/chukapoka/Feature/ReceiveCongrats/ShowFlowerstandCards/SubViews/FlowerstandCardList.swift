@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct FlowerstandCardList: View {
-    @State private var selectedCard: FlowerstandCardItem? = nil
+    @State private var selectedCard: FlowerstandCardItem?
     @State private var currentRotation: Double = 0
     @State private var isDragging: Bool = false
     

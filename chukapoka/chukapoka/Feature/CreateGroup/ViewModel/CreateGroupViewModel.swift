@@ -179,8 +179,16 @@ final class CreateGroupViewModel: ObservableObject {
         let brideCode = generateBrideInviteCode()
         
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy. MM. dd HH:mm"
-        let dateTime = formatter.date(from: "\(weddingDate) \(weddingTime)") ?? Date()
+        formatter.timeZone = .current
+        let dateTime: Date
+        
+        if !weddingTime.isEmpty {
+            formatter.dateFormat = "yyyy.MM.dd HH:mm"
+            dateTime = formatter.date(from: "\(weddingDate) \(weddingTime)") ?? Date()
+        } else {
+            formatter.dateFormat = "yyyy.MM.dd"
+            dateTime = formatter.date(from: weddingDate) ?? Date()
+        }
         
         let wedding = Wedding(
             place: weddingPlace,
