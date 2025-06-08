@@ -18,9 +18,11 @@ struct CreateFlowerstandView: View {
                 viewModel.goBack()
             }
             // ⬆︎ 상단: 프로그레스 바만
-            CircleProgress(step: viewModel.step.rawValue)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.top, 16)
+            if viewModel.step != .complete {
+                CircleProgress(step: viewModel.step.rawValue)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.top, 16)
+            }
             
             // 플로우따라 바뀌는 컨테이너
             ZStack {

@@ -17,15 +17,15 @@ struct FinishFlowerstandCard: View {
         FlowerstandCardView(
             selectedColor: selectedColor,
             selectedFlower: selectedFlower,
-            width: 275,
-            height: 399
+            width: 235,
+            height: 300
         )
         .overlay(
-            HStack(spacing: 105) {
+            HStack(spacing: 100) {
                 LeftText(partyName: partyName)
                 RightText(ribbonText: ribbonText)
             }
-                .padding(.bottom, 12)
+                .padding(.bottom, 8)
         )
     }
 }

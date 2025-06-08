@@ -106,6 +106,10 @@ final class CreateFlowerstandViewModel: ObservableObject {
         }
     }
     
+    var partyName: String {
+        leader?.party?.name ?? "알 수 없음"
+    }
+    
     func saveFlowerstandInfo(modelContext: ModelContext) {
         guard let leader else {
             print("error: 리더가 존재하지않음")
