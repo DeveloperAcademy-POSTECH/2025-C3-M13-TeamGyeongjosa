@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct CardScrollView: View {
+    
     let parties: [Party]
     @Binding var currentIndex: Int
     @GestureState private var dragOffset: CGFloat = 0
-    private let viewModel = CardViewStateModel()
+    
+    private let viewModel = MultiCardViewModel()
+    @Environment(\.modelContext) private var ModelContext
     
     var body: some View {
         GeometryReader { geometry in
@@ -22,7 +25,19 @@ struct CardScrollView: View {
             
             if parties.count == 1 {
                 // 카드 1장: 그냥 중앙 정렬
-                SingleCardView(party: parties[0], width: cardWidth)
+                HStack {
+                    Spacer()
+                    SingleCardView(
+                        party: parties[0],
+                        width: cardWidth,
+                        onTapClose: {
+                            withAnimation(.interactiveSpring(response: 0.3, dampingFraction: 0.8)) {
+                                viewModel.deleteParty(parties[0], context: ModelContext)
+                                currentIndex = 0
+                            }
+                        })
+                    Spacer()
+                }
             } else {
                 // 여러 장: 스와이프 가능 + 중앙 카드
                 MultiCardScrollView(

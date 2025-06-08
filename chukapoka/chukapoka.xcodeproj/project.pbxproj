@@ -119,7 +119,7 @@
 		D5F2EDB72DF5E254003D1291 /* HomeCardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F2EDB62DF5E24B003D1291 /* HomeCardScrollView.swift */; };
 		D5F2EDB92DF5E6B7003D1291 /* SingleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F2EDB82DF5E6B3003D1291 /* SingleCardView.swift */; };
 		D5F2EDBB2DF5E6CB003D1291 /* MultiCardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F2EDBA2DF5E6C1003D1291 /* MultiCardScrollView.swift */; };
-		D5F2EDBE2DF5E798003D1291 /* CardViewStateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F2EDBD2DF5E792003D1291 /* CardViewStateModel.swift */; };
+		D5F2EDBE2DF5E798003D1291 /* MultiCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F2EDBD2DF5E792003D1291 /* MultiCardViewModel.swift */; };
 		D5F710AE2DF13C9D00F2CE3B /* CreateFlowerstandViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F710AD2DF13C9000F2CE3B /* CreateFlowerstandViewModel.swift */; };
 		D5F710B02DF284CB00F2CE3B /* FlowerStandStep1ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F710AF2DF284C200F2CE3B /* FlowerStandStep1ViewModel.swift */; };
 		D5F710B22DF28D1500F2CE3B /* FlowerStandStep2ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F710B12DF28D0800F2CE3B /* FlowerStandStep2ViewModel.swift */; };
@@ -260,7 +260,7 @@
 		D5F2EDB62DF5E24B003D1291 /* HomeCardScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCardScrollView.swift; sourceTree = "<group>"; };
 		D5F2EDB82DF5E6B3003D1291 /* SingleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCardView.swift; sourceTree = "<group>"; };
 		D5F2EDBA2DF5E6C1003D1291 /* MultiCardScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiCardScrollView.swift; sourceTree = "<group>"; };
-		D5F2EDBD2DF5E792003D1291 /* CardViewStateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewStateModel.swift; sourceTree = "<group>"; };
+		D5F2EDBD2DF5E792003D1291 /* MultiCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiCardViewModel.swift; sourceTree = "<group>"; };
 		D5F710AD2DF13C9000F2CE3B /* CreateFlowerstandViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFlowerstandViewModel.swift; sourceTree = "<group>"; };
 		D5F710AF2DF284C200F2CE3B /* FlowerStandStep1ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerStandStep1ViewModel.swift; sourceTree = "<group>"; };
 		D5F710B12DF28D0800F2CE3B /* FlowerStandStep2ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerStandStep2ViewModel.swift; sourceTree = "<group>"; };
@@ -721,6 +721,7 @@
 		D59F7C602DEAF4E000A829A8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				D59F7C772DEB005E00A829A8 /* HomeView.swift */,
 				D5E9AD932DF5A90600CDB444 /* View */,
 			);
 			path = Home;
@@ -792,7 +793,6 @@
 		D5E9AD932DF5A90600CDB444 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D59F7C772DEB005E00A829A8 /* HomeView.swift */,
 				D5E9AD912DF5A7D600CDB444 /* HomeNormalView.swift */,
 				D5E9AD8F2DF5A7CC00CDB444 /* HomeCardView.swift */,
 				D5F2EDB62DF5E24B003D1291 /* HomeCardScrollView.swift */,
@@ -801,10 +801,18 @@
 				D5E9AD992DF5D70A00CDB444 /* FlippableCardView.swift */,
 				D5E9ADA02DF5DBFF00CDB444 /* FlippableBackCardView.swift */,
 				D5E9AD9E2DF5DBD000CDB444 /* FlippableFrontCardView.swift */,
-				D5F2EDBD2DF5E792003D1291 /* CardViewStateModel.swift */,
 				D51C80C12DEF47740051CB40 /* SubViews */,
+				D5F2EDBF2DF5EFDF003D1291 /* ViewModel */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		D5F2EDBF2DF5EFDF003D1291 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D5F2EDBD2DF5E792003D1291 /* MultiCardViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		D5F710AC2DF13C3600F2CE3B /* ViewModel */ = {
@@ -1075,7 +1083,7 @@
 				CA2C4A4B2DF0525000D8E170 /* CardDecorationPicker.swift in Sources */,
 				D51C80C52DEF482A0051CB40 /* HomeChracterImage.swift in Sources */,
 				D5B38C442DF0475A005DAFDC /* PartyCardStyle.swift in Sources */,
-				D5F2EDBE2DF5E798003D1291 /* CardViewStateModel.swift in Sources */,
+				D5F2EDBE2DF5E798003D1291 /* MultiCardViewModel.swift in Sources */,
 				D5E9FCD02DF2E145000859A6 /* NavigationBar.swift in Sources */,
 				D59F7C762DEAF6E100A829A8 /* AppRoute.swift in Sources */,
 				D5B38C3E2DF04621005DAFDC /* PartyCardTitle.swift in Sources */,

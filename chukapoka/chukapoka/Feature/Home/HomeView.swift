@@ -10,7 +10,8 @@ import SwiftData
 
 struct HomeView: View {
     @EnvironmentObject var coordinator: AppCoordinator
-    @Query(sort: \Party.partyID, order: .reverse) var parties: [Party]
+    // 최근에 만들어진 것
+    @Query(sort: \Party.createdAt, order: .reverse) var parties: [Party]
     @State private var currentIndex = 0
 
     var body: some View {

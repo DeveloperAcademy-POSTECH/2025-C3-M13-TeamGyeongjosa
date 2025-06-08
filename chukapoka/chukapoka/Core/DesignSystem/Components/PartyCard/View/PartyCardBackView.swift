@@ -23,7 +23,7 @@ struct PartyCardBackView: View {
     }
 
     var body: some View {
-        GeometryReader { geometry in
+        GeometryReader { _ in
             PartyCardBackContainer(
                 inviteCode: inviteCode,
                 onTapCodeCopy: onTapCodeCopy,

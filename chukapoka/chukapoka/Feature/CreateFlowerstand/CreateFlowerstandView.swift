@@ -33,8 +33,6 @@ struct CreateFlowerstandView: View {
                     FlowerstandStep3(viewModel: viewModel.step3ViewModel)
                 case .complete:
                     FlowerstandStep4(viewModel: viewModel)
-                default:
-                    EmptyView()
                 }
             }
             .frame(maxHeight: .infinity)

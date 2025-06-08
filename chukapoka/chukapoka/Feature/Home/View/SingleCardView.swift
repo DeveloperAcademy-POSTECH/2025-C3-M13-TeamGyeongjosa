@@ -10,6 +10,7 @@ import SwiftUI
 struct SingleCardView: View {
     let party: Party
     let width: CGFloat
+    let onTapClose: () -> Void
     
     var body: some View {
         FlippableCardView(
@@ -20,7 +21,7 @@ struct SingleCardView: View {
             state: PartyCardState.from(date: party.wedding?.date ?? Date()),
             inviteCode: party.inviteCode,
             onTapPhoto: {},
-            onTapClose: {}
+            onTapClose: onTapClose
         )
         .frame(width: width)
         .padding(.horizontal, 16)

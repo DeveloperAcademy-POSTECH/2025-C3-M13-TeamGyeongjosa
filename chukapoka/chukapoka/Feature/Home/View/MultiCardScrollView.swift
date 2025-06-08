@@ -11,12 +11,13 @@ struct MultiCardScrollView: View {
     let parties: [Party]
     @Binding var currentIndex: Int
     @GestureState var dragOffset: CGFloat
+    @Environment(\.modelContext) private var modelContext
     
     let screenWidth: CGFloat
     let cardWidth: CGFloat
     let spacing: CGFloat
     let xOffset: CGFloat
-    let viewModel: CardViewStateModel
+    let viewModel: MultiCardViewModel
     
     var body: some View {
         HStack(spacing: spacing) {
@@ -29,7 +30,21 @@ struct MultiCardScrollView: View {
                     state: PartyCardState.from(date: parties[index].wedding?.date ?? Date()),
                     inviteCode: parties[index].inviteCode,
                     onTapPhoto: {},
-                    onTapClose: {}
+                    onTapClose: {
+                        let isLast = parties.count - 1 == index
+                        
+                        withAnimation(.interactiveSpring(response: 0.3, dampingFraction: 0.8)) {
+                            if isLast && currentIndex > 0 {
+                                currentIndex -= 1
+                            }
+                        }
+                        
+                        // 약간의 지연 후 실제 삭제 수행 (애니메이션 끝난 뒤)
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+                            viewModel.deleteParty(parties[index], context: modelContext)
+                            
+                        }
+                    }
                 )
                 .frame(width: cardWidth)
                 .opacity(viewModel.opacity(for: index, current: currentIndex))

@@ -34,7 +34,7 @@ struct PartyCardView: View {
     }
     
     var body: some View {
-        GeometryReader { geometry in
+        GeometryReader { _ in
             PartyCardContainer(
                 name: name,
                 groupName: groupName,

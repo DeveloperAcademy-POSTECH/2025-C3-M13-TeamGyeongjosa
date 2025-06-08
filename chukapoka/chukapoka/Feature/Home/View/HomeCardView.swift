@@ -20,21 +20,7 @@ struct HomeCardView: View {
                 .padding(.leading, 16)
             
             CardScrollView(parties: parties, currentIndex: $currentIndex)
-//            ForEach(parties, id: \.partyID) { party in
-//                let state = PartyCardState.from(date: party.wedding?.date ?? Date())
-//                FlippableCardView(
-//                    name: party.wedding?.accountName ?? "신랑신부",
-//                    groupName: party.name,
-//                    weddingDate: party.wedding?.date ?? Date(),
-//                    weddingPlace: party.wedding?.place ?? "장소없음",
-//                    state: state,
-//                    inviteCode: party.inviteCode,
-//                    onTapPhoto: {},
-//                    onTapClose: {}
-//                )
-//                
-//            }
-//            .padding(.horizontal, 16)
+            
         }
         .padding(.top, 30)
     }

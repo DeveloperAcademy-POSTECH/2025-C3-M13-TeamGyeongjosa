@@ -19,7 +19,7 @@ struct FlippableCardView: View {
     let onTapClose: (() -> Void)?
     
     @State private var isFlipped: Bool = false
-    @State private var copiedText: String? = nil
+    @State private var copiedText: String?
     
     var body: some View {
         ZStack {
