@@ -5,7 +5,8 @@
 //  Created by jenki on 6/8/25.
 //
 
-// TODO: 값만 InfoStep1View 로 보내도록 수정
+// TODO: 값만 InfoStep1View 로 보내도록 수정 -> 뒤로가기 이슈 고려
+// TODO: 값만 InfoStep2View 로 보냈을 때 -> 뒤로가기 이슈 고려
 
 import SwiftUI
 
@@ -74,11 +75,13 @@ struct OCRResultView: View {
             .padding(.horizontal, 16)
             .animation(.easeInOut, value: viewModel.currentStep)
             
+            @Environment(\.modelContext) var modelContext
             PrimaryButton(
                 title: viewModel.nextButtonTitle,
                 style: viewModel.isNextButtonEnabled ? .basic : .disabled,
                 action: {
-                    viewModel.handleNext()
+                    // TODO: SwiftData와 확인 필요
+                    viewModel.handleNext(modelContext: modelContext)
                     onNext()
                 }
             )

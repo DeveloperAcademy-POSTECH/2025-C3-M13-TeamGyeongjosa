@@ -17,11 +17,14 @@ struct PhotoScanView: View {
         ZStack {
             Image(uiImage: image)
                 .resizable()
-                .scaledToFit()
-                .edgesIgnoringSafeArea(.all)
+                .aspectRatio(contentMode: .fit)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(Color.black)
+                .ignoresSafeArea()
+            
             Color.black.opacity(0.4)
                 .edgesIgnoringSafeArea(.all)
-
+            
             GeometryReader { geometry in
                 Rectangle()
                     .fill(
@@ -38,14 +41,13 @@ struct PhotoScanView: View {
                             Animation.linear(duration: 3)
                                 .repeatForever(autoreverses: false)
                         ) {
-                            scanLineOffset = geometry.size.height + 200
+                            scanLineOffset = geometry.size.height + 300
                             isAnimating = true
                         }
                         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
                             onFinished()
                         }
                     }
-                    .background(Color.black)
             }
         }
     }
