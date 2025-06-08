@@ -116,6 +116,10 @@
 		D5E9ADA12DF5DC0700CDB444 /* FlippableBackCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E9ADA02DF5DBFF00CDB444 /* FlippableBackCardView.swift */; };
 		D5E9FCD02DF2E145000859A6 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E9FCCF2DF2E140000859A6 /* NavigationBar.swift */; };
 		D5ED63172DED427B007912E1 /* RootNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED63162DED427B007912E1 /* RootNavigationView.swift */; };
+		D5F2EDB72DF5E254003D1291 /* HomeCardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F2EDB62DF5E24B003D1291 /* HomeCardScrollView.swift */; };
+		D5F2EDB92DF5E6B7003D1291 /* SingleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F2EDB82DF5E6B3003D1291 /* SingleCardView.swift */; };
+		D5F2EDBB2DF5E6CB003D1291 /* MultiCardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F2EDBA2DF5E6C1003D1291 /* MultiCardScrollView.swift */; };
+		D5F2EDBE2DF5E798003D1291 /* CardViewStateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F2EDBD2DF5E792003D1291 /* CardViewStateModel.swift */; };
 		D5F710AE2DF13C9D00F2CE3B /* CreateFlowerstandViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F710AD2DF13C9000F2CE3B /* CreateFlowerstandViewModel.swift */; };
 		D5F710B02DF284CB00F2CE3B /* FlowerStandStep1ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F710AF2DF284C200F2CE3B /* FlowerStandStep1ViewModel.swift */; };
 		D5F710B22DF28D1500F2CE3B /* FlowerStandStep2ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F710B12DF28D0800F2CE3B /* FlowerStandStep2ViewModel.swift */; };
@@ -253,6 +257,10 @@
 		D5E9ADA02DF5DBFF00CDB444 /* FlippableBackCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlippableBackCardView.swift; sourceTree = "<group>"; };
 		D5E9FCCF2DF2E140000859A6 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		D5ED63162DED427B007912E1 /* RootNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationView.swift; sourceTree = "<group>"; };
+		D5F2EDB62DF5E24B003D1291 /* HomeCardScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCardScrollView.swift; sourceTree = "<group>"; };
+		D5F2EDB82DF5E6B3003D1291 /* SingleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCardView.swift; sourceTree = "<group>"; };
+		D5F2EDBA2DF5E6C1003D1291 /* MultiCardScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiCardScrollView.swift; sourceTree = "<group>"; };
+		D5F2EDBD2DF5E792003D1291 /* CardViewStateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewStateModel.swift; sourceTree = "<group>"; };
 		D5F710AD2DF13C9000F2CE3B /* CreateFlowerstandViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFlowerstandViewModel.swift; sourceTree = "<group>"; };
 		D5F710AF2DF284C200F2CE3B /* FlowerStandStep1ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerStandStep1ViewModel.swift; sourceTree = "<group>"; };
 		D5F710B12DF28D0800F2CE3B /* FlowerStandStep2ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerStandStep2ViewModel.swift; sourceTree = "<group>"; };
@@ -785,11 +793,15 @@
 			isa = PBXGroup;
 			children = (
 				D59F7C772DEB005E00A829A8 /* HomeView.swift */,
-				D5E9AD8F2DF5A7CC00CDB444 /* HomeCardView.swift */,
 				D5E9AD912DF5A7D600CDB444 /* HomeNormalView.swift */,
+				D5E9AD8F2DF5A7CC00CDB444 /* HomeCardView.swift */,
+				D5F2EDB62DF5E24B003D1291 /* HomeCardScrollView.swift */,
+				D5F2EDB82DF5E6B3003D1291 /* SingleCardView.swift */,
+				D5F2EDBA2DF5E6C1003D1291 /* MultiCardScrollView.swift */,
 				D5E9AD992DF5D70A00CDB444 /* FlippableCardView.swift */,
 				D5E9ADA02DF5DBFF00CDB444 /* FlippableBackCardView.swift */,
 				D5E9AD9E2DF5DBD000CDB444 /* FlippableFrontCardView.swift */,
+				D5F2EDBD2DF5E792003D1291 /* CardViewStateModel.swift */,
 				D51C80C12DEF47740051CB40 /* SubViews */,
 			);
 			path = View;
@@ -1004,6 +1016,7 @@
 				D5B38C4D2DF04824005DAFDC /* PartyCardAction.swift in Sources */,
 				38AA40D12DF38D9C004D5EC9 /* NameCheck.swift in Sources */,
 				D5B38C3A2DF045EC005DAFDC /* PartyCardStatusBadge.swift in Sources */,
+				D5F2EDBB2DF5E6CB003D1291 /* MultiCardScrollView.swift in Sources */,
 				D5951B002DEFF68C006863B6 /* CustomTextField.swift in Sources */,
 				D5F710B02DF284CB00F2CE3B /* FlowerStandStep1ViewModel.swift in Sources */,
 				D595C30C2DF3766000F484A1 /* FlowerLoadingViewModel.swift in Sources */,
@@ -1043,6 +1056,7 @@
 				CA064B332DF07AF40048F794 /* FlowerstandStep4.swift in Sources */,
 				CA0B87EE2DF021B80001F120 /* CircleProgress.swift in Sources */,
 				CA5EAAC32DF443C300690A03 /* ReceiveCongratsCardFlipView.swift in Sources */,
+				D5F2EDB72DF5E254003D1291 /* HomeCardScrollView.swift in Sources */,
 				D5B38C4F2DF05A2C005DAFDC /* PartyCardGroupName.swift in Sources */,
 				D59F7C782DEB006200A829A8 /* HomeView.swift in Sources */,
 				CA5EAA4A2DF2C06F00690A03 /* CreateGroupView.swift in Sources */,
@@ -1061,6 +1075,7 @@
 				CA2C4A4B2DF0525000D8E170 /* CardDecorationPicker.swift in Sources */,
 				D51C80C52DEF482A0051CB40 /* HomeChracterImage.swift in Sources */,
 				D5B38C442DF0475A005DAFDC /* PartyCardStyle.swift in Sources */,
+				D5F2EDBE2DF5E798003D1291 /* CardViewStateModel.swift in Sources */,
 				D5E9FCD02DF2E145000859A6 /* NavigationBar.swift in Sources */,
 				D59F7C762DEAF6E100A829A8 /* AppRoute.swift in Sources */,
 				D5B38C3E2DF04621005DAFDC /* PartyCardTitle.swift in Sources */,
@@ -1080,6 +1095,7 @@
 				D5E9AD9F2DF5DBD300CDB444 /* FlippableFrontCardView.swift in Sources */,
 				CA2C4A492DF0513700D8E170 /* FlowerstandCardView.swift in Sources */,
 				D51C80D32DEF6B820051CB40 /* Wedding.swift in Sources */,
+				D5F2EDB92DF5E6B7003D1291 /* SingleCardView.swift in Sources */,
 				CA5EAA712DF2CA5800690A03 /* FinishFlowerstandCard.swift in Sources */,
 				CA5EAA722DF2CA5800690A03 /* FinishFlowerstandContent.swift in Sources */,
 				CA5EAAB92DF4292100690A03 /* ReceiveCongratsCardBackView.swift in Sources */,

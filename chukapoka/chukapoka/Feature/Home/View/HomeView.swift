@@ -11,13 +11,14 @@ import SwiftData
 struct HomeView: View {
     @EnvironmentObject var coordinator: AppCoordinator
     @Query(sort: \Party.partyID, order: .reverse) var parties: [Party]
+    @State private var currentIndex = 0
 
     var body: some View {
         VStack(spacing: 0) {
             if parties.isEmpty {
                 HomeNormalView()
             } else {
-                HomeCardView(parties: parties)
+                HomeCardView(parties: parties, currentIndex: $currentIndex)
             }
             Spacer()
             
