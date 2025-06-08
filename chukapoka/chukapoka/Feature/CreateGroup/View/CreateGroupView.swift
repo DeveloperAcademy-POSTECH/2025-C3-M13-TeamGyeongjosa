@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct CreateGroupView: View {
     
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.modelContext) private var modelContext
+    
     @StateObject private var viewModel: CreateGroupViewModel
     
     // 초기화
@@ -43,7 +46,7 @@ struct CreateGroupView: View {
                 title: viewModel.nextButtonTitle,
                 style: viewModel.isNextButtonEnabled ? .basic : .disabled,
                 action: {
-                    viewModel.handleNext()
+                    viewModel.handleNext(modelContext: modelContext)
                 }
             )
             .padding(.horizontal, 16)

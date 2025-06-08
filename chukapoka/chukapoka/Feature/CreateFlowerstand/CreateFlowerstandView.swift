@@ -10,6 +10,7 @@ import SwiftUI
 struct CreateFlowerstandView: View {
     @ObservedObject var viewModel: CreateFlowerstandViewModel
     @EnvironmentObject var coordinator: AppCoordinator
+    @Environment(\.modelContext) private var modelContext
     
     var body: some View {
         VStack(spacing: 0) {
@@ -43,7 +44,7 @@ struct CreateFlowerstandView: View {
                 title: viewModel.nextButtonTitle,
                 style: viewModel.isNextEnabled ? .basic : .disabled,
                 action: {
-                    viewModel.goNext()
+                    viewModel.goNext(modelContext: modelContext)
                 }
             )
             .padding(.horizontal, 16)
