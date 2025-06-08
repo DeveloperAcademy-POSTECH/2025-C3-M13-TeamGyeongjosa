@@ -22,9 +22,7 @@ struct RootNavigationView: View {
                             .navigationBarHidden(true)
                         // 그룹 생성 파티장 flow
                     case .createGroup:
-                        CreateGroupView(viewModel: CreateGroupViewModel(coordinator: coordinator))
-                            .navigationBarHidden(true)
-                    case .invitationOCR:
+//                        CreateGroupView(viewModel: CreateGroupViewModel(coordinator: coordinator))
                         InvitationOCRView(ocrViewModel: OCRViewModel(coordinator: coordinator))
                             .navigationBarHidden(true)
                     case .createFlowerstand:

@@ -264,8 +264,8 @@
 		38A09B5A2DF566AC0066E434 /* CreateGroupOCR */ = {
 			isa = PBXGroup;
 			children = (
-				38A09B5C2DF567650066E434 /* ViewModel */,
 				38A09B5B2DF5675F0066E434 /* View */,
+				38A09B5C2DF567650066E434 /* ViewModel */,
 			);
 			path = CreateGroupOCR;
 			sourceTree = "<group>";

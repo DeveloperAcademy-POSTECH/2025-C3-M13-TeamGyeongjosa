@@ -5,6 +5,13 @@ import UIKit
 
 @MainActor
 class OCRViewModel: ObservableObject {
+    
+    let coordinator: AppCoordinator
+
+    init(coordinator: AppCoordinator) {
+        self.coordinator = coordinator
+    }
+    
     @Published var selectedItem: PhotosPickerItem?
     @Published var selectedImage: UIImage?
     @Published var recognizedTextLines: [String] = []
