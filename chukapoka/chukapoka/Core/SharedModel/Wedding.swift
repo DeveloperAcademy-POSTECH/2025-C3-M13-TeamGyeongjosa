@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Model
-final class Wedding {
+final class Wedding: Identifiable {
     @Attribute(.unique)
     var weddingID: UUID
     var place: String
@@ -22,6 +22,8 @@ final class Wedding {
     // 관계: Wedding ⟶ Party (1:N)
     @Relationship(deleteRule: .cascade)
     var parties: [Party] = []
+    
+    var id: UUID { weddingID }
     
     init(
         weddingID: UUID = UUID(),

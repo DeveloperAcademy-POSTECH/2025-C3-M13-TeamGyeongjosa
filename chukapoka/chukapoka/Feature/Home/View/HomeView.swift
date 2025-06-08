@@ -6,17 +6,21 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct HomeView: View {
     @EnvironmentObject var coordinator: AppCoordinator
+    @Query(sort: \Party.partyID, order: .reverse) var parties: [Party]
 
     var body: some View {
         VStack(spacing: 0) {
-            HomeChracterImage()
-                .padding(.top,57)
-            HomeIntroText()
-                .padding(.top, 57)
+            if parties.isEmpty {
+                HomeNormalView()
+            } else {
+                HomeCardView(parties: parties)
+            }
             Spacer()
+            
             HomeBottomButtons(
                 onGroupCreateTapped: {
                     coordinator.push(.createGroup)
@@ -28,9 +32,4 @@ struct HomeView: View {
             .padding(.bottom, 24)
         }
     }
-}
-
-#Preview {
-    HomeView()
-        .environmentObject(AppCoordinator())
 }

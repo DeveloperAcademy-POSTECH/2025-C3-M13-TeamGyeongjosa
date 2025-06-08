@@ -109,6 +109,9 @@
 		D5B38C5B2DF09B3F005DAFDC /* PartyCardContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B38C5A2DF09B39005DAFDC /* PartyCardContainer.swift */; };
 		D5B38C5E2DF0A769005DAFDC /* PartyCardBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B38C5D2DF0A763005DAFDC /* PartyCardBackView.swift */; };
 		D5B38C642DF0AB04005DAFDC /* PartyCardBackContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B38C632DF0AAFA005DAFDC /* PartyCardBackContainer.swift */; };
+		D5E9AD902DF5A7D200CDB444 /* HomeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E9AD8F2DF5A7CC00CDB444 /* HomeCardView.swift */; };
+		D5E9AD922DF5A7E400CDB444 /* HomeNormalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E9AD912DF5A7D600CDB444 /* HomeNormalView.swift */; };
+		D5E9AD9A2DF5D71500CDB444 /* FlippableCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E9AD992DF5D70A00CDB444 /* FlippableCardView.swift */; };
 		D5E9FCD02DF2E145000859A6 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E9FCCF2DF2E140000859A6 /* NavigationBar.swift */; };
 		D5ED63172DED427B007912E1 /* RootNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED63162DED427B007912E1 /* RootNavigationView.swift */; };
 		D5F710AE2DF13C9D00F2CE3B /* CreateFlowerstandViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F710AD2DF13C9000F2CE3B /* CreateFlowerstandViewModel.swift */; };
@@ -241,6 +244,9 @@
 		D5B38C5A2DF09B39005DAFDC /* PartyCardContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCardContainer.swift; sourceTree = "<group>"; };
 		D5B38C5D2DF0A763005DAFDC /* PartyCardBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCardBackView.swift; sourceTree = "<group>"; };
 		D5B38C632DF0AAFA005DAFDC /* PartyCardBackContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCardBackContainer.swift; sourceTree = "<group>"; };
+		D5E9AD8F2DF5A7CC00CDB444 /* HomeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCardView.swift; sourceTree = "<group>"; };
+		D5E9AD912DF5A7D600CDB444 /* HomeNormalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNormalView.swift; sourceTree = "<group>"; };
+		D5E9AD992DF5D70A00CDB444 /* FlippableCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlippableCardView.swift; sourceTree = "<group>"; };
 		D5E9FCCF2DF2E140000859A6 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		D5ED63162DED427B007912E1 /* RootNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationView.swift; sourceTree = "<group>"; };
 		D5F710AD2DF13C9000F2CE3B /* CreateFlowerstandViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFlowerstandViewModel.swift; sourceTree = "<group>"; };
@@ -703,8 +709,7 @@
 		D59F7C602DEAF4E000A829A8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				D59F7C772DEB005E00A829A8 /* HomeView.swift */,
-				D51C80C12DEF47740051CB40 /* SubViews */,
+				D5E9AD932DF5A90600CDB444 /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -770,6 +775,18 @@
 				D5B38C582DF09A0B005DAFDC /* PartyCardBackground.swift */,
 			);
 			path = Style;
+			sourceTree = "<group>";
+		};
+		D5E9AD932DF5A90600CDB444 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D59F7C772DEB005E00A829A8 /* HomeView.swift */,
+				D5E9AD8F2DF5A7CC00CDB444 /* HomeCardView.swift */,
+				D5E9AD912DF5A7D600CDB444 /* HomeNormalView.swift */,
+				D5E9AD992DF5D70A00CDB444 /* FlippableCardView.swift */,
+				D51C80C12DEF47740051CB40 /* SubViews */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		D5F710AC2DF13C3600F2CE3B /* ViewModel */ = {
@@ -977,6 +994,7 @@
 				CA5EAABF2DF42D1C00690A03 /* CardMemberListItem.swift in Sources */,
 				D595C30A2DF3636B00F484A1 /* InfoViewModel.swift in Sources */,
 				38AA40C62DF38D18004D5EC9 /* OCRScreen.swift in Sources */,
+				D5E9AD902DF5A7D200CDB444 /* HomeCardView.swift in Sources */,
 				D5B38C4D2DF04824005DAFDC /* PartyCardAction.swift in Sources */,
 				38AA40D12DF38D9C004D5EC9 /* NameCheck.swift in Sources */,
 				D5B38C3A2DF045EC005DAFDC /* PartyCardStatusBadge.swift in Sources */,
@@ -1043,6 +1061,7 @@
 				CA064B262DF061AD0048F794 /* SelectedFlowerGroup.swift in Sources */,
 				CA5EAA4C2DF2C15600690A03 /* TextfieldDown.swift in Sources */,
 				D5F710B22DF28D1500F2CE3B /* FlowerStandStep2ViewModel.swift in Sources */,
+				D5E9AD9A2DF5D71500CDB444 /* FlippableCardView.swift in Sources */,
 				D5B38C5B2DF09B3F005DAFDC /* PartyCardContainer.swift in Sources */,
 				D5ED63172DED427B007912E1 /* RootNavigationView.swift in Sources */,
 				D51C80CB2DEF487F0051CB40 /* HomeBottomButtons.swift in Sources */,
@@ -1059,6 +1078,7 @@
 				38AA40CF2DF38D77004D5EC9 /* FlowerstandCardData.swift in Sources */,
 				CA0B87EC2DF0217A0001F120 /* CreateFlowerstandView.swift in Sources */,
 				D5F710B42DF28D9800F2CE3B /* FlowerStandStep3ViewModel.swift in Sources */,
+				D5E9AD922DF5A7E400CDB444 /* HomeNormalView.swift in Sources */,
 				D574E9DE2DEDEE3500AAF70F /* PairButton.swift in Sources */,
 				CA5EAAD12DF483DC00690A03 /* FlowerstandCard.swift in Sources */,
 			);

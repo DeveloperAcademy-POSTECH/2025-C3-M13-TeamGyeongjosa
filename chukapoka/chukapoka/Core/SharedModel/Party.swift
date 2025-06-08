@@ -8,13 +8,15 @@ import Foundation
 import SwiftData
 
 @Model
-final class Party {
+final class Party: Identifiable {
     @Attribute(.unique)
     var partyID: UUID
     var name: String
     var photoPath: String
     @Attribute(.unique)
     var inviteCode: String
+    
+    var createdAt: Date = Date()
     
     // 관계: Party ⟶ PartyMember (1:N)
     @Relationship(deleteRule: .cascade)
@@ -23,6 +25,8 @@ final class Party {
     // 역관계: Party ⟵ Wedding (N:1)
     @Relationship(inverse: \Wedding.parties)
     var wedding: Wedding?
+    
+    var id: UUID { partyID }
     
     init(
         partyID: UUID = UUID(),
@@ -36,5 +40,6 @@ final class Party {
         self.photoPath = photoPath
         self.wedding = wedding
         self.inviteCode = inviteCode
+        self.createdAt = Date()
     }
 }

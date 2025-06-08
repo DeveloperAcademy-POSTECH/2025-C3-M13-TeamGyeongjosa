@@ -53,5 +53,6 @@ struct PartyCardContainer: View {
             x: 0,
             y: 4
         )
+        .frame(height: height)
     }
 }

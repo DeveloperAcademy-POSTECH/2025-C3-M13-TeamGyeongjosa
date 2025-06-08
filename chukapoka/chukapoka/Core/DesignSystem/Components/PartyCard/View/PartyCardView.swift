@@ -12,6 +12,7 @@ struct PartyCardView: View {
     let weddingDate: Date
     let weddingPlace: String
     let state: PartyCardState
+    let height: CGFloat
     let onTapPhoto: (() -> Void)?
     let onTapClose: (() -> Void)?
     
@@ -21,6 +22,7 @@ struct PartyCardView: View {
         weddingDate: Date,
         weddingPlace: String,
         state: PartyCardState,
+        height: CGFloat,
         onTapPhoto: (() -> Void)? = nil,
         onTapClose: (() -> Void)? = nil
     ) {
@@ -29,6 +31,7 @@ struct PartyCardView: View {
         self.weddingDate = weddingDate
         self.weddingPlace = weddingPlace
         self.state = state
+        self.height = height
         self.onTapPhoto = onTapPhoto
         self.onTapClose = onTapClose
     }
@@ -41,22 +44,10 @@ struct PartyCardView: View {
                 weddingDate: weddingDate,
                 weddingPlace: weddingPlace,
                 state: state,
-                height: geometry.size.height,
+                height: height,
                 onTapPhoto: onTapPhoto,
                 onTapClose: onTapClose
             )
         }
     }
 }
-    
-    #Preview {
-        PartyCardView(
-            name: "지수",
-            groupName: "친한친구들",
-            weddingDate: Date(),
-            weddingPlace: "서울 더라빌",
-            state: .archived,
-            onTapPhoto: { print("사진 버튼 클릭") },
-            onTapClose: { print("닫기 버튼 클릭") }
-        )
-    }
