@@ -60,6 +60,11 @@
 		CA5EAAC12DF430F800690A03 /* CardMemberListMemberSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAAC02DF430F800690A03 /* CardMemberListMemberSection.swift */; };
 		CA5EAAC32DF443C300690A03 /* ReceiveCongratsCardFlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAAC22DF443C300690A03 /* ReceiveCongratsCardFlipView.swift */; };
 		CA5EAAC52DF4486800690A03 /* CardMemberListMemberSectionScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAAC42DF4486800690A03 /* CardMemberListMemberSectionScrollView.swift */; };
+		CA5EAACF2DF483C400690A03 /* ShowFlowerstandCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAACE2DF483C400690A03 /* ShowFlowerstandCardsView.swift */; };
+		CA5EAAD12DF483DC00690A03 /* FlowerstandCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAAD02DF483DC00690A03 /* FlowerstandCard.swift */; };
+		CA5EAAD42DF483FC00690A03 /* FlowerstandCardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAAD32DF483FC00690A03 /* FlowerstandCardList.swift */; };
+		CA5EAAD82DF4897400690A03 /* FlowerstandCardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAAD72DF4897400690A03 /* FlowerstandCardItem.swift */; };
+		CA5EAADA2DF48E6600690A03 /* SelectedCardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAAD92DF48E6600690A03 /* SelectedCardDetailView.swift */; };
 		D51C80C32DEF48210051CB40 /* HomeIntroText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80C22DEF481C0051CB40 /* HomeIntroText.swift */; };
 		D51C80C52DEF482A0051CB40 /* HomeChracterImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80C42DEF48260051CB40 /* HomeChracterImage.swift */; };
 		D51C80CB2DEF487F0051CB40 /* HomeBottomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80CA2DEF487C0051CB40 /* HomeBottomButtons.swift */; };
@@ -183,6 +188,11 @@
 		CA5EAAC02DF430F800690A03 /* CardMemberListMemberSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMemberListMemberSection.swift; sourceTree = "<group>"; };
 		CA5EAAC22DF443C300690A03 /* ReceiveCongratsCardFlipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveCongratsCardFlipView.swift; sourceTree = "<group>"; };
 		CA5EAAC42DF4486800690A03 /* CardMemberListMemberSectionScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMemberListMemberSectionScrollView.swift; sourceTree = "<group>"; };
+		CA5EAACE2DF483C400690A03 /* ShowFlowerstandCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowFlowerstandCardsView.swift; sourceTree = "<group>"; };
+		CA5EAAD02DF483DC00690A03 /* FlowerstandCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerstandCard.swift; sourceTree = "<group>"; };
+		CA5EAAD32DF483FC00690A03 /* FlowerstandCardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerstandCardList.swift; sourceTree = "<group>"; };
+		CA5EAAD72DF4897400690A03 /* FlowerstandCardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerstandCardItem.swift; sourceTree = "<group>"; };
+		CA5EAAD92DF48E6600690A03 /* SelectedCardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCardDetailView.swift; sourceTree = "<group>"; };
 		D51C80C22DEF481C0051CB40 /* HomeIntroText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeIntroText.swift; sourceTree = "<group>"; };
 		D51C80C42DEF48260051CB40 /* HomeChracterImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChracterImage.swift; sourceTree = "<group>"; };
 		D51C80CA2DEF487C0051CB40 /* HomeBottomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomButtons.swift; sourceTree = "<group>"; };
@@ -458,6 +468,8 @@
 		CA5EAAAD2DF4282F00690A03 /* ReceiveCongrats */ = {
 			isa = PBXGroup;
 			children = (
+				CA5EAADD2DF53EE400690A03 /* Model */,
+				CA5EAACD2DF483AF00690A03 /* ShowFlowerstandCards */,
 				CA5EAAB62DF428A400690A03 /* ViewModel */,
 				CA5EAAB72DF428AD00690A03 /* SubViews */,
 				CA5EAAAE2DF4286900690A03 /* ReceiveCongratsView.swift */,
@@ -486,6 +498,33 @@
 				CA5EAABE2DF42D1C00690A03 /* CardMemberListItem.swift */,
 			);
 			path = SubViews;
+			sourceTree = "<group>";
+		};
+		CA5EAACD2DF483AF00690A03 /* ShowFlowerstandCards */ = {
+			isa = PBXGroup;
+			children = (
+				CA5EAAD22DF483E100690A03 /* SubViews */,
+				CA5EAACE2DF483C400690A03 /* ShowFlowerstandCardsView.swift */,
+			);
+			path = ShowFlowerstandCards;
+			sourceTree = "<group>";
+		};
+		CA5EAAD22DF483E100690A03 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				CA5EAAD02DF483DC00690A03 /* FlowerstandCard.swift */,
+				CA5EAAD32DF483FC00690A03 /* FlowerstandCardList.swift */,
+				CA5EAAD92DF48E6600690A03 /* SelectedCardDetailView.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		CA5EAADD2DF53EE400690A03 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CA5EAAD72DF4897400690A03 /* FlowerstandCardItem.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		D51C80C12DEF47740051CB40 /* SubViews */ = {
@@ -954,6 +993,7 @@
 				D574E9DC2DED8E2E00AAF70F /* GSColor.swift in Sources */,
 				D5B38C642DF0AB04005DAFDC /* PartyCardBackContainer.swift in Sources */,
 				CA064B222DF05DE60048F794 /* FlowerstandStep3.swift in Sources */,
+				CA5EAACF2DF483C400690A03 /* ShowFlowerstandCardsView.swift in Sources */,
 				D574E9DA2DED8A6500AAF70F /* GSFont.swift in Sources */,
 				D51C80D52DEF6B890051CB40 /* Party.swift in Sources */,
 				D5B38C592DF09A11005DAFDC /* PartyCardBackground.swift in Sources */,
@@ -987,7 +1027,9 @@
 				CA5EAA4A2DF2C06F00690A03 /* CreateGroupView.swift in Sources */,
 				38AA40CC2DF38D44004D5EC9 /* OCRViewModel.swift in Sources */,
 				CA0B87F22DF022070001F120 /* FlowerstandStep2.swift in Sources */,
+				CA5EAAD82DF4897400690A03 /* FlowerstandCardItem.swift in Sources */,
 				D56CD4042DEF3BFD002267B1 /* GSImage.swift in Sources */,
+				CA5EAAD42DF483FC00690A03 /* FlowerstandCardList.swift in Sources */,
 				38AA40E62DF38DF0004D5EC9 /* LottieView.swift in Sources */,
 				CA5EAAB32DF4288E00690A03 /* ReceiveCongratsCardContainer.swift in Sources */,
 				38AA40E72DF38DF0004D5EC9 /* NoticeStep1.swift in Sources */,
@@ -1012,6 +1054,7 @@
 				CA5EAAB52DF4289F00690A03 /* ReceiveCongratsViewModel.swift in Sources */,
 				D59F7C812DEB09C200A829A8 /* EnterCodeView.swift in Sources */,
 				CA064B352DF07B090048F794 /* FlowerLoadingView.swift in Sources */,
+				CA5EAADA2DF48E6600690A03 /* SelectedCardDetailView.swift in Sources */,
 				CA2C4A492DF0513700D8E170 /* FlowerstandCardView.swift in Sources */,
 				D51C80D32DEF6B820051CB40 /* Wedding.swift in Sources */,
 				CA5EAA712DF2CA5800690A03 /* FinishFlowerstandCard.swift in Sources */,
@@ -1021,6 +1064,7 @@
 				CA0B87EC2DF0217A0001F120 /* CreateFlowerstandView.swift in Sources */,
 				D5F710B42DF28D9800F2CE3B /* FlowerStandStep3ViewModel.swift in Sources */,
 				D574E9DE2DEDEE3500AAF70F /* PairButton.swift in Sources */,
+				CA5EAAD12DF483DC00690A03 /* FlowerstandCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
