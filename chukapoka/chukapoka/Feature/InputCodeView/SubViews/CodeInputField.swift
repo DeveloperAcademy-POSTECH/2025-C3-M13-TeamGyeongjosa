@@ -12,7 +12,7 @@ struct CodeInputField: View {
     @Binding var text: String
     let isValid: Bool
     let errorMessage: String?
-
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
             ZStack(alignment: .leading) {
@@ -22,7 +22,7 @@ struct CodeInputField: View {
                         .padding(.horizontal, 15)
                         .padding(.vertical, 12)
                 }
-
+                
                 TextField("", text: $text)
                     .keyboardType(.asciiCapable)
                     .autocorrectionDisabled()
@@ -31,13 +31,12 @@ struct CodeInputField: View {
                     .padding()
             }
             .background(GSColor.secondary3)
-            .cornerRadius(12)
             .overlay(
-                RoundedRectangle(cornerRadius: 12)
+                Rectangle()
                     .stroke((text.isEmpty || isValid) ? Color.clear : Color.red, lineWidth: 1)
             )
             .frame(maxWidth: .infinity, minHeight: 52)
-
+            
             if let error = errorMessage, !text.isEmpty && !isValid {
                 Text(error)
                     .font(.caption)
@@ -63,7 +62,7 @@ struct CodeInputField: View {
                     errorMessage: "6자리 영문 대문자와 숫자 조합이어야 해요"
                 )
                 .padding(.horizontal, 16)
-
+                
                 Button("유효성 확인") {
                     let pattern: String = "^[A-Z0-9]{6}$"
                     if text.range(of: pattern, options: .regularExpression) != nil {
@@ -75,6 +74,6 @@ struct CodeInputField: View {
             }
         }
     }
-
+    
     return PreviewWrapper()
 }
