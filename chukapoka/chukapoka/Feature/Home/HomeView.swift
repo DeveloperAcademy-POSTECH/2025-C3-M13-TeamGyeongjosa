@@ -12,10 +12,10 @@ struct HomeView: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            Spacer()
-            HomeIntroText()
-                .padding(.bottom, 96)
             HomeChracterImage()
+                .padding(.top,57)
+            HomeIntroText()
+                .padding(.top, 57)
             Spacer()
             HomeBottomButtons(
                 onGroupCreateTapped: {

@@ -22,7 +22,6 @@
 		38AA40E82DF38DF0004D5EC9 /* NoticeStep2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40E12DF38DF0004D5EC9 /* NoticeStep2.swift */; };
 		38AA40E92DF38DF0004D5EC9 /* SkipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40E22DF38DF0004D5EC9 /* SkipView.swift */; };
 		38AA40EA2DF38DF0004D5EC9 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40E42DF38DF0004D5EC9 /* OnboardingView.swift */; };
-		38AA40EB2DF38DF0004D5EC9 /* .swift in Resources */ = {isa = PBXBuildFile; fileRef = 38AA40DE2DF38DF0004D5EC9 /* .swift */; };
 		38AA40EE2DF38DFB004D5EC9 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40EC2DF38DFB004D5EC9 /* SplashView.swift */; };
 		55512E1E2DEEFB3300433ED8 /* InfoLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55512E1D2DEEFB3300433ED8 /* InfoLoadingView.swift */; };
 		CA064B222DF05DE60048F794 /* FlowerstandStep3.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA064B212DF05DE60048F794 /* FlowerstandStep3.swift */; };
@@ -146,7 +145,6 @@
 		38AA40D42DF38DE2004D5EC9 /* InputCodeFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputCodeFieldView.swift; sourceTree = "<group>"; };
 		38AA40D52DF38DE2004D5EC9 /* InputCodeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputCodeHeaderView.swift; sourceTree = "<group>"; };
 		38AA40D72DF38DE2004D5EC9 /* InputCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputCodeView.swift; sourceTree = "<group>"; };
-		38AA40DE2DF38DF0004D5EC9 /* .swift */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swift; sourceTree = "<group>"; };
 		38AA40DF2DF38DF0004D5EC9 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		38AA40E02DF38DF0004D5EC9 /* NoticeStep1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeStep1.swift; sourceTree = "<group>"; };
 		38AA40E12DF38DF0004D5EC9 /* NoticeStep2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeStep2.swift; sourceTree = "<group>"; };
@@ -316,7 +314,6 @@
 		38AA40E32DF38DF0004D5EC9 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
-				38AA40DE2DF38DF0004D5EC9 /* .swift */,
 				38AA40DF2DF38DF0004D5EC9 /* LottieView.swift */,
 				38AA40E02DF38DF0004D5EC9 /* NoticeStep1.swift */,
 				38AA40E12DF38DF0004D5EC9 /* NoticeStep2.swift */,
@@ -917,7 +914,6 @@
 				D574E9D22DED897A00AAF70F /* Pretendard-ExtraBold.otf in Resources */,
 				D574E9D32DED897A00AAF70F /* Pretendard-ExtraLight.otf in Resources */,
 				CA064B242DF05F660048F794 /* Assets.xcassets in Resources */,
-				38AA40EB2DF38DF0004D5EC9 /* .swift in Resources */,
 				D574E9D42DED897A00AAF70F /* Pretendard-Light.otf in Resources */,
 				CA5EAAA82DF41A8E00690A03 /* CKPK_onboarding2.json in Resources */,
 				CA5EAAA92DF41A8E00690A03 /* CKPK_onboarding1.json in Resources */,
@@ -1226,7 +1222,6 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9S8SHSW95K;
-				DEVELOPMENT_TEAM = 6TW9MCXPJD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = chukapoka/Info.plist;
@@ -1257,7 +1252,6 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9S8SHSW95K;
-				DEVELOPMENT_TEAM = 6TW9MCXPJD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = chukapoka/Info.plist;
