@@ -74,11 +74,12 @@ struct OCRResultView: View {
             .padding(.horizontal, 16)
             .animation(.easeInOut, value: viewModel.currentStep)
             
+            @Environment(\.modelContext) var modelContext
             PrimaryButton(
                 title: viewModel.nextButtonTitle,
                 style: viewModel.isNextButtonEnabled ? .basic : .disabled,
                 action: {
-                    viewModel.handleNext()
+                    viewModel.handleNext(modelContext: modelContext)
                     onNext()
                 }
             )

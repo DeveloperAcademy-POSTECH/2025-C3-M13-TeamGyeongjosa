@@ -1093,7 +1093,6 @@
 				CA5EAABF2DF42D1C00690A03 /* CardMemberListItem.swift in Sources */,
 				D595C30A2DF3636B00F484A1 /* InfoViewModel.swift in Sources */,
 				38A09B592DF55F1D0066E434 /* OCRResultView.swift in Sources */,
-				38AA40C62DF38D18004D5EC9 /* OCRScreen.swift in Sources */,
 				D5E9AD902DF5A7D200CDB444 /* HomeCardView.swift in Sources */,
 				D5B38C4D2DF04824005DAFDC /* PartyCardAction.swift in Sources */,
 				38AA40D12DF38D9C004D5EC9 /* NameCheck.swift in Sources */,
@@ -1119,7 +1118,7 @@
 				D5B38C402DF04733005DAFDC /* PartyCardInfoText.swift in Sources */,
 				38AA40C92DF38D27004D5EC9 /* PhotoPickerView.swift in Sources */,
 				D5E9ADA12DF5DC0700CDB444 /* FlippableBackCardView.swift in Sources */,
-				38AA40C92DF38D27004D5EC9 /* ImagePickerView.swift in Sources */,
+				38AA40C92DF38D27004D5EC9 /* PhotoPickerView.swift in Sources */,
 				D5F710AE2DF13C9D00F2CE3B /* CreateFlowerstandViewModel.swift in Sources */,
 				CA5EAA632DF2C34200690A03 /* CustomProgressView.swift in Sources */,
 				CA5EAA642DF2C34200690A03 /* InfoStep1View.swift in Sources */,
@@ -1351,8 +1350,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 6TW9MCXPJD;
-				DEVELOPMENT_TEAM = 9S8SHSW95K;
+				DEVELOPMENT_TEAM = L9AQ48UJ68;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = chukapoka/Info.plist;
@@ -1382,8 +1380,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 6TW9MCXPJD;
-				DEVELOPMENT_TEAM = 9S8SHSW95K;
+				DEVELOPMENT_TEAM = L9AQ48UJ68;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = chukapoka/Info.plist;
