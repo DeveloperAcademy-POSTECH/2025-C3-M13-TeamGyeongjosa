@@ -11,6 +11,7 @@
 		38A09B572DF4A9090066E434 /* InvitationOCRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A09B562DF4A8BD0066E434 /* InvitationOCRView.swift */; };
 		38A09B592DF55F1D0066E434 /* OCRResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A09B582DF55F180066E434 /* OCRResultView.swift */; };
 		38A09B652DF578B90066E434 /* PhotoScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A09B642DF578B20066E434 /* PhotoScanView.swift */; };
+		38A09B672DF59B3F0066E434 /* OCRTextParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A09B662DF59B360066E434 /* OCRTextParser.swift */; };
 		38AA40C92DF38D27004D5EC9 /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40C72DF38D27004D5EC9 /* PhotoPickerView.swift */; };
 		38AA40CC2DF38D44004D5EC9 /* OCRViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40CB2DF38D44004D5EC9 /* OCRViewModel.swift */; };
 		38AA40CF2DF38D77004D5EC9 /* FlowerstandCardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40CD2DF38D77004D5EC9 /* FlowerstandCardData.swift */; };
@@ -128,6 +129,7 @@
 		38A09B562DF4A8BD0066E434 /* InvitationOCRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationOCRView.swift; sourceTree = "<group>"; };
 		38A09B582DF55F180066E434 /* OCRResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRResultView.swift; sourceTree = "<group>"; };
 		38A09B642DF578B20066E434 /* PhotoScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoScanView.swift; sourceTree = "<group>"; };
+		38A09B662DF59B360066E434 /* OCRTextParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRTextParser.swift; sourceTree = "<group>"; };
 		38AA40C72DF38D27004D5EC9 /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
 		38AA40CB2DF38D44004D5EC9 /* OCRViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRViewModel.swift; sourceTree = "<group>"; };
 		38AA40CD2DF38D77004D5EC9 /* FlowerstandCardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerstandCardData.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 		38A09B512DF4318C0066E434 /* TextRecognition */ = {
 			isa = PBXGroup;
 			children = (
+				38A09B662DF59B360066E434 /* OCRTextParser.swift */,
 				38A09B522DF431A30066E434 /* OCRManager.swift */,
 			);
 			path = TextRecognition;
@@ -990,6 +993,7 @@
 				CA064B332DF07AF40048F794 /* FlowerstandStep4.swift in Sources */,
 				CA0B87EE2DF021B80001F120 /* CircleProgress.swift in Sources */,
 				D5B38C4F2DF05A2C005DAFDC /* PartyCardGroupName.swift in Sources */,
+				38A09B672DF59B3F0066E434 /* OCRTextParser.swift in Sources */,
 				D59F7C782DEB006200A829A8 /* HomeView.swift in Sources */,
 				CA5EAA4A2DF2C06F00690A03 /* CreateGroupView.swift in Sources */,
 				38AA40CC2DF38D44004D5EC9 /* OCRViewModel.swift in Sources */,

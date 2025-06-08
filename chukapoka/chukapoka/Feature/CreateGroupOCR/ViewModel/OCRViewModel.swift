@@ -12,6 +12,12 @@ class OCRViewModel: ObservableObject {
         self.coordinator = coordinator
     }
     
+    private let textClassifier = TextClassifier()
+
+    var ocrResult: OCRResult? {
+        textClassifier.classify(recognizedTextLines)
+    }
+    
     @Published var selectedItem: PhotosPickerItem?
     @Published var selectedImage: UIImage?
     @Published var recognizedTextLines: [String] = []

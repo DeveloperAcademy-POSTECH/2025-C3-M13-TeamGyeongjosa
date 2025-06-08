@@ -28,20 +28,34 @@ struct OCRResultView: View {
                         Text("인식된 텍스트")
                             .font(.headline)
 
-                        ForEach(ocrViewModel.recognizedTextLines, id: \.self) { line in
-                            Text("• \(line)")
-                                .font(.body)
-                                .padding(.vertical, 4)
-                                .padding(.horizontal, 8)
-                                .background(Color.yellow.opacity(0.2))
-                                .cornerRadius(5)
+                        // MARK: - OCR 결과 출력
+                        if let result = ocrViewModel.ocrResult {
+                            VStack(alignment: .leading, spacing: 8) {
+                                Text("👰 신부: \(result.brideName ?? "인식 실패")")
+                                Text("🤵 신랑: \(result.groomName ?? "인식 실패")")
+                                Text("📅 날짜: \(result.date ?? "인식 실패")")
+                                Text("📍 장소: \(result.place ?? "인식 실패")")
+                            }
+                            .padding()
+                            .background(Color(.secondarySystemBackground))
+                            .cornerRadius(12)
                         }
+//
+//                        ForEach(ocrViewModel.recognizedTextLines, id: \.self) { line in
+//                            Text("• \(line)")
+//                                .font(.body)
+//                                .padding(.vertical, 4)
+//                                .padding(.horizontal, 8)
+//                                .background(Color.yellow.opacity(0.2))
+//                                .cornerRadius(5)
+//                        }
                     }
                     .padding()
                     .background(Color(.secondarySystemBackground))
                     .cornerRadius(10)
                 }
 
+                
                 // 다음 단계로 이동 버튼
                 Button("다음으로") {
                     // coordinator.push(.nextStep) 등으로 다음 라우트 이동

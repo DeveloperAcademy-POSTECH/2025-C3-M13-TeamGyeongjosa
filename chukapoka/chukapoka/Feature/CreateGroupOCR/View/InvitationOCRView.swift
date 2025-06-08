@@ -6,20 +6,25 @@ struct InvitationOCRView: View {
     @ObservedObject var ocrViewModel: OCRViewModel
     @EnvironmentObject var coordinator: AppCoordinator
     @StateObject private var viewModel: CreateGroupViewModel
-
+    
     init(ocrViewModel: OCRViewModel, coordinator: AppCoordinator) {
         self.ocrViewModel = ocrViewModel
         _viewModel = StateObject(wrappedValue: CreateGroupViewModel(coordinator: coordinator))
     }
-
+    
     var body: some View {
         VStack {
             if ocrViewModel.selectedImage == nil {
                 PhotoPickerView(viewModel: viewModel, ocrViewModel: ocrViewModel)
             } else {
-                PhotoScanView(image: ocrViewModel.selectedImage!)
+                if showScan {
+                    PhotoScanView(image: ocrViewModel.selectedImage!) {
+                        showScan = false
+                    }
+                } else {
+                    OCRResultView(ocrViewModel: ocrViewModel)
+                }
             }
-            
         }
         .onChange(of: ocrViewModel.selectedItem) { _, newItem in
             guard let newItem else { return }
