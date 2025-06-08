@@ -8,9 +8,17 @@ import SwiftUI
 
 struct HomeIntroText: View {
     var body: some View {
-        Text("멤버를 초대하고\n함께 축하해보세요")
-            .multilineTextAlignment(.center)
-            .font(GSFont.title2)
-            .foregroundColor(GSColor.black)
+        VStack {
+            Text("지금 바로 마음을 전달해봐요")
+                .multilineTextAlignment(.center)
+                .font(GSFont.title2)
+                .foregroundColor(GSColor.black)
+            
+            Text("처음이라 어렵다면 걱정마세요!\n추카포카의 포키가 도와줄게요")
+                .multilineTextAlignment(.center)
+                .font(GSFont.caption2)
+                .foregroundColor(GSColor.black)
+                .padding(.top, 36)
+        }
     }
 }
