@@ -12,7 +12,6 @@ struct PartyCardView: View {
     let weddingDate: Date
     let weddingPlace: String
     let state: PartyCardState
-    let height: CGFloat
     let onTapPhoto: (() -> Void)?
     let onTapClose: (() -> Void)?
     
@@ -22,7 +21,6 @@ struct PartyCardView: View {
         weddingDate: Date,
         weddingPlace: String,
         state: PartyCardState,
-        height: CGFloat,
         onTapPhoto: (() -> Void)? = nil,
         onTapClose: (() -> Void)? = nil
     ) {
@@ -31,7 +29,6 @@ struct PartyCardView: View {
         self.weddingDate = weddingDate
         self.weddingPlace = weddingPlace
         self.state = state
-        self.height = height
         self.onTapPhoto = onTapPhoto
         self.onTapClose = onTapClose
     }
@@ -44,7 +41,6 @@ struct PartyCardView: View {
                 weddingDate: weddingDate,
                 weddingPlace: weddingPlace,
                 state: state,
-                height: height,
                 onTapPhoto: onTapPhoto,
                 onTapClose: onTapClose
             )

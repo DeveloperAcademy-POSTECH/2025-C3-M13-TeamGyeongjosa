@@ -28,7 +28,7 @@ struct ReceiveCongratsCardFrontView: View {
             .padding(.bottom, 16)
         }
         .padding(16)
-        .background(PartyCardBackground(height: height))
+        .background(PartyCardBackground())
         .background(.ultraThinMaterial)
         .cornerRadius(16)
         .shadow(

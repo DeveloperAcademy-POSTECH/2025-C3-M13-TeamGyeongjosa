@@ -13,7 +13,6 @@ struct PartyCardContainer: View {
     let weddingDate: Date
     let weddingPlace: String
     let state: PartyCardState
-    let height: CGFloat
     let onTapPhoto: (() -> Void)?
     let onTapClose: (() -> Void)?
 
@@ -44,7 +43,7 @@ struct PartyCardContainer: View {
             PrimaryButton(title: "코드로 초대하기")
         }
         .padding(16)
-        .background(PartyCardBackground(height: height))
+        .background(PartyCardBackground())
         .background(.ultraThinMaterial)
         .cornerRadius(16)
         .shadow(
@@ -53,6 +52,5 @@ struct PartyCardContainer: View {
             x: 0,
             y: 4
         )
-        .frame(height: height)
     }
 }

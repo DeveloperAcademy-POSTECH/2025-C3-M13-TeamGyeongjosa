@@ -9,7 +9,6 @@ import SwiftUI
 
 struct HomeCardView: View {
     var parties: [Party]
-    let cardHeight: CGFloat = 525
     
     var body: some View {
         VStack(spacing: 24) {
@@ -21,13 +20,13 @@ struct HomeCardView: View {
             
             ForEach(parties, id: \.partyID) { party in
                 let state = PartyCardState.from(date: party.wedding?.date ?? Date())
-                PartyCardView(
+                FlippableCardView(
                     name: "예시",
                     groupName: party.name,
                     weddingDate: party.wedding?.date ?? Date(),
                     weddingPlace: party.wedding?.place ?? "장소없음",
                     state: state,
-                    height: cardHeight,
+                    inviteCode: party.inviteCode ?? "파티코드없음",
                     onTapPhoto: {},
                     onTapClose: {}
                 )

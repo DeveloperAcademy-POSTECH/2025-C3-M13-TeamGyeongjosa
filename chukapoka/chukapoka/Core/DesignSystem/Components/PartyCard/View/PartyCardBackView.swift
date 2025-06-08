@@ -27,7 +27,6 @@ struct PartyCardBackView: View {
             PartyCardBackContainer(
                 inviteCode: inviteCode,
                 onTapCodeCopy: onTapCodeCopy,
-                height: geometry.size.height,
                 coppiedText: $copiedText
             )
         }

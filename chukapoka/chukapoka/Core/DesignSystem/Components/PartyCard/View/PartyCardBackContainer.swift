@@ -13,7 +13,6 @@ struct PartyCardBackContainer: View {
     let infoText: String = "같이 화환을 꾸밀 멤버를 초대할 수 있어요"
     let inviteCode: String
     let onTapCodeCopy: (() -> Void)?
-    let height: CGFloat
     @Binding var coppiedText: String?
     
     var body: some View {
@@ -58,7 +57,7 @@ struct PartyCardBackContainer: View {
             )
         }
         .padding(16)
-        .background(PartyCardBackground(height: height))
+        .background(PartyCardBackground())
         .background(.ultraThinMaterial)
         .cornerRadius(16)
         .shadow(
