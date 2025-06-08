@@ -26,6 +26,7 @@ struct RootNavigationView: View {
                     case .createGroup:
                         // CreateGroupView(viewModel: CreateGroupViewModel(coordinator: coordinator))
                         ImagePickerView(viewModel: CreateGroupViewModel(coordinator: coordinator), ocrViewModel: ocrViewModel)
+                        .environmentObject(coordinator) 
                         .navigationBarHidden(true)
                     case .createFlowerstand:
                         CreateFlowerstandView(viewModel: CreateFlowerstandViewModel(coordinator: coordinator))

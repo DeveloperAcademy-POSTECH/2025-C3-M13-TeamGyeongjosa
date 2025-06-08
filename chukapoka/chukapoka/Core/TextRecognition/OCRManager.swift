@@ -11,26 +11,21 @@ import Vision
 class OCRManager {
     func recognizeText(from image: UIImage, completion: @escaping ([String]) -> Void) {
         guard let cgImage = image.cgImage else {
-            print("OCR 실패: UIImage -> CGImage로 변환 실패")
+            print("CGImage 변환 실패")
             completion([])
             return
         }
 
         let request = VNRecognizeTextRequest { request, error in
             if let error = error {
-                print("OCR 요청 처리 중 에러 발생: \(error.localizedDescription)")
+                print("OCR 에러: \(error.localizedDescription)")
                 completion([])
                 return
             }
 
-            guard let observations = request.results as? [VNRecognizedTextObservation] else {
-                print("OCR 결과 VNRecognizedTextObservation으로 캐스팅 실패")
-                completion([])
-                return
-            }
-
+            let observations = request.results as? [VNRecognizedTextObservation] ?? []
             let texts = observations.compactMap { $0.topCandidates(1).first?.string }
-            print("OCR 인식된 텍스트 라인들: \(texts)")
+            print("OCR 결과: \(texts)")
             completion(texts)
         }
 
@@ -41,7 +36,7 @@ class OCRManager {
         do {
             try handler.perform([request])
         } catch {
-            print("OCR 실행 중 예외 발생: \(error.localizedDescription)")
+            print("OCR 처리 중 오류: \(error.localizedDescription)")
             completion([])
         }
     }

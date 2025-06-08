@@ -1,34 +1,36 @@
-//
-//  SelectImageViewModel.swift
-//  chukapoka
-//
-//  Created by jenki on 6/5/25.
-//
-
 import SwiftUI
 import PhotosUI
+import Vision
+import UIKit
 
 @MainActor
-final class OCRViewModel: ObservableObject {
-    @Published var selectedItem: PhotosPickerItem? = nil
-    @Published var selectedImage: UIImage? = nil
+class OCRViewModel: ObservableObject {
+    @Published var selectedItem: PhotosPickerItem?
+    @Published var selectedImage: UIImage?
     @Published var recognizedTextLines: [String] = []
 
     private let ocrManager = OCRManager()
 
-    func processSelectedItem() async {
-        guard let item = selectedItem else { return }
-        
-        // Step 1: UIImage로 변환
-        if let data = try? await item.loadTransferable(type: Data.self),
-           let image = UIImage(data: data) {
-            self.selectedImage = image
-            
-            // Step 2: OCR 처리
-            ocrManager.recognizeText(from: image) { [weak self] lines in
-                Task { @MainActor in
-                    self?.recognizedTextLines = lines
+    // MARK: - 이미지 선택 후 OCR 처리
+    func handleImageSelection(from item: PhotosPickerItem, completion: @escaping () -> Void) {
+        Task {
+            do {
+                // 이미지 데이터 가져오기
+                if let data = try await item.loadTransferable(type: Data.self),
+                   let image = UIImage(data: data) {
+                    self.selectedImage = image
+
+                    // OCR 실행
+                    ocrManager.recognizeText(from: image) { [weak self] lines in
+                        DispatchQueue.main.async {
+                            self?.recognizedTextLines = lines
+                            completion()
+                        }
+                    }
                 }
+            } catch {
+                print("이미지 로딩 실패: \(error.localizedDescription)")
+                completion()
             }
         }
     }
