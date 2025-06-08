@@ -21,12 +21,12 @@ struct HomeCardView: View {
             ForEach(parties, id: \.partyID) { party in
                 let state = PartyCardState.from(date: party.wedding?.date ?? Date())
                 FlippableCardView(
-                    name: "예시",
+                    name: party.wedding?.accountName ?? "신랑신부",
                     groupName: party.name,
                     weddingDate: party.wedding?.date ?? Date(),
                     weddingPlace: party.wedding?.place ?? "장소없음",
                     state: state,
-                    inviteCode: party.inviteCode ?? "파티코드없음",
+                    inviteCode: party.inviteCode,
                     onTapPhoto: {},
                     onTapClose: {}
                 )
