@@ -18,6 +18,7 @@ struct MultiCardScrollView: View {
     let spacing: CGFloat
     let xOffset: CGFloat
     let viewModel: MultiCardViewModel
+    let onCopy: () -> Void
     
     var body: some View {
         HStack(spacing: spacing) {
@@ -44,6 +45,9 @@ struct MultiCardScrollView: View {
                             viewModel.deleteParty(parties[index], context: modelContext)
                             
                         }
+                    },
+                    onCopy: {
+                        onCopy()
                     }
                 )
                 .frame(width: cardWidth)

@@ -11,6 +11,7 @@ struct SingleCardView: View {
     let party: Party
     let width: CGFloat
     let onTapClose: () -> Void
+    let onCopy: () -> Void
     
     var body: some View {
         FlippableCardView(
@@ -21,7 +22,10 @@ struct SingleCardView: View {
             state: PartyCardState.from(date: party.wedding?.date ?? Date()),
             inviteCode: party.inviteCode,
             onTapPhoto: {},
-            onTapClose: onTapClose
+            onTapClose: onTapClose,
+            onCopy: {
+                onCopy()
+            }
         )
         .frame(width: width)
         .padding(.horizontal, 16)

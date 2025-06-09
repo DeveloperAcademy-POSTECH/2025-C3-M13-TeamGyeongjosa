@@ -6,7 +6,8 @@ disabled_rules: # 초보자에게 너무 엄격한 건 끄자 !
   - nesting                         # SwiftUI 구조상 중첩 뷰 많음
   - line_length                     # View 선언이 길어질 수 있음
   - cyclomatic_complexity           # 조건문 많아지는 건 초기엔 자연스러움
-  - explicit_type_interface 
+  - explicit_type_interface
+  - multiple_closures_with_trailing_closure
 
 opt_in_rules: # SwiftUI와 MVVM 스타일에서 명시적으로 켜줄 것들
   - closure_end_indentation         # 클로저 끝 들여쓰기 일관되게

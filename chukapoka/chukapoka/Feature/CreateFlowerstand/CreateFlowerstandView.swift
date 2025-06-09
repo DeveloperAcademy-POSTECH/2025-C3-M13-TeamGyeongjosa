@@ -17,7 +17,7 @@ struct CreateFlowerstandView: View {
             NavigationBar {
                 viewModel.goBack()
             }
-            // ⬆︎ 상단: 프로그레스 바만
+            // 상단: 프로그레스 바만
             if viewModel.step != .complete {
                 CircleProgress(step: viewModel.step.rawValue)
                     .frame(maxWidth: .infinity, alignment: .leading)

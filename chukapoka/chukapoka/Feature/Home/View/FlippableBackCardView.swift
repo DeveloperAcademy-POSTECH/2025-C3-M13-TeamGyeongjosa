@@ -11,11 +11,12 @@ struct FlippableBackCardView: View {
     let inviteCode: String
     let height: CGFloat
     @Binding var copiedText: String?
-
+    let onTapCopy: () -> Void
+    
     var body: some View {
         PartyCardBackView(
             inviteCode: inviteCode,
-            onTapCodeCopy: {},
+            onTapCodeCopy: onTapCopy,
             copiedText: $copiedText
         )
         .frame(height: height)
