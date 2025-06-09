@@ -76,6 +76,17 @@
 		D5565D452DF66A2000187DDD /* EnterGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5565D442DF66A1500187DDD /* EnterGroupView.swift */; };
 		D5565D472DF66E3B00187DDD /* EnterGroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5565D462DF66DC800187DDD /* EnterGroupViewModel.swift */; };
 		D5565D4A2DF677CE00187DDD /* JoinGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5565D492DF677C800187DDD /* JoinGroupView.swift */; };
+		D5565D4E2DF6A09400187DDD /* MemberInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5565D4D2DF6A08F00187DDD /* MemberInfoView.swift */; };
+		D5565D502DF6A0AE00187DDD /* MemberMoneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5565D4F2DF6A0A500187DDD /* MemberMoneyView.swift */; };
+		D5565D522DF6A0D600187DDD /* MemberCreateFlowerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5565D512DF6A0B200187DDD /* MemberCreateFlowerView.swift */; };
+		D5565D542DF6A0E400187DDD /* MemberCreateMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5565D532DF6A0DA00187DDD /* MemberCreateMessageView.swift */; };
+		D5565D562DF6A0F700187DDD /* MemberShowFlowerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5565D552DF6A0E900187DDD /* MemberShowFlowerView.swift */; };
+		D5565D592DF6AB6700187DDD /* MemberJoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5565D582DF6AB4F00187DDD /* MemberJoinViewModel.swift */; };
+		D5565D5C2DF6B75200187DDD /* MemberJoinViewModel+Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5565D5B2DF6B72900187DDD /* MemberJoinViewModel+Binding.swift */; };
+		D5565D5E2DF6BCEC00187DDD /* MemberJoinViewModel+Computed.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5565D5D2DF6BCDF00187DDD /* MemberJoinViewModel+Computed.swift */; };
+		D5565D602DF6D26800187DDD /* MemberLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5565D5F2DF6D25C00187DDD /* MemberLoadingView.swift */; };
+		D5565D622DF6D27C00187DDD /* MemberLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5565D612DF6D27700187DDD /* MemberLoadingViewModel.swift */; };
+		D5565D642DF6D95500187DDD /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5565D632DF6D95100187DDD /* ToastView.swift */; };
 		D56CD4042DEF3BFD002267B1 /* GSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56CD4032DEF3BED002267B1 /* GSImage.swift */; };
 		D574E9B12DED7FA000AAF70F /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D574E9B02DED7F9400AAF70F /* PrimaryButton.swift */; };
 		D574E9D02DED897A00AAF70F /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = D574E9C62DED897A00AAF70F /* Pretendard-Black.otf */; };
@@ -217,6 +228,17 @@
 		D5565D442DF66A1500187DDD /* EnterGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterGroupView.swift; sourceTree = "<group>"; };
 		D5565D462DF66DC800187DDD /* EnterGroupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterGroupViewModel.swift; sourceTree = "<group>"; };
 		D5565D492DF677C800187DDD /* JoinGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinGroupView.swift; sourceTree = "<group>"; };
+		D5565D4D2DF6A08F00187DDD /* MemberInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberInfoView.swift; sourceTree = "<group>"; };
+		D5565D4F2DF6A0A500187DDD /* MemberMoneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberMoneyView.swift; sourceTree = "<group>"; };
+		D5565D512DF6A0B200187DDD /* MemberCreateFlowerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberCreateFlowerView.swift; sourceTree = "<group>"; };
+		D5565D532DF6A0DA00187DDD /* MemberCreateMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberCreateMessageView.swift; sourceTree = "<group>"; };
+		D5565D552DF6A0E900187DDD /* MemberShowFlowerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberShowFlowerView.swift; sourceTree = "<group>"; };
+		D5565D582DF6AB4F00187DDD /* MemberJoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberJoinViewModel.swift; sourceTree = "<group>"; };
+		D5565D5B2DF6B72900187DDD /* MemberJoinViewModel+Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemberJoinViewModel+Binding.swift"; sourceTree = "<group>"; };
+		D5565D5D2DF6BCDF00187DDD /* MemberJoinViewModel+Computed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemberJoinViewModel+Computed.swift"; sourceTree = "<group>"; };
+		D5565D5F2DF6D25C00187DDD /* MemberLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberLoadingView.swift; sourceTree = "<group>"; };
+		D5565D612DF6D27700187DDD /* MemberLoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberLoadingViewModel.swift; sourceTree = "<group>"; };
+		D5565D632DF6D95100187DDD /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		D56CD4032DEF3BED002267B1 /* GSImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSImage.swift; sourceTree = "<group>"; };
 		D574E9B02DED7F9400AAF70F /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		D574E9C52DED890000AAF70F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -652,8 +674,32 @@
 			isa = PBXGroup;
 			children = (
 				D5565D492DF677C800187DDD /* JoinGroupView.swift */,
+				D5565D4C2DF6A06500187DDD /* SubView */,
+				D5565D572DF6A20300187DDD /* ViewModel */,
 			);
 			path = JoinGroup;
+			sourceTree = "<group>";
+		};
+		D5565D4C2DF6A06500187DDD /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				D5565D4D2DF6A08F00187DDD /* MemberInfoView.swift */,
+				D5565D4F2DF6A0A500187DDD /* MemberMoneyView.swift */,
+				D5565D512DF6A0B200187DDD /* MemberCreateFlowerView.swift */,
+				D5565D532DF6A0DA00187DDD /* MemberCreateMessageView.swift */,
+				D5565D552DF6A0E900187DDD /* MemberShowFlowerView.swift */,
+			);
+			path = SubView;
+			sourceTree = "<group>";
+		};
+		D5565D572DF6A20300187DDD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D5565D582DF6AB4F00187DDD /* MemberJoinViewModel.swift */,
+				D5565D5D2DF6BCDF00187DDD /* MemberJoinViewModel+Computed.swift */,
+				D5565D5B2DF6B72900187DDD /* MemberJoinViewModel+Binding.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		D574E9AD2DED7F6A00AAF70F /* DesignSystem */ = {
@@ -676,6 +722,7 @@
 				D5B38C522DF06D52005DAFDC /* ActionIconButton.swift */,
 				D574E9DD2DEDEDE300AAF70F /* PairButton.swift */,
 				D574E9B02DED7F9400AAF70F /* PrimaryButton.swift */,
+				D5565D632DF6D95100187DDD /* ToastView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -701,6 +748,7 @@
 			children = (
 				D595C3092DF3635D00F484A1 /* InfoViewModel.swift */,
 				D595C30B2DF3765900F484A1 /* FlowerLoadingViewModel.swift */,
+				D5565D612DF6D27700187DDD /* MemberLoadingViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -910,6 +958,7 @@
 			children = (
 				55512E1D2DEEFB3300433ED8 /* InfoLoadingView.swift */,
 				CA064B342DF07B090048F794 /* FlowerLoadingView.swift */,
+				D5565D5F2DF6D25C00187DDD /* MemberLoadingView.swift */,
 				D595C3082DF3635500F484A1 /* ViewModel */,
 			);
 			path = Loading;
@@ -1088,11 +1137,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5565D602DF6D26800187DDD /* MemberLoadingView.swift in Sources */,
 				D5B38C5E2DF0A769005DAFDC /* PartyCardBackView.swift in Sources */,
 				CA5EAABD2DF42C3C00690A03 /* CardMemberListLeaderSection.swift in Sources */,
 				D59F7C742DEAF6D600A829A8 /* AppCoordinator.swift in Sources */,
 				38AA40EE2DF38DFB004D5EC9 /* SplashView.swift in Sources */,
 				D59F7C642DEAF56D00A829A8 /* AppDelegate.swift in Sources */,
+				D5565D642DF6D95500187DDD /* ToastView.swift in Sources */,
 				D59F7C7F2DEB019700A829A8 /* CreateGroupViewModel.swift in Sources */,
 				D51C80D72DEF6B940051CB40 /* PartyMember.swift in Sources */,
 				D5565D472DF66E3B00187DDD /* EnterGroupViewModel.swift in Sources */,
@@ -1116,6 +1167,7 @@
 				D5B38C642DF0AB04005DAFDC /* PartyCardBackContainer.swift in Sources */,
 				D5565D4A2DF677CE00187DDD /* JoinGroupView.swift in Sources */,
 				CA5EAAE02DF5648300690A03 /* View+Extension.swift in Sources */,
+				D5565D5C2DF6B75200187DDD /* MemberJoinViewModel+Binding.swift in Sources */,
 				CA064B222DF05DE60048F794 /* FlowerstandStep3.swift in Sources */,
 				CA5EAACF2DF483C400690A03 /* ShowFlowerstandCardsView.swift in Sources */,
 				D574E9DA2DED8A6500AAF70F /* GSFont.swift in Sources */,
@@ -1130,18 +1182,23 @@
 				D5F710AE2DF13C9D00F2CE3B /* CreateFlowerstandViewModel.swift in Sources */,
 				CA5EAA632DF2C34200690A03 /* CustomProgressView.swift in Sources */,
 				CA5EAA642DF2C34200690A03 /* InfoStep1View.swift in Sources */,
+				D5565D4E2DF6A09400187DDD /* MemberInfoView.swift in Sources */,
 				CA5EAA652DF2C34200690A03 /* InfoStep3View.swift in Sources */,
 				CA5EAA662DF2C34200690A03 /* InfoStep2View.swift in Sources */,
 				38A09B572DF4A9090066E434 /* InvitationOCRView.swift in Sources */,
 				55512E1E2DEEFB3300433ED8 /* InfoLoadingView.swift in Sources */,
+				D5565D622DF6D27C00187DDD /* MemberLoadingViewModel.swift in Sources */,
 				D574E9B12DED7FA000AAF70F /* PrimaryButton.swift in Sources */,
 				CA5EAAAF2DF4286900690A03 /* ReceiveCongratsView.swift in Sources */,
 				D51C80C32DEF48210051CB40 /* HomeIntroText.swift in Sources */,
 				38AA40D92DF38DE2004D5EC9 /* InputCodeButtonView.swift in Sources */,
 				38AA40DA2DF38DE2004D5EC9 /* CodeInputField.swift in Sources */,
+				D5565D5E2DF6BCEC00187DDD /* MemberJoinViewModel+Computed.swift in Sources */,
+				D5565D542DF6A0E400187DDD /* MemberCreateMessageView.swift in Sources */,
 				CA5EAAC52DF4486800690A03 /* CardMemberListMemberSectionScrollView.swift in Sources */,
 				CA5EAAC12DF430F800690A03 /* CardMemberListMemberSection.swift in Sources */,
 				38AA40DB2DF38DE2004D5EC9 /* InputCodeHeaderView.swift in Sources */,
+				D5565D592DF6AB6700187DDD /* MemberJoinViewModel.swift in Sources */,
 				38AA40DC2DF38DE2004D5EC9 /* InputCodeView.swift in Sources */,
 				38AA40DD2DF38DE2004D5EC9 /* InputCodeFieldView.swift in Sources */,
 				CA5EAA752DF2CA5D00690A03 /* LeftText.swift in Sources */,
@@ -1178,6 +1235,7 @@
 				D59F7C702DEAF69400A829A8 /* Constants.swift in Sources */,
 				CA064B262DF061AD0048F794 /* SelectedFlowerGroup.swift in Sources */,
 				D5F710B22DF28D1500F2CE3B /* FlowerStandStep2ViewModel.swift in Sources */,
+				D5565D502DF6A0AE00187DDD /* MemberMoneyView.swift in Sources */,
 				D5E9AD9A2DF5D71500CDB444 /* FlippableCardView.swift in Sources */,
 				D5B38C5B2DF09B3F005DAFDC /* PartyCardContainer.swift in Sources */,
 				D5ED63172DED427B007912E1 /* RootNavigationView.swift in Sources */,
@@ -1189,8 +1247,10 @@
 				D5E9AD9F2DF5DBD300CDB444 /* FlippableFrontCardView.swift in Sources */,
 				CA2C4A492DF0513700D8E170 /* FlowerstandCardView.swift in Sources */,
 				D51C80D32DEF6B820051CB40 /* Wedding.swift in Sources */,
+				D5565D522DF6A0D600187DDD /* MemberCreateFlowerView.swift in Sources */,
 				D5F2EDB92DF5E6B7003D1291 /* SingleCardView.swift in Sources */,
 				CA5EAA712DF2CA5800690A03 /* FinishFlowerstandCard.swift in Sources */,
+				D5565D562DF6A0F700187DDD /* MemberShowFlowerView.swift in Sources */,
 				CA5EAAB92DF4292100690A03 /* ReceiveCongratsCardBackView.swift in Sources */,
 				38AA40CF2DF38D77004D5EC9 /* FlowerstandCardData.swift in Sources */,
 				CA0B87EC2DF0217A0001F120 /* CreateFlowerstandView.swift in Sources */,

@@ -16,6 +16,8 @@ struct CardScrollView: View {
     private let viewModel = MultiCardViewModel()
     @Environment(\.modelContext) private var ModelContext
     
+    let onCopy: () -> Void
+    
     var body: some View {
         GeometryReader { geometry in
             let screenWidth = geometry.size.width
@@ -35,7 +37,10 @@ struct CardScrollView: View {
                                 viewModel.deleteParty(parties[0], context: ModelContext)
                                 currentIndex = 0
                             }
-                        })
+                        },
+                        onCopy: onCopy
+                    )
+                    
                     Spacer()
                 }
             } else {
@@ -48,7 +53,8 @@ struct CardScrollView: View {
                     cardWidth: cardWidth,
                     spacing: spacing,
                     xOffset: xOffset,
-                    viewModel: viewModel
+                    viewModel: viewModel,
+                    onCopy: onCopy
                 )
             }
         }

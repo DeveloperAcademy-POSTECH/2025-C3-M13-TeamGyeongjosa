@@ -18,10 +18,7 @@ struct InputCodeView: View {
                 isCodeValid: $viewModel.isCodeValid
             )
             .padding(.top, 24)
-            
             Spacer()
-            
-            
                 .onTapGesture {
                     self.endTextEditing()
                 }

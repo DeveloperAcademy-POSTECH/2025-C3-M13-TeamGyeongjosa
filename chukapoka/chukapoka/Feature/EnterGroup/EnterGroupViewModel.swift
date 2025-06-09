@@ -19,6 +19,7 @@ final class EnterGroupViewModel: ObservableObject {
     @Published var code: String =  ""
     @Published var isCodeValid: Bool = false
     @Published var teamName: String = ""
+    @Published var joinedParty: Party? = nil
     
     let coordinator: AppCoordinator
     
@@ -48,6 +49,7 @@ final class EnterGroupViewModel: ObservableObject {
             let result = try modelContext.fetch(descriptor)
             if let party = result.first {
                 self.teamName = party.name
+                self.joinedParty = party
                 self.isCodeValid = true
                 self.step = .nameCheck
             } else {
@@ -60,6 +62,10 @@ final class EnterGroupViewModel: ObservableObject {
     }
     
     func goNext() {
-        coordinator.push(.joinGroupStep2)
+        guard let party = joinedParty else {
+            print("error: 파티 정보 없음")
+            return
+        }
+        coordinator.push(.joinGroupStep2(party: party))
     }
 }

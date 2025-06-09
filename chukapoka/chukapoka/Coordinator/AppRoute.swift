@@ -13,5 +13,6 @@ enum AppRoute: Hashable {
     case createFlowerstand(leader: PartyMember)
     case loadingFlowerstandDone
     case joinGroupStep1
-    case joinGroupStep2
+    case joinGroupStep2(party: Party)
+    case loadingJoinGroupDone
 }

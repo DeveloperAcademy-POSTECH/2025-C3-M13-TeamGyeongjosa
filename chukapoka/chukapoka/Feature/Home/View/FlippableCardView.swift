@@ -17,6 +17,7 @@ struct FlippableCardView: View {
     let inviteCode: String
     let onTapPhoto: (() -> Void)?
     let onTapClose: (() -> Void)?
+    let onCopy: (() -> Void)?
     
     @State private var isFlipped: Bool = false
     @State private var copiedText: String?
@@ -39,7 +40,12 @@ struct FlippableCardView: View {
             FlippableBackCardView(
                 inviteCode: inviteCode,
                 height: height,
-                copiedText: $copiedText
+                copiedText: $copiedText,
+                onTapCopy: {
+                    UIPasteboard.general.string = inviteCode
+                    copiedText = inviteCode
+                    onCopy?()
+                }
             )
             .opacity(isFlipped ? 1.0 : 0.0)
             .rotation3DEffect(.degrees(isFlipped ? 0 : -180), axis: (x: 0, y: 1, z: 0))

@@ -40,7 +40,7 @@ struct PartyCardContainer: View {
             )
             .padding(.bottom, 16)
 
-            PrimaryButton(title: "코드로 초대하기")
+            PrimaryButton(title: "파티 확인하기")
         }
         .padding(16)
         .background(PartyCardBackground())
