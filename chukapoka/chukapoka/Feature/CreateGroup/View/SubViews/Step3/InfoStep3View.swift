@@ -18,14 +18,21 @@ struct InfoStep3View: View {
                 
                 CustomTextField(
                     title: "보내는 분",
-                    placeholder: "예: 김영희",
+                    placeholder: "ex) 김포키",
                     text: $viewModel.senderName,
                     isValid: $viewModel.isSenderNameValid
                 )
                 
                 CustomTextField(
+                    title: "은행",
+                    placeholder: "ex) 카카오뱅크",
+                    text: $viewModel.senderBank,
+                    isValid: $viewModel.isSenderBankValid
+                )
+                
+                CustomTextField(
                     title: "계좌번호",
-                    placeholder: "입금 계좌번호",
+                    placeholder: "계좌번호 입력",
                     text: $viewModel.senderAccount,
                     isValid: $viewModel.isSenderAccountValid
                 )
@@ -34,10 +41,13 @@ struct InfoStep3View: View {
                 CustomTextField(
                     title: "연락처",
                     placeholder: "010-1234-5678",
-                    text: $viewModel.senderPhone,
-                    isValid: $viewModel.isSenderPhoneValid
+                    text: $viewModel.senderPhoneNumber,
+                    isValid: $viewModel.isSenderPhoneNumberValid
                 )
                 .keyboardType(.numberPad)
+                .onChange(of: viewModel.senderPhoneNumber) {
+                    viewModel.senderPhoneNumber = viewModel.formatPhoneNumberInput(viewModel.senderPhoneNumber)
+                }
                 
                 Text("파티 해산 시 해당 정보로 돌려드려요")
                     .font(GSFont.caption2)
