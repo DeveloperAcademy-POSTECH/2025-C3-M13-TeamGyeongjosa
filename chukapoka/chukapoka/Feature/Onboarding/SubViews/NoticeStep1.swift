@@ -16,7 +16,7 @@ struct NoticeStep1: View {
                 Spacer()
                 LottieView(fileName: "CKPK_onboarding1")
                                 .frame(width: 320, height: 320)
-                                .padding(.bottom, 43)
+                                .padding(.bottom, 40)
                 
                 Text("함께 축하할 사람을 모아봐요")
                     .foregroundStyle(GSColor.black)

@@ -17,6 +17,7 @@ struct HomeIntroText: View {
             Text("처음이라 어렵다면 걱정마세요!\n추카포카의 포키가 도와줄게요")
                 .multilineTextAlignment(.center)
                 .font(GSFont.caption2)
+                .lineSpacing(10)
                 .foregroundColor(GSColor.black)
                 .padding(.top, 36)
         }

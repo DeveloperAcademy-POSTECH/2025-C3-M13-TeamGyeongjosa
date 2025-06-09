@@ -18,12 +18,11 @@ struct NavigationBar: View {
                 Image(systemName: "chevron.backward")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 12)
+                    .frame(width: 10, height: 17)
                     .foregroundColor(GSColor.black)
             }
             Spacer()
         }
-        .padding(.horizontal, 16)
-        .padding(.bottom, 16)
+        .padding(16)
     }
 }
