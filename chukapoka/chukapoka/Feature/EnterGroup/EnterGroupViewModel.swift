@@ -20,6 +20,7 @@ final class EnterGroupViewModel: ObservableObject {
     @Published var isCodeValid: Bool = false
     @Published var teamName: String = ""
     @Published var joinedParty: Party? = nil
+    @Published var isCodeMatched: Bool = true
     
     let coordinator: AppCoordinator
     
@@ -39,6 +40,7 @@ final class EnterGroupViewModel: ObservableObject {
     func validateAndFetchParty(modelContext: ModelContext) {
         guard code.count == 6 else {
             isCodeValid = false
+            isCodeMatched = true
             return print("코드가 6자리가 아닙니다.")
         }
         
@@ -53,11 +55,14 @@ final class EnterGroupViewModel: ObservableObject {
                 self.isCodeValid = true
                 self.step = .nameCheck
             } else {
-                self.isCodeValid = false
+                self.isCodeValid = true
+                self.isCodeMatched = false
+                print("일치하는 파티가 없어요.")
             }
         } catch {
             print("Party data fetching error: \(error)")
             self.isCodeValid = false
+            self.isCodeMatched = false
         }
     }
     

@@ -15,7 +15,8 @@ struct InputCodeView: View {
             
             InputCodeFieldView(
                 code: $viewModel.code,
-                isCodeValid: $viewModel.isCodeValid
+                isCodeValid: $viewModel.isCodeValid,
+                isCodeMatched: $viewModel.isCodeMatched
             )
             .padding(.top, 24)
             Spacer()
