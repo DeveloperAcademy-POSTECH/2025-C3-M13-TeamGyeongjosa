@@ -36,18 +36,24 @@ final class CreateGroupViewModel: ObservableObject {
     @Published var receiverName: String = ""
     @Published var isReceiverNameValid: Bool = true
     
-    @Published var receiverAccount: String = ""
+    @Published var receiverBank: String = "" // 은행
+    @Published var isReceiverBankValid: Bool = true
+    
+    @Published var receiverAccount: String = "" // 계좌번호
     @Published var isReceiverAccountValid: Bool = true
     
     // MARK: - Step 3
     @Published var senderName: String = ""
     @Published var isSenderNameValid: Bool = true
     
-    @Published var senderAccount: String = ""
+    @Published var senderBank: String = "" // 은행
+    @Published var isSenderBankValid: Bool = true
+    
+    @Published var senderAccount: String = "" // 계좌번호
     @Published var isSenderAccountValid: Bool = true
     
-    @Published var senderPhone: String = ""
-    @Published var isSenderPhoneValid: Bool = true
+    @Published var senderPhoneNumber: String = ""
+    @Published var isSenderPhoneNumberValid: Bool = true
     
     init(coordinator: AppCoordinator) {
         self.coordinator = coordinator
@@ -71,15 +77,6 @@ final class CreateGroupViewModel: ObservableObject {
         }
     }
     
-    // MARK: - Step 1 Validation
-    func validateStep1() -> Bool {
-        isPartyNameValid = !partyName.isEmpty
-        isPlaceValid = !weddingPlace.isEmpty
-        isDateValid = weddingDate.count == 10
-        isTimeValid = weddingTime.count == 5
-        return isPartyNameValid && isPlaceValid && isDateValid && isTimeValid
-    }
-    
     func formatDateInput(_ input: String) -> String {
         let digits = input.filter { $0.isNumber }.prefix(8)
         var result = ""
@@ -100,29 +97,55 @@ final class CreateGroupViewModel: ObservableObject {
         return result
     }
     
-    // MARK: - Step2 유효성 검사
-    func validateStep2() -> Bool {
-        isReceiverNameValid = isValidKoreanName(receiverName)
-        isReceiverAccountValid = !receiverAccount.isEmpty
-        return isReceiverNameValid && isReceiverAccountValid
+    func isValidKoreanName(_ input: String) -> Bool {
+        let regex = "^[가-힣]{2,10}$"
+        return NSPredicate(format: "SELF MATCHES %@", regex).evaluate(with: input)
     }
     
-    private func isValidKoreanName(_ input: String) -> Bool {
-        let regex = "^[가-힣]{2,5}$"
-        return NSPredicate(format: "SELF MATCHES %@", regex).evaluate(with: input)
+    func isValidAccountNumber(_ input: String) -> Bool {
+        let digitsOnly = input.filter { $0.isNumber }
+        return digitsOnly.count >= 11 && digitsOnly.count <= 14
+    }
+    
+    func isValidPhoneNumber(_ input: String) -> Bool {
+        let digitsOnly = input.filter { $0.isNumber }
+        return digitsOnly.count == 11
+    }
+    
+    func formatPhoneNumberInput(_ input: String) -> String {
+        let digits = input.filter { $0.isNumber }.prefix(11)
+        var result = ""
+        for (index, char) in digits.enumerated() {
+            if index == 3 || index == 7 { result.append("-") }
+            result.append(char)
+        }
+        return result
+    }
+    
+    // MARK: - Step 1 Validation
+    func validateStep1() -> Bool {
+        isPartyNameValid = !partyName.isEmpty && partyName.count <= 10
+        isPlaceValid = !weddingPlace.isEmpty && weddingPlace.count <= 20
+        isDateValid = !weddingDate.isEmpty && weddingDate.count == 10
+        isTimeValid = !weddingTime.isEmpty && weddingTime.count == 5
+        return isPartyNameValid && isPlaceValid && isDateValid && isTimeValid
+    }
+    
+    // MARK: - Step2 Validation
+    func validateStep2() -> Bool {
+        isReceiverNameValid = isValidKoreanName(receiverName)
+        isReceiverBankValid = isValidKoreanName(receiverBank)
+        isReceiverAccountValid = isValidAccountNumber(receiverAccount)
+        return isReceiverNameValid && isReceiverBankValid && isReceiverAccountValid
     }
     
     // MARK: - Step 3 Validation
     func validateStep3() -> Bool {
         isSenderNameValid = isValidKoreanName(senderName)
-        isSenderAccountValid = !senderAccount.isEmpty
-        isSenderPhoneValid = isValidPhone(senderPhone)
-        return isSenderNameValid && isSenderAccountValid && isSenderPhoneValid
-    }
-    
-    private func isValidPhone(_ input: String) -> Bool {
-        let digitsOnly = input.filter { $0.isNumber }
-        return digitsOnly.count == 11
+        isSenderBankValid = isValidKoreanName(senderBank)
+        isSenderAccountValid = isValidAccountNumber(senderAccount)
+        isSenderPhoneNumberValid = isValidPhoneNumber(senderPhoneNumber)
+        return isSenderNameValid && isSenderAccountValid && isSenderPhoneNumberValid
     }
     
     func handleNext(modelContext: ModelContext) {
@@ -152,13 +175,14 @@ final class CreateGroupViewModel: ObservableObject {
     
     var isStep2Valid: Bool {
         isValidKoreanName(receiverName) ||
+        !receiverBank.isEmpty ||
         !receiverAccount.isEmpty
     }
     
     var isStep3Valid: Bool {
         isValidKoreanName(senderName) ||
         !senderAccount.isEmpty ||
-        isValidPhone(senderPhone)
+        isValidPhoneNumber(senderPhoneNumber)
     }
     
     var isNextButtonEnabled: Bool {
@@ -194,7 +218,7 @@ final class CreateGroupViewModel: ObservableObject {
             place: weddingPlace,
             date: dateTime,
             accountName: receiverName,
-            accountNumber: receiverAccount,
+            accountNumber: receiverBank + " " + receiverAccount,
             brideInviteCode: brideCode
         )
         modelContext.insert(wedding)
@@ -212,8 +236,8 @@ final class CreateGroupViewModel: ObservableObject {
         let leader = PartyMember(
             isLeader: true,
             name: senderName,
-            accountNumber: senderAccount,
-            phoneNumber: senderPhone,
+            accountNumber: senderBank + " " + senderAccount,
+            phoneNumber: senderPhoneNumber,
             money: 0,
             message: "",
             flowerstandPath: "",

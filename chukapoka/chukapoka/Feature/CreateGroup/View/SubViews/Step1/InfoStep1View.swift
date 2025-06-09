@@ -35,7 +35,7 @@ struct InfoStep1View: View {
                 
                 CustomTextField(
                     title: "결혼식 날짜",
-                    placeholder: "YYYY. MM. DD",
+                    placeholder: "ex) 2025.12.25",
                     text: $viewModel.weddingDate,
                     isValid: $viewModel.isDateValid
                 )
@@ -46,7 +46,7 @@ struct InfoStep1View: View {
                 
                 CustomTextField(
                     title: "결혼식 시간",
-                    placeholder: "HH:MM",
+                    placeholder: "ex) 12:00",
                     text: $viewModel.weddingTime,
                     isValid: $viewModel.isTimeValid
                 )
