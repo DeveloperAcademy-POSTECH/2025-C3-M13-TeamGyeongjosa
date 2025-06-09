@@ -11,26 +11,16 @@ struct ShowFlowerstandCardsView: View {
     let partyName: String
     
     var body: some View {
-        // 이후 NavigationBar로 대체
-        HStack {
-            Button(action: {}) {
-                Image(systemName: "chevron.backward")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 12)
+        ZStack {
+            NavigationBar(onBack: {})
+            HStack {
+                Spacer()
+                Text(partyName)
+                    .font(GSFont.body1)
                     .foregroundColor(GSColor.black)
+                Spacer()
             }
-            
-            Spacer()
-            
-            Text("\(partyName)")
-                .font(GSFont.body1)
-                .foregroundColor(GSColor.black)
-            
-            Spacer()
         }
-        .padding(16)
-        
         FlowerstandCardList()
     }
 }
