@@ -16,7 +16,7 @@ struct PartyCardStatusBadge: View {
             .foregroundColor(state.textColor)
             .padding(.horizontal, 5)
             .padding(.vertical, 4)
-            .frame(width: 48, alignment: .center)
+            .frame(minWidth: 48, alignment: .center)
             .background(state.badgeColor)
             .cornerRadius(8)
     }

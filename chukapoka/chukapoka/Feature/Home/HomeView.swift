@@ -28,7 +28,7 @@ struct HomeView: View {
                     coordinator.push(.createGroup)
                 },
                 onGroupJoinTapped: {
-                    coordinator.push(.joinGroup)
+                    coordinator.push(.joinGroupStep1)
                 }
             )
             .padding(.bottom, 24)

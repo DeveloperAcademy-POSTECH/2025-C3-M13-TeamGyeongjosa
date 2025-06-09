@@ -11,6 +11,7 @@
 import SwiftUI
 
 struct OCRResultView: View {
+    @Environment(\.modelContext) var modelContext
     @ObservedObject var viewModel: CreateGroupViewModel
     @ObservedObject var ocrViewModel: OCRViewModel
     @Binding var currentStep: InvitationOCRView.OCRStep
@@ -75,7 +76,6 @@ struct OCRResultView: View {
             .padding(.horizontal, 16)
             .animation(.easeInOut, value: viewModel.currentStep)
             
-            @Environment(\.modelContext) var modelContext
             PrimaryButton(
                 title: viewModel.nextButtonTitle,
                 style: viewModel.isNextButtonEnabled ? .basic : .disabled,

@@ -15,7 +15,7 @@
 		38AA40C92DF38D27004D5EC9 /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40C72DF38D27004D5EC9 /* PhotoPickerView.swift */; };
 		38AA40CC2DF38D44004D5EC9 /* OCRViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40CB2DF38D44004D5EC9 /* OCRViewModel.swift */; };
 		38AA40CF2DF38D77004D5EC9 /* FlowerstandCardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40CD2DF38D77004D5EC9 /* FlowerstandCardData.swift */; };
-		38AA40D12DF38D9C004D5EC9 /* NameCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40D02DF38D9C004D5EC9 /* NameCheck.swift */; };
+		38AA40D12DF38D9C004D5EC9 /* NameCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40D02DF38D9C004D5EC9 /* NameCheckView.swift */; };
 		38AA40D92DF38DE2004D5EC9 /* InputCodeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40D32DF38DE2004D5EC9 /* InputCodeButtonView.swift */; };
 		38AA40DA2DF38DE2004D5EC9 /* CodeInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40D22DF38DE2004D5EC9 /* CodeInputField.swift */; };
 		38AA40DB2DF38DE2004D5EC9 /* InputCodeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40D52DF38DE2004D5EC9 /* InputCodeHeaderView.swift */; };
@@ -73,6 +73,9 @@
 		D51C80D32DEF6B820051CB40 /* Wedding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80D22DEF6B780051CB40 /* Wedding.swift */; };
 		D51C80D52DEF6B890051CB40 /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80D42DEF6B850051CB40 /* Party.swift */; };
 		D51C80D72DEF6B940051CB40 /* PartyMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80D62DEF6B8F0051CB40 /* PartyMember.swift */; };
+		D5565D452DF66A2000187DDD /* EnterGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5565D442DF66A1500187DDD /* EnterGroupView.swift */; };
+		D5565D472DF66E3B00187DDD /* EnterGroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5565D462DF66DC800187DDD /* EnterGroupViewModel.swift */; };
+		D5565D4A2DF677CE00187DDD /* JoinGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5565D492DF677C800187DDD /* JoinGroupView.swift */; };
 		D56CD4042DEF3BFD002267B1 /* GSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56CD4032DEF3BED002267B1 /* GSImage.swift */; };
 		D574E9B12DED7FA000AAF70F /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D574E9B02DED7F9400AAF70F /* PrimaryButton.swift */; };
 		D574E9D02DED897A00AAF70F /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = D574E9C62DED897A00AAF70F /* Pretendard-Black.otf */; };
@@ -97,7 +100,6 @@
 		D59F7C762DEAF6E100A829A8 /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59F7C752DEAF6DF00A829A8 /* AppRoute.swift */; };
 		D59F7C782DEB006200A829A8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59F7C772DEB005E00A829A8 /* HomeView.swift */; };
 		D59F7C7F2DEB019700A829A8 /* CreateGroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59F7C7E2DEB019100A829A8 /* CreateGroupViewModel.swift */; };
-		D59F7C812DEB09C200A829A8 /* EnterCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59F7C802DEB09BF00A829A8 /* EnterCodeView.swift */; };
 		D5B38C382DF04084005DAFDC /* PartyCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B38C372DF04081005DAFDC /* PartyCardView.swift */; };
 		D5B38C3A2DF045EC005DAFDC /* PartyCardStatusBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B38C392DF045EC005DAFDC /* PartyCardStatusBadge.swift */; };
 		D5B38C3C2DF045FB005DAFDC /* PartyCardActionIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B38C3B2DF045FB005DAFDC /* PartyCardActionIcons.swift */; };
@@ -155,7 +157,7 @@
 		38AA40C72DF38D27004D5EC9 /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
 		38AA40CB2DF38D44004D5EC9 /* OCRViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRViewModel.swift; sourceTree = "<group>"; };
 		38AA40CD2DF38D77004D5EC9 /* FlowerstandCardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerstandCardData.swift; sourceTree = "<group>"; };
-		38AA40D02DF38D9C004D5EC9 /* NameCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameCheck.swift; sourceTree = "<group>"; };
+		38AA40D02DF38D9C004D5EC9 /* NameCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameCheckView.swift; sourceTree = "<group>"; };
 		38AA40D22DF38DE2004D5EC9 /* CodeInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeInputField.swift; sourceTree = "<group>"; };
 		38AA40D32DF38DE2004D5EC9 /* InputCodeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputCodeButtonView.swift; sourceTree = "<group>"; };
 		38AA40D42DF38DE2004D5EC9 /* InputCodeFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputCodeFieldView.swift; sourceTree = "<group>"; };
@@ -212,6 +214,9 @@
 		D51C80D22DEF6B780051CB40 /* Wedding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wedding.swift; sourceTree = "<group>"; };
 		D51C80D42DEF6B850051CB40 /* Party.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Party.swift; sourceTree = "<group>"; };
 		D51C80D62DEF6B8F0051CB40 /* PartyMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyMember.swift; sourceTree = "<group>"; };
+		D5565D442DF66A1500187DDD /* EnterGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterGroupView.swift; sourceTree = "<group>"; };
+		D5565D462DF66DC800187DDD /* EnterGroupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterGroupViewModel.swift; sourceTree = "<group>"; };
+		D5565D492DF677C800187DDD /* JoinGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinGroupView.swift; sourceTree = "<group>"; };
 		D56CD4032DEF3BED002267B1 /* GSImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSImage.swift; sourceTree = "<group>"; };
 		D574E9B02DED7F9400AAF70F /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		D574E9C52DED890000AAF70F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -240,7 +245,6 @@
 		D59F7C752DEAF6DF00A829A8 /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
 		D59F7C772DEB005E00A829A8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D59F7C7E2DEB019100A829A8 /* CreateGroupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupViewModel.swift; sourceTree = "<group>"; };
-		D59F7C802DEB09BF00A829A8 /* EnterCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterCodeView.swift; sourceTree = "<group>"; };
 		D59F7C9E2DECC2B100A829A8 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		D5B38C372DF04081005DAFDC /* PartyCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCardView.swift; sourceTree = "<group>"; };
 		D5B38C392DF045EC005DAFDC /* PartyCardStatusBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCardStatusBadge.swift; sourceTree = "<group>"; };
@@ -385,15 +389,6 @@
 				38AA40D52DF38DE2004D5EC9 /* InputCodeHeaderView.swift */,
 			);
 			path = SubViews;
-			sourceTree = "<group>";
-		};
-		38AA40D82DF38DE2004D5EC9 /* InputCodeView */ = {
-			isa = PBXGroup;
-			children = (
-				38AA40D62DF38DE2004D5EC9 /* SubViews */,
-				38AA40D72DF38DE2004D5EC9 /* InputCodeView.swift */,
-			);
-			path = InputCodeView;
 			sourceTree = "<group>";
 		};
 		38AA40E32DF38DF0004D5EC9 /* SubViews */ = {
@@ -653,6 +648,14 @@
 			path = SharedModel;
 			sourceTree = "<group>";
 		};
+		D5565D482DF677A800187DDD /* JoinGroup */ = {
+			isa = PBXGroup;
+			children = (
+				D5565D492DF677C800187DDD /* JoinGroupView.swift */,
+			);
+			path = JoinGroup;
+			sourceTree = "<group>";
+		};
 		D574E9AD2DED7F6A00AAF70F /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
@@ -772,11 +775,11 @@
 				CA5EAAAD2DF4282F00690A03 /* ReceiveCongrats */,
 				38AA40ED2DF38DFB004D5EC9 /* Splash */,
 				38AA40E52DF38DF0004D5EC9 /* Onboarding */,
-				38AA40D82DF38DE2004D5EC9 /* InputCodeView */,
 				D59F7C602DEAF4E000A829A8 /* Home */,
 				D59F7C7A2DEB00B600A829A8 /* CreateGroup */,
 				CA0B87EA2DF021300001F120 /* CreateFlowerstand */,
 				D59F7C7B2DEB00C800A829A8 /* EnterGroup */,
+				D5565D482DF677A800187DDD /* JoinGroup */,
 				D5F710B72DF2971F00F2CE3B /* Loading */,
 			);
 			path = Feature;
@@ -813,8 +816,11 @@
 		D59F7C7B2DEB00C800A829A8 /* EnterGroup */ = {
 			isa = PBXGroup;
 			children = (
-				38AA40D02DF38D9C004D5EC9 /* NameCheck.swift */,
-				D59F7C802DEB09BF00A829A8 /* EnterCodeView.swift */,
+				D5565D462DF66DC800187DDD /* EnterGroupViewModel.swift */,
+				D5565D442DF66A1500187DDD /* EnterGroupView.swift */,
+				38AA40D72DF38DE2004D5EC9 /* InputCodeView.swift */,
+				38AA40D02DF38D9C004D5EC9 /* NameCheckView.swift */,
+				38AA40D62DF38DE2004D5EC9 /* SubViews */,
 			);
 			path = EnterGroup;
 			sourceTree = "<group>";
@@ -1089,13 +1095,14 @@
 				D59F7C642DEAF56D00A829A8 /* AppDelegate.swift in Sources */,
 				D59F7C7F2DEB019700A829A8 /* CreateGroupViewModel.swift in Sources */,
 				D51C80D72DEF6B940051CB40 /* PartyMember.swift in Sources */,
+				D5565D472DF66E3B00187DDD /* EnterGroupViewModel.swift in Sources */,
 				D5B38C382DF04084005DAFDC /* PartyCardView.swift in Sources */,
 				CA5EAABF2DF42D1C00690A03 /* CardMemberListItem.swift in Sources */,
 				D595C30A2DF3636B00F484A1 /* InfoViewModel.swift in Sources */,
 				38A09B592DF55F1D0066E434 /* OCRResultView.swift in Sources */,
 				D5E9AD902DF5A7D200CDB444 /* HomeCardView.swift in Sources */,
 				D5B38C4D2DF04824005DAFDC /* PartyCardAction.swift in Sources */,
-				38AA40D12DF38D9C004D5EC9 /* NameCheck.swift in Sources */,
+				38AA40D12DF38D9C004D5EC9 /* NameCheckView.swift in Sources */,
 				D5B38C3A2DF045EC005DAFDC /* PartyCardStatusBadge.swift in Sources */,
 				D5F2EDBB2DF5E6CB003D1291 /* MultiCardScrollView.swift in Sources */,
 				D5951B002DEFF68C006863B6 /* CustomTextField.swift in Sources */,
@@ -1107,6 +1114,7 @@
 				38A09B532DF431AC0066E434 /* OCRManager.swift in Sources */,
 				D574E9DC2DED8E2E00AAF70F /* GSColor.swift in Sources */,
 				D5B38C642DF0AB04005DAFDC /* PartyCardBackContainer.swift in Sources */,
+				D5565D4A2DF677CE00187DDD /* JoinGroupView.swift in Sources */,
 				CA5EAAE02DF5648300690A03 /* View+Extension.swift in Sources */,
 				CA064B222DF05DE60048F794 /* FlowerstandStep3.swift in Sources */,
 				CA5EAACF2DF483C400690A03 /* ShowFlowerstandCardsView.swift in Sources */,
@@ -1140,6 +1148,7 @@
 				CA5EAA762DF2CA5D00690A03 /* RightText.swift in Sources */,
 				CA064B332DF07AF40048F794 /* FlowerstandStep4.swift in Sources */,
 				CA0B87EE2DF021B80001F120 /* CircleProgress.swift in Sources */,
+				D5565D452DF66A2000187DDD /* EnterGroupView.swift in Sources */,
 				CA5EAAC32DF443C300690A03 /* ReceiveCongratsCardFlipView.swift in Sources */,
 				D5F2EDB72DF5E254003D1291 /* HomeCardScrollView.swift in Sources */,
 				D5B38C4F2DF05A2C005DAFDC /* PartyCardGroupName.swift in Sources */,
@@ -1175,7 +1184,6 @@
 				D51C80CB2DEF487F0051CB40 /* HomeBottomButtons.swift in Sources */,
 				CA064B2E2DF074040048F794 /* CreateRibbonMessage.swift in Sources */,
 				CA5EAAB52DF4289F00690A03 /* ReceiveCongratsViewModel.swift in Sources */,
-				D59F7C812DEB09C200A829A8 /* EnterCodeView.swift in Sources */,
 				CA064B352DF07B090048F794 /* FlowerLoadingView.swift in Sources */,
 				CA5EAADA2DF48E6600690A03 /* SelectedCardDetailView.swift in Sources */,
 				D5E9AD9F2DF5DBD300CDB444 /* FlippableFrontCardView.swift in Sources */,

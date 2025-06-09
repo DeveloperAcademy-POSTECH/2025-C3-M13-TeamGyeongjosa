@@ -32,8 +32,11 @@ struct RootNavigationView: View {
                     case .loadingInfoDone(let leader):
                         InfoLoadingView(viewModel: InfoViewModel(coordinator: coordinator, leader: leader))
                             .navigationBarHidden(true)
-                    case .joinGroup:
-                        EnterCodeView()
+                    case .joinGroupStep1:
+                        EnterGroupView(viewModel: EnterGroupViewModel(coordinator: coordinator))
+                            .navigationBarHidden(true)
+                    case .joinGroupStep2:
+                        JoinGroupView()
                             .navigationBarHidden(true)
                     case .loadingFlowerstandDone:
                         FlowerLoadingView(viewModel: FlowerLoadingViewModel(coordinator: coordinator))
