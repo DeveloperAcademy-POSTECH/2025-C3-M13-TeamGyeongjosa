@@ -5,9 +5,6 @@
 //  Created by jenki on 6/8/25.
 //
 
-// TODO: 값만 InfoStep1View 로 보내도록 수정 -> 뒤로가기 이슈 고려
-// TODO: 값만 InfoStep2View 로 보냈을 때 -> 뒤로가기 이슈 고려
-
 import SwiftUI
 
 struct OCRResultView: View {
@@ -24,26 +21,39 @@ struct OCRResultView: View {
     
     var onNext: () -> Void
     var body: some View {
+        NavigationBar {
+            viewModel.goToPreviousStep()
+        }
+        CustomProgressView(progress: 0.6).padding(.bottom, 30)
+
         VStack(spacing: 0) {
-            NavigationBar {
-                //ocrviewModel.goToPreviousStep()
-                currentStep = .photoPicker
-            }
-            CustomProgressView(progress: viewModel.progressRate)
-                .padding(.bottom, 30)
             ZStack{
                 ScrollView {
                     VStack(alignment: .leading, spacing: 32) {
-                        Text("입력된 정보가 정확한지 \n 다시 한 번 확인해주세요")
+                        Text("입력된 정보가 정확한지 \n다시 한 번 확인해주세요")
                             .font(GSFont.title2)
                             .lineSpacing(12)
                             .foregroundColor(GSColor.black)
                         CustomTextField(
-                            title: "모임명",
-                            placeholder: "어떤 모임에서 화환을 전달하나요?",
-                            text: $viewModel.partyName,
-                            isValid: $viewModel.isPartyNameValid
+                            title: "받는 분",
+                            placeholder: "화환을 받는 분의 이름을 입력해주세요",
+                            text: $viewModel.receiverName,
+                            isValid: $viewModel.isReceiverNameValid
                         )
+                        CustomTextField(
+                            title: "은행",
+                            placeholder: "모바일 청첩장에 있는 은행을 알려주세요",
+                            text: $viewModel.receiverBank,
+                            isValid: $viewModel.isReceiverBankValid
+                        )
+                        
+                        CustomTextField(
+                            title: "계좌번호",
+                            placeholder: "모바일 청첩장에 있는 계좌번호를 알려주세요",
+                            text: $viewModel.receiverAccount,
+                            isValid: $viewModel.isReceiverAccountValid
+                        )
+                        .keyboardType(.numberPad)
                         CustomTextField(
                             title: "결혼식 장소",
                             placeholder: "결혼식 장소를 입력해주세요",
@@ -67,6 +77,10 @@ struct OCRResultView: View {
                             isValid: $viewModel.isTimeValid
                         )
                         .keyboardType(.numberPad)
+                        Text("결혼식 D-day에 맞춰 모인 축의금이 자동으로 송금돼요!")
+                            .font(GSFont.caption2)
+                            .foregroundStyle(GSColor.gray1)
+                            .frame(maxWidth: .infinity, alignment: .center)
                         .onChange(of: viewModel.weddingTime) {
                             viewModel.weddingTime = viewModel.formatTimeInput(viewModel.weddingTime)
                         }
@@ -89,7 +103,7 @@ struct OCRResultView: View {
             .padding(.horizontal, 16)
             .padding(.bottom, 30)
         }
-        //.navigationBarBackButtonHidden(true)
+        .navigationBarBackButtonHidden(true)
         .onTapGesture {
             self.endTextEditing()
         }
@@ -98,13 +112,21 @@ struct OCRResultView: View {
                 place = result.place ?? ""
                 date = result.date ?? ""
                 time = result.time ?? ""
-                
+
                 viewModel.weddingPlace = place
                 viewModel.weddingDate = viewModel.formatDateInput(date)
                 viewModel.weddingTime = viewModel.formatTimeInput(time)
-                
+
                 if let bride = result.brideName {
                     viewModel.receiverName = bride
+                }
+
+                if let bank = result.bank {
+                    viewModel.receiverBank = bank
+                }
+
+                if let account = result.accountNumber {
+                    viewModel.receiverAccount = account
                 }
             }
         }

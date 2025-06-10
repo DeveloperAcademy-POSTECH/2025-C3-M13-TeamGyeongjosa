@@ -6,6 +6,15 @@ import UIKit
 @MainActor
 class OCRViewModel: ObservableObject {
     
+    struct OCRParseResult {
+        var place: String?
+        var date: String?
+        var time: String?
+        var brideName: String?
+        var bank: String?
+        var accountNumber: String?
+    }
+    
     let coordinator: AppCoordinator
 
     init(coordinator: AppCoordinator) {

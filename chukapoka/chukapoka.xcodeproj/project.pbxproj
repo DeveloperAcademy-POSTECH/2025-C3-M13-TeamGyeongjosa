@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		385B803C2DF8B17700420D7F /* MyinfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385B803B2DF8B15E00420D7F /* MyinfoView.swift */; };
 		38A09B532DF431AC0066E434 /* OCRManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A09B522DF431A30066E434 /* OCRManager.swift */; };
 		38A09B572DF4A9090066E434 /* InvitationOCRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A09B562DF4A8BD0066E434 /* InvitationOCRView.swift */; };
 		38A09B592DF55F1D0066E434 /* OCRResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A09B582DF55F180066E434 /* OCRResultView.swift */; };
@@ -166,6 +167,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		385B803B2DF8B15E00420D7F /* MyinfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyinfoView.swift; sourceTree = "<group>"; };
 		38A09B522DF431A30066E434 /* OCRManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRManager.swift; sourceTree = "<group>"; };
 		38A09B562DF4A8BD0066E434 /* InvitationOCRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationOCRView.swift; sourceTree = "<group>"; };
 		38A09B582DF55F180066E434 /* OCRResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRResultView.swift; sourceTree = "<group>"; };
@@ -337,6 +339,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		385B803A2DF8B15600420D7F /* Step4 */ = {
+			isa = PBXGroup;
+			children = (
+				385B803B2DF8B15E00420D7F /* MyinfoView.swift */,
+			);
+			path = Step4;
+			sourceTree = "<group>";
+		};
 		38A09B512DF4318C0066E434 /* TextRecognition */ = {
 			isa = PBXGroup;
 			children = (
@@ -375,6 +385,7 @@
 		38A09B5D2DF568270066E434 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
+				385B803A2DF8B15600420D7F /* Step4 */,
 				38A09B5E2DF568590066E434 /* Step1 */,
 				38A09B5F2DF568640066E434 /* Step2 */,
 				38A09B622DF569AA0066E434 /* Step3 */,
@@ -1227,6 +1238,7 @@
 				D5B38C592DF09A11005DAFDC /* PartyCardBackground.swift in Sources */,
 				D5B38C482DF04775005DAFDC /* PartyCardModel.swift in Sources */,
 				D5B38C532DF06D59005DAFDC /* ActionIconButton.swift in Sources */,
+				385B803C2DF8B17700420D7F /* MyinfoView.swift in Sources */,
 				D5B38C402DF04733005DAFDC /* PartyCardInfoText.swift in Sources */,
 				38AA40C92DF38D27004D5EC9 /* PhotoPickerView.swift in Sources */,
 				D5E9ADA12DF5DC0700CDB444 /* FlippableBackCardView.swift in Sources */,
@@ -1474,6 +1486,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = L9AQ48UJ68;
 				DEVELOPMENT_TEAM = 9S8SHSW95K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1504,6 +1517,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = L9AQ48UJ68;
 				DEVELOPMENT_TEAM = 9S8SHSW95K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
