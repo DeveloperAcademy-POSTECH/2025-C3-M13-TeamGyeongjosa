@@ -1,29 +1,35 @@
 //
-//  CardMemberListItem.swift
+//  ShowPartyLeaderView.swift
 //  chukapoka
 //
-//  Created by Demian Yoo on 6/10/25.
+//  Created by Demian Yoo on 6/11/25.
 //
 import SwiftUI
 
-struct CardMemberListItemView: View {
+struct ShowPartyLeaderView: View {
     let name: String
-    let money: Int
-
+    let money: Int?
+    
     var body: some View {
         HStack {
             Text(name)
                 .font(GSFont.body1)
                 .foregroundColor(GSColor.black)
+            
             Spacer()
-            Text("\(money)만원")
-                .font(GSFont.body1)
-                .foregroundColor(GSColor.black)
+            
+            if let money = money {
+                Text("\(money)만원")
+                    .font(GSFont.body1)
+                    .foregroundColor(GSColor.black)
+            }
         }
-        .padding(.horizontal, 17)
         .padding(.vertical, 10)
+        .padding(.horizontal, 17)
         .frame(maxWidth: .infinity, minHeight: 40, maxHeight: 40, alignment: .center)
-        .background(GSColor.secondary3)
+        .background(
+            GSColor.secondary3
+        )
         .cornerRadius(12)
         .overlay(
             RoundedRectangle(cornerRadius: 12)
@@ -33,3 +39,9 @@ struct CardMemberListItemView: View {
     }
 }
 
+#Preview {
+    ShowPartyLeaderView(
+        name: "데미안",
+        money: 12000
+    )
+}

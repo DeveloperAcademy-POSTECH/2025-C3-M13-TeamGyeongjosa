@@ -7,39 +7,53 @@
 import SwiftUI
 
 struct ShowPartyMemberView: View {
-    @StateObject private var viewModel: ShowPartyMemberViewModel
-    @State private var selectedMember: PartyMember? = nil
-    
-    init(viewModel: ShowPartyMemberViewModel) {
-        _viewModel = StateObject(wrappedValue: viewModel)
-    }
+    @ObservedObject var viewModel: ShowPartyMemberViewModel
     
     var body: some View {
-        VStack(spacing: 0) {
-            NavigationBar {
-                viewModel.goBack()
-            }
-            Text(viewModel.party.name)
-                .font(GSFont.title1)
-                .foregroundColor(GSColor.black)
-                .padding(.top, 30)
-            
-            PartyCardDetailContainerView(
-                party: viewModel.party,
-                onSelect: { member in
-                    selectedMember = member
+        ZStack {
+            VStack {
+                NavigationBar {
+                    viewModel.goBack()
                 }
-            )
-        }
-        .overlay {
-            if let selected = selectedMember {
-                ShowPartyFlowers(
-                    member: selected,
-                    onDismiss: {
-                        selectedMember = nil
+                
+                ShowPartyNameView(partyName: viewModel.partyName)
+                
+                let noMoneyMembers = viewModel.membersWithoutMoney()
+                
+                if let leader = noMoneyMembers.leader {
+                    ShowPartyCardView(
+                        leader: leader,
+                        participants: noMoneyMembers.participants,
+                        onMemberTapped: { tappedMember in
+                            viewModel.selectedMember = tappedMember
+                        }
+                    )
+                    .padding(.top, 24)
+                    .padding(.horizontal, 16)
+                }
+                
+                Spacer()
+            }
+            
+            if let selected = viewModel.selectedMember {
+                let parsed = viewModel.parseFlowerstandPath(selected.flowerstandPath)
+                
+                Color.black.opacity(0.4)
+                    .ignoresSafeArea()
+                    .onTapGesture {
+                        viewModel.selectedMember = nil
                     }
+                
+                FinishFlowerstandCard(
+                    selectedColor: parsed.color,
+                    selectedFlower: parsed.flower,
+                    partyName: viewModel.partyName,
+                    ribbonText: selected.message
                 )
+                .transition(.scale)
+                .zIndex(1)
             }
         }
+        .animation(.easeInOut, value: viewModel.selectedMember)
     }
 }

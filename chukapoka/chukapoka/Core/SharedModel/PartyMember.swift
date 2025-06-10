@@ -16,7 +16,7 @@ final class PartyMember: Identifiable {
     var name: String
     var accountNumber: String
     var phoneNumber: String
-    var money: Int
+    var money: Int?
     var message: String
     var flowerstandPath: String
     
@@ -30,7 +30,7 @@ final class PartyMember: Identifiable {
         name: String,
         accountNumber: String,
         phoneNumber: String,
-        money: Int,
+        money: Int?,
         message: String,
         flowerstandPath: String,
         party: Party? = nil
