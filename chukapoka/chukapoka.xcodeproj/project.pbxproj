@@ -739,7 +739,6 @@
 				D56CD4032DEF3BED002267B1 /* GSImage.swift */,
 				D574E9DB2DED8E2900AAF70F /* GSColor.swift */,
 				D574E9D92DED8A5C00AAF70F /* GSFont.swift */,
-				D574E9AF2DED7F8A00AAF70F /* Components */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
@@ -830,6 +829,7 @@
 		D59F7C5A2DEAF24500A829A8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				D574E9AF2DED7F8A00AAF70F /* Components */,
 				38A09B512DF4318C0066E434 /* TextRecognition */,
 				CA5EAADE2DF5646E00690A03 /* Extensions */,
 				D51C80D12DEF6B620051CB40 /* SharedModel */,

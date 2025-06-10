@@ -75,7 +75,7 @@ final class MemberJoinViewModel: ObservableObject {
     var isNextEnabled: Bool {
         switch state.step {
         case .info:
-            return !state.name.isEmpty || !state.accountNumber.isEmpty || state.phoneNumber.count == 11
+            return !state.name.isEmpty || !state.accountNumber.isEmpty || state.phoneNumber.filter(\.isNumber).count == 11
         case .money:
             return state.amount ?? 0 > 0
         case .decorate:
@@ -97,7 +97,7 @@ final class MemberJoinViewModel: ObservableObject {
         case .updateName(let name):
             state.name = name
         case .updatePhone(let phone):
-            state.phoneNumber = phone
+            state.phoneNumber = formatPhoneNumberInput(phone)
         case .updateAccount(let acc):
             state.accountNumber = acc
         case .updateAmount(let text):
@@ -173,13 +173,24 @@ final class MemberJoinViewModel: ObservableObject {
     }
     
     func isValidPhone(_ phone: String) -> Bool {
+        let numericPhone = phone.filter(\.isNumber)
         let regex = "^01[0-9]{8,9}$"
-        return NSPredicate(format: "SELF MATCHES %@", regex).evaluate(with: phone)
+        return NSPredicate(format: "SELF MATCHES %@", regex).evaluate(with: numericPhone)
     }
     
     func validateFields() {
         state.isNameValid = isValidKoreanName(state.name)
         state.isPhoneValid = isValidPhone(state.phoneNumber)
         state.isAccountValid = !state.accountNumber.isEmpty
+    }
+    
+    func formatPhoneNumberInput(_ input: String) -> String {
+        let digits = input.filter { $0.isNumber }.prefix(11)
+        var result = ""
+        for (index, char) in digits.enumerated() {
+            if index == 3 || index == 7 { result.append("-") }
+            result.append(char)
+        }
+        return result
     }
 }
