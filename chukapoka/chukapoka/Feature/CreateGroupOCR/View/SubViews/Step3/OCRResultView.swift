@@ -30,12 +30,6 @@ struct OCRResultView: View {
         CustomProgressView(progress: 0.6).padding(.bottom, 30)
 
         VStack(spacing: 0) {
-//            NavigationBar {
-//                //ocrviewModel.goToPreviousStep()
-//                currentStep = .photoPicker
-//            }
-//            CustomProgressView(progress: viewModel.progressRate)
-//                .padding(.bottom, 30)
             ZStack{
                 ScrollView {
                     VStack(alignment: .leading, spacing: 32) {
@@ -45,31 +39,24 @@ struct OCRResultView: View {
                             .foregroundColor(GSColor.black)
                         CustomTextField(
                             title: "받는 분",
-                            placeholder: "ex) 김신부",
+                            placeholder: "화환을 받는 분의 이름을 입력해주세요",
                             text: $viewModel.receiverName,
                             isValid: $viewModel.isReceiverNameValid
                         )
                         CustomTextField(
                             title: "은행",
-                            placeholder: "ex) 카카오뱅크",
+                            placeholder: "모바일 청첩장에 있는 은행을 알려주세요",
                             text: $viewModel.receiverBank,
                             isValid: $viewModel.isReceiverBankValid
                         )
                         
                         CustomTextField(
                             title: "계좌번호",
-                            placeholder: "계좌번호 입력",
+                            placeholder: "모바일 청첩장에 있는 계좌번호를 알려주세요",
                             text: $viewModel.receiverAccount,
                             isValid: $viewModel.isReceiverAccountValid
                         )
                         .keyboardType(.numberPad)
-
-//                        CustomTextField(
-//                            title: "모임명",
-//                            placeholder: "어떤 모임에서 화환을 전달하나요?",
-//                            text: $viewModel.partyName,
-//                            isValid: $viewModel.isPartyNameValid
-//                        )
                         CustomTextField(
                             title: "결혼식 장소",
                             placeholder: "결혼식 장소를 입력해주세요",
@@ -119,7 +106,7 @@ struct OCRResultView: View {
             .padding(.horizontal, 16)
             .padding(.bottom, 30)
         }
-        //.navigationBarBackButtonHidden(true)
+        .navigationBarBackButtonHidden(true)
         .onTapGesture {
             self.endTextEditing()
         }

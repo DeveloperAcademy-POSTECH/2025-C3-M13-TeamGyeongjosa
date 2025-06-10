@@ -15,7 +15,7 @@ struct InvitationOCRView: View {
         case photoPicker
         case scan
         case result
-        case group
+        case info
     }
     
     var body: some View {
@@ -31,10 +31,10 @@ struct InvitationOCRView: View {
                 }
             case .result:
                 OCRResultView(viewModel: viewModel, ocrViewModel: ocrViewModel, currentStep: $currentStep,
-                              onNext: {currentStep = .group}
+                              onNext: {currentStep = .info}
                 )
-            case .group:
-                CreateGroupView(viewModel: viewModel)
+            case .info:
+                MyinfoView(viewModel: viewModel)
             }
         }
         .onChange(of: ocrViewModel.selectedItem) { _, newItem in
