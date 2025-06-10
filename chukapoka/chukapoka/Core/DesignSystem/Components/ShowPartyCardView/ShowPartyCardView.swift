@@ -23,12 +23,12 @@ struct ShowPartyCardView: View {
             Button(action: {
                 UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
                 onLeaderTapped?()
-            }) {
+            }, label: {
                 ShowPartyLeaderView(
                     name: leader.name,
                     money: leader.money
                 )
-            }
+            })
             .buttonStyle(PlainButtonStyle())
             .padding(.top, 8)
             
@@ -40,16 +40,18 @@ struct ShowPartyCardView: View {
             ScrollView(showsIndicators: false) {
                 VStack(spacing: 8) {
                     ForEach(participants) { member in
-                        Button {
+                        Button(action: {
+                            UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
                             onMemberTapped?(member)
-                        } label: {
+                        }, label: {
                             ShowPartyLeaderView(
                                 name: member.name,
                                 money: member.money
                             )
-                        }
+                        })
                     }
                 }
+                
                 .background(
                     GeometryReader { geo in
                         Color.clear
