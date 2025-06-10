@@ -137,6 +137,7 @@
 		D5ED63172DED427B007912E1 /* RootNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED63162DED427B007912E1 /* RootNavigationView.swift */; };
 		D5EFEACE2DF8926500CD71D9 /* ShowPartyCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EFEACD2DF8925C00CD71D9 /* ShowPartyCardView.swift */; };
 		D5EFEAD22DF8956B00CD71D9 /* ShowPartyLeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EFEAD12DF8954C00CD71D9 /* ShowPartyLeaderView.swift */; };
+		D5EFEAD82DF8A89500CD71D9 /* ConfettiParticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EFEAD72DF8A88B00CD71D9 /* ConfettiParticleView.swift */; };
 		D5F2EDB72DF5E254003D1291 /* HomeCardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F2EDB62DF5E24B003D1291 /* HomeCardScrollView.swift */; };
 		D5F2EDB92DF5E6B7003D1291 /* SingleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F2EDB82DF5E6B3003D1291 /* SingleCardView.swift */; };
 		D5F2EDBB2DF5E6CB003D1291 /* MultiCardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F2EDBA2DF5E6C1003D1291 /* MultiCardScrollView.swift */; };
@@ -299,6 +300,7 @@
 		D5ED63162DED427B007912E1 /* RootNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationView.swift; sourceTree = "<group>"; };
 		D5EFEACD2DF8925C00CD71D9 /* ShowPartyCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPartyCardView.swift; sourceTree = "<group>"; };
 		D5EFEAD12DF8954C00CD71D9 /* ShowPartyLeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPartyLeaderView.swift; sourceTree = "<group>"; };
+		D5EFEAD72DF8A88B00CD71D9 /* ConfettiParticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfettiParticleView.swift; sourceTree = "<group>"; };
 		D5F2EDB62DF5E24B003D1291 /* HomeCardScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCardScrollView.swift; sourceTree = "<group>"; };
 		D5F2EDB82DF5E6B3003D1291 /* SingleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCardView.swift; sourceTree = "<group>"; };
 		D5F2EDBA2DF5E6C1003D1291 /* MultiCardScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiCardScrollView.swift; sourceTree = "<group>"; };
@@ -725,6 +727,7 @@
 		D5565D892DF88E1F00187DDD /* SubView */ = {
 			isa = PBXGroup;
 			children = (
+				D5EFEAD72DF8A88B00CD71D9 /* ConfettiParticleView.swift */,
 				D5565D8A2DF88E3900187DDD /* ShowPartyNameView.swift */,
 			);
 			path = SubView;
@@ -1208,6 +1211,7 @@
 				D595C30C2DF3766000F484A1 /* FlowerLoadingViewModel.swift in Sources */,
 				D59F7C562DEAF20600A829A8 /* chukapokaApp.swift in Sources */,
 				CA0B87F02DF021F50001F120 /* FlowerstandStep1.swift in Sources */,
+				D5EFEAD82DF8A89500CD71D9 /* ConfettiParticleView.swift in Sources */,
 				D5B38C3C2DF045FB005DAFDC /* PartyCardActionIcons.swift in Sources */,
 				38A09B532DF431AC0066E434 /* OCRManager.swift in Sources */,
 				D574E9DC2DED8E2E00AAF70F /* GSColor.swift in Sources */,
