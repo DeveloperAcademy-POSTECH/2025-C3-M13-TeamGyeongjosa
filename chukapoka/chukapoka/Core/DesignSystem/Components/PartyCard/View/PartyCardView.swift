@@ -14,6 +14,7 @@ struct PartyCardView: View {
     let state: PartyCardState
     let onTapPhoto: (() -> Void)?
     let onTapClose: (() -> Void)?
+    let onTapCheckParty: (() -> Void)?
     
     init(
         name: String,
@@ -22,7 +23,8 @@ struct PartyCardView: View {
         weddingPlace: String,
         state: PartyCardState,
         onTapPhoto: (() -> Void)? = nil,
-        onTapClose: (() -> Void)? = nil
+        onTapClose: (() -> Void)? = nil,
+        onTapCheckParty: (() -> Void)? = nil
     ) {
         self.name = name
         self.groupName = groupName
@@ -31,6 +33,8 @@ struct PartyCardView: View {
         self.state = state
         self.onTapPhoto = onTapPhoto
         self.onTapClose = onTapClose
+        self.onTapCheckParty = onTapCheckParty
+        
     }
     
     var body: some View {
@@ -42,7 +46,8 @@ struct PartyCardView: View {
                 weddingPlace: weddingPlace,
                 state: state,
                 onTapPhoto: onTapPhoto,
-                onTapClose: onTapClose
+                onTapClose: onTapClose,
+                onTapCheckParty: onTapCheckParty
             )
         }
     }

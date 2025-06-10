@@ -44,6 +44,9 @@ struct RootNavigationView: View {
                     case .loadingFlowerstandDone:
                         FlowerLoadingView(viewModel: FlowerLoadingViewModel(coordinator: coordinator))
                             .navigationBarHidden(true)
+                    case .showPartyMember(let party):
+                        ShowPartyMemberView(viewModel: ShowPartyMemberViewModel(coordinator: coordinator, party: party))
+                            .navigationBarHidden(true)
                     }
                 }
         }

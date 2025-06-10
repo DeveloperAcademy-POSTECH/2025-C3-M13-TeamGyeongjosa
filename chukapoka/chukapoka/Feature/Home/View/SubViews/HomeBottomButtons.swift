@@ -12,8 +12,8 @@ struct HomeBottomButtons: View {
     
     var body: some View {
         PairButton(
-            leftTitle: "파티장으로 참여하기",
-            rightTitle: "파티원으로 참여하기",
+            leftTitle: "그룹 생성하기",
+            rightTitle: "코드로 참여하기",
             leftStyle: .custom(
                 textColor: GSColor.primary,
                 backgroundColor: GSColor.secondary3,
