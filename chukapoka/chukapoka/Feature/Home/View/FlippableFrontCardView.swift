@@ -16,6 +16,7 @@ struct FlippableFrontCardView: View {
     let height: CGFloat
     let onTapPhoto: (() -> Void)?
     let onTapClose: (() -> Void)?
+    let onTapCheckParty: (() -> Void)?
 
     var body: some View {
         PartyCardView(
@@ -25,7 +26,8 @@ struct FlippableFrontCardView: View {
             weddingPlace: weddingPlace,
             state: state,
             onTapPhoto: onTapPhoto,
-            onTapClose: onTapClose
+            onTapClose: onTapClose,
+            onTapCheckParty: onTapCheckParty
         )
         .frame(height: height)
     }

@@ -14,11 +14,11 @@ struct ReceiveCongratsCardBackView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 61) {
-            if let leader = leader {
+            if let leader = leader, let money = leader.money {
                 CardMemberListLeaderSection(
                     role: "주최자",
                     name: leader.name,
-                    money: leader.money
+                    money: money
                 )
             }
             

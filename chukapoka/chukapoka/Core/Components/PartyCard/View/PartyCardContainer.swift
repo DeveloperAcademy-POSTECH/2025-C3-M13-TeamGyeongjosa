@@ -15,6 +15,7 @@ struct PartyCardContainer: View {
     let state: PartyCardState
     let onTapPhoto: (() -> Void)?
     let onTapClose: (() -> Void)?
+    let onTapCheckParty: (() -> Void)?
 
     var body: some View {
         VStack(spacing: 0) {
@@ -40,7 +41,9 @@ struct PartyCardContainer: View {
             )
             .padding(.bottom, 16)
 
-            PrimaryButton(title: "파티 확인하기")
+            PrimaryButton(title: "파티 확인하기") {
+                onTapCheckParty?()
+            }
         }
         .padding(16)
         .background(PartyCardBackground())

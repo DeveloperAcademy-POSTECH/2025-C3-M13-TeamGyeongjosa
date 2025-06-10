@@ -36,6 +36,9 @@ struct MemberInfoView: View {
                     title: "연락처",
                     placeholder: "010-1234-5678",
                     text: viewModel.bindingSenderPhone,
+                    action: {
+                        viewModel.send(.updatePhone(viewModel.state.phoneNumber))
+                    },
                     isValid: viewModel.bindingIsSenderPhoneValid
                 )
                 .keyboardType(.numberPad)

@@ -19,7 +19,9 @@ extension MemberJoinViewModel {
     var bindingSenderPhone: Binding<String> {
         Binding(
             get: { self.state.phoneNumber },
-            set: { self.send(.updatePhone($0)) }
+            set: { newValue in
+                self.send(.updatePhone(newValue))
+            }
         )
     }
     

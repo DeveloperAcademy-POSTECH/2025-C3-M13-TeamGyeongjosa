@@ -15,7 +15,7 @@ struct CardMemberListMemberSectionScrollView: View {
             ForEach(members, id: \.self) { member in
                 CardMemberListItem(
                     name: member.name,
-                    money: member.money
+                    money: member.money!
                 )
             }
         }

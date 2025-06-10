@@ -12,6 +12,7 @@ struct MultiCardScrollView: View {
     @Binding var currentIndex: Int
     @GestureState var dragOffset: CGFloat
     @Environment(\.modelContext) private var modelContext
+    @EnvironmentObject var coordinator: AppCoordinator
     
     let screenWidth: CGFloat
     let cardWidth: CGFloat
@@ -48,6 +49,9 @@ struct MultiCardScrollView: View {
                     },
                     onCopy: {
                         onCopy()
+                    },
+                    onTapCheckParty: {
+                        coordinator.push(.showPartyMember(party: parties[index]))
                     }
                 )
                 .frame(width: cardWidth)

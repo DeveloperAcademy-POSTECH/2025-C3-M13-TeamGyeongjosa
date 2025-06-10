@@ -88,6 +88,9 @@
 		D5565D602DF6D26800187DDD /* MemberLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5565D5F2DF6D25C00187DDD /* MemberLoadingView.swift */; };
 		D5565D622DF6D27C00187DDD /* MemberLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5565D612DF6D27700187DDD /* MemberLoadingViewModel.swift */; };
 		D5565D642DF6D95500187DDD /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5565D632DF6D95100187DDD /* ToastView.swift */; };
+		D5565D692DF84B9A00187DDD /* ShowPartyMemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5565D682DF84B8E00187DDD /* ShowPartyMemberView.swift */; };
+		D5565D882DF88A8D00187DDD /* ShowPartyMemberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5565D872DF88A8400187DDD /* ShowPartyMemberViewModel.swift */; };
+		D5565D8B2DF88E4200187DDD /* ShowPartyNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5565D8A2DF88E3900187DDD /* ShowPartyNameView.swift */; };
 		D56CD4042DEF3BFD002267B1 /* GSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56CD4032DEF3BED002267B1 /* GSImage.swift */; };
 		D574E9B12DED7FA000AAF70F /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D574E9B02DED7F9400AAF70F /* PrimaryButton.swift */; };
 		D574E9D02DED897A00AAF70F /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = D574E9C62DED897A00AAF70F /* Pretendard-Black.otf */; };
@@ -133,6 +136,9 @@
 		D5E9ADA12DF5DC0700CDB444 /* FlippableBackCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E9ADA02DF5DBFF00CDB444 /* FlippableBackCardView.swift */; };
 		D5E9FCD02DF2E145000859A6 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E9FCCF2DF2E140000859A6 /* NavigationBar.swift */; };
 		D5ED63172DED427B007912E1 /* RootNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED63162DED427B007912E1 /* RootNavigationView.swift */; };
+		D5EFEACE2DF8926500CD71D9 /* ShowPartyCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EFEACD2DF8925C00CD71D9 /* ShowPartyCardView.swift */; };
+		D5EFEAD22DF8956B00CD71D9 /* ShowPartyLeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EFEAD12DF8954C00CD71D9 /* ShowPartyLeaderView.swift */; };
+		D5EFEAD82DF8A89500CD71D9 /* ConfettiParticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EFEAD72DF8A88B00CD71D9 /* ConfettiParticleView.swift */; };
 		D5F2EDB72DF5E254003D1291 /* HomeCardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F2EDB62DF5E24B003D1291 /* HomeCardScrollView.swift */; };
 		D5F2EDB92DF5E6B7003D1291 /* SingleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F2EDB82DF5E6B3003D1291 /* SingleCardView.swift */; };
 		D5F2EDBB2DF5E6CB003D1291 /* MultiCardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F2EDBA2DF5E6C1003D1291 /* MultiCardScrollView.swift */; };
@@ -241,6 +247,9 @@
 		D5565D5F2DF6D25C00187DDD /* MemberLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberLoadingView.swift; sourceTree = "<group>"; };
 		D5565D612DF6D27700187DDD /* MemberLoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberLoadingViewModel.swift; sourceTree = "<group>"; };
 		D5565D632DF6D95100187DDD /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		D5565D682DF84B8E00187DDD /* ShowPartyMemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPartyMemberView.swift; sourceTree = "<group>"; };
+		D5565D872DF88A8400187DDD /* ShowPartyMemberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPartyMemberViewModel.swift; sourceTree = "<group>"; };
+		D5565D8A2DF88E3900187DDD /* ShowPartyNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPartyNameView.swift; sourceTree = "<group>"; };
 		D56CD4032DEF3BED002267B1 /* GSImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSImage.swift; sourceTree = "<group>"; };
 		D574E9B02DED7F9400AAF70F /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		D574E9C52DED890000AAF70F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -291,6 +300,9 @@
 		D5E9ADA02DF5DBFF00CDB444 /* FlippableBackCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlippableBackCardView.swift; sourceTree = "<group>"; };
 		D5E9FCCF2DF2E140000859A6 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		D5ED63162DED427B007912E1 /* RootNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationView.swift; sourceTree = "<group>"; };
+		D5EFEACD2DF8925C00CD71D9 /* ShowPartyCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPartyCardView.swift; sourceTree = "<group>"; };
+		D5EFEAD12DF8954C00CD71D9 /* ShowPartyLeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPartyLeaderView.swift; sourceTree = "<group>"; };
+		D5EFEAD72DF8A88B00CD71D9 /* ConfettiParticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfettiParticleView.swift; sourceTree = "<group>"; };
 		D5F2EDB62DF5E24B003D1291 /* HomeCardScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCardScrollView.swift; sourceTree = "<group>"; };
 		D5F2EDB82DF5E6B3003D1291 /* SingleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCardView.swift; sourceTree = "<group>"; };
 		D5F2EDBA2DF5E6C1003D1291 /* MultiCardScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiCardScrollView.swift; sourceTree = "<group>"; };
@@ -713,13 +725,31 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		D5565D672DF84B8300187DDD /* ShowParty */ = {
+			isa = PBXGroup;
+			children = (
+				D5565D682DF84B8E00187DDD /* ShowPartyMemberView.swift */,
+				D5565D892DF88E1F00187DDD /* SubView */,
+				D5565D872DF88A8400187DDD /* ShowPartyMemberViewModel.swift */,
+			);
+			path = ShowParty;
+			sourceTree = "<group>";
+		};
+		D5565D892DF88E1F00187DDD /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				D5EFEAD72DF8A88B00CD71D9 /* ConfettiParticleView.swift */,
+				D5565D8A2DF88E3900187DDD /* ShowPartyNameView.swift */,
+			);
+			path = SubView;
+			sourceTree = "<group>";
+		};
 		D574E9AD2DED7F6A00AAF70F /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
 				D56CD4032DEF3BED002267B1 /* GSImage.swift */,
 				D574E9DB2DED8E2900AAF70F /* GSColor.swift */,
 				D574E9D92DED8A5C00AAF70F /* GSFont.swift */,
-				D574E9AF2DED7F8A00AAF70F /* Components */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
@@ -727,6 +757,7 @@
 		D574E9AF2DED7F8A00AAF70F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D5EFEACC2DF8924700CD71D9 /* ShowPartyCardView */,
 				D5B38C362DF04079005DAFDC /* PartyCard */,
 				D5951AFF2DEFF68C006863B6 /* CustomTextField.swift */,
 				D5E9FCCF2DF2E140000859A6 /* NavigationBar.swift */,
@@ -809,6 +840,7 @@
 		D59F7C5A2DEAF24500A829A8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				D574E9AF2DED7F8A00AAF70F /* Components */,
 				38A09B512DF4318C0066E434 /* TextRecognition */,
 				CA5EAADE2DF5646E00690A03 /* Extensions */,
 				D51C80D12DEF6B620051CB40 /* SharedModel */,
@@ -839,6 +871,7 @@
 				CA0B87EA2DF021300001F120 /* CreateFlowerstand */,
 				D59F7C7B2DEB00C800A829A8 /* EnterGroup */,
 				D5565D482DF677A800187DDD /* JoinGroup */,
+				D5565D672DF84B8300187DDD /* ShowParty */,
 				D5F710B72DF2971F00F2CE3B /* Loading */,
 			);
 			path = Feature;
@@ -859,6 +892,7 @@
 			children = (
 				D59F7C772DEB005E00A829A8 /* HomeView.swift */,
 				D5E9AD932DF5A90600CDB444 /* View */,
+				D5F2EDBF2DF5EFDF003D1291 /* ViewModel */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -940,9 +974,25 @@
 				D5E9ADA02DF5DBFF00CDB444 /* FlippableBackCardView.swift */,
 				D5E9AD9E2DF5DBD000CDB444 /* FlippableFrontCardView.swift */,
 				D51C80C12DEF47740051CB40 /* SubViews */,
-				D5F2EDBF2DF5EFDF003D1291 /* ViewModel */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		D5EFEACC2DF8924700CD71D9 /* ShowPartyCardView */ = {
+			isa = PBXGroup;
+			children = (
+				D5EFEACD2DF8925C00CD71D9 /* ShowPartyCardView.swift */,
+				D5EFEAD02DF8954500CD71D9 /* SubView */,
+			);
+			path = ShowPartyCardView;
+			sourceTree = "<group>";
+		};
+		D5EFEAD02DF8954500CD71D9 /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				D5EFEAD12DF8954C00CD71D9 /* ShowPartyLeaderView.swift */,
+			);
+			path = SubView;
 			sourceTree = "<group>";
 		};
 		D5F2EDBF2DF5EFDF003D1291 /* ViewModel */ = {
@@ -1172,10 +1222,12 @@
 				D595C30C2DF3766000F484A1 /* FlowerLoadingViewModel.swift in Sources */,
 				D59F7C562DEAF20600A829A8 /* chukapokaApp.swift in Sources */,
 				CA0B87F02DF021F50001F120 /* FlowerstandStep1.swift in Sources */,
+				D5EFEAD82DF8A89500CD71D9 /* ConfettiParticleView.swift in Sources */,
 				D5B38C3C2DF045FB005DAFDC /* PartyCardActionIcons.swift in Sources */,
 				38A09B532DF431AC0066E434 /* OCRManager.swift in Sources */,
 				D574E9DC2DED8E2E00AAF70F /* GSColor.swift in Sources */,
 				D5B38C642DF0AB04005DAFDC /* PartyCardBackContainer.swift in Sources */,
+				D5565D882DF88A8D00187DDD /* ShowPartyMemberViewModel.swift in Sources */,
 				D5565D4A2DF677CE00187DDD /* JoinGroupView.swift in Sources */,
 				CA5EAAE02DF5648300690A03 /* View+Extension.swift in Sources */,
 				D5565D5C2DF6B75200187DDD /* MemberJoinViewModel+Binding.swift in Sources */,
@@ -1190,6 +1242,7 @@
 				D5B38C402DF04733005DAFDC /* PartyCardInfoText.swift in Sources */,
 				38AA40C92DF38D27004D5EC9 /* PhotoPickerView.swift in Sources */,
 				D5E9ADA12DF5DC0700CDB444 /* FlippableBackCardView.swift in Sources */,
+				D5EFEACE2DF8926500CD71D9 /* ShowPartyCardView.swift in Sources */,
 				38AA40C92DF38D27004D5EC9 /* PhotoPickerView.swift in Sources */,
 				D5F710AE2DF13C9D00F2CE3B /* CreateFlowerstandViewModel.swift in Sources */,
 				CA5EAA632DF2C34200690A03 /* CustomProgressView.swift in Sources */,
@@ -1224,6 +1277,7 @@
 				38A09B672DF59B3F0066E434 /* OCRTextParser.swift in Sources */,
 				D59F7C782DEB006200A829A8 /* HomeView.swift in Sources */,
 				CA5EAA4A2DF2C06F00690A03 /* CreateGroupView.swift in Sources */,
+				D5EFEAD22DF8956B00CD71D9 /* ShowPartyLeaderView.swift in Sources */,
 				38AA40CC2DF38D44004D5EC9 /* OCRViewModel.swift in Sources */,
 				CA0B87F22DF022070001F120 /* FlowerstandStep2.swift in Sources */,
 				CA5EAAD82DF4897400690A03 /* FlowerstandCardItem.swift in Sources */,
@@ -1239,6 +1293,7 @@
 				CA2C4A4B2DF0525000D8E170 /* CardDecorationPicker.swift in Sources */,
 				38A09B652DF578B90066E434 /* PhotoScanView.swift in Sources */,
 				D51C80C52DEF482A0051CB40 /* HomeChracterImage.swift in Sources */,
+				D5565D692DF84B9A00187DDD /* ShowPartyMemberView.swift in Sources */,
 				D5B38C442DF0475A005DAFDC /* PartyCardStyle.swift in Sources */,
 				D5F2EDBE2DF5E798003D1291 /* MultiCardViewModel.swift in Sources */,
 				D5E9FCD02DF2E145000859A6 /* NavigationBar.swift in Sources */,
@@ -1270,6 +1325,7 @@
 				D5E9AD922DF5A7E400CDB444 /* HomeNormalView.swift in Sources */,
 				D574E9DE2DEDEE3500AAF70F /* PairButton.swift in Sources */,
 				CA5EAAD12DF483DC00690A03 /* FlowerstandCard.swift in Sources */,
+				D5565D8B2DF88E4200187DDD /* ShowPartyNameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1431,6 +1487,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = L9AQ48UJ68;
+				DEVELOPMENT_TEAM = 9S8SHSW95K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = chukapoka/Info.plist;
@@ -1461,6 +1518,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = L9AQ48UJ68;
+				DEVELOPMENT_TEAM = 9S8SHSW95K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = chukapoka/Info.plist;

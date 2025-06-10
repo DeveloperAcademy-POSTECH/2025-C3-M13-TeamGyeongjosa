@@ -12,6 +12,7 @@ struct SingleCardView: View {
     let width: CGFloat
     let onTapClose: () -> Void
     let onCopy: () -> Void
+    @EnvironmentObject var coordinator: AppCoordinator
     
     var body: some View {
         FlippableCardView(
@@ -25,6 +26,9 @@ struct SingleCardView: View {
             onTapClose: onTapClose,
             onCopy: {
                 onCopy()
+            },
+            onTapCheckParty: {
+                coordinator.push(.showPartyMember(party: party))
             }
         )
         .frame(width: width)

@@ -18,6 +18,7 @@ struct FlippableCardView: View {
     let onTapPhoto: (() -> Void)?
     let onTapClose: (() -> Void)?
     let onCopy: (() -> Void)?
+    let onTapCheckParty: (() -> Void)?
     
     @State private var isFlipped: Bool = false
     @State private var copiedText: String?
@@ -32,7 +33,8 @@ struct FlippableCardView: View {
                 state: state,
                 height: height,
                 onTapPhoto: onTapPhoto,
-                onTapClose: onTapClose
+                onTapClose: onTapClose,
+                onTapCheckParty: onTapCheckParty
             )
             .opacity(isFlipped ? 0.0 : 1.0)
             .rotation3DEffect(.degrees(isFlipped ? 180 : 0), axis: (x: 0, y: 1, z: 0))
