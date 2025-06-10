@@ -24,13 +24,18 @@ struct OCRResultView: View {
     
     var onNext: () -> Void
     var body: some View {
+        NavigationBar {
+            viewModel.goToPreviousStep()
+        }
+        CustomProgressView(progress: 0.6).padding(.bottom, 30)
+
         VStack(spacing: 0) {
-            NavigationBar {
-                //ocrviewModel.goToPreviousStep()
-                currentStep = .photoPicker
-            }
-            CustomProgressView(progress: viewModel.progressRate)
-                .padding(.bottom, 30)
+//            NavigationBar {
+//                //ocrviewModel.goToPreviousStep()
+//                currentStep = .photoPicker
+//            }
+//            CustomProgressView(progress: viewModel.progressRate)
+//                .padding(.bottom, 30)
             ZStack{
                 ScrollView {
                     VStack(alignment: .leading, spacing: 32) {
@@ -39,11 +44,32 @@ struct OCRResultView: View {
                             .lineSpacing(12)
                             .foregroundColor(GSColor.black)
                         CustomTextField(
-                            title: "모임명",
-                            placeholder: "어떤 모임에서 화환을 전달하나요?",
-                            text: $viewModel.partyName,
-                            isValid: $viewModel.isPartyNameValid
+                            title: "받는 분",
+                            placeholder: "ex) 김신부",
+                            text: $viewModel.receiverName,
+                            isValid: $viewModel.isReceiverNameValid
                         )
+                        CustomTextField(
+                            title: "은행",
+                            placeholder: "ex) 카카오뱅크",
+                            text: $viewModel.receiverBank,
+                            isValid: $viewModel.isReceiverBankValid
+                        )
+                        
+                        CustomTextField(
+                            title: "계좌번호",
+                            placeholder: "계좌번호 입력",
+                            text: $viewModel.receiverAccount,
+                            isValid: $viewModel.isReceiverAccountValid
+                        )
+                        .keyboardType(.numberPad)
+
+//                        CustomTextField(
+//                            title: "모임명",
+//                            placeholder: "어떤 모임에서 화환을 전달하나요?",
+//                            text: $viewModel.partyName,
+//                            isValid: $viewModel.isPartyNameValid
+//                        )
                         CustomTextField(
                             title: "결혼식 장소",
                             placeholder: "결혼식 장소를 입력해주세요",
@@ -67,6 +93,10 @@ struct OCRResultView: View {
                             isValid: $viewModel.isTimeValid
                         )
                         .keyboardType(.numberPad)
+                        Text("결혼식 D-day에 맞춰 모인 축의금이 자동으로 송금돼요!")
+                            .font(GSFont.caption2)
+                            .foregroundStyle(GSColor.gray1)
+                            .frame(maxWidth: .infinity, alignment: .center)
                         .onChange(of: viewModel.weddingTime) {
                             viewModel.weddingTime = viewModel.formatTimeInput(viewModel.weddingTime)
                         }
