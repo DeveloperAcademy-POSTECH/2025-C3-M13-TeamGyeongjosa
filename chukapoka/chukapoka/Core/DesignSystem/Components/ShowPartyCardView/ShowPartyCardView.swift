@@ -9,6 +9,7 @@ import SwiftUI
 struct ShowPartyCardView: View {
     let leader: PartyMember
     let participants: [PartyMember]
+    var onLeaderTapped: (() -> Void)?
     var onMemberTapped: ((PartyMember) -> Void)?
     
     @State private var contentHeight: CGFloat = 0
@@ -19,10 +20,16 @@ struct ShowPartyCardView: View {
                 .font(GSFont.body1)
                 .foregroundColor(GSColor.secondary3)
                 .padding(.top, 10)
-            ShowPartyLeaderView(
-                name: leader.name,
-                money: leader.money
-            )
+            Button(action: {
+                UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                onLeaderTapped?()
+            }) {
+                ShowPartyLeaderView(
+                    name: leader.name,
+                    money: leader.money
+                )
+            }
+            .buttonStyle(PlainButtonStyle())
             .padding(.top, 8)
             
             Text("참여자 (\(participants.count)명)")

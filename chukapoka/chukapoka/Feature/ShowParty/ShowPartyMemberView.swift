@@ -24,6 +24,9 @@ struct ShowPartyMemberView: View {
                     ShowPartyCardView(
                         leader: leader,
                         participants: noMoneyMembers.participants,
+                        onLeaderTapped: {
+                            viewModel.selectedMember = leader
+                        },
                         onMemberTapped: { tappedMember in
                             viewModel.selectedMember = tappedMember
                         }
