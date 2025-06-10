@@ -21,7 +21,7 @@ struct ShowPartyCardView: View {
                 .foregroundColor(GSColor.secondary3)
                 .padding(.top, 10)
             Button(action: {
-                UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
                 onLeaderTapped?()
             }) {
                 ShowPartyLeaderView(
