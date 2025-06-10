@@ -33,7 +33,7 @@ struct OCRResultView: View {
             ZStack{
                 ScrollView {
                     VStack(alignment: .leading, spacing: 32) {
-                        Text("입력된 정보가 정확한지 \n 다시 한 번 확인해주세요")
+                        Text("입력된 정보가 정확한지 \n다시 한 번 확인해주세요")
                             .font(GSFont.title2)
                             .lineSpacing(12)
                             .foregroundColor(GSColor.black)

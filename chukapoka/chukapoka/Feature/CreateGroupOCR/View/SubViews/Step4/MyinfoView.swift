@@ -88,6 +88,7 @@ struct MyinfoView: View {
                 style: viewModel.isNextButtonEnabled ? .basic : .disabled,
                 action: {
                     viewModel.handleNext(modelContext: modelContext)
+                    viewModel.currentStep = .step3
                 }
             )
             .padding(.horizontal, 16)
