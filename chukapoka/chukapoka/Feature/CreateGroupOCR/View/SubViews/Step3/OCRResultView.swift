@@ -5,9 +5,6 @@
 //  Created by jenki on 6/8/25.
 //
 
-// TODO: 값만 InfoStep1View 로 보내도록 수정 -> 뒤로가기 이슈 고려
-// TODO: 값만 InfoStep2View 로 보냈을 때 -> 뒤로가기 이슈 고려
-
 import SwiftUI
 
 struct OCRResultView: View {
@@ -115,13 +112,21 @@ struct OCRResultView: View {
                 place = result.place ?? ""
                 date = result.date ?? ""
                 time = result.time ?? ""
-                
+
                 viewModel.weddingPlace = place
                 viewModel.weddingDate = viewModel.formatDateInput(date)
                 viewModel.weddingTime = viewModel.formatTimeInput(time)
-                
+
                 if let bride = result.brideName {
                     viewModel.receiverName = bride
+                }
+
+                if let bank = result.bank {
+                    viewModel.receiverBank = bank
+                }
+
+                if let account = result.accountNumber {
+                    viewModel.receiverAccount = account
                 }
             }
         }

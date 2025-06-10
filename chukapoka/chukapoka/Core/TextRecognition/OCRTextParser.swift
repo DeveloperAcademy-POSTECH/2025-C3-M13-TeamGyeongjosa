@@ -13,6 +13,8 @@ struct OCRResult {
     var date: String?
     var place: String?
     var time: String?
+    var bank: String?
+    var accountNumber: String?
 }
 
 class TextClassifier {
@@ -22,69 +24,71 @@ class TextClassifier {
         for index in lines.indices {
             let line = lines[index].lowercased()
 
-            // MARK: - 신랑, 신부
-            // 신부 이름 추출 (예: "신부 김민지" → "김민지")
+            // MARK: - 신랑/신부 이름 추출
             if result.brideName == nil,
-               let brideRange = lines[index].range(of: "신부") {
-                let afterBride = lines[index][brideRange.upperBound...]
-                    .trimmingCharacters(in: .whitespacesAndNewlines)
-                if !afterBride.isEmpty {
-                    result.brideName = afterBride
-                    print("신부 이름 추출 \(afterBride)")
-                }
+               let name = extractName(from: lines[index], keyword: "신부") {
+                result.brideName = name
             }
-            // 신랑 이름 추출 (예: "신랑 이민수" → "이민수")
             if result.groomName == nil,
-               let groomRange = lines[index].range(of: "신랑") {
-                let afterGroom = lines[index][groomRange.upperBound...]
-                    .trimmingCharacters(in: .whitespacesAndNewlines)
-                if !afterGroom.isEmpty {
-                    result.groomName = afterGroom
-                    print("신랑 이름 추출 \(afterGroom)")
-                }
+               let name = extractName(from: lines[index], keyword: "신랑") {
+                result.groomName = name
             }
-            // "and" 또는 "그리고"가 독립된 라인일 경우 → 전후 줄로 이름 추론
+
+            // 'and' 혹은 '그리고'가 단독일 경우 앞뒤 줄에서 추정
             if (line == "and" || line == "그리고"),
                index > 0, index + 1 < lines.count {
-                let groomCandidate = lines[index - 1].trimmingCharacters(in: .whitespacesAndNewlines)
-                let brideCandidate = lines[index + 1].trimmingCharacters(in: .whitespacesAndNewlines)
-                print("🪄 'and' 탐지: 신랑 → \(groomCandidate), 신부 → \(brideCandidate)")
-                result.groomName = groomCandidate
-                result.brideName = brideCandidate
-                continue
+                result.groomName = lines[index - 1].trimmingCharacters(in: .whitespacesAndNewlines)
+                result.brideName = lines[index + 1].trimmingCharacters(in: .whitespacesAndNewlines)
             }
+
             // MARK: - 날짜
-            // 날짜 추출 및 포맷 변환
             if result.date == nil,
                let dateMatch = lines[index].range(of: #"\d{4}년 \d{1,2}월 \d{1,2}일"#, options: .regularExpression) {
                 let rawDate = String(lines[index][dateMatch])
                 result.date = formatKoreanDateString(rawDate)
             }
+
+            // MARK: - 시간
+            if result.time == nil,
+               let timeMatch = lines[index].range(of: #"(오전|오후|AM|PM|am|pm)\s?\d{1,2}시(?:\s?\d{1,2}분)?"#, options: .regularExpression) {
+                let rawTime = String(lines[index][timeMatch])
+                result.time = formatKoreanTimeString(rawTime)
+            }
+
             // MARK: - 장소
             if result.place == nil,
                lines[index].contains("웨딩") || lines[index].contains("컨벤션") || lines[index].contains("호텔") {
-                // 해당 라인에서 숫자 및 특수문자 제거 → 한글/영어/공백만 남김
-                let filtered = lines[index].replacingOccurrences(
-                    of: #"[^가-힣a-zA-Z0-9\s]"#,  // 숫자(0-9)도 허용
-                    // of: #"[^가-힣a-zA-Z\s]"#,
+                var placeLine = lines[index]
+                if let start = placeLine.first, start.isNumber { placeLine.removeFirst() }
+                if let end = placeLine.last, end.isNumber { placeLine.removeLast() }
+                let filtered = placeLine.replacingOccurrences(
+                    of: #"[^가-힣a-zA-Z0-9\s]"#,
                     with: "",
                     options: .regularExpression
                 ).trimmingCharacters(in: .whitespacesAndNewlines)
                 result.place = filtered
             }
-            // MARK: - 날짜
-            // 시간 추출
-            if result.time == nil {
-                if let timeMatch = lines[index].range(of: #"(오전|오후|AM|PM|am|pm)\s?\d{1,2}시(?:\s?\d{1,2}분)?"#, options: .regularExpression) {
-                    let rawTime = String(lines[index][timeMatch])
-                    result.time = formatKoreanTimeString(rawTime)
+
+            // MARK: - 은행 및 계좌번호
+            if (result.bank == nil || result.accountNumber == nil),
+               lines[index].contains("은행") {
+                let trimmedLine = lines[index].trimmingCharacters(in: .whitespacesAndNewlines)
+                result.bank = extractBankName(from: trimmedLine)
+                
+                // 계좌번호는 같은 줄 또는 다음 줄에서 추출
+                if let accountNumber = extractAccountNumber(from: trimmedLine) {
+                    result.accountNumber = accountNumber
+                } else if index + 1 < lines.count {
+                    result.accountNumber = extractAccountNumber(from: lines[index + 1])
                 }
             }
         }
+
         print("최종 결과: \(result)")
         return result
     }
 
+    // MARK: - 날짜 포맷
     func formatKoreanDateString(_ koreanDate: String) -> String? {
         let inputFormatter = DateFormatter()
         inputFormatter.locale = Locale(identifier: "ko_KR")
@@ -99,18 +103,19 @@ class TextClassifier {
             return nil
         }
     }
-    
+
+    // MARK: - 시간 포맷
     func formatKoreanTimeString(_ koreanTime: String) -> String? {
         let inputFormatter = DateFormatter()
         inputFormatter.locale = Locale(identifier: "ko_KR")
-        inputFormatter.dateFormat = "a h시 m분"  // "오전 11시 30분" 등
+        inputFormatter.dateFormat = "a h시 m분"
 
         let fallbackFormatter = DateFormatter()
         fallbackFormatter.locale = Locale(identifier: "ko_KR")
-        fallbackFormatter.dateFormat = "a h시"  // "오전 11시" 등
+        fallbackFormatter.dateFormat = "a h시"
 
         let outputFormatter = DateFormatter()
-        outputFormatter.dateFormat = "HH:mm"  // ✅ 최종 출력
+        outputFormatter.dateFormat = "HH:mm"
 
         if let date = inputFormatter.date(from: koreanTime) {
             return outputFormatter.string(from: date)
@@ -120,21 +125,36 @@ class TextClassifier {
             return nil
         }
     }
-    
-    func extractBrideName(from line: String) -> String? {
-        guard let range = line.range(of: "신부") else { return nil }
-        
-        // "신부"라는 단어 뒤쪽 문자열 추출
+
+    // MARK: - 이름 추출
+    func extractName(from line: String, keyword: String) -> String? {
+        guard let range = line.range(of: keyword) else { return nil }
         let afterKeyword = line[range.upperBound...]
             .trimmingCharacters(in: .whitespacesAndNewlines)
-        
-        // 특수문자, 숫자 등 제거 → 한글만 추출
         let cleaned = afterKeyword.replacingOccurrences(
-            of: #"[^가-힣\s]"#, // 한글과 공백만 허용
+            of: #"[^가-힣\s]"#,
             with: "",
             options: .regularExpression
         ).trimmingCharacters(in: .whitespacesAndNewlines)
-        
         return cleaned.isEmpty ? nil : cleaned
+    }
+
+    // MARK: - 은행 이름 추출
+    func extractBankName(from line: String) -> String? {
+        let regex = try! NSRegularExpression(pattern: #"[가-힣]+은행"#)
+        if let match = regex.firstMatch(in: line, range: NSRange(line.startIndex..., in: line)) {
+            let bankName = String(line[Range(match.range, in: line)!])
+            return bankName
+        }
+        return nil
+    }
+
+    // MARK: - 계좌번호 추출
+    func extractAccountNumber(from line: String) -> String? {
+        let regex = try! NSRegularExpression(pattern: #"[0-9]{2,5}[-\s]?[0-9]{2,6}[-\s]?[0-9]{2,6}"#)
+        if let match = regex.firstMatch(in: line, range: NSRange(line.startIndex..., in: line)) {
+            return String(line[Range(match.range, in: line)!])
+        }
+        return nil
     }
 }
