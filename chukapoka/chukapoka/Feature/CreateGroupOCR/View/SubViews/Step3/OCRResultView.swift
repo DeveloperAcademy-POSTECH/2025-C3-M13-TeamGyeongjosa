@@ -22,7 +22,16 @@ struct OCRResultView: View {
     var onNext: () -> Void
     var body: some View {
         NavigationBar {
-            viewModel.goToPreviousStep()
+            switch currentStep {
+            case .photoPicker:
+                break
+            case .scan:
+                currentStep = .photoPicker
+            case .result:
+                currentStep = .photoPicker 
+            case .info:
+                currentStep = .result
+            }
         }
         CustomProgressView(progress: 0.6).padding(.bottom, 30)
 
