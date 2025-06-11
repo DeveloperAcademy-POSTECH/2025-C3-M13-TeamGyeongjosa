@@ -10,7 +10,7 @@ import SwiftUI
 struct FlowerstandCard: View {
     // 화환 이미지 저장 기능 구현 후 이미지로 대체
     let card: FlowerstandCardItem
-    
+
     var body: some View {
         RoundedRectangle(cornerRadius: 16)
             .fill(

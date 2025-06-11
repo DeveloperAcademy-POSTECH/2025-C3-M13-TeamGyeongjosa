@@ -2,9 +2,9 @@ import SwiftUI
 import PhotosUI
 
 struct InvitationOCRView: View {
-    @State private var currentStep: OCRStep = .photoPicker
     @ObservedObject var ocrViewModel: OCRViewModel
     @StateObject private var viewModel: CreateGroupViewModel
+    @State private var stepHistory: [OCRStep] = []
     
     init(viewModel: CreateGroupViewModel, ocrViewModel: OCRViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
@@ -16,13 +16,36 @@ struct InvitationOCRView: View {
         case scan
         case result
         case info
+        
+        var progress: CGFloat {
+            switch self {
+            case .photoPicker: return 0.2
+            case .scan: return 0.4
+            case .result: return 0.6
+            case .info: return 0.8
+            }
+        }
+    }
+    
+    @State private var currentStep: OCRStep = .photoPicker {
+        didSet {
+            if let last = stepHistory.last, last == currentStep {
+                stepHistory.removeLast()
+            } else {
+                stepHistory.append(oldValue)
+            }
+        }
     }
     
     var body: some View {
         VStack {
             switch currentStep {
             case .photoPicker:
-                PhotoPickerView(viewModel: viewModel, ocrViewModel: ocrViewModel)
+                PhotoPickerView(
+                    viewModel: viewModel,
+                    ocrViewModel: ocrViewModel,
+                    onBack: handleBack
+                )
             case .scan:
                 if let image = ocrViewModel.selectedImage {
                     PhotoScanView(image: image) {
@@ -30,12 +53,18 @@ struct InvitationOCRView: View {
                     }
                 }
             case .result:
-                OCRResultView(viewModel: viewModel, ocrViewModel: ocrViewModel, currentStep: $currentStep,
-                              onNext: {currentStep = .info}
+                OCRResultView(
+                    viewModel: viewModel,
+                    ocrViewModel: ocrViewModel,
+                    currentStep: $currentStep,
+                    onNext: {currentStep = .info},
+                    onBack: handleBack
                 )
             case .info:
-                MyinfoView(viewModel: viewModel, currentStep: $currentStep
-                          // onNext: {currentStep = .info}
+                MyinfoView(
+                    currentStep: $currentStep,
+                    viewModel: viewModel,
+                    onBack: handleBack
                 )
             }
         }
@@ -51,5 +80,16 @@ struct InvitationOCRView: View {
             }
         }
         .navigationBarBackButtonHidden(true)
+    }
+    private func handleBack() {
+        if currentStep == .result {
+            // result -> photoPicker로 바로 이동
+            currentStep = .photoPicker
+            stepHistory.removeAll() // 히스토리 리셋도 가능
+        } else if let last = stepHistory.popLast() {
+            currentStep = last
+        } else {
+            viewModel.coordinator.pop()
+        }
     }
 }

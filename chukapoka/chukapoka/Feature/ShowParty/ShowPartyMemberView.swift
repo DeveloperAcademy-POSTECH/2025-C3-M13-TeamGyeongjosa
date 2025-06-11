@@ -63,7 +63,8 @@ struct ShowPartyMemberView: View {
                     .zIndex(1) // 카드가 배경보다 위지만, confetti보다 아래
                 }
                 .zIndex(2)
-                .animation(.easeInOut, value: viewModel.selectedMember)            }
+                .animation(.easeInOut, value: viewModel.selectedMember)
+            }
         }
         .animation(.easeInOut, value: viewModel.selectedMember)
     }
