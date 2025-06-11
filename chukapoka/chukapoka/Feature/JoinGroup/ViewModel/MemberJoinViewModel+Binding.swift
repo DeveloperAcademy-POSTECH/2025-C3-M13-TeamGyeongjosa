@@ -8,7 +8,31 @@
 import SwiftUI
 
 extension MemberJoinViewModel {
-    // MARK: - 바인딩 (텍스트 입력)
+    // MARK: - Account Parsing Helpers
+    func parseAccount(_ account: String) -> (bank: String, number: String)? {
+        let components = account.split(separator: " ", maxSplits: 1).map { String($0) }
+        guard components.count == 2 else { return nil }
+        return (bank: components[0], number: components[1])
+    }
+
+    func composeAccount(bank: String, number: String) -> String {
+        return "\(bank) \(number)"
+    }
+
+    // MARK: - Setters
+    func updateSenderBankAndNumberFromState() {
+        if let parsed = parseAccount(state.accountNumber) {
+            senderBank = parsed.bank
+            senderAccountNumber = parsed.number
+        }
+    }
+
+    func updateAccountFromSenderBankAndNumber() {
+        let composed = composeAccount(bank: senderBank, number: senderAccountNumber)
+        send(.updateAccount(composed))
+    }
+
+    // MARK: - 바인딩 (텍트 입력)
     var bindingSenderName: Binding<String> {
         Binding(
             get: { self.state.name },
@@ -25,10 +49,23 @@ extension MemberJoinViewModel {
         )
     }
     
-    var bindingSenderAccount: Binding<String> {
+    var bindingSenderBankName: Binding<String> {
         Binding(
-            get: { self.state.accountNumber },
-            set: { self.send(.updateAccount($0)) }
+            get: { self.senderBank },
+            set: {
+                self.senderBank = $0
+                self.updateAccountFromSenderBankAndNumber()
+            }
+        )
+    }
+
+    var bindingSenderAccountNumber: Binding<String> {
+        Binding(
+            get: { self.senderAccountNumber },
+            set: {
+                self.senderAccountNumber = $0
+                self.updateAccountFromSenderBankAndNumber()
+            }
         )
     }
     
@@ -81,7 +118,14 @@ extension MemberJoinViewModel {
         )
     }
     
-    var bindingIsSenderAccountValid: Binding<Bool> {
+    var bindingIsSenderBankNameValid: Binding<Bool> {
+        Binding(
+            get: { !self.state.bankName.isEmpty },
+            set: { _ in }
+        )
+    }
+    
+    var bindingIsSenderAccountNumberValid: Binding<Bool> {
         Binding(
             get: { !self.state.accountNumber.isEmpty },
             set: { _ in }

@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "청첩장 1.png",
+      "filename" : "InvitationCard.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "청첩장 2.png",
+      "filename" : "InvitationCard 2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "청첩장 3.png",
+      "filename" : "InvitationCard 3.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

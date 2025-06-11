@@ -14,21 +14,36 @@ struct MemberInfoView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 32) {
-                Text("화환을 보내는 분의 정보를 수집할게요")
-                    .font(GSFont.title2)
+                (
+                    Text("화환을 ") +
+                    Text("보내는 분")
+                        .foregroundStyle(GSColor.primary) +
+                    Text("의\n정보를 수집할게요")
+                )
+                .font(GSFont.title2)
                 
                 CustomTextField(
                     title: "보내는 분",
-                    placeholder: "예: 김영희",
+                    placeholder: "ex) 김포키",
                     text: viewModel.bindingSenderName,
-                    isValid: viewModel.bindingIsSenderNameValid
+                    isValid: viewModel.bindingIsSenderNameValid,
+                    errorMessage: "받는 분은 한글 10자 이내로 입력해주세요"
+                )
+                
+                CustomTextField(
+                    title: "은행명",
+                    placeholder: "모바일 청첩장에 있는 은행명을 알려주세요",
+                    text: viewModel.bindingSenderBankName,
+                    isValid: viewModel.bindingIsSenderBankNameValid,
+                    errorMessage: "은행명은 한글 10자 이내로 입력해주세요"
                 )
                 
                 CustomTextField(
                     title: "계좌번호",
                     placeholder: "입금 계좌번호",
-                    text: viewModel.bindingSenderAccount,
-                    isValid: viewModel.bindingIsSenderAccountValid
+                    text: viewModel.bindingSenderAccountNumber,
+                    isValid: viewModel.bindingIsSenderAccountNumberValid,
+                    errorMessage: "계좌번호는 11자 ~ 14자 이내로 입력해주세요"
                 )
                 .keyboardType(.numberPad)
                 
@@ -39,7 +54,8 @@ struct MemberInfoView: View {
                     action: {
                         viewModel.send(.updatePhone(viewModel.state.phoneNumber))
                     },
-                    isValid: viewModel.bindingIsSenderPhoneValid
+                    isValid: viewModel.bindingIsSenderPhoneValid,
+                    errorMessage: "연락처는 11자 이내로 입력해주세요"
                 )
                 .keyboardType(.numberPad)
                 

@@ -19,7 +19,6 @@ final class CreateGroupViewModel: ObservableObject {
     @Published var currentStep: CreateGroupStep = .step1
     let coordinator: AppCoordinator
     
-    
     // MARK: - Step 1
     @Published var partyName: String = ""
     @Published var isPartyNameValid: Bool = true
@@ -199,7 +198,6 @@ final class CreateGroupViewModel: ObservableObject {
     
     // SwiftData 저장
     func saveGroupData(modelContext: ModelContext) -> PartyMember {
-        
         let partyCode = generatePartyInviteCode()
         let brideCode = generateBrideInviteCode()
         
