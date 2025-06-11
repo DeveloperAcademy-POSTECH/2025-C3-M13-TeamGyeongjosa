@@ -15,11 +15,16 @@ struct JoinGroupView: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            NavigationBar {
-                viewModel.send(.goBack)
+            if viewModel.step != .info {
+                NavigationBar {
+                    viewModel.send(.goBack)
+                }
+            } else {
+                Color.clear
+                    .frame(height: 100)
             }
             
-            if viewModel.step != .showResult {
+            if viewModel.step != .showResult && viewModel.step != .info {
                 CircleProgress(step: max(viewModel.step.rawValue - 1, 0))
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.top, 16)
@@ -29,7 +34,6 @@ struct JoinGroupView: View {
                 switch viewModel.step {
                 case .info:
                     MemberInfoView(viewModel: viewModel)
-                        .padding(.top, 32)
                 case .money:
                     MemberMoneyView(viewModel: viewModel)
                 case .decorate:
