@@ -47,6 +47,12 @@ struct RootNavigationView: View {
                     case .showPartyMember(let party):
                         ShowPartyMemberView(viewModel: ShowPartyMemberViewModel(coordinator: coordinator, party: party))
                             .navigationBarHidden(true)
+                    case .marriedCouple(let wedding):
+                        MarriedCoupleView(viewModel: MarriedCoupleViewModel(coordinator: coordinator, wedding: wedding))
+                            .navigationBarHidden(true)
+                    case .receiveCardList(let party):
+                        ReceiveCardListView(party: party)
+                            .navigationBarHidden(true)
                     }
                 }
         }

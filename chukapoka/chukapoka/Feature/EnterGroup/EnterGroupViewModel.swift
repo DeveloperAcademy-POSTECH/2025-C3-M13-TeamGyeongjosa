@@ -19,7 +19,7 @@ final class EnterGroupViewModel: ObservableObject {
     @Published var code: String =  ""
     @Published var isCodeValid: Bool = false
     @Published var teamName: String = ""
-    @Published var joinedParty: Party? = nil
+    @Published var joinedParty: Party?
     @Published var isCodeMatched: Bool = true
     
     let coordinator: AppCoordinator
@@ -38,18 +38,47 @@ final class EnterGroupViewModel: ObservableObject {
     }
     
     func validateAndFetchParty(modelContext: ModelContext) {
-        guard code.count == 6 else {
+        
+        // 신부 코드
+        
+        let trimmedCode = code.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+        
+        guard trimmedCode.count == 6 else {
             isCodeValid = false
             isCodeMatched = true
-            return print("코드가 6자리가 아닙니다.")
+            print("코드가 6자리가 아닙니다.")
+            return
         }
         
-        let descriptor = FetchDescriptor<Party>(
-            predicate: #Predicate { $0.inviteCode == code
-            })
+        if trimmedCode.hasPrefix("BB") {
+            let weddingDescriptor = FetchDescriptor<Wedding>(
+                predicate: #Predicate { $0.brideInviteCode == trimmedCode }
+            )
+            do {
+                let weddings = try modelContext.fetch(weddingDescriptor)
+                if let wedding = weddings.first {
+                    coordinator.push(.marriedCouple(wedding: wedding))
+                } else {
+                    isCodeValid = true
+                    isCodeMatched = false
+                    print("일치하는 신부 초대 코드가 없어요.")
+                }
+            } catch {
+                isCodeValid = false
+                isCodeMatched = false
+                print("Wedding fetch 실패: \(error)")
+            }
+            return
+        }
+        
+        // 일반 초대 코드인경우
+        
+        let partyDescriptor = FetchDescriptor<Party>(
+            predicate: #Predicate { $0.inviteCode == trimmedCode }
+        )
         do {
-            let result = try modelContext.fetch(descriptor)
-            if let party = result.first {
+            let parties = try modelContext.fetch(partyDescriptor)
+            if let party = parties.first {
                 self.teamName = party.name
                 self.joinedParty = party
                 self.isCodeValid = true

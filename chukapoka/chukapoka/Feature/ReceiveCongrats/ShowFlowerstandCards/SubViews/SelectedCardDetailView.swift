@@ -10,7 +10,7 @@ import SwiftUI
 struct SelectedCardDetailView: View {
     let card: FlowerstandCardItem
     let onClose: () -> Void
-    
+
     var body: some View {
         ZStack {
             GSColor.white.opacity(0.6)
@@ -18,7 +18,7 @@ struct SelectedCardDetailView: View {
                 .onTapGesture {
                     onClose()
                 }
-            
+
             VStack(spacing: 20) {
                 HStack {
                     Button(action: onClose) {
@@ -28,10 +28,10 @@ struct SelectedCardDetailView: View {
                             .padding(.horizontal, 32)
                             .padding(.vertical, 12)
                     }
-                    
+
                     Spacer()
                 }
-                
+
                 // 확대된 카드
                 RoundedRectangle(cornerRadius: 24)
                     .fill(
@@ -44,7 +44,7 @@ struct SelectedCardDetailView: View {
                     .frame(width: 275, height: 399)
                     .shadow(color: card.backgroundColor.opacity(0.5), radius: 20, x: 0, y: 10)
                     .padding(.bottom, 24)
-                
+
                 Text(card.name)
                     .font(GSFont.title2)
                     .foregroundColor(GSColor.primary)
