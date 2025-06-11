@@ -15,7 +15,7 @@ struct InfoStep1View: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 32) {
-                Text("화환을 함께 전달하기 위해 \n몇 가지 정보를 수집할게요")
+                Text("화환을 함께 전달하기 위해\n몇 가지 정보를 수집할게요")
                     .font(GSFont.title2)
                     .foregroundColor(GSColor.black)
                 
@@ -23,21 +23,24 @@ struct InfoStep1View: View {
                     title: "모임명",
                     placeholder: "어떤 파티에서 화환을 전달하나요?",
                     text: $viewModel.partyName,
-                    isValid: $viewModel.isPartyNameValid
+                    isValid: $viewModel.isPartyNameValid,
+                    errorMessage: "모임명은 한글 10자 이내로 입력해주세요"
                 )
                 
                 CustomTextField(
                     title: "결혼식 장소",
                     placeholder: "결혼식 장소를 입력해주세요",
                     text: $viewModel.weddingPlace,
-                    isValid: $viewModel.isPlaceValid
+                    isValid: $viewModel.isPlaceValid,
+                    errorMessage: "장소는 한글 20자 이내로 입력해주세요"
                 )
                 
                 CustomTextField(
                     title: "결혼식 날짜",
-                    placeholder: "ex) 2025.12.25",
+                    placeholder: "YYYY. MM. DD",
                     text: $viewModel.weddingDate,
-                    isValid: $viewModel.isDateValid
+                    isValid: $viewModel.isDateValid,
+                    errorMessage: "날짜를 입력해주세요"
                 )
                 .keyboardType(.numberPad)
                 .onChange(of: viewModel.weddingDate) {
@@ -46,9 +49,10 @@ struct InfoStep1View: View {
                 
                 CustomTextField(
                     title: "결혼식 시간",
-                    placeholder: "ex) 12:00",
+                    placeholder: "HH:MM",
                     text: $viewModel.weddingTime,
-                    isValid: $viewModel.isTimeValid
+                    isValid: $viewModel.isTimeValid,
+                    errorMessage: "시간을 입력해주세요"
                 )
                 .keyboardType(.numberPad)
                 .onChange(of: viewModel.weddingTime) {

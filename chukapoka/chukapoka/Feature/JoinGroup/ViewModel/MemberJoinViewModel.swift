@@ -36,6 +36,7 @@ struct MemberJoinState {
     // Step1
     var name: String = ""
     var phoneNumber: String = ""
+    var bankName: String = ""
     var accountNumber: String = ""
     
     // Step2
@@ -53,6 +54,7 @@ struct MemberJoinState {
     
     var isNameValid: Bool = true
     var isPhoneValid: Bool = true
+    var isSenderBankValid: Bool = true
     var isAccountValid: Bool = true
 }
 
@@ -65,6 +67,9 @@ final class MemberJoinViewModel: ObservableObject {
     
     // 상태
     @Published private(set) var state = MemberJoinState()
+    
+    @Published var senderBank: String = ""
+    @Published var senderAccountNumber: String = ""
     
     init(coordinator: AppCoordinator, party: Party) {
         self.coordinator = coordinator
@@ -100,6 +105,9 @@ final class MemberJoinViewModel: ObservableObject {
             state.phoneNumber = formatPhoneNumberInput(phone)
         case .updateAccount(let acc):
             state.accountNumber = acc
+            if let parsed = parseAccount(acc) {
+                    state.bankName = parsed.bank
+                }
         case .updateAmount(let text):
             state.amountText = String(text.filter(\.isNumber).prefix(4))
         case .updateColor(let color):
@@ -135,7 +143,7 @@ final class MemberJoinViewModel: ObservableObject {
         let member = PartyMember(
             isLeader: false,
             name: state.name,
-            accountNumber: state.accountNumber,
+            accountNumber: state.bankName + state.accountNumber,
             phoneNumber: state.phoneNumber,
             money: state.amount ?? 0,
             message: state.message,
@@ -182,6 +190,7 @@ final class MemberJoinViewModel: ObservableObject {
         state.isNameValid = isValidKoreanName(state.name)
         state.isPhoneValid = isValidPhone(state.phoneNumber)
         state.isAccountValid = !state.accountNumber.isEmpty
+        state.isSenderBankValid = isValidKoreanName(state.bankName)
     }
     
     func formatPhoneNumberInput(_ input: String) -> String {

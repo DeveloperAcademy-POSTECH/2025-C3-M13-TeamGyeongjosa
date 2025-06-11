@@ -198,7 +198,6 @@ final class CreateGroupViewModel: ObservableObject {
     
     // SwiftData 저장
     func saveGroupData(modelContext: ModelContext) -> PartyMember {
-        
         let partyCode = generatePartyInviteCode()
         let brideCode = generateBrideInviteCode()
         

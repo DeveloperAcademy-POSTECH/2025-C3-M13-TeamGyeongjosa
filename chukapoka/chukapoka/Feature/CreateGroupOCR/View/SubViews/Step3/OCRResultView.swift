@@ -30,53 +30,65 @@ struct OCRResultView: View {
             ZStack {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 32) {
-                        Text("입력된 정보가 정확한지 \n다시 한 번 확인해주세요")
+                        Text("입력된 정보가 정확한지\n다시 한 번 확인해주세요")
                             .font(GSFont.title2)
                             .lineSpacing(12)
                             .foregroundColor(GSColor.black)
+                        
                         CustomTextField(
                             title: "받는 분",
-                            placeholder: "화환을 받는 분의 이름을 입력해주세요",
+                            placeholder: "ex) 김신부",
                             text: $viewModel.receiverName,
-                            isValid: $viewModel.isReceiverNameValid
+                            isValid: $viewModel.isReceiverNameValid,
+                            errorMessage: "받는 분은 한글 10자 이내로 입력해주세요"
                         )
+                        
                         CustomTextField(
-                            title: "은행",
-                            placeholder: "모바일 청첩장에 있는 은행을 알려주세요",
+                            title: "은행명",
+                            placeholder: "모바일 청첩장에 있는 은행명을 알려주세요",
                             text: $viewModel.receiverBank,
-                            isValid: $viewModel.isReceiverBankValid
+                            isValid: $viewModel.isReceiverBankValid,
+                            errorMessage: "은행명은 한글 10자 이내로 입력해주세요"
                         )
                         
                         CustomTextField(
                             title: "계좌번호",
                             placeholder: "모바일 청첩장에 있는 계좌번호를 알려주세요",
                             text: $viewModel.receiverAccount,
-                            isValid: $viewModel.isReceiverAccountValid
+                            isValid: $viewModel.isReceiverAccountValid,
+                            errorMessage: "계좌번호는 11자 ~ 14자 이내로 입력해주세요"
                         )
                         .keyboardType(.numberPad)
+                        
                         CustomTextField(
                             title: "결혼식 장소",
                             placeholder: "결혼식 장소를 입력해주세요",
                             text: $place,
-                            isValid: $viewModel.isPlaceValid
+                            isValid: $viewModel.isPlaceValid,
+                            errorMessage: "장소는 한글 20자 이내로 입력해주세요"
                         )
+                        
                         CustomTextField(
                             title: "결혼식 날짜",
                             placeholder: "YYYY. MM. DD",
                             text: $date,
-                            isValid: $viewModel.isDateValid
+                            isValid: $viewModel.isDateValid,
+                            errorMessage: "날짜를 입력해주세요"
                         )
                         .keyboardType(.numberPad)
                         .onChange(of: viewModel.weddingDate) {
                             viewModel.weddingDate = viewModel.formatDateInput(viewModel.weddingDate)
                         }
+                        
                         CustomTextField(
                             title: "결혼식 시간",
                             placeholder: "HH:MM",
                             text: $viewModel.weddingTime,
-                            isValid: $viewModel.isTimeValid
+                            isValid: $viewModel.isTimeValid,
+                            errorMessage: "시간을 입력해주세요"
                         )
                         .keyboardType(.numberPad)
+                        
                         Text("결혼식 D-day에 맞춰 모인 축의금이 자동으로 송금돼요!")
                             .font(GSFont.caption2)
                             .foregroundStyle(GSColor.gray1)
