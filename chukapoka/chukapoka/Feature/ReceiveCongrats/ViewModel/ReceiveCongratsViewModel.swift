@@ -35,7 +35,7 @@ class ReceiveCongratsViewModel: ObservableObject {
             phoneNumber: "010-1111-2222",
             money: 10,
             message: "결혼 축하해!",
-            flowerstandPath: "path/to/flower1.png"
+            flowerstandPath: "RedFlower_Pink"
         )
 
         let member1 = PartyMember(
@@ -45,7 +45,7 @@ class ReceiveCongratsViewModel: ObservableObject {
             phoneNumber: "010-2222-3333",
             money: 5,
             message: "잘 살아~",
-            flowerstandPath: "path/to/flower2.png"
+            flowerstandPath: "RedFlower_Pink"
         )
 
         let member2 = PartyMember(
@@ -55,7 +55,7 @@ class ReceiveCongratsViewModel: ObservableObject {
             phoneNumber: "010-3333-4444",
             money: 7,
             message: "행복하길!",
-            flowerstandPath: "path/to/flower3.png"
+            flowerstandPath: "RedFlower_Pink"
         )
 
         let party = Party(

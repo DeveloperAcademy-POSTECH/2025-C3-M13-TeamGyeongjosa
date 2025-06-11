@@ -23,6 +23,7 @@ struct ReceiveCardListView: View {
                 .padding(.leading, 16)
                 .frame(maxWidth: .infinity, alignment: .leading)
             
+                FlowerstandCardList(members: party.members)
         }
     }
 }
