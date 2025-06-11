@@ -10,10 +10,20 @@ import SwiftUI
 struct MyinfoView: View {
     @Environment(\.modelContext) var modelContext
     @ObservedObject var viewModel: CreateGroupViewModel
+    @Binding var currentStep: InvitationOCRView.OCRStep
     
     var body: some View {
         NavigationBar {
-            viewModel.goToPreviousStep()
+            switch currentStep {
+            case .photoPicker:
+                break
+            case .scan:
+                currentStep = .photoPicker
+            case .result:
+                currentStep = .info
+            case .info:
+                currentStep = .result
+            }
         }
         CustomProgressView(progress: 0.9).padding(.bottom, 30)
         

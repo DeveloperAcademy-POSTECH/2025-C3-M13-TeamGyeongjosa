@@ -34,7 +34,9 @@ struct InvitationOCRView: View {
                               onNext: {currentStep = .info}
                 )
             case .info:
-                MyinfoView(viewModel: viewModel)
+                MyinfoView(viewModel: viewModel, currentStep: $currentStep
+                          // onNext: {currentStep = .info}
+                )
             }
         }
         .onChange(of: ocrViewModel.selectedItem) { _, newItem in
