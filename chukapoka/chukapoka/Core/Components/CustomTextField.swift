@@ -73,6 +73,7 @@ struct CustomTextField: View {
                             isValid = true
                         }
                     }
+                    action?()
                 }
                 .background(GSColor.secondary3)
                 .overlay(
