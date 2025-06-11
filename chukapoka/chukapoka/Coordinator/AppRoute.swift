@@ -16,4 +16,6 @@ enum AppRoute: Hashable {
     case joinGroupStep2(party: Party)
     case loadingJoinGroupDone
     case showPartyMember(party: Party)
+    case marriedCouple(wedding: Wedding)
+    case receiveCardList(party: Party)
 }
