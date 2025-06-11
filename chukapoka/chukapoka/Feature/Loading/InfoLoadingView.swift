@@ -18,7 +18,7 @@ struct InfoLoadingView: View {
                 .frame(height: 2)
                 .padding(.top, 48)
             
-            Text("모든 준비가 끝났어요! \n 열심히 재료를 배달 중이에요")
+            Text("모든 준비가 끝났어요!\n열심히 재료를 배달 중이에요")
                 .foregroundStyle(GSColor.black)
                 .font(GSFont.title2)
                 .multilineTextAlignment(.center)

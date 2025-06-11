@@ -27,12 +27,12 @@ struct MemberInfoView: View {
                     placeholder: "ex) 김포키",
                     text: viewModel.bindingSenderName,
                     isValid: viewModel.bindingIsSenderNameValid,
-                    errorMessage: "받는 분은 한글 10자 이내로 입력해주세요"
+                    errorMessage: "보내는 분은 한글 10자 이내로 입력해주세요"
                 )
                 
                 CustomTextField(
                     title: "은행명",
-                    placeholder: "모바일 청첩장에 있는 은행명을 알려주세요",
+                    placeholder: "화환을 보내는 분의 은행을 입력해주세요",
                     text: viewModel.bindingSenderBankName,
                     isValid: viewModel.bindingIsSenderBankNameValid,
                     errorMessage: "은행명은 한글 10자 이내로 입력해주세요"
@@ -40,7 +40,7 @@ struct MemberInfoView: View {
                 
                 CustomTextField(
                     title: "계좌번호",
-                    placeholder: "입금 계좌번호",
+                    placeholder: "화환을 보내는 분의 계좌번호를 입력해주세요",
                     text: viewModel.bindingSenderAccountNumber,
                     isValid: viewModel.bindingIsSenderAccountNumberValid,
                     errorMessage: "계좌번호는 11자 ~ 14자 이내로 입력해주세요"

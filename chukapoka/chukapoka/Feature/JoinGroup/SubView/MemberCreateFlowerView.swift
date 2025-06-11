@@ -11,7 +11,7 @@ struct MemberCreateFlowerView: View {
     @ObservedObject var viewModel: MemberJoinViewModel
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 39) {
+        VStack(alignment: .leading, spacing: 24) {
             Text("진심을 담아\n나만의 화환 카드를 꾸며보세요!")
                 .font(GSFont.title2)
                 .lineSpacing(12)

@@ -733,8 +733,8 @@
 			children = (
 				D5565D4D2DF6A08F00187DDD /* MemberInfoView.swift */,
 				D5565D4F2DF6A0A500187DDD /* MemberMoneyView.swift */,
-				D5565D512DF6A0B200187DDD /* MemberCreateFlowerView.swift */,
 				D5565D532DF6A0DA00187DDD /* MemberCreateMessageView.swift */,
+				D5565D512DF6A0B200187DDD /* MemberCreateFlowerView.swift */,
 				D5565D552DF6A0E900187DDD /* MemberShowFlowerView.swift */,
 			);
 			path = SubView;
@@ -1558,6 +1558,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9S8SHSW95K;
+				DEVELOPMENT_TEAM = 6TW9MCXPJD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = chukapoka/Info.plist;
@@ -1588,6 +1589,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9S8SHSW95K;
+				DEVELOPMENT_TEAM = 6TW9MCXPJD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = chukapoka/Info.plist;

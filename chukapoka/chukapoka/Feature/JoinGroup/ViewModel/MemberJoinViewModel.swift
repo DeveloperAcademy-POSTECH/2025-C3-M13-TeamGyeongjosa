@@ -156,7 +156,8 @@ final class MemberJoinViewModel: ObservableObject {
             print("""
                   멤버 저장됨: - 이름: \(member.name)
                   - 소속 파티: \(party.name)
-                  - 전달 금액: \(member.money!)
+                  - 전달 금액: \(member.money)
+                  - 계좌: \(member.accountNumber)
                   - 꽃 장식: \(member.flowerstandPath)
                   - 메시지: \(member.message)
             """)
@@ -176,7 +177,7 @@ final class MemberJoinViewModel: ObservableObject {
     
     // 내부 유효성 로직
     func isValidKoreanName(_ name: String) -> Bool {
-        let regex = "^[가-힣]{2,4}$"
+        let regex = "^[가-힣]{2,10}$"
         return NSPredicate(format: "SELF MATCHES %@", regex).evaluate(with: name)
     }
     
