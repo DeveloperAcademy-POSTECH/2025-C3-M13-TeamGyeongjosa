@@ -19,7 +19,7 @@ struct JoinGroupView: View {
                 viewModel.send(.goBack)
             }
             
-            if viewModel.step != .info {
+            if viewModel.step != .showResult {
                 CircleProgress(step: max(viewModel.step.rawValue - 1, 0))
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.top, 16)

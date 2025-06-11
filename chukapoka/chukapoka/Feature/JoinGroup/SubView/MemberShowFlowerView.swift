@@ -25,5 +25,11 @@ struct MemberShowFlowerView: View {
                 ribbonText: viewModel.message
             )
         }
+        .overlay(
+            ForEach(0..<100, id: \.self) { _ in
+                ConfettiParticleView()
+                    .zIndex(2)
+            }
+        )
     }
 }

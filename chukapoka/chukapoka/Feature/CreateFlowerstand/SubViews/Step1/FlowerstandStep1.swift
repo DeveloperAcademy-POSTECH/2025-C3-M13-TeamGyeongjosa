@@ -52,7 +52,7 @@ struct FlowerstandStep1: View {
             
             HStack {
                 Spacer()
-                Text("우리은행 1002-246-194483 김현진")
+                Text("우리은행 1002-246-194483 추카포카")
                     .font(GSFont.caption2)
                     .foregroundStyle(GSColor.primary)
                     .padding(.bottom, 16)
