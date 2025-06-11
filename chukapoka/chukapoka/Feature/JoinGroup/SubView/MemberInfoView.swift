@@ -10,6 +10,12 @@ import SwiftUI
 struct MemberInfoView: View {
     
     @ObservedObject var viewModel: MemberJoinViewModel
+    @FocusState private var focusedField: Field?
+    @StateObject private var keyboard = KeyboardResponder()
+    
+    private enum Field: Hashable {
+        case name, bank, account, phone
+    }
     
     var body: some View {
         ScrollView {
@@ -29,6 +35,7 @@ struct MemberInfoView: View {
                     isValid: viewModel.bindingIsSenderNameValid,
                     errorMessage: "보내는 분은 한글 10자 이내로 입력해주세요"
                 )
+                .focused($focusedField, equals: .name)
                 
                 CustomTextField(
                     title: "은행명",
@@ -37,6 +44,7 @@ struct MemberInfoView: View {
                     isValid: viewModel.bindingIsSenderBankNameValid,
                     errorMessage: "은행명은 한글 10자 이내로 입력해주세요"
                 )
+                .focused($focusedField, equals: .bank)
                 
                 CustomTextField(
                     title: "계좌번호",
@@ -46,6 +54,7 @@ struct MemberInfoView: View {
                     errorMessage: "계좌번호는 11자 ~ 14자 이내로 입력해주세요"
                 )
                 .keyboardType(.numberPad)
+                .focused($focusedField, equals: .account)
                 
                 CustomTextField(
                     title: "연락처",
@@ -58,6 +67,7 @@ struct MemberInfoView: View {
                     errorMessage: "연락처는 11자 이내로 입력해주세요"
                 )
                 .keyboardType(.numberPad)
+                .focused($focusedField, equals: .phone)
                 
                 Text("파티 해산 시 해당 정보로 돌려드려요")
                     .font(GSFont.caption2)
@@ -65,9 +75,10 @@ struct MemberInfoView: View {
                     .frame(maxWidth: .infinity)
                     .multilineTextAlignment(.center)
                 
-                Spacer()
+                Spacer().frame(height: keyboard.keyboardHeight)
             }
+            .padding(.horizontal, 16)
+            .animation(.easeInOut(duration: 0.2), value: keyboard.keyboardHeight)
         }
-        .padding(.horizontal, 16)
     }
 }
