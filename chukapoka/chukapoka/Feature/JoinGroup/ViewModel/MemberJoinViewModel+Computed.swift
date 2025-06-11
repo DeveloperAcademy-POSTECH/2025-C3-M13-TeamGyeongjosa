@@ -49,7 +49,7 @@ extension MemberJoinViewModel {
     }
     
     var isSenderAccountValid: Bool {
-        !state.accountNumber.isEmpty
+        !state.accountNumber.isEmpty && !state.bankName.isEmpty
     }
     
     var isAmountValid: Bool {
