@@ -150,6 +150,7 @@
 		D5EFEAF22DF91A2900CD71D9 /* ReceiveFlippableFrontCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EFEAF12DF91A1C00CD71D9 /* ReceiveFlippableFrontCardView.swift */; };
 		D5EFEAF42DF91A3600CD71D9 /* ReceiveFlippableBackCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EFEAF32DF91A2C00CD71D9 /* ReceiveFlippableBackCardView.swift */; };
 		D5EFEAF52DF964A700CD71D9 /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40C72DF38D27004D5EC9 /* PhotoPickerView.swift */; };
+		D5EFEAF92DF97E5A00CD71D9 /* OCRParseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EFEAF82DF97E5200CD71D9 /* OCRParseResult.swift */; };
 		D5F2EDB72DF5E254003D1291 /* HomeCardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F2EDB62DF5E24B003D1291 /* HomeCardScrollView.swift */; };
 		D5F2EDB92DF5E6B7003D1291 /* SingleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F2EDB82DF5E6B3003D1291 /* SingleCardView.swift */; };
 		D5F2EDBB2DF5E6CB003D1291 /* MultiCardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F2EDBA2DF5E6C1003D1291 /* MultiCardScrollView.swift */; };
@@ -325,6 +326,7 @@
 		D5EFEAEF2DF9188800CD71D9 /* ReceiveFlippableCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveFlippableCardView.swift; sourceTree = "<group>"; };
 		D5EFEAF12DF91A1C00CD71D9 /* ReceiveFlippableFrontCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveFlippableFrontCardView.swift; sourceTree = "<group>"; };
 		D5EFEAF32DF91A2C00CD71D9 /* ReceiveFlippableBackCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveFlippableBackCardView.swift; sourceTree = "<group>"; };
+		D5EFEAF82DF97E5200CD71D9 /* OCRParseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRParseResult.swift; sourceTree = "<group>"; };
 		D5F2EDB62DF5E24B003D1291 /* HomeCardScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCardScrollView.swift; sourceTree = "<group>"; };
 		D5F2EDB82DF5E6B3003D1291 /* SingleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCardView.swift; sourceTree = "<group>"; };
 		D5F2EDBA2DF5E6C1003D1291 /* MultiCardScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiCardScrollView.swift; sourceTree = "<group>"; };
@@ -381,6 +383,7 @@
 		38A09B5A2DF566AC0066E434 /* CreateGroupOCR */ = {
 			isa = PBXGroup;
 			children = (
+				D5EFEAF82DF97E5200CD71D9 /* OCRParseResult.swift */,
 				38A09B5B2DF5675F0066E434 /* View */,
 				38A09B5C2DF567650066E434 /* ViewModel */,
 			);
@@ -407,10 +410,10 @@
 		38A09B5D2DF568270066E434 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
-				385B803A2DF8B15600420D7F /* Step4 */,
 				38A09B5E2DF568590066E434 /* Step1 */,
 				38A09B5F2DF568640066E434 /* Step2 */,
 				38A09B622DF569AA0066E434 /* Step3 */,
+				385B803A2DF8B15600420D7F /* Step4 */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -1286,6 +1289,7 @@
 				38A09B532DF431AC0066E434 /* OCRManager.swift in Sources */,
 				D574E9DC2DED8E2E00AAF70F /* GSColor.swift in Sources */,
 				D5B38C642DF0AB04005DAFDC /* PartyCardBackContainer.swift in Sources */,
+				D5EFEAF92DF97E5A00CD71D9 /* OCRParseResult.swift in Sources */,
 				D5565D882DF88A8D00187DDD /* ShowPartyMemberViewModel.swift in Sources */,
 				D5565D4A2DF677CE00187DDD /* JoinGroupView.swift in Sources */,
 				CA5EAAE02DF5648300690A03 /* View+Extension.swift in Sources */,

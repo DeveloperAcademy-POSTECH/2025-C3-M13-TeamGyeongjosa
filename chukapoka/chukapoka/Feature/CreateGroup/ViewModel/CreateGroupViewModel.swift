@@ -14,6 +14,7 @@ enum CreateGroupStep: Int, CaseIterable {
 
 @MainActor
 final class CreateGroupViewModel: ObservableObject {
+    
     var onComplete: (() -> Void)?
     
     @Published var currentStep: CreateGroupStep = .step1
@@ -259,6 +260,27 @@ final class CreateGroupViewModel: ObservableObject {
     private func generateBrideInviteCode() -> String {
         let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
         return "BB" + String((0..<4).map { _ in chars.randomElement()! })
+    }
+    
+    func applyOCRResult(_ result: OCRParseResult) {
+        if let place = result.place {
+            weddingPlace = place
+        }
+        if let date = result.date {
+            weddingDate = formatDateInput(date)
+        }
+        if let time = result.time {
+            weddingTime = formatTimeInput(time)
+        }
+        if let bride = result.brideName {
+            receiverName = bride
+        }
+        if let bank = result.bank {
+            receiverBank = bank
+        }
+        if let account = result.accountNumber {
+            receiverAccount = account
+        }
     }
     
 }

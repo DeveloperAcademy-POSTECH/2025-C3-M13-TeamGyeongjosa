@@ -14,15 +14,14 @@ struct OCRResultView: View {
     @Binding var currentStep: InvitationOCRView.OCRStep
     
     // OCR 결과를 받아와 텍스트 필드에 반영할 State 변수
-    @State private var place: String = ""
-    @State private var date: String = ""
-    @State private var time: String = ""
     @State private var bride: String = ""
     
     var onNext: () -> Void
+    var onBack: () -> Void
+    
     var body: some View {
         NavigationBar {
-            viewModel.goToPreviousStep()
+            onBack()
         }
         CustomProgressView(progress: 0.6).padding(.bottom, 30)
 
@@ -63,7 +62,7 @@ struct OCRResultView: View {
                         CustomTextField(
                             title: "결혼식 장소",
                             placeholder: "결혼식 장소를 입력해주세요",
-                            text: $place,
+                            text: $viewModel.weddingPlace,
                             isValid: $viewModel.isPlaceValid,
                             errorMessage: "장소는 한글 20자 이내로 입력해주세요"
                         )
@@ -71,7 +70,7 @@ struct OCRResultView: View {
                         CustomTextField(
                             title: "결혼식 날짜",
                             placeholder: "YYYY. MM. DD",
-                            text: $date,
+                            text: $viewModel.weddingDate,
                             isValid: $viewModel.isDateValid,
                             errorMessage: "날짜를 입력해주세요"
                         )
@@ -121,25 +120,7 @@ struct OCRResultView: View {
         }
         .onAppear {
             if let result = ocrViewModel.ocrResult {
-                place = result.place ?? ""
-                date = result.date ?? ""
-                time = result.time ?? ""
-
-                viewModel.weddingPlace = place
-                viewModel.weddingDate = viewModel.formatDateInput(date)
-                viewModel.weddingTime = viewModel.formatTimeInput(time)
-
-                if let bride = result.brideName {
-                    viewModel.receiverName = bride
-                }
-
-                if let bank = result.bank {
-                    viewModel.receiverBank = bank
-                }
-
-                if let account = result.accountNumber {
-                    viewModel.receiverAccount = account
-                }
+                viewModel.applyOCRResult(OCRParseResult(from: result))
             }
         }
     }

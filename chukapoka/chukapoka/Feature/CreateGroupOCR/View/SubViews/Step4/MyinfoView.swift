@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct MyinfoView: View {
+    @Binding var currentStep: InvitationOCRView.OCRStep
     @Environment(\.modelContext) var modelContext
     @ObservedObject var viewModel: CreateGroupViewModel
+    var onBack: () -> Void
     
     var body: some View {
         NavigationBar {
-            viewModel.goToPreviousStep()
+          onBack()
         }
         CustomProgressView(progress: 0.9).padding(.bottom, 30)
         
