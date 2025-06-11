@@ -27,7 +27,7 @@ struct OCRResultView: View {
         CustomProgressView(progress: 0.6).padding(.bottom, 30)
 
         VStack(spacing: 0) {
-            ZStack{
+            ZStack {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 32) {
                         Text("입력된 정보가 정확한지 \n다시 한 번 확인해주세요")

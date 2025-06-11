@@ -13,7 +13,6 @@
 		38A09B592DF55F1D0066E434 /* OCRResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A09B582DF55F180066E434 /* OCRResultView.swift */; };
 		38A09B652DF578B90066E434 /* PhotoScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A09B642DF578B20066E434 /* PhotoScanView.swift */; };
 		38A09B672DF59B3F0066E434 /* OCRTextParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A09B662DF59B360066E434 /* OCRTextParser.swift */; };
-		38AA40C92DF38D27004D5EC9 /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40C72DF38D27004D5EC9 /* PhotoPickerView.swift */; };
 		38AA40CC2DF38D44004D5EC9 /* OCRViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40CB2DF38D44004D5EC9 /* OCRViewModel.swift */; };
 		38AA40CF2DF38D77004D5EC9 /* FlowerstandCardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40CD2DF38D77004D5EC9 /* FlowerstandCardData.swift */; };
 		38AA40D12DF38D9C004D5EC9 /* NameCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40D02DF38D9C004D5EC9 /* NameCheckView.swift */; };
@@ -145,11 +144,12 @@
 		D5EFEAE52DF90BB000CD71D9 /* MarriedCoupleMainTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EFEAE42DF90BAF00CD71D9 /* MarriedCoupleMainTextView.swift */; };
 		D5EFEAE72DF9102D00CD71D9 /* ReceiveCardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EFEAE62DF9101A00CD71D9 /* ReceiveCardListView.swift */; };
 		D5EFEAEA2DF9149F00CD71D9 /* ReceiveCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EFEAE92DF9149800CD71D9 /* ReceiveCardView.swift */; };
-		D5EFEAEC2DF9183A00CD71D9 /* RecieveSingleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EFEAEB2DF9183100CD71D9 /* RecieveSingleCardView.swift */; };
+		D5EFEAEC2DF9183A00CD71D9 /* ReceiveSingleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EFEAEB2DF9183100CD71D9 /* ReceiveSingleCardView.swift */; };
 		D5EFEAEE2DF9184C00CD71D9 /* MultiReceiveCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EFEAED2DF9184600CD71D9 /* MultiReceiveCardView.swift */; };
 		D5EFEAF02DF9189400CD71D9 /* ReceiveFlippableCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EFEAEF2DF9188800CD71D9 /* ReceiveFlippableCardView.swift */; };
 		D5EFEAF22DF91A2900CD71D9 /* ReceiveFlippableFrontCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EFEAF12DF91A1C00CD71D9 /* ReceiveFlippableFrontCardView.swift */; };
 		D5EFEAF42DF91A3600CD71D9 /* ReceiveFlippableBackCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EFEAF32DF91A2C00CD71D9 /* ReceiveFlippableBackCardView.swift */; };
+		D5EFEAF52DF964A700CD71D9 /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA40C72DF38D27004D5EC9 /* PhotoPickerView.swift */; };
 		D5F2EDB72DF5E254003D1291 /* HomeCardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F2EDB62DF5E24B003D1291 /* HomeCardScrollView.swift */; };
 		D5F2EDB92DF5E6B7003D1291 /* SingleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F2EDB82DF5E6B3003D1291 /* SingleCardView.swift */; };
 		D5F2EDBB2DF5E6CB003D1291 /* MultiCardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F2EDBA2DF5E6C1003D1291 /* MultiCardScrollView.swift */; };
@@ -320,7 +320,7 @@
 		D5EFEAE42DF90BAF00CD71D9 /* MarriedCoupleMainTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarriedCoupleMainTextView.swift; sourceTree = "<group>"; };
 		D5EFEAE62DF9101A00CD71D9 /* ReceiveCardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveCardListView.swift; sourceTree = "<group>"; };
 		D5EFEAE92DF9149800CD71D9 /* ReceiveCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveCardView.swift; sourceTree = "<group>"; };
-		D5EFEAEB2DF9183100CD71D9 /* RecieveSingleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecieveSingleCardView.swift; sourceTree = "<group>"; };
+		D5EFEAEB2DF9183100CD71D9 /* ReceiveSingleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveSingleCardView.swift; sourceTree = "<group>"; };
 		D5EFEAED2DF9184600CD71D9 /* MultiReceiveCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiReceiveCardView.swift; sourceTree = "<group>"; };
 		D5EFEAEF2DF9188800CD71D9 /* ReceiveFlippableCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveFlippableCardView.swift; sourceTree = "<group>"; };
 		D5EFEAF12DF91A1C00CD71D9 /* ReceiveFlippableFrontCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveFlippableFrontCardView.swift; sourceTree = "<group>"; };
@@ -1042,7 +1042,7 @@
 				D5EFEAE42DF90BAF00CD71D9 /* MarriedCoupleMainTextView.swift */,
 				D5EFEAE22DF905D600CD71D9 /* ReceiveCardContainerView.swift */,
 				D5EFEAE92DF9149800CD71D9 /* ReceiveCardView.swift */,
-				D5EFEAEB2DF9183100CD71D9 /* RecieveSingleCardView.swift */,
+				D5EFEAEB2DF9183100CD71D9 /* ReceiveSingleCardView.swift */,
 				D5EFEAED2DF9184600CD71D9 /* MultiReceiveCardView.swift */,
 				D5EFEAEF2DF9188800CD71D9 /* ReceiveFlippableCardView.swift */,
 				D5EFEAF12DF91A1C00CD71D9 /* ReceiveFlippableFrontCardView.swift */,
@@ -1255,6 +1255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5EFEAF52DF964A700CD71D9 /* PhotoPickerView.swift in Sources */,
 				D5565D602DF6D26800187DDD /* MemberLoadingView.swift in Sources */,
 				D5B38C5E2DF0A769005DAFDC /* PartyCardBackView.swift in Sources */,
 				D5EFEAEE2DF9184C00CD71D9 /* MultiReceiveCardView.swift in Sources */,
@@ -1301,10 +1302,8 @@
 				D5EFEAE72DF9102D00CD71D9 /* ReceiveCardListView.swift in Sources */,
 				D5B38C402DF04733005DAFDC /* PartyCardInfoText.swift in Sources */,
 				D5EFEAF02DF9189400CD71D9 /* ReceiveFlippableCardView.swift in Sources */,
-				38AA40C92DF38D27004D5EC9 /* PhotoPickerView.swift in Sources */,
 				D5E9ADA12DF5DC0700CDB444 /* FlippableBackCardView.swift in Sources */,
 				D5EFEACE2DF8926500CD71D9 /* ShowPartyCardView.swift in Sources */,
-				38AA40C92DF38D27004D5EC9 /* PhotoPickerView.swift in Sources */,
 				D5F710AE2DF13C9D00F2CE3B /* CreateFlowerstandViewModel.swift in Sources */,
 				CA5EAA632DF2C34200690A03 /* CustomProgressView.swift in Sources */,
 				D5EFEAF22DF91A2900CD71D9 /* ReceiveFlippableFrontCardView.swift in Sources */,
@@ -1314,7 +1313,7 @@
 				CA5EAA662DF2C34200690A03 /* InfoStep2View.swift in Sources */,
 				38A09B572DF4A9090066E434 /* InvitationOCRView.swift in Sources */,
 				D5EFEADB2DF9021100CD71D9 /* MarriedCoupleView.swift in Sources */,
-				D5EFEAEC2DF9183A00CD71D9 /* RecieveSingleCardView.swift in Sources */,
+				D5EFEAEC2DF9183A00CD71D9 /* ReceiveSingleCardView.swift in Sources */,
 				55512E1E2DEEFB3300433ED8 /* InfoLoadingView.swift in Sources */,
 				D5565D622DF6D27C00187DDD /* MemberLoadingViewModel.swift in Sources */,
 				D574E9B12DED7FA000AAF70F /* PrimaryButton.swift in Sources */,

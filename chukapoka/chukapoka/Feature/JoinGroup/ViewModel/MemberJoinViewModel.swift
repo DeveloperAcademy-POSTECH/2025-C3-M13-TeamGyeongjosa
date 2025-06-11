@@ -148,7 +148,7 @@ final class MemberJoinViewModel: ObservableObject {
             print("""
                   멤버 저장됨: - 이름: \(member.name)
                   - 소속 파티: \(party.name)
-                  - 전달 금액: \(member.money)
+                  - 전달 금액: \(member.money!)
                   - 꽃 장식: \(member.flowerstandPath)
                   - 메시지: \(member.message)
             """)

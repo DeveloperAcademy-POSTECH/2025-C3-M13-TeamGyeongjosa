@@ -43,7 +43,3 @@ struct MarriedCoupleView: View {
         }
     }
 }
-
-#Preview {
-    MarridCoupleView()
-}

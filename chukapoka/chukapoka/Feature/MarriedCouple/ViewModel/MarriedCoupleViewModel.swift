@@ -15,19 +15,15 @@ final class MarriedCoupleViewModel: ObservableObject {
     init(coordinator: AppCoordinator, wedding: Wedding) {
         self.coordinator = coordinator
         self.wedding = wedding
-        self.parties = wedding.parties.sorted
+        self.parties = wedding.parties.sorted { $0.name < $1.name }
     }
-    
-    func goBack() {
-        coordinator.pop()
+        
+        func goBack() {
+            coordinator.pop()
+        }
+        
+        func goToReceiveCardList(party: Party) {
+            coordinator.push(.receiveCardList(party: party))
+        }
+        
     }
-    
-    func goToNext() {
-        coordinator.push()
-    }
-    
-    func goToReceiveCardList(party: Party) {
-        coordinator.push(.receiveCardList(party: Party))
-    }
-    
-}

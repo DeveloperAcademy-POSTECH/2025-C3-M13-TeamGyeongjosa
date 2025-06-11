@@ -25,14 +25,20 @@ struct ReceiveCardContainerView: View {
             if parties.count == 1 {
                 HStack {
                     Spacer()
-                    ReceiveSingleCardView (
-                        
+                    ReceiveSingleCardView(
+                        party: parties[0],
+                        width: cardWidth
                     )
                     Spacer()
                 }
             } else {
-                MultiReceiveCardView (
-                    
+                MultiReceiveCardView(
+                    parties: parties,
+                    currentIndex: $currentIndex,
+                    screenWidth: screenWidth,
+                    cardWidth: cardWidth,
+                    spacing: spacing,
+                    xOffset: xOffset
                 )
             }
         }

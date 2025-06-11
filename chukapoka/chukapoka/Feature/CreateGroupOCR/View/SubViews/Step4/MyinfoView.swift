@@ -18,7 +18,7 @@ struct MyinfoView: View {
         CustomProgressView(progress: 0.9).padding(.bottom, 30)
         
         VStack(alignment: .leading, spacing: 4) {
-            ZStack{
+            ZStack {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 32) {
                         VStack(alignment: .leading, spacing: 4) {
@@ -100,4 +100,3 @@ struct MyinfoView: View {
         }
     }
 }
-
