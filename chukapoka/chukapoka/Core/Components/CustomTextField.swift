@@ -13,6 +13,7 @@ struct CustomTextField: View {
     @Binding var text: String
     let action: (() -> Void)?
     @Binding var isValid: Bool
+    var errorMessage: String?
     
     init(
         title: String,
@@ -20,7 +21,8 @@ struct CustomTextField: View {
         placeholder: String,
         text: Binding<String>,
         action: (() -> Void)? = nil,
-        isValid: Binding<Bool>
+        isValid: Binding<Bool>,
+        errorMessage: String? = nil
     ) {
         self.title = title
         self.infoText = infoText
@@ -28,56 +30,64 @@ struct CustomTextField: View {
         self._text = text
         self.action = action
         self._isValid = isValid
+        self.errorMessage = errorMessage
     }
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            HStack(spacing: 0) {
-                Text(title)
-                    .font(GSFont.body2)
-                    .foregroundColor(GSColor.black)
-                if let info = infoText {
-                    Text(info)
+        VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: 16) {
+                HStack(spacing: 0) {
+                    Text(title)
                         .font(GSFont.body2)
-                        .foregroundColor(GSColor.gray1)
-                }
-            }
-            
-            ZStack(alignment: .leading) {
-                if text.isEmpty {
-                    Text(placeholder)
-                        .foregroundColor(GSColor.gray3)
-                        .padding(.horizontal, 15)
-                        .padding(.vertical, 12)
+                        .foregroundColor(GSColor.black)
+                    if let info = infoText {
+                        Text(info)
+                            .font(GSFont.body2)
+                            .foregroundColor(GSColor.gray1)
+                    }
                 }
                 
-                TextField("", text: $text, onEditingChanged: { isEditing in
-                    if isEditing {
+                ZStack(alignment: .leading) {
+                    if text.isEmpty {
+                        Text(placeholder)
+                            .foregroundColor(GSColor.gray3)
+                            .padding(.horizontal, 15)
+                            .padding(.vertical, 12)
+                    }
+                    
+                    TextField("", text: $text, onEditingChanged: { isEditing in
+                        if isEditing {
+                            withAnimation(.easeInOut(duration: 0.25)) {
+                                isValid = true
+                            }
+                        }
+                        action?()
+                    })
+                    .accentColor(GSColor.primary)
+                    .padding()
+                    
+                }
+                .onChange(of: text) {
+                    if !isValid {
                         withAnimation(.easeInOut(duration: 0.25)) {
                             isValid = true
                         }
                     }
-                    action?()
-                })
-                .accentColor(GSColor.primary)
-                .padding()
-                
-            }
-            .onChange(of: text) {
-                if !isValid {
-                    withAnimation(.easeInOut(duration: 0.25)) {
-                        isValid = true
-                    }
                 }
-                action?()
+                .background(GSColor.secondary3)
+                .overlay(
+                    Rectangle()
+                        .stroke(isValid ? Color.clear : Color.red, lineWidth: 1)
+                )
             }
-            .background(GSColor.secondary3)
-            .overlay(
-                Rectangle()
-                    .stroke(isValid ? Color.clear : Color.red, lineWidth: 1)
-            )
+            .frame(maxWidth: .infinity, minHeight: 52, alignment: .topLeading)
+            
+            Text(errorMessage ?? " ")
+                .font(GSFont.caption2)
+                .foregroundColor(isValid ? .clear : Color.red)
+                .fixedSize(horizontal: false, vertical: true)
+                .frame(height: 20)
         }
-        .frame(maxWidth: .infinity, minHeight: 52, alignment: .topLeading)
     }
 }
 
@@ -94,7 +104,8 @@ struct CustomTextField: View {
                     infoText: "(신랑 혹은 신부)", // 없으면 작성하지 않아도 되는 부분
                     placeholder: "어떤 파티에서 화환을 전달하나요?",
                     text: $inputText,
-                    isValid: $isValid
+                    isValid: $isValid,
+                    errorMessage: "10자 이내로 입력해주세요"
                 )
                 
                 Button("확인") {
