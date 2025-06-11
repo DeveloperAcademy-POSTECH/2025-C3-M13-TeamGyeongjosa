@@ -24,7 +24,7 @@ struct OCRResultView: View {
             onBack()
         }
         CustomProgressView(progress: 0.6).padding(.bottom, 30)
-
+        
         VStack(spacing: 0) {
             ZStack {
                 ScrollView {
@@ -92,9 +92,9 @@ struct OCRResultView: View {
                             .font(GSFont.caption2)
                             .foregroundStyle(GSColor.gray1)
                             .frame(maxWidth: .infinity, alignment: .center)
-                        .onChange(of: viewModel.weddingTime) {
-                            viewModel.weddingTime = viewModel.formatTimeInput(viewModel.weddingTime)
-                        }
+                            .onChange(of: viewModel.weddingTime) {
+                                viewModel.weddingTime = viewModel.formatTimeInput(viewModel.weddingTime)
+                            }
                         Spacer(minLength: 0)
                     }
                 }
@@ -103,12 +103,12 @@ struct OCRResultView: View {
             .animation(.easeInOut, value: viewModel.currentStep)
             
             PrimaryButton(
-                title: viewModel.nextButtonTitle,
+                title: "다음",
                 style: viewModel.isNextButtonEnabled ? .basic : .disabled,
                 action: {
-                    // TODO: SwiftData와 확인 필요
-                    viewModel.handleNext(modelContext: modelContext)
-                    onNext()
+                    if viewModel.validateOCRInputs() {
+                        onNext()
+                    }
                 }
             )
             .padding(.horizontal, 16)

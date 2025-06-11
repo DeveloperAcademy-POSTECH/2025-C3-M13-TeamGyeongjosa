@@ -18,7 +18,7 @@ struct MyinfoView: View {
         NavigationBar {
           onBack()
         }
-        CustomProgressView(progress: 0.9).padding(.bottom, 30)
+        CustomProgressView(progress: 0.8).padding(.bottom, 30)
         
         VStack(alignment: .leading, spacing: 4) {
             ZStack {
@@ -93,11 +93,10 @@ struct MyinfoView: View {
             .animation(.easeInOut, value: viewModel.currentStep)
             
             PrimaryButton(
-                title: viewModel.nextButtonTitle,
-                style: viewModel.isNextButtonEnabled ? .basic : .disabled,
+                title: "완료",
+                style: viewModel.isMyInfoNextButtonEnabled ? .basic : .disabled,
                 action: {
-                    viewModel.handleNext(modelContext: modelContext)
-                    viewModel.currentStep = .step3
+                    viewModel.saveIfValidThenPush(modelContext: modelContext)
                 }
             )
             .padding(.horizontal, 16)
