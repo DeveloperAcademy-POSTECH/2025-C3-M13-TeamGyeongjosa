@@ -35,7 +35,7 @@ class TextClassifier {
             }
             
             // 'and' 혹은 '그리고'가 단독일 경우 앞뒤 줄에서 추정
-            if (line == "and" || line == "그리고"),
+            if(line == "and" || line == "그리고"),
                index > 0, index + 1 < lines.count {
                 result.groomName = lines[index - 1].trimmingCharacters(in: .whitespacesAndNewlines)
                 result.brideName = lines[index + 1].trimmingCharacters(in: .whitespacesAndNewlines)
@@ -70,7 +70,7 @@ class TextClassifier {
             }
             
             // MARK: - 은행 및 계좌번호
-            if (result.bank == nil || result.accountNumber == nil),
+            if(result.bank == nil || result.accountNumber == nil),
                lines[index].contains("은행") {
                 let trimmedLine = lines[index].trimmingCharacters(in: .whitespacesAndNewlines)
                 result.bank = extractBankName(from: trimmedLine)

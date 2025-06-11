@@ -8,24 +8,17 @@
 import SwiftUI
 
 struct MyinfoView: View {
+    @Binding var currentStep: InvitationOCRView.OCRStep
     @Environment(\.modelContext) var modelContext
     @ObservedObject var viewModel: CreateGroupViewModel
-    @Binding var currentStep: InvitationOCRView.OCRStep
+
+    var onBack: () -> Void
     
     var body: some View {
         NavigationBar {
-            switch currentStep {
-            case .photoPicker:
-                break
-            case .scan:
-                currentStep = .photoPicker
-            case .result:
-                currentStep = .info
-            case .info:
-                currentStep = .result
-            }
+          onBack()
         }
-        CustomProgressView(progress: 0.9).padding(.bottom, 30)
+        CustomProgressView(progress: 0.8).padding(.bottom, 30)
         
         VStack(alignment: .leading, spacing: 4) {
             ZStack {
@@ -100,11 +93,10 @@ struct MyinfoView: View {
             .animation(.easeInOut, value: viewModel.currentStep)
             
             PrimaryButton(
-                title: viewModel.nextButtonTitle,
-                style: viewModel.isNextButtonEnabled ? .basic : .disabled,
+                title: "완료",
+                style: viewModel.isMyInfoNextButtonEnabled ? .basic : .disabled,
                 action: {
-                    viewModel.handleNext(modelContext: modelContext)
-                    viewModel.currentStep = .step3
+                    viewModel.saveIfValidThenPush(modelContext: modelContext)
                 }
             )
             .padding(.horizontal, 16)

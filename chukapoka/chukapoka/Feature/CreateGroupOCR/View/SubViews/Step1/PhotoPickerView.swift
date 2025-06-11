@@ -11,17 +11,19 @@ import PhotosUI
 struct PhotoPickerView: View {
     @ObservedObject var ocrViewModel: OCRViewModel
     @StateObject private var viewModel: CreateGroupViewModel
+    var onBack: () -> Void
     @State private var isPickerPresented = false
     
-    init(viewModel: CreateGroupViewModel, ocrViewModel: OCRViewModel) {
+    init(viewModel: CreateGroupViewModel, ocrViewModel: OCRViewModel, onBack: @escaping () -> Void) {
         _viewModel = StateObject(wrappedValue: viewModel)
         self.ocrViewModel = ocrViewModel
+        self.onBack = onBack
     }
     
     var body: some View {
         // MARK: - 툴바 (뒤로가기)
         NavigationBar {
-            viewModel.goToPreviousStep()
+            onBack()
         }
         CustomProgressView(progress: 0.3).padding(.bottom, 30)
         VStack(alignment: .leading, spacing: 4) {

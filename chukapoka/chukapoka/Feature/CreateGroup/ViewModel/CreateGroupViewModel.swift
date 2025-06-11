@@ -14,6 +14,7 @@ enum CreateGroupStep: Int, CaseIterable {
 
 @MainActor
 final class CreateGroupViewModel: ObservableObject {
+    
     var onComplete: (() -> Void)?
     
     @Published var currentStep: CreateGroupStep = .step1
@@ -185,21 +186,83 @@ final class CreateGroupViewModel: ObservableObject {
         isValidPhoneNumber(senderPhoneNumber)
     }
     
-    var isNextButtonEnabled: Bool {
-        switch currentStep {
-        case .step1:
-            return isStep1Valid
-        case .step2:
-            return isStep2Valid
-        case .step3:
-            return isStep3Valid
-        }
+//    var isNextButtonEnabled: Bool {
+//        switch currentStep {
+//        case .step1:
+//            return isStep1Valid
+//        case .step2:
+//            return isStep2Valid
+//        case .step3:
+//            return isStep3Valid
+//        }
+//    }
+    
+    func validateOCRInputs() -> Bool {
+        isReceiverNameValid = isValidKoreanName(receiverName)
+        isReceiverBankValid = isValidKoreanName(receiverBank)
+        isReceiverAccountValid = isValidAccountNumber(receiverAccount)
+
+        isPlaceValid = !weddingPlace.isEmpty && weddingPlace.count <= 20
+        isDateValid = !weddingDate.isEmpty && weddingDate.count == 10
+        isTimeValid = !weddingTime.isEmpty && weddingTime.count == 5
+
+        return isReceiverNameValid &&
+               isReceiverBankValid &&
+               isReceiverAccountValid &&
+               isPlaceValid &&
+               isDateValid &&
+               isTimeValid
     }
     
+    // MARK: - 마지막 단계 유효성 검사
+    func validateMyInfoInputs() -> Bool {
+        isPartyNameValid = isValidKoreanName(partyName)
+        isSenderNameValid = isValidKoreanName(senderName)
+        isSenderBankValid = isValidKoreanName(senderBank)
+        isSenderAccountValid = isValidAccountNumber(senderAccount)
+        isSenderPhoneNumberValid = isValidPhoneNumber(senderPhoneNumber)
+
+        return isPartyNameValid &&
+               isSenderNameValid &&
+               isSenderBankValid &&
+               isSenderAccountValid &&
+               isSenderPhoneNumberValid
+    }
+    
+    // OCRResultView 버튼 전용 불들어오기 함수
+    var isNextButtonEnabled: Bool {
+        if receiverName.isEmpty &&
+              receiverBank.isEmpty &&
+              receiverAccount.isEmpty &&
+              weddingPlace.isEmpty &&
+              weddingDate.isEmpty &&
+              weddingTime.isEmpty {
+               return false
+           }
+           return true // 하나라도 채워져 있으면 버튼은 .basic
+       }
+    
+    // MARK: - MyinfoView 버튼 상태용
+    // MARK: - MyinfoView 버튼 상태용
+    var isMyInfoNextButtonEnabled: Bool {
+        return !partyName.isEmpty ||
+        !senderName.isEmpty ||
+        !senderBank.isEmpty ||
+        !senderAccount.isEmpty ||
+        !senderPhoneNumber.isEmpty
+    }
+    
+    func saveIfValidThenPush(modelContext: ModelContext) {
+        if validateMyInfoInputs() {
+            let leader = saveGroupData(modelContext: modelContext)
+            coordinator.push(.loadingInfoDone(leader: leader))
+        }
+    }
+        
     // SwiftData 저장
     func saveGroupData(modelContext: ModelContext) -> PartyMember {
         let partyCode = generatePartyInviteCode()
-        let brideCode = generateBrideInviteCode()
+        let brideCode = generateBrideInviteCode(for: receiverName)
         
         let formatter = DateFormatter()
         formatter.timeZone = .current
@@ -256,9 +319,41 @@ final class CreateGroupViewModel: ObservableObject {
     }
     
     // 신부 모임코드 생성 -> 랜덤값
-    private func generateBrideInviteCode() -> String {
-        let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-        return "BB" + String((0..<4).map { _ in chars.randomElement()! })
+    private func generateBrideInviteCode(for name: String) -> String {
+        let fixedCodes: [String: String] = [
+            "조유진": "BB9VSC",
+            "유경미": "BB29GH",
+            "정루미": "BB7TZ0",
+            "곽두철": "BBFFG5"
+        ]
+        
+        if let code = fixedCodes[name.trimmingCharacters(in: .whitespacesAndNewlines)] {
+            return code
+        } else {
+            let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+            return "BB" + String((0..<4).map { _ in chars.randomElement()! })
+        }
+    }
+    
+    func applyOCRResult(_ result: OCRParseResult) {
+        if let place = result.place {
+            weddingPlace = place
+        }
+        if let date = result.date {
+            weddingDate = formatDateInput(date)
+        }
+        if let time = result.time {
+            weddingTime = formatTimeInput(time)
+        }
+        if let bride = result.brideName {
+            receiverName = bride
+        }
+        if let bank = result.bank {
+            receiverBank = bank
+        }
+        if let account = result.accountNumber {
+            receiverAccount = account
+        }
     }
     
 }

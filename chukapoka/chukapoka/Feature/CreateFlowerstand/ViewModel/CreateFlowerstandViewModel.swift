@@ -125,7 +125,7 @@ final class CreateFlowerstandViewModel: ObservableObject {
         
         do {
             try modelContext.save()
-            print("✅ 화환 정보 저장됨: \(leader.name), 금액=\(leader.money), 메시지=\(leader.message), path=\(leader.flowerstandPath)")
+            print("✅ 화환 정보 저장됨: \(leader.name), 금액=\(leader.money!), 메시지=\(leader.message), path=\(leader.flowerstandPath)")
         } catch {
             print("저장 실패: \(error.localizedDescription)")
         }
