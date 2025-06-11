@@ -12,7 +12,7 @@ struct FlowerstandCardItem: Identifiable {
     let id = UUID()
     let name: String
     let backgroundColor: Color
-    
+
     static func sampleData() -> [FlowerstandCardItem] {
         [
             FlowerstandCardItem(name: "데미안", backgroundColor: GSColor.primary),

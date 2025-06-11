@@ -24,7 +24,7 @@ struct MultiReceiveCardView: View {
                     .frame(width: cardWidth)
                     .scaleEffect(scale(for: index)) // 현재 카드 크기 강조
                     .opacity(opacity(for: index))   // 투명도 조절
-                    .animation(.easeInOut(duration: 0.2), value: currentIndex)
+                    .animation(.interactiveSpring(response: 0.3, dampingFraction: 0.8), value: currentIndex)
             }
         }
         .frame(width: screenWidth, alignment: .leading)

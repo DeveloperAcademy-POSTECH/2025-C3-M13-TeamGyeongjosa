@@ -25,9 +25,13 @@ struct ReceiveFlippableCardView: View {
             .opacity(isFlipped ? 0.0 : 1.0)
             .rotation3DEffect(.degrees(isFlipped ? 180 : 0), axis: (x: 0, y: 1, z: 0))
             
-            ReceiveFlippableBackCardView(party: party)
+            ReceiveFlippableBackCardView(
+                party: party,
+                height: height
+            )
+                .frame(height: height)
                 .opacity(isFlipped ? 1.0 : 0.0)
-                .rotation3DEffect(.degrees(isFlipped ? -180 : 0), axis: (x: 0, y: 1, z: 0))
+                .rotation3DEffect(.degrees(isFlipped ? 0 : -180), axis: (x: 0, y: 1, z: 0))
         }
         .frame(height: height)
         .onTapGesture {

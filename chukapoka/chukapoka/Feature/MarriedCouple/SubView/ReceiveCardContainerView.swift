@@ -18,7 +18,7 @@ struct ReceiveCardContainerView: View {
     var body: some View {
         GeometryReader { geometry in
             let screenWidth = geometry.size.width
-            let cardWidth = screenWidth * 0.85
+            let cardWidth = screenWidth * 0.8
             let spacing: CGFloat = 8
             let xOffset = (screenWidth - cardWidth) / 2
             

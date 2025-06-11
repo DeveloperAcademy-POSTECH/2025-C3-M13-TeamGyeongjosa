@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ReceiveFlippableBackCardView: View {
     let party: Party
+    let height: CGFloat
     
     var body: some View {
         let sortedMembers = party.members.sorted {
@@ -25,13 +26,10 @@ struct ReceiveFlippableBackCardView: View {
             if let leader = leader {
                 ShowPartyCardView(
                     leader: leader,
-                    participants: participants,
-                    onLeaderTapped: { },
-                    onMemberTapped: { _ in }
+                    participants: participants
                 )
-                .padding(.top, 24)
-                .padding(.horizontal, 16)
             }
         }
+        .frame(maxWidth: .infinity)
     }
 }

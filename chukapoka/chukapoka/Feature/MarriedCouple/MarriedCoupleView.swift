@@ -33,9 +33,7 @@ struct MarriedCoupleView: View {
                     backgroundColor: GSColor.secondary3,
                     isEnable: true),
                 action: {
-                    guard viewModel.parties.indices.contains(currentIndex) else { return }
-                    let selectedParty = viewModel.parties[currentIndex]
-                    viewModel.goToReceiveCardList(party: selectedParty)
+                    viewModel.goToReceiveCardList(party: viewModel.parties[currentIndex])
                 }
             )
             .padding(.horizontal, 16)
