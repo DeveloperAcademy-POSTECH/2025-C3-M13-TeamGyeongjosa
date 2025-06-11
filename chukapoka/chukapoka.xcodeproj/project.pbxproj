@@ -67,8 +67,8 @@
 		CA5EAAD82DF4897400690A03 /* FlowerstandCardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAAD72DF4897400690A03 /* FlowerstandCardItem.swift */; };
 		CA5EAADA2DF48E6600690A03 /* SelectedCardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAAD92DF48E6600690A03 /* SelectedCardDetailView.swift */; };
 		CA5EAAE02DF5648300690A03 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5EAADF2DF5648300690A03 /* View+Extension.swift */; };
-		D5146AB12DF9D66E006DBA89 /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5146AB02DF9D662006DBA89 /* KeyboardResponder.swift */; };
 		CACFC78C2DF9CD94003D8F29 /* ReceivedFlowerStandCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACFC78B2DF9CD94003D8F29 /* ReceivedFlowerStandCard.swift */; };
+		D5146AB12DF9D66E006DBA89 /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5146AB02DF9D662006DBA89 /* KeyboardResponder.swift */; };
 		D51C80C32DEF48210051CB40 /* HomeIntroText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80C22DEF481C0051CB40 /* HomeIntroText.swift */; };
 		D51C80C52DEF482A0051CB40 /* HomeChracterImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80C42DEF48260051CB40 /* HomeChracterImage.swift */; };
 		D51C80CB2DEF487F0051CB40 /* HomeBottomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C80CA2DEF487C0051CB40 /* HomeBottomButtons.swift */; };
@@ -241,8 +241,8 @@
 		CA5EAAD72DF4897400690A03 /* FlowerstandCardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerstandCardItem.swift; sourceTree = "<group>"; };
 		CA5EAAD92DF48E6600690A03 /* SelectedCardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCardDetailView.swift; sourceTree = "<group>"; };
 		CA5EAADF2DF5648300690A03 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
-		D5146AB02DF9D662006DBA89 /* KeyboardResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
 		CACFC78B2DF9CD94003D8F29 /* ReceivedFlowerStandCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivedFlowerStandCard.swift; sourceTree = "<group>"; };
+		D5146AB02DF9D662006DBA89 /* KeyboardResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
 		D51C80C22DEF481C0051CB40 /* HomeIntroText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeIntroText.swift; sourceTree = "<group>"; };
 		D51C80C42DEF48260051CB40 /* HomeChracterImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChracterImage.swift; sourceTree = "<group>"; };
 		D51C80CA2DEF487C0051CB40 /* HomeBottomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomButtons.swift; sourceTree = "<group>"; };
@@ -1566,7 +1566,6 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9S8SHSW95K;
-				DEVELOPMENT_TEAM = 6TW9MCXPJD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = chukapoka/Info.plist;
@@ -1597,7 +1596,6 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9S8SHSW95K;
-				DEVELOPMENT_TEAM = 6TW9MCXPJD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = chukapoka/Info.plist;
