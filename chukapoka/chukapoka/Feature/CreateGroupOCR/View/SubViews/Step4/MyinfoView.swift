@@ -11,6 +11,7 @@ struct MyinfoView: View {
     @Binding var currentStep: InvitationOCRView.OCRStep
     @Environment(\.modelContext) var modelContext
     @ObservedObject var viewModel: CreateGroupViewModel
+
     var onBack: () -> Void
     
     var body: some View {
